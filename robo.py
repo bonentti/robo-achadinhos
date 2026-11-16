@@ -393,7 +393,7 @@ def converter_link(cfg: dict, url: str, sub_id: str = "telegram") -> str | None:
     if not url.lower().startswith("http"):
         url = "https://" + url
     final = url
-    if re.search(r"amzn\.to|a\.co/|shope\.ee|s\.shopee|tidd\.ly|bit\.ly", url):
+    if re.search(r"amzn\.to|a\.co/|link\.amazon|amzlinks|shope\.ee|s\.shopee|tidd\.ly|bit\.ly", url):
         try:  # link encurtado: descobre para onde ele leva
             r = requests.get(url, headers={"User-Agent": NAVEGADOR}, timeout=20, allow_redirects=True)
             final = r.url
@@ -1336,7 +1336,7 @@ def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: 
     return True
 
 
-_URL = re.compile(r"(?:https?://|(?<![\w.])(?=(?:amzn\.to|a\.co|shope\.ee|s\.shopee\.com\.br)/))\S+", re.I)
+_URL = re.compile(r"(?:https?://|(?<![\w.])(?=(?:amzn\.to|a\.co|link\.amazon|shope\.ee|s\.shopee\.com\.br)/))\S+", re.I)
 _LINHA_DE_DIVULGADOR = re.compile(
     r"(@\w{3,}|t\.me|chat\.whatsapp|whatsapp\.com|entre no|entra no|participe|meu grupo|nosso grupo|"
     r"meu canal|nosso canal|compartilhe|link na bio|#\w+)", re.I)
