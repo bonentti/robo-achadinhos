@@ -317,6 +317,16 @@ def buscar_shopee(cfg: dict) -> list[Oferta]:
 ARQ_FEED_SHOPEE = PASTA / "shopee_feed.csv"
 
 
+def produto_favorito(cfg: dict, titulo: str, loja: str) -> str | None:
+    """Produto especifico que a Nicole ama (ex.: oleo de banho Nivea na loja oficial)."""
+    t, lj = titulo.lower(), loja.lower()
+    for item in cfg.get("produtos_favoritos", {}).get("itens", []):
+        termos = [x.lower() for x in item.get("termos", [])]
+        if termos and all(x in t for x in termos) and item.get("loja", "").lower() in lj:
+            return item.get("nome") or " ".join(item.get("termos", []))
+    return None
+
+
 def marca_favorita(cfg: dict, texto: str) -> str | None:
     """Devolve a marca favorita citada no texto (nome do produto/loja), se houver."""
     t = " " + re.sub(r"[^a-z0-9à-ú]+", " ", texto.lower()) + " "
@@ -412,12 +422,16 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                 continue
             # Marcas favoritas: entram com desconto menor e sem exigir curtidas, e vao para o topo da fila
             texto_busca = titulo + " " + (linha.get("shop_name") or "")
+            produto_fav = produto_favorito(cfg, titulo, linha.get("shop_name") or "")
             if cat_cafe and linha.get("global_category1") == cat_cafe:
                 # Cafes: so as marcas vigiadas e so produtos de cafe (evita, ex., "Sofa Orfeu")
                 favorita = marca_favorita({"marcas_favoritas": {"marcas": cafes.get("marcas", [])}}, texto_busca)
                 if not favorita or not re.search(r"caf[eé]|c[aá]psul|espresso|cappuccino", titulo, re.I):
                     continue
                 d_min, c_min = cafes.get("desconto_minimo", 10), 0
+            elif produto_fav:  # produto que a Nicole ama: prioridade maxima, regras mais leves
+                favorita = produto_fav
+                d_min, c_min = cfg.get("produtos_favoritos", {}).get("desconto_minimo", 20), 0
             else:
                 favorita = marca_favorita(cfg, texto_busca)
                 d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
@@ -442,7 +456,7 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                 categoria=linha.get("global_category1", ""),
             )
             # Prioriza produtos populares (curtidas) com bom desconto, e nao so o maior %
-            o.prioridade = desconto + 10 * math.log10(max(curtidas, 1))
+            o.prioridade = desconto + 10 * math.log10(max(curtidas, 1)) + (500 if produto_fav else 0)
             o.favorita = favorita
             ofertas.append(o)
     log.info(f"Shopee (lojas oficiais): {total} produtos do tema, {len(ofertas)} passaram nos filtros")

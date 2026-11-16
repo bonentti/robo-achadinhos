@@ -272,3 +272,15 @@ ativo = true
 categoria = "Food & Beverages"
 desconto_minimo = 10      # em %
 marcas = ["L'OR", "Lor", "L’or", "Orfeu", "Baggio"]
+
+# ---------------------------------------------------------------------
+#  PRODUTOS FAVORITOS (prioridade máxima)
+#  Produtos específicos que você ama. Quando entram em promoção na loja
+#  indicada, vão para a FRENTE da fila (na vez das marcas favoritas).
+#  termos = palavras que precisam estar no nome; loja = parte do nome da loja.
+# ---------------------------------------------------------------------
+[produtos_favoritos]
+desconto_minimo = 20      # em %
+itens = [
+  { nome = "Óleo de Banho Nivea", termos = ["nivea", "óleo de banho"], loja = "NIVEA OFICIAL" },
+]
