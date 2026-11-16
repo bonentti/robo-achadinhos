@@ -197,6 +197,12 @@ class Telegram:
             raise RuntimeError(resposta.get("description", r.text))
         return resposta
 
+    def enviar_privado(self, chat_id: str, texto: str) -> None:
+        """Mensagem de texto puro no privado (para copiar e colar no WhatsApp)."""
+        for i in range(0, len(texto), 4000):  # limite do Telegram por mensagem
+            self._api("sendMessage", {"chat_id": chat_id, "text": texto[i:i + 4000],
+                                      "disable_web_page_preview": "true"})
+
     def enviar(self, texto: str, imagem: str | None = None) -> None:
         if self.modo_teste:
             print("\n" + "=" * 60)
@@ -874,6 +880,7 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
         if not any(p in o.nome.lower() for p in bloqueadas)
         and not (desconto_max and o.desconto > desconto_max)
     ]
+    candidatas_do_dia = list(ofertas)  # para o resumo diario (inclui as ja postadas)
     ofertas = [o for o in ofertas if pode_postar(o, estado, dias_repetir)]
 
     # Vigiados primeiro (sao quedas reais de preco), depois maiores descontos.
@@ -927,9 +934,57 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
         if not modo_teste and i < len(fila) - 1:
             time.sleep(pausa)
 
+    # Resumo diario para a Nicole repassar no Canal do WhatsApp (1x por dia)
+    rc = cfg.get("resumo_whatsapp", {})
+    hoje = datetime.now().strftime("%Y-%m-%d")
+    if (rc.get("ativo") and preenchido(rc.get("chat_id")) and not modo_teste
+            and datetime.now().hour >= int(rc.get("hora", 19)) and estado.get("resumo_enviado_em") != hoje):
+        try:
+            texto = montar_resumo_whatsapp(candidatas_do_dia, cfg)
+            if texto:
+                tg.enviar_privado(str(rc["chat_id"]), texto)
+                estado["resumo_enviado_em"] = hoje
+                log.info("  ✔ resumo do dia enviado no seu privado")
+        except Exception as erro:
+            log.info(f"  ✘ erro ao enviar o resumo do dia: {erro}")
+
     limpar_estado(estado)
     if not modo_teste:
         salvar_estado(estado)
+
+
+def montar_resumo_whatsapp(ofertas: list[Oferta], cfg: dict) -> str:
+    """Texto pronto para colar no WhatsApp (*negrito*, ~riscado~), com os melhores achados."""
+    rc = cfg.get("resumo_whatsapp", {})
+    qtd = int(rc.get("quantidade", 5))
+    filas: dict[str, list[Oferta]] = {}
+    for o in sorted(ofertas, key=lambda o: -o.ordem):  # o melhor de cada loja, revezando
+        filas.setdefault(o.loja, []).append(o)
+    escolhidas = []
+    while len(escolhidas) < qtd and any(filas.values()):
+        for fila in filas.values():
+            if fila and len(escolhidas) < qtd:
+                escolhidas.append(fila.pop(0))
+    if not escolhidas:
+        return ""
+    numeros = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣"]
+    linhas = [f"💸 *Achados do dia* ({datetime.now():%d/%m})", ""]
+    for i, o in enumerate(escolhidas):
+        nome = o.nome.strip()
+        nome = nome[:80] + "..." if len(nome) > 80 else nome
+        loja = NOMES_LOJAS.get(o.loja, o.loja.title())
+        linhas.append(f"{numeros[i % len(numeros)]} *{nome}*")
+        if o.desconto >= 1:
+            linhas.append(f"~{reais(o.preco_antigo)}~ por *{reais(o.preco)}* (-{o.desconto}%) na {loja}")
+        else:
+            linhas.append(f"*{reais(o.preco)}* na {loja}")
+        if o.cupom:
+            linhas.append(f"🎟️ Cupom: *{o.cupom}*")
+        linhas.append(f"🛒 {o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}")  # vendas por canal
+        linhas.append("")
+    if rc.get("rodape"):
+        linhas.append(rc["rodape"])
+    return "\n".join(linhas).strip()
 
 
 def carregar_config() -> dict:

@@ -201,3 +201,18 @@ url = "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k
 loja = "kaisan"
 url = "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c"
 
+
+# ---------------------------------------------------------------------
+#  RESUMO DIÁRIO PARA O CANAL DO WHATSAPP
+#  1x por dia (a partir da hora abaixo) o robô manda no SEU privado do
+#  Telegram os melhores achados, já formatados para colar no WhatsApp.
+# ---------------------------------------------------------------------
+[resumo_whatsapp]
+ativo = true
+chat_id = "1713332589"   # seu chat privado com o bot
+hora = 19             # a partir das 19h
+quantidade = 5
+rodape = """#publi Links e cupons de parceria: posso ganhar uma comissão, sem custo extra pra você.
+
+📲 Quer ofertas o dia todo? Entra no meu canal do Telegram: t.me/achadosdabonentti
+💬 Canal no WhatsApp: https://whatsapp.com/channel/0029VbEqyLMFi8xUgzfgQ53N"""
