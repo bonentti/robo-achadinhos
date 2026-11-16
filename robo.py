@@ -172,7 +172,7 @@ def montar_mensagem(oferta: Oferta, cfg: dict) -> str:
         linhas.append(e(extra))
     linhas.append(f"🏬 {NOMES_LOJAS.get(oferta.loja, oferta.loja.title())}")
     linhas.append("")
-    linhas.append(f'🛒 <a href="{e(oferta.link, quote=True)}">Comprar aqui</a>')
+    linhas.append(f'🛒 Comprar aqui: {e(oferta.link)}')  # link visivel: vai junto ao copiar para o WhatsApp
     rodape = msg_cfg.get("rodape", "")
     if rodape:
         linhas += ["", e(rodape)]
@@ -1120,10 +1120,10 @@ def montar_aviso_cupom(texto: str, id_af: str) -> str | None:
             msg.append(f"🎟️ <code>{e(codigo)}</code>: {e(desc.strip())}")
     if paginas:
         link = link_shopee_afiliado(paginas[0], id_af)
-        msg += ["", f'👉 <a href="{e(link, quote=True)}">Pegue os cupons aqui</a>']
+        msg += ["", f'👉 Pegue os cupons aqui: {e(link)}']
     else:  # so codigo: leva para a Shopee para usar no carrinho
         link = link_shopee_afiliado("https://shopee.com.br/", id_af)
-        msg += ["", f'👉 Use o cupom no carrinho: <a href="{e(link, quote=True)}">abrir a Shopee</a>']
+        msg += ["", f'👉 Use o cupom no carrinho: {e(link)}']
     msg += ["", "⚠️ Cupons são limitados e acabam rápido.",
             "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você."]
     return "\n".join(msg)
@@ -1182,7 +1182,7 @@ def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: 
     texto = "\n".join([
         f"📅 <b>HOJE É {e(nome.upper()) if nome.lower().startswith('dia ') else 'DIA DE ' + e(nome.upper())} NA SHOPEE!</b>", "",
         "Promoções e cupons o dia todo. Vou postando aqui os melhores achados de lojas oficiais 👇", "",
-        f'🎟️ <a href="{e(link, quote=True)}">Veja as ofertas e cupons do dia</a>', "",
+        f'🎟️ Veja as ofertas e cupons do dia: {e(link)}', "",
         "🔔 Ative as notificações para não perder nada!",
         "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você.",
     ])
