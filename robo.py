@@ -203,6 +203,11 @@ class Telegram:
             self._api("sendMessage", {"chat_id": chat_id, "text": texto[i:i + 4000],
                                       "disable_web_page_preview": "true"})
 
+    def enviar_foto_privado(self, chat_id: str, foto: bytes, legenda: str) -> None:
+        """Foto + legenda em texto puro (os * e ~ ficam para o WhatsApp formatar)."""
+        self._api("sendPhoto", {"chat_id": chat_id, "caption": legenda[:1024]},
+                  {"photo": ("achado.jpg", foto)})
+
     def enviar(self, texto: str, imagem: str | None = None) -> None:
         if self.modo_teste:
             print("\n" + "=" * 60)
@@ -940,9 +945,7 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     if (rc.get("ativo") and preenchido(rc.get("chat_id")) and not modo_teste
             and datetime.now().hour >= int(rc.get("hora", 19)) and estado.get("resumo_enviado_em") != hoje):
         try:
-            texto = montar_resumo_whatsapp(candidatas_do_dia, cfg)
-            if texto:
-                tg.enviar_privado(str(rc["chat_id"]), texto)
+            if enviar_resumo_whatsapp(tg, candidatas_do_dia, cfg):
                 estado["resumo_enviado_em"] = hoje
                 log.info("  ✔ resumo do dia enviado no seu privado")
         except Exception as erro:
@@ -951,6 +954,58 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     limpar_estado(estado)
     if not modo_teste:
         salvar_estado(estado)
+
+
+def escolher_para_resumo(ofertas: list[Oferta], qtd: int) -> list[Oferta]:
+    """O melhor de cada loja, revezando, sem repetir produto parecido."""
+    filas: dict[str, list[Oferta]] = {}
+    for o in sorted(ofertas, key=lambda o: -o.ordem):
+        filas.setdefault(o.loja, []).append(o)
+    escolhidas = []
+    while len(escolhidas) < qtd and any(filas.values()):
+        for fila in filas.values():
+            if fila and len(escolhidas) < qtd:
+                escolhidas.append(fila.pop(0))
+    return escolhidas
+
+
+def legenda_whatsapp(o: Oferta) -> str:
+    """Legenda pronta para o WhatsApp (*negrito*, ~riscado~)."""
+    loja = NOMES_LOJAS.get(o.loja, o.loja.title())
+    nome = o.nome.strip()
+    nome = nome[:90] + "..." if len(nome) > 90 else nome
+    linhas = [f"🔥 *{o.desconto}% OFF*" if o.desconto >= 1 else "🔥 *Achado do dia*", "", f"🛍️ {nome}", ""]
+    if o.desconto >= 1:
+        linhas.append(f"De ~{reais(o.preco_antigo)}~")
+        linhas.append(f"💰 *Por {reais(o.preco)}* na {loja}")
+    else:
+        linhas.append(f"💰 *{reais(o.preco)}* na {loja}")
+    if o.cupom:
+        linhas.append(f"🎟️ Cupom: *{o.cupom}*")
+    linhas += ["", f"🛒 {o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "",
+               "#publi Link/cupom de parceria: posso ganhar uma comissão, sem custo extra pra você."]
+    return "\n".join(linhas)
+
+
+def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> bool:
+    """Manda no privado cada achado separado (imagem pronta + legenda) para encaminhar ao WhatsApp."""
+    from cartao import gerar_cartao  # so precisa do Pillow aqui
+
+    rc = cfg.get("resumo_whatsapp", {})
+    chat = str(rc["chat_id"])
+    escolhidas = escolher_para_resumo(ofertas, int(rc.get("quantidade", 5)))
+    if not escolhidas:
+        return False
+    tg.enviar_privado(chat, f"💸 Achados do dia ({datetime.now():%d/%m}) para o Canal do WhatsApp — "
+                            f"{len(escolhidas)} posts abaixo, cada um com imagem e legenda.")
+    for o in escolhidas:
+        loja = NOMES_LOJAS.get(o.loja, o.loja.title())
+        foto = gerar_cartao(o.nome, o.preco, o.preco_antigo, loja, o.imagem, o.cupom, "Achados da @bonentti")
+        tg.enviar_foto_privado(chat, foto, legenda_whatsapp(o))
+        time.sleep(1)
+    if rc.get("rodape"):
+        tg.enviar_privado(chat, rc["rodape"])
+    return True
 
 
 def montar_resumo_whatsapp(ofertas: list[Oferta], cfg: dict) -> str:
