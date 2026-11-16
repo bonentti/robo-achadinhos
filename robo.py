@@ -344,6 +344,10 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
     if not sp.get("usar_feed", False) or not urls or not preenchido(id_af):
         return []
     categorias = set(sp.get("categorias_feed", ["Women Clothes", "Women Shoes", "Women Bags", "Beauty"]))
+    cafes = cfg.get("cafes", {})
+    cat_cafe = cafes.get("categoria", "Food & Beverages") if cafes.get("ativo") else None
+    if cat_cafe:
+        categorias.add(cat_cafe)  # so entram os cafes das marcas vigiadas (filtro abaixo)
     # O feed de lojas oficiais e enorme (~200 MB): baixa 1x por dia e guarda so as
     # categorias do canal num arquivo pequeno.
     if not ARQ_FEED_SHOPEE.exists() or time.time() - ARQ_FEED_SHOPEE.stat().st_mtime > 24 * 3600:
@@ -407,9 +411,17 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
             except ValueError:
                 continue
             # Marcas favoritas: entram com desconto menor e sem exigir curtidas, e vao para o topo da fila
-            favorita = marca_favorita(cfg, titulo + " " + (linha.get("shop_name") or ""))
-            d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
-            c_min = 0 if favorita else curtidas_min
+            texto_busca = titulo + " " + (linha.get("shop_name") or "")
+            if cat_cafe and linha.get("global_category1") == cat_cafe:
+                # Cafes: so as marcas vigiadas e so produtos de cafe (evita, ex., "Sofa Orfeu")
+                favorita = marca_favorita({"marcas_favoritas": {"marcas": cafes.get("marcas", [])}}, texto_busca)
+                if not favorita or not re.search(r"caf[eé]|c[aá]psul|espresso|cappuccino", titulo, re.I):
+                    continue
+                d_min, c_min = cafes.get("desconto_minimo", 10), 0
+            else:
+                favorita = marca_favorita(cfg, texto_busca)
+                d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
+                c_min = 0 if favorita else curtidas_min
             if (not preco or desconto < d_min or nota < nota_min or nota_loja < nota_loja_min
                     or curtidas < c_min or (preco_max and preco > preco_max)):
                 continue

@@ -261,3 +261,14 @@ datas = [
   "12-25 Natal",
   "2027-05-09 Dia das Mães",
 ]
+
+# ---------------------------------------------------------------------
+#  CAFÉS ESPECIAIS
+#  O robô vigia cafés dessas marcas nas lojas oficiais da Shopee e posta
+#  quando o desconto passar do mínimo (entram na vez das marcas favoritas).
+# ---------------------------------------------------------------------
+[cafes]
+ativo = true
+categoria = "Food & Beverages"
+desconto_minimo = 10      # em %
+marcas = ["L'OR", "Lor", "L’or", "Orfeu", "Baggio"]
