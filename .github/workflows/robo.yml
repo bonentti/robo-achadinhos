@@ -2,8 +2,10 @@ name: Robo de Achadinhos
 
 on:
   schedule:
-    # A cada 30 min, das 8h as 23h (horario de Brasilia = UTC-3)
-    - cron: "0,30 11-23,0-2 * * *"
+    # A cada 15 min, das 8h as 23h (Brasilia = UTC-3), em minutos "quebrados":
+    # o GitHub costuma pular agendamentos nos minutos :00 e :30 (horarios mais disputados).
+    # O robo garante sozinho o intervalo minimo de ~30 min entre os posts.
+    - cron: "7,22,37,52 11-23,0-2 * * *"
   workflow_dispatch: {}   # botao "Run workflow" para rodar na hora
 
 permissions:
