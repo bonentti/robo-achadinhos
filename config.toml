@@ -229,3 +229,35 @@ marcas = [
   "Mari Maria", "Océane", "Oceane", "Quem Disse, Berenice", "Vizzela", "Fran by Franciny Ehlke",
   "Payot", "Eudora", "Sallve", "Principia", "Creamy", "Maybelline", "L'Oréal", "Natura",
 ]
+
+# ---------------------------------------------------------------------
+#  CUPONS DA SHOPEE
+#  O robô lê o canal OFICIAL da Shopee para afiliados no Telegram
+#  (@afiliadosshopeebroficial). Quando sai cupom ou página de cupons,
+#  ele avisa no seu canal com o SEU link de afiliada.
+# ---------------------------------------------------------------------
+[cupons_shopee]
+ativo = true
+validade_horas = 6        # ignora cupons divulgados há mais tempo que isso
+maximo_por_rodada = 2
+
+# ---------------------------------------------------------------------
+#  DIAS PROMOCIONAIS
+#  No primeiro horário do dia (8h), o robô avisa no canal que é dia de
+#  promoção. Datas duplas (1.1, 2.2 ... 12.12) entram sozinhas.
+#  Formato: "MM-DD Nome" (todo ano) ou "AAAA-MM-DD Nome" (só naquele ano).
+# ---------------------------------------------------------------------
+[dias_promocionais]
+ativo = true
+datas_duplas = true
+link_cupons = "https://shopee.com.br/"
+datas = [
+  "03-15 Dia do Consumidor",
+  "06-12 Dia dos Namorados",
+  "10-12 Dia das Crianças",
+  "2026-11-16 Dia de Grandes Marcas",
+  "2026-11-27 Black Friday",
+  "2026-11-30 Cyber Monday",
+  "12-25 Natal",
+  "2027-05-09 Dia das Mães",
+]

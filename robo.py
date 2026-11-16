@@ -967,6 +967,14 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
         if not modo_teste and i < len(fila) - 1:
             time.sleep(pausa)
 
+    # Dias promocionais e cupons oficiais da Shopee (dentro do horario de postagem)
+    if modo_teste or dentro_do_horario(cfg):
+        try:
+            avisar_dia_promocional(cfg, estado, tg, modo_teste)
+            avisar_cupons_shopee(cfg, estado, tg, modo_teste)
+        except Exception as erro:
+            log.info(f"  ✘ erro nos avisos de cupons/dias promocionais: {erro}")
+
     # Resumo diario para a Nicole repassar no Canal do WhatsApp (1x por dia)
     rc = cfg.get("resumo_whatsapp", {})
     hoje = datetime.now().strftime("%Y-%m-%d")
@@ -1069,6 +1077,120 @@ def montar_resumo_whatsapp(ofertas: list[Oferta], cfg: dict) -> str:
     if rc.get("rodape"):
         linhas.append(rc["rodape"])
     return "\n".join(linhas).strip()
+
+
+# --------------------------------------------------------------------------- #
+# Cupons e dias promocionais da Shopee
+# --------------------------------------------------------------------------- #
+
+CANAL_OFICIAL_SHOPEE = "afiliadosshopeebroficial"  # canal oficial da Shopee para afiliados
+_INTERNO = re.compile(r"afiliad|criador|comiss|inscrev|inscri|regulamento|forms\.gle|corrida de vendas", re.I)
+
+
+def _posts_canal_oficial() -> list[dict]:
+    """Le a pre-visualizacao publica do canal oficial de afiliados da Shopee no Telegram."""
+    t = requests.get(f"https://t.me/s/{CANAL_OFICIAL_SHOPEE}", headers={"User-Agent": NAVEGADOR}, timeout=30).text
+    posts = []
+    for b in re.split(r'<div class="tgme_widget_message_wrap', t)[1:]:
+        pid = re.search(r'data-post="[^/]+/(\d+)"', b)
+        quando = re.search(r'datetime="([^"]+)"', b)
+        corpo = re.search(r'<div class="tgme_widget_message_text[^"]*"[^>]*>(.*?)</div>', b, re.S)
+        if not (pid and quando and corpo):
+            continue
+        texto = html.unescape(re.sub(r"<[^>]+>", "", re.sub(r"<br\s*/?>", "\n", corpo.group(1))))
+        posts.append({"id": int(pid.group(1)), "em": datetime.fromisoformat(quando.group(1)), "texto": texto})
+    return posts
+
+
+def montar_aviso_cupom(texto: str, id_af: str) -> str | None:
+    """Transforma um post oficial com cupons num aviso para o canal (com o link de afiliada)."""
+    if not re.search(r"cupo", texto, re.I) or re.search(r"forms\.gle|inscrev", texto, re.I):
+        return None
+    paginas = re.findall(r"https?://(?:www\.)?shopee\.com\.br/m/[^\s#]+", texto)
+    codigos = re.findall(r"\b([A-Z0-9]{6,20})\s*[:–-]\s*([^\n]{5,90})", texto)
+    if not paginas and not codigos:
+        return None
+    linhas_txt = [l.strip() for l in texto.splitlines() if l.strip()]
+    titulo = next((l for l in linhas_txt if not _INTERNO.search(l) and "http" not in l), "Cupons na Shopee")
+    e = html.escape
+    msg = ["🎟️ <b>CUPONS NA SHOPEE</b>", "", e(titulo[:120])]
+    if codigos:
+        msg.append("")
+        for codigo, desc in codigos[:6]:
+            msg.append(f"🎟️ <code>{e(codigo)}</code>: {e(desc.strip())}")
+    if paginas:
+        link = link_shopee_afiliado(paginas[0], id_af)
+        msg += ["", f'👉 <a href="{e(link, quote=True)}">Pegue os cupons aqui</a>']
+    else:  # so codigo: leva para a Shopee para usar no carrinho
+        link = link_shopee_afiliado("https://shopee.com.br/", id_af)
+        msg += ["", f'👉 Use o cupom no carrinho: <a href="{e(link, quote=True)}">abrir a Shopee</a>']
+    msg += ["", "⚠️ Cupons são limitados e acabam rápido.",
+            "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você."]
+    return "\n".join(msg)
+
+
+def avisar_cupons_shopee(cfg: dict, estado: dict, tg: "Telegram", modo_teste: bool) -> int:
+    """Posta no canal os cupons novos que a Shopee divulgou no canal oficial de afiliados."""
+    cc = cfg.get("cupons_shopee", {})
+    id_af = str(cfg.get("shopee", {}).get("id_afiliado", ""))
+    if not cc.get("ativo", False) or not preenchido(id_af):
+        return 0
+    try:
+        posts = _posts_canal_oficial()
+    except Exception as erro:
+        log.info(f"Cupons Shopee: nao consegui ler o canal oficial: {erro}")
+        return 0
+    ultimo = estado.get("cupons_ultimo_id", 0)
+    limite = datetime.now().astimezone() - timedelta(hours=int(cc.get("validade_horas", 6)))
+    enviados = 0
+    for p in sorted(posts, key=lambda p: p["id"]):
+        if p["id"] <= ultimo:
+            continue
+        if not modo_teste:
+            estado["cupons_ultimo_id"] = p["id"]
+        if p["em"] < limite:  # antigo demais: cupom provavelmente ja acabou
+            continue
+        aviso = montar_aviso_cupom(p["texto"], id_af)
+        if aviso and enviados < int(cc.get("maximo_por_rodada", 2)):
+            tg.enviar(aviso)
+            enviados += 1
+            log.info(f"  ✔ cupom avisado (post oficial {p['id']})")
+    return enviados
+
+
+def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: bool) -> bool:
+    """Nos dias especiais (11.11, 12.12, Black Friday...), avisa no canal logo cedo."""
+    dc = cfg.get("dias_promocionais", {})
+    if not dc.get("ativo", False):
+        return False
+    hoje = datetime.now()
+    chave = hoje.strftime("%Y-%m-%d")
+    if estado.get("dia_promocional_avisado") == chave:
+        return False
+    nome = None
+    for item in dc.get("datas", []):  # "MM-DD Nome" ou "AAAA-MM-DD Nome"
+        data, _, rotulo = item.partition(" ")
+        if data in (hoje.strftime("%m-%d"), chave):
+            nome = rotulo.strip() or "Dia de promoções"
+    if not nome and dc.get("datas_duplas", True) and hoje.day == hoje.month:
+        nome = f"{hoje.day}.{hoje.month}"  # 1.1, 2.2 ... 12.12
+    if not nome:
+        return False
+    id_af = str(cfg.get("shopee", {}).get("id_afiliado", ""))
+    link = link_shopee_afiliado(dc.get("link_cupons", "https://shopee.com.br/"), id_af)
+    e = html.escape
+    texto = "\n".join([
+        f"📅 <b>HOJE É {e(nome.upper()) if nome.lower().startswith('dia ') else 'DIA DE ' + e(nome.upper())} NA SHOPEE!</b>", "",
+        "Promoções e cupons o dia todo. Vou postando aqui os melhores achados de lojas oficiais 👇", "",
+        f'🎟️ <a href="{e(link, quote=True)}">Veja as ofertas e cupons do dia</a>', "",
+        "🔔 Ative as notificações para não perder nada!",
+        "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você.",
+    ])
+    tg.enviar(texto)
+    if not modo_teste:
+        estado["dia_promocional_avisado"] = chave
+    log.info(f"  ✔ aviso de dia promocional: {nome}")
+    return True
 
 
 def carregar_config() -> dict:
