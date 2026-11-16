@@ -1,0 +1,51 @@
+name: Robo de Achadinhos
+
+on:
+  schedule:
+    # A cada 30 min, das 8h as 23h (horario de Brasilia = UTC-3)
+    - cron: "0,30 11-23,0-2 * * *"
+  workflow_dispatch: {}   # botao "Run workflow" para rodar na hora
+
+permissions:
+  contents: write   # para salvar o estado.json (o que ja foi postado)
+
+concurrency:
+  group: robo
+  cancel-in-progress: false
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: America/Sao_Paulo
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      SHOPEE_FEED_URL: ${{ secrets.SHOPEE_FEED_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - id: dia
+        run: echo "hoje=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      # O feed da Shopee e grande: baixa 1x por dia e reaproveita nas outras rodadas
+      - uses: actions/cache@v4
+        with:
+          path: shopee_feed.csv
+          key: shopee-feed-${{ steps.dia.outputs.hoje }}
+
+      - name: Rodar o robo
+        run: python robo.py uma-vez
+
+      - name: Salvar o que foi postado
+        if: always()
+        run: |
+          git config user.name "robo-achadinhos"
+          git config user.email "robo-achadinhos@users.noreply.github.com"
+          git add estado.json
+          git diff --cached --quiet || (git commit -m "estado [skip ci]" && git pull --rebase && git push)

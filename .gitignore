@@ -1,0 +1,8 @@
+# Nunca enviar para o GitHub
+segredos.toml
+robo.log
+shopee_feed.csv
+*.tmp
+__pycache__/
+Divulgacao/
+*.bat

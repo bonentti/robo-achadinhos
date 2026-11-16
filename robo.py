@@ -1,0 +1,1038 @@
+"""
+Robo de Achadinhos
+==================
+Procura ofertas (Shopee, Renner/Awin, Mercado Livre, Shein), monta a mensagem
+com o SEU link de afiliado e publica no seu canal do Telegram.
+
+Comandos (rode no terminal, dentro da pasta do robo):
+  python robo.py                  -> roda para sempre, verificando de tempos em tempos
+  python robo.py teste            -> faz UMA verificacao e so MOSTRA as mensagens (nao posta)
+  python robo.py uma-vez          -> faz UMA verificacao e posta de verdade
+  python robo.py testar-telegram  -> manda uma mensagem de teste no canal
+  python robo.py link-renner URL  -> gera o seu link de afiliado (Awin) para um produto da Renner
+  python robo.py postar --loja shein --nome "Vestido" --preco 59,90 --de 99,90 --link URL [--imagem URL]
+                                  -> posta uma oferta que voce achou manualmente
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import gzip
+import hashlib
+import html
+import io
+import json
+import logging
+import math
+import os
+import re
+import sys
+import time
+import tomllib
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta
+from pathlib import Path
+from urllib.parse import quote
+
+import requests
+
+PASTA = Path(__file__).resolve().parent
+ARQ_CONFIG = PASTA / "config.toml"
+ARQ_ESTADO = PASTA / "estado.json"
+ARQ_LOG = PASTA / "robo.log"
+
+NAVEGADOR = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+)
+
+NOMES_LOJAS = {
+    "shopee": "Shopee",
+    "renner": "Renner",
+    "mercadolivre": "Mercado Livre",
+    "shein": "Shein",
+    "hardyn": "Hardyn",
+    "kaisan": "Kaisan",
+}
+
+log = logging.getLogger("robo")
+
+
+# --------------------------------------------------------------------------- #
+# Utilidades
+# --------------------------------------------------------------------------- #
+
+def configurar_log() -> None:
+    fmt = logging.Formatter("%(asctime)s  %(message)s", "%d/%m %H:%M:%S")
+    log.setLevel(logging.INFO)
+    tela = logging.StreamHandler(sys.stdout)
+    tela.setFormatter(fmt)
+    arquivo = logging.FileHandler(ARQ_LOG, encoding="utf-8")
+    arquivo.setFormatter(fmt)
+    log.addHandler(tela)
+    log.addHandler(arquivo)
+
+
+def preenchido(valor) -> bool:
+    """False para campos vazios ou que ainda estao com o texto de exemplo."""
+    return bool(valor) and "COLOQUE" not in str(valor).upper()
+
+
+def parse_preco(valor) -> float | None:
+    """Aceita 59.9, "59,90", "1.234,56", "R$ 1.234,56", "1234.56"."""
+    if valor is None:
+        return None
+    if isinstance(valor, (int, float)):
+        return float(valor)
+    texto = re.sub(r"[^\d,.]", "", str(valor))
+    if not texto:
+        return None
+    if "," in texto and "." in texto:
+        if texto.rfind(",") > texto.rfind("."):  # 1.234,56
+            texto = texto.replace(".", "").replace(",", ".")
+        else:  # 1,234.56
+            texto = texto.replace(",", "")
+    elif "," in texto:
+        texto = texto.replace(",", ".")
+    elif texto.count(".") > 1 or (
+        isinstance(valor, str) and re.fullmatch(r"\d{1,3}\.\d{3}", texto)
+    ):  # "1.234.567" ou "2.499" (milhar no formato brasileiro)
+        texto = texto.replace(".", "")
+    try:
+        return float(texto)
+    except ValueError:
+        return None
+
+
+def reais(valor: float) -> str:
+    s = f"{valor:,.2f}"  # 1,234.56
+    return "R$ " + s.replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+# --------------------------------------------------------------------------- #
+# Oferta e mensagem
+# --------------------------------------------------------------------------- #
+
+@dataclass
+class Oferta:
+    loja: str
+    nome: str
+    preco: float
+    link: str
+    preco_antigo: float | None = None
+    imagem: str | None = None
+    chave: str = ""  # identificador unico para nao repetir posts
+    extras: list[str] = field(default_factory=list)
+    chamada: str | None = None  # frase de impacto no topo (ex.: "O PREÇO CAIU!")
+    cupom: str | None = None
+    prioridade: float | None = None  # quanto maior, antes posta (padrao: o desconto)
+    categoria: str = ""
+
+    @property
+    def desconto(self) -> int:
+        if self.preco_antigo and self.preco_antigo > self.preco:
+            return round((1 - self.preco / self.preco_antigo) * 100)
+        return 0
+
+    @property
+    def ordem(self) -> float:
+        return self.prioridade if self.prioridade is not None else self.desconto
+
+
+def montar_mensagem(oferta: Oferta, cfg: dict) -> str:
+    msg_cfg = cfg.get("mensagem", {})
+    e = html.escape
+    nome = oferta.nome.strip()
+    if len(nome) > 120:
+        nome = nome[:117] + "..."
+    # Chamada no topo: os canais grandes abrem quase todo post com uma frase de impacto.
+    chamada = oferta.chamada
+    if not chamada and msg_cfg.get("usar_chamadas", True):
+        if oferta.desconto >= 1:
+            chamada = f"🔥 {oferta.desconto}% OFF"
+    linhas = []
+    if chamada:
+        linhas += [f"<b>{e(chamada)}</b>", ""]
+    linhas += [f"🛍️ {e(nome)}", ""]
+    if oferta.desconto >= 1:
+        linhas.append(f"De <s>{reais(oferta.preco_antigo)}</s>")
+        linhas.append(f"💰 <b>Por {reais(oferta.preco)}</b>  (-{oferta.desconto}%)")
+    else:
+        linhas.append(f"💰 <b>{reais(oferta.preco)}</b>")
+    if oferta.cupom:
+        linhas.append(f"🎟️ Cupom: <code>{e(oferta.cupom)}</code>")
+    for extra in oferta.extras:
+        linhas.append(e(extra))
+    linhas.append(f"🏬 {NOMES_LOJAS.get(oferta.loja, oferta.loja.title())}")
+    linhas.append("")
+    linhas.append(f'🛒 <a href="{e(oferta.link, quote=True)}">Comprar aqui</a>')
+    rodape = msg_cfg.get("rodape", "")
+    if rodape:
+        linhas += ["", e(rodape)]
+    return "\n".join(linhas)
+
+
+# --------------------------------------------------------------------------- #
+# Telegram
+# --------------------------------------------------------------------------- #
+
+class Telegram:
+    def __init__(self, cfg: dict, modo_teste: bool):
+        tg = cfg.get("telegram", {})
+        self.token = tg.get("token_do_bot", "")
+        self.canal = str(tg.get("canal", ""))
+        self.modo_teste = modo_teste
+        if not modo_teste and not (preenchido(self.token) and preenchido(self.canal)):
+            raise SystemExit(
+                "Falta configurar o Telegram (token_do_bot e canal) no config.toml. "
+                "Veja o LEIA-ME."
+            )
+
+    def _api(self, metodo: str, dados: dict, arquivos: dict | None = None) -> dict:
+        url = f"https://api.telegram.org/bot{self.token}/{metodo}"
+        r = requests.post(url, data=dados, files=arquivos, timeout=60)
+        resposta = r.json()
+        if not resposta.get("ok"):
+            raise RuntimeError(resposta.get("description", r.text))
+        return resposta
+
+    def enviar(self, texto: str, imagem: str | None = None) -> None:
+        if self.modo_teste:
+            print("\n" + "=" * 60)
+            if imagem:
+                print(f"[foto: {imagem}]")
+            print(texto)
+            print("=" * 60)
+            return
+        if imagem and len(texto) <= 1024:
+            dados = {"chat_id": self.canal, "caption": texto, "parse_mode": "HTML"}
+            try:
+                # Algumas lojas (ex.: Renner) nao deixam o Telegram baixar a foto,
+                # entao o robo baixa a foto e envia o arquivo.
+                foto = requests.get(imagem, headers={"User-Agent": NAVEGADOR}, timeout=30)
+                foto.raise_for_status()
+                self._api("sendPhoto", dados, {"photo": ("foto.jpg", foto.content)})
+                return
+            except Exception as erro:
+                try:
+                    self._api("sendPhoto", {**dados, "photo": imagem})
+                    return
+                except Exception:
+                    log.info(f"  (nao consegui enviar a foto: {erro}; enviando so texto)")
+        self._api("sendMessage", {
+            "chat_id": self.canal, "text": texto, "parse_mode": "HTML",
+            "disable_web_page_preview": "false",
+        })
+
+
+# --------------------------------------------------------------------------- #
+# Fonte 1: Shopee (API oficial de afiliados)
+# --------------------------------------------------------------------------- #
+
+SHOPEE_URL = "https://open-api.affiliate.shopee.com.br/graphql"
+
+
+def shopee_consulta(app_id: str, segredo: str, consulta: str) -> dict:
+    corpo = json.dumps({"query": consulta}, separators=(",", ":"))
+    ts = str(int(time.time()))
+    assinatura = hashlib.sha256((app_id + ts + corpo + segredo).encode()).hexdigest()
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"SHA256 Credential={app_id}, Timestamp={ts}, Signature={assinatura}",
+    }
+    r = requests.post(SHOPEE_URL, data=corpo.encode(), headers=headers, timeout=30)
+    dados = r.json()
+    if dados.get("errors"):
+        raise RuntimeError(dados["errors"][0].get("message", str(dados["errors"])))
+    return dados["data"]
+
+
+def buscar_shopee(cfg: dict) -> list[Oferta]:
+    sp = cfg.get("shopee", {})
+    if not sp.get("ativo", False):
+        return []
+    app_id, segredo = str(sp.get("app_id", "")), str(sp.get("segredo", ""))
+    if not (preenchido(app_id) and preenchido(segredo)):
+        log.info("Shopee: falta app_id/segredo no config.toml — pulando.")
+        return []
+
+    desconto_min = sp.get("desconto_minimo", 30)
+    nota_min = sp.get("nota_minima", 4.5)
+    vendas_min = sp.get("vendas_minimas", 50)
+    preco_max = sp.get("preco_maximo", 0)
+    ofertas: list[Oferta] = []
+
+    for palavra in sp.get("palavras_chave", []):
+        consulta = (
+            "{ productOfferV2(keyword: %s, sortType: 2, page: 1, limit: %d) { nodes {"
+            " itemId productName priceMin priceDiscountRate imageUrl offerLink"
+            " sales ratingStar shopName } } }"
+        ) % (json.dumps(palavra, ensure_ascii=False), int(sp.get("resultados_por_busca", 30)))
+        try:
+            nos = shopee_consulta(app_id, segredo, consulta)["productOfferV2"]["nodes"]
+        except Exception as erro:
+            log.info(f"Shopee: erro ao buscar '{palavra}': {erro}")
+            continue
+
+        aprovados = 0
+        for p in nos:
+            preco = parse_preco(p.get("priceMin"))
+            desconto = int(p.get("priceDiscountRate") or 0)
+            nota = float(p.get("ratingStar") or 0)
+            vendas = int(p.get("sales") or 0)
+            if not preco or desconto < desconto_min or nota < nota_min or vendas < vendas_min:
+                continue
+            if preco_max and preco > preco_max:
+                continue
+            antigo = round(preco / (1 - desconto / 100), 2) if 0 < desconto < 100 else None
+            extras = [f"⭐ {nota:.1f}  |  {vendas:,} vendidos".replace(",", ".")]
+            ofertas.append(Oferta(
+                loja="shopee", nome=p["productName"], preco=preco, preco_antigo=antigo,
+                link=p["offerLink"], imagem=p.get("imageUrl"),
+                chave=f"shopee:{p['itemId']}", extras=extras,
+            ))
+            aprovados += 1
+        log.info(f"Shopee '{palavra}': {len(nos)} produtos, {aprovados} passaram nos filtros")
+    return ofertas
+
+
+ARQ_FEED_SHOPEE = PASTA / "shopee_feed.csv"
+
+
+def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") -> str:
+    """Os links do feed nao levam o ID de afiliada; sem ele nao ha comissao."""
+    if "affiliate_id=" in link:
+        return link
+    if "an_redir" not in link:
+        link = "https://shope.ee/an_redir?origin_link=" + quote(link, safe="")
+    return f"{link}&affiliate_id={id_afiliado}&sub_id={sub_id}"
+
+
+def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
+    """Feed de produtos do painel de afiliados (Criativo > Feed de produto), atualizado 1x por dia."""
+    sp = cfg.get("shopee", {})
+    urls = [u for u in sp.get("urls_do_feed", []) if preenchido(u)]
+    id_af = str(sp.get("id_afiliado", ""))
+    if not sp.get("usar_feed", False) or not urls or not preenchido(id_af):
+        return []
+    categorias = set(sp.get("categorias_feed", ["Women Clothes", "Women Shoes", "Women Bags", "Beauty"]))
+    # O feed de lojas oficiais e enorme (~200 MB): baixa 1x por dia e guarda so as
+    # categorias do canal num arquivo pequeno.
+    if not ARQ_FEED_SHOPEE.exists() or time.time() - ARQ_FEED_SHOPEE.stat().st_mtime > 24 * 3600:
+        csv.field_size_limit(10**8)
+        temp = PASTA / "shopee_feed_baixando.tmp"
+        guardados, cabecalho = [], None
+        for url in urls:
+            try:
+                with requests.get(url, timeout=900, stream=True) as r, open(temp, "wb") as f:
+                    r.raise_for_status()
+                    for bloco in r.iter_content(1 << 20):
+                        f.write(bloco)
+                with open(temp, "rb") as f:
+                    gz = f.read(2) == b"\x1f\x8b"
+                aberto = gzip.open(temp, "rt", encoding="utf-8-sig", errors="replace", newline="") if gz \
+                    else open(temp, encoding="utf-8-sig", errors="replace", newline="")
+                with aberto as f:
+                    leitor = csv.DictReader(f)
+                    cabecalho = cabecalho or [c for c in leitor.fieldnames if c not in ("description", "global_item_attributes")]
+                    for linha in leitor:
+                        if linha.get("global_category1") in categorias:
+                            guardados.append({c: linha.get(c, "") for c in cabecalho})
+            except Exception as erro:
+                log.info(f"Shopee (feed): erro ao baixar o feed: {erro}")
+        temp.unlink(missing_ok=True)
+        if guardados:
+            with open(ARQ_FEED_SHOPEE, "w", encoding="utf-8", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=cabecalho)
+                w.writeheader()
+                w.writerows(guardados)
+    if not ARQ_FEED_SHOPEE.exists():
+        return []
+
+    desconto_min = sp.get("desconto_minimo", 30)
+    nota_min = sp.get("nota_minima", 4.7)
+    nota_loja_min = sp.get("nota_minima_loja", 4.7)
+    curtidas_min = sp.get("curtidas_minimas", 500)
+    preco_max = sp.get("preco_maximo", 0)
+    excluir = [p.lower() for p in sp.get("excluir_palavras", ["masculin", "infantil", "kids"])]
+    lojas_bloqueadas = [p.lower() for p in sp.get("lojas_bloqueadas", [])]
+    ofertas, total = [], 0
+    with open(ARQ_FEED_SHOPEE, encoding="utf-8", newline="") as f:
+        for linha in csv.DictReader(f):
+            total += 1
+            if linha.get("global_category1") not in categorias:
+                continue
+            if linha.get("cb_option", "Non-Cross border") != "Non-Cross border":  # vendedor no Brasil
+                continue
+            if linha.get("condition", "New") != "New":
+                continue
+            titulo = linha.get("title", "")
+            if any(p in titulo.lower() for p in excluir):
+                continue
+            preco = parse_preco(linha.get("sale_price"))
+            antigo = parse_preco(linha.get("price"))
+            try:
+                desconto = int(float(linha.get("discount_percentage") or 0))
+                nota = float(linha.get("item_rating") or 0)
+                nota_loja = float(linha.get("shop_rating") or 5)
+                curtidas = int(float(linha.get("like") or 0))
+            except ValueError:
+                continue
+            if (not preco or desconto < desconto_min or nota < nota_min or nota_loja < nota_loja_min
+                    or curtidas < curtidas_min or (preco_max and preco > preco_max)):
+                continue
+            link = linha.get("product_short link") or linha.get("product_link")
+            if not link:
+                continue
+            loja_nome = (linha.get("shop_name") or "").strip()
+            if any(b in loja_nome.lower() for b in lojas_bloqueadas):
+                continue
+            extras = [f"⭐ {nota:.1f}" + (f"  |  ❤️ {curtidas:,} curtidas".replace(",", ".") if curtidas else "")]
+            if loja_nome:
+                extras.append(f"✅ Loja oficial: {loja_nome}")
+            o = Oferta(
+                loja="shopee", nome=titulo or "Oferta", preco=preco,
+                preco_antigo=antigo if antigo and antigo > preco else None,
+                link=link_shopee_afiliado(link, id_af), imagem=linha.get("image_link") or None,
+                chave=f"shopee:{linha.get('itemid')}", extras=extras,
+                categoria=linha.get("global_category1", ""),
+            )
+            # Prioriza produtos populares (curtidas) com bom desconto, e nao so o maior %
+            o.prioridade = desconto + 10 * math.log10(max(curtidas, 1))
+            ofertas.append(o)
+    log.info(f"Shopee (lojas oficiais): {total} produtos do tema, {len(ofertas)} passaram nos filtros")
+    return ofertas
+
+
+# --------------------------------------------------------------------------- #
+# Fonte 2: Renner pela Awin (link automatico + feed de produtos opcional)
+# --------------------------------------------------------------------------- #
+
+def link_awin(cfg: dict, url_produto: str) -> str | None:
+    aw = cfg.get("awin", {})
+    pub, loja = aw.get("id_publisher", ""), aw.get("id_anunciante_renner", "")
+    if not (preenchido(pub) and preenchido(loja)):
+        return None
+    return (
+        f"https://www.awin1.com/cread.php?awinmid={loja}&awinaffid={pub}"
+        f"&ued={quote(url_produto, safe='')}"
+    )
+
+
+def buscar_feed_awin(cfg: dict) -> list[Oferta]:
+    aw = cfg.get("awin", {})
+    url = aw.get("url_do_feed", "")
+    if not aw.get("usar_feed", False) or not preenchido(url):
+        return []
+    try:
+        r = requests.get(url, timeout=120)
+        r.raise_for_status()
+        conteudo = r.content
+        if conteudo[:2] == b"\x1f\x8b":
+            conteudo = gzip.decompress(conteudo)
+        texto = conteudo.decode("utf-8-sig", errors="replace")
+    except Exception as erro:
+        log.info(f"Renner (feed Awin): erro ao baixar: {erro}")
+        return []
+
+    palavras = [p.lower() for p in aw.get("palavras_chave", [])]
+    desconto_min = aw.get("desconto_minimo", 30)
+    preco_max = aw.get("preco_maximo", 0)
+    ofertas = []
+    linhas = csv.DictReader(io.StringIO(texto))
+    total = 0
+    for linha in linhas:
+        total += 1
+        nome = linha.get("product_name") or ""
+        if palavras and not any(p in nome.lower() for p in palavras):
+            continue
+        preco = parse_preco(linha.get("search_price") or linha.get("store_price"))
+        antigo = parse_preco(linha.get("rrp_price") or linha.get("product_price_old"))
+        link = linha.get("aw_deep_link")
+        if not (preco and antigo and link) or antigo <= preco:
+            continue
+        desconto = (1 - preco / antigo) * 100
+        if desconto < desconto_min or (preco_max and preco > preco_max):
+            continue
+        ofertas.append(Oferta(
+            loja="renner", nome=nome, preco=preco, preco_antigo=antigo, link=link,
+            imagem=linha.get("merchant_image_url") or linha.get("aw_image_url"),
+            chave=f"renner:{linha.get('aw_product_id') or link}",
+        ))
+    log.info(f"Renner (feed Awin): {total} produtos no feed, {len(ofertas)} passaram nos filtros")
+    return ofertas
+
+
+RENNER = "https://www.lojasrenner.com.br"
+
+
+def _renner_registros(url: str) -> list[dict]:
+    """Le os produtos de uma pagina de lista/categoria da Renner (dados que a propria pagina traz)."""
+    r = requests.get(url, headers={"User-Agent": NAVEGADOR, "Accept-Language": "pt-BR"}, timeout=30)
+    r.raise_for_status()
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
+    if not m:
+        return []
+    achados: list[dict] = []
+
+    def andar(o):
+        if isinstance(o, dict):
+            a = o.get("attributes")
+            if isinstance(a, dict) and "prop.product.displayName" in a:
+                achados.append(a)
+            for v in o.values():
+                andar(v)
+        elif isinstance(o, list):
+            for v in o:
+                andar(v)
+
+    andar(json.loads(m.group(1)))
+    return achados
+
+
+def buscar_renner_promocoes(cfg: dict) -> list[Oferta]:
+    """Percorre as listas de promocao da Renner e pega pecas femininas com desconto alto."""
+    rc = cfg.get("renner_auto", {})
+    if not rc.get("ativo", False):
+        return []
+    if not link_awin(cfg, RENNER):
+        log.info("Renner automatica: falta configurar a secao [awin] — pulando.")
+        return []
+    desconto_min = rc.get("desconto_minimo", 50)
+    preco_max = rc.get("preco_maximo", 0)
+    permitidas = [c.lower() for c in rc.get("categorias", ["feminino", "bolsas-e-calcados", "perfumaria-e-cosmeticos"])]
+
+    paginas = list(rc.get("paginas_extras", []))
+    try:  # as listas de promocao mudam: pega as que estao na pagina inicial agora
+        home = requests.get(RENNER + "/", headers={"User-Agent": NAVEGADOR}, timeout=30).text
+        paginas += sorted(set(re.findall(r'/lista/-/N-[0-9a-z]+', home)))
+    except Exception as erro:
+        log.info(f"Renner automatica: nao consegui abrir a pagina inicial: {erro}")
+
+    vistos, ofertas, total = set(), [], 0
+    for pagina in dict.fromkeys(paginas):
+        url = pagina if pagina.startswith("http") else RENNER + pagina
+        try:
+            registros = _renner_registros(url)
+        except Exception as erro:
+            log.info(f"Renner automatica: erro em {pagina}: {erro}")
+            continue
+        total += len(registros)
+        for a in registros:
+            g = lambda k: (a.get(k) or [""])[0]
+            pid = g("prop.product.repositoryId") or g("record.id")
+            if pid in vistos:
+                continue
+            vistos.add(pid)
+            hierarquia = g("dim.product.categoryHierarchy").lower()
+            if "masculin" in hierarquia or "infantil" in hierarquia or not any(hierarquia.startswith(c) for c in permitidas):
+                continue
+            if g("dim.product.stockStatus") and g("dim.product.stockStatus") != "INSTOCK":
+                continue
+            preco, antigo = parse_preco(g("prop.sku.activePrice")), parse_preco(g("prop.sku.listPrice"))
+            if not (preco and antigo) or antigo <= preco:
+                continue
+            desconto = (1 - preco / antigo) * 100
+            if desconto < desconto_min or (preco_max and preco > preco_max):
+                continue
+            caminho = g("prop.product.url")
+            imagem = g("prop.product.smallImageUrl").replace("/small/", "/zoom/")
+            if imagem.startswith("//"):
+                imagem = "https:" + imagem
+            ofertas.append(Oferta(
+                loja="renner", nome=g("prop.product.displayName"), preco=preco, preco_antigo=antigo,
+                link=link_awin(cfg, RENNER + caminho), imagem=imagem or None, chave=f"renner:{pid}",
+                categoria=hierarquia.split("|")[0],
+            ))
+        time.sleep(1)
+    log.info(f"Renner automatica: {len(paginas)} listas, {total} pecas lidas, {len(ofertas)} passaram nos filtros")
+    return ofertas
+
+
+def buscar_hardyn(cfg: dict) -> list[Oferta]:
+    """Outlet da Hardyn (parceria por cupom): le a pagina publica de outlet."""
+    hc = cfg.get("hardyn", {})
+    if not hc.get("ativo", False):
+        return []
+    base = "https://www.hardyn.com.br"
+    desconto_min = hc.get("desconto_minimo", 30)
+    preco_max = hc.get("preco_maximo", 0)
+    ofertas, total = [], 0
+    for pagina in hc.get("paginas", ["/hotsite/outlet"]):
+        try:
+            r = requests.get(base + pagina, headers={"User-Agent": NAVEGADOR, "Accept-Language": "pt-BR"}, timeout=30)
+            r.raise_for_status()
+        except Exception as erro:
+            log.info(f"Hardyn: erro ao abrir {pagina}: {erro}")
+            continue
+        for card in re.split(r'<li data-id-produto=', r.text)[1:]:
+            total += 1
+            nome = re.search(r'data-nome="([^"]+)"', card)
+            link = re.search(r'class=linkProduto href="([^"]+)"', card)
+            de = re.search(r'class="de p-price">\s*R\$\s*([\d.,]+)', card)
+            por = re.search(r'class="boleto p-price"[^>]*>\s*R\$\s*([\d.,]+)', card)
+            img = re.search(r'<img src="([^"]+)"', card)
+            if not (nome and link and por):
+                continue
+            preco, antigo = parse_preco(por.group(1)), parse_preco(de.group(1)) if de else None
+            if not preco or not antigo or antigo <= preco:
+                continue
+            desconto = (1 - preco / antigo) * 100
+            if desconto < desconto_min or (preco_max and preco > preco_max):
+                continue
+            pid = re.search(r"/produto/(\d+)/", link.group(1))
+            ofertas.append(Oferta(
+                loja="hardyn", nome=html.unescape(nome.group(1)), preco=preco, preco_antigo=antigo,
+                link=base + link.group(1), imagem=img.group(1) if img else None,
+                chave=f"hardyn:{pid.group(1) if pid else link.group(1)}", categoria="fitness",
+                cupom=hc.get("cupom") or cfg.get("cupons", {}).get("hardyn") or None,
+            ))
+    log.info(f"Hardyn (outlet): {total} produtos lidos, {len(ofertas)} passaram nos filtros")
+    return ofertas
+
+
+# --------------------------------------------------------------------------- #
+# Fonte 3: lista de produtos vigiados (Mercado Livre, Renner, Shein...)
+# --------------------------------------------------------------------------- #
+
+def ler_pagina_produto(url: str) -> dict:
+    """Le nome, preco e foto de uma pagina de produto (dados estruturados da propria loja)."""
+    r = requests.get(url, headers={
+        "User-Agent": NAVEGADOR, "Accept-Language": "pt-BR,pt;q=0.9",
+    }, timeout=30)
+    r.raise_for_status()
+    pagina = r.text
+    info: dict = {}
+
+    # 1) JSON-LD (schema.org Product)
+    for bloco in re.findall(
+        r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        pagina, flags=re.S | re.I,
+    ):
+        try:
+            dados = json.loads(bloco.strip())
+        except Exception:
+            continue
+        candidatos = dados if isinstance(dados, list) else [dados]
+        for item in list(candidatos):
+            if isinstance(item, dict) and "@graph" in item:
+                candidatos += item["@graph"]
+        for item in candidatos:
+            if not isinstance(item, dict) or "Product" not in str(item.get("@type")):
+                continue
+            ofertas = item.get("offers") or {}
+            if isinstance(ofertas, list):
+                ofertas = ofertas[0] if ofertas else {}
+            preco = parse_preco(ofertas.get("price") or ofertas.get("lowPrice"))
+            if preco:
+                info["preco"] = preco
+                info["nome"] = item.get("name")
+                img = item.get("image")
+                if isinstance(img, list):
+                    img = img[0] if img else None
+                if isinstance(img, dict):
+                    img = img.get("url")
+                info["imagem"] = img
+                break
+        if "preco" in info:
+            break
+
+    # 2) Meta tags (reserva)
+    def meta(*nomes):
+        for n in nomes:
+            m = re.search(
+                rf'<meta[^>]+(?:property|name|itemprop)=["\']{re.escape(n)}["\'][^>]+content=["\']([^"\']+)',
+                pagina, flags=re.I,
+            )
+            if m:
+                return html.unescape(m.group(1))
+        return None
+
+    if "preco" not in info:
+        p = parse_preco(meta("product:price:amount", "og:price:amount", "price"))
+        if p:
+            info["preco"] = p
+    info["nome"] = info.get("nome") or meta("og:title")
+    info["imagem"] = info.get("imagem") or meta("og:image")
+    # Preco antigo ("De"), quando a loja mostra (ex.: lojas Magento como a Kaisan)
+    m = re.search(r'old-price.{0,400}?R\$\s*(?:&nbsp;)?\s*([\d.]+,\d{2})', pagina, flags=re.S)
+    if m and info.get("preco"):
+        antigo = parse_preco(m.group(1))
+        if antigo and antigo > info["preco"]:
+            info["preco_antigo"] = antigo
+    if info["imagem"] and info["imagem"].startswith("//"):
+        info["imagem"] = "https:" + info["imagem"]
+    return info
+
+
+_ML_TOKEN: dict = {}
+
+
+def ler_mercadolivre(cfg: dict, url: str) -> dict:
+    """O Mercado Livre bloqueia leitura de paginas por robos; usa a API oficial."""
+    ml = cfg.get("mercadolivre", {})
+    cid, segredo = str(ml.get("client_id", "")), str(ml.get("client_secret", ""))
+    if not (preenchido(cid) and preenchido(segredo)):
+        raise RuntimeError("preencha client_id e client_secret na secao [mercadolivre]")
+    if not _ML_TOKEN or _ML_TOKEN["expira"] < time.time():
+        r = requests.post("https://api.mercadolibre.com/oauth/token", data={
+            "grant_type": "client_credentials", "client_id": cid, "client_secret": segredo,
+        }, timeout=30)
+        dados = r.json()
+        if "access_token" not in dados:
+            raise RuntimeError(f"Mercado Livre recusou as credenciais: {dados.get('message', dados)}")
+        _ML_TOKEN.update(token=dados["access_token"], expira=time.time() + dados.get("expires_in", 3600) - 120)
+    auth = {"Authorization": f"Bearer {_ML_TOKEN['token']}"}
+
+    catalogo = re.search(r"/p/(MLB\d+)", url)
+    if catalogo:  # pagina de catalogo (.../p/MLB123)
+        d = requests.get(f"https://api.mercadolibre.com/products/{catalogo.group(1)}", headers=auth, timeout=30).json()
+        caixa = d.get("buy_box_winner") or {}
+        fotos = d.get("pictures") or [{}]
+        return {"preco": caixa.get("price"), "nome": d.get("name"), "imagem": fotos[0].get("url")}
+
+    item = re.search(r"MLB-?(\d+)", url)
+    if not item:
+        raise RuntimeError("nao achei o codigo MLB no link")
+    d = requests.get(f"https://api.mercadolibre.com/items/MLB{item.group(1)}", headers=auth, timeout=30).json()
+    if "price" not in d:
+        raise RuntimeError(d.get("message", "resposta sem preco"))
+    fotos = d.get("pictures") or [{}]
+    return {"preco": d.get("price"), "nome": d.get("title"),
+            "imagem": fotos[0].get("secure_url") or d.get("thumbnail")}
+
+
+def verificar_lista(cfg: dict, estado: dict) -> list[Oferta]:
+    produtos = cfg.get("produto", [])
+    if not produtos:
+        return []
+    queda_min = cfg.get("vigiados", {}).get("queda_minima_percentual", 10)
+    vistos = estado.setdefault("vigiados", {})
+    ofertas = []
+
+    for prod in produtos:
+        url = prod.get("url", "")
+        loja = prod.get("loja", "").lower().replace(" ", "")
+        if not preenchido(url):
+            continue
+        if loja == "shein":
+            log.info("Shein bloqueia robos (captcha), entao nao da para vigiar preco. "
+                     "Use o postar-oferta.bat para postar ofertas da Shein.")
+            continue
+        link = prod.get("link_afiliado", "")
+        cupom = prod.get("cupom") or cfg.get("cupons", {}).get(loja)
+        if not preenchido(link) and loja == "renner":
+            link = link_awin(cfg, url) or ""
+        if not preenchido(link) and preenchido(cupom):
+            link = url  # parceria por cupom: o link e o normal, a comissao vem do cupom
+        if not preenchido(link):
+            log.info(f"Vigiado sem link de afiliado, pulando: {url}")
+            continue
+
+        try:
+            if loja == "mercadolivre":
+                info = ler_mercadolivre(cfg, url)
+            else:
+                info = ler_pagina_produto(url)
+        except Exception as erro:
+            log.info(f"Vigiado [{loja}] nao consegui abrir a pagina ({erro}): {url}")
+            continue
+        preco = info.get("preco")
+        if not preco:
+            log.info(f"Vigiado [{loja}] nao achei o preco na pagina: {url}")
+            continue
+
+        nome = prod.get("nome") or info.get("nome") or "Oferta"
+        nome = re.sub(r"\s*\|\s*Ref:.*$", "", nome)  # tira o codigo de referencia (Kaisan)
+        reg = vistos.setdefault(url, {})
+        # "referencia" = preco normal do produto; so muda quando o preco NAO esta em queda
+        # (assim uma queda nao se perde se nao der para postar nesta rodada).
+        anterior = reg.get("referencia")
+        reg["maior_preco"] = max(reg.get("maior_preco", preco), preco)
+        reg["menor_preco"] = min(reg.get("menor_preco", preco), preco)
+        reg["ultimo_preco"] = preco
+        reg["visto_em"] = datetime.now().isoformat(timespec="minutes")
+
+        alvo = parse_preco(prod.get("preco_alvo"))
+        caiu = anterior is not None and preco <= anterior * (1 - queda_min / 100)
+        if not caiu:
+            reg["referencia"] = preco
+        ultimo_postado = reg.get("ultimo_postado")
+        if ultimo_postado is not None and preco > ultimo_postado * (1 + queda_min / 100):
+            reg.pop("ultimo_postado")  # preco subiu de novo: uma nova queda pode ser postada
+            ultimo_postado = None
+        bateu_alvo = alvo is not None and preco <= alvo
+        ja_postado_igual = ultimo_postado is not None and preco >= ultimo_postado
+
+        situacao = f"{reais(preco)}" + (f" (antes {reais(anterior)})" if anterior else " (primeira leitura)")
+        log.info(f"Vigiado [{loja}] {nome[:40]}: {situacao}")
+
+        # Produto que a loja ja mostra em promocao ("De R$ X por R$ Y")
+        antigo_loja = info.get("preco_antigo")
+        em_promocao = bool(antigo_loja) and preco <= antigo_loja * (1 - queda_min / 100)
+
+        if (caiu or bateu_alvo or em_promocao) and not ja_postado_igual:
+            de = antigo_loja or (anterior if (anterior and anterior > preco) else reg["maior_preco"])
+            extras = []
+            if preco <= reg["menor_preco"] and reg["maior_preco"] > preco:
+                extras.append("📉 Menor preço que já vimos!")
+            ofertas.append(Oferta(
+                loja=loja, nome=nome, preco=preco,
+                preco_antigo=de if de and de > preco else None,
+                link=link, imagem=prod.get("imagem") or info.get("imagem"),
+                chave=f"vigiado:{url}", extras=extras, categoria=loja,
+                cupom=cupom if preenchido(cupom) else None,
+            ))
+            reg["_candidato"] = preco
+    return ofertas
+
+
+# --------------------------------------------------------------------------- #
+# Estado (o que ja foi postado)
+# --------------------------------------------------------------------------- #
+
+def carregar_estado() -> dict:
+    if ARQ_ESTADO.exists():
+        try:
+            return json.loads(ARQ_ESTADO.read_text(encoding="utf-8"))
+        except Exception:
+            log.info("estado.json corrompido — comecando do zero.")
+    return {}
+
+
+def salvar_estado(estado: dict) -> None:
+    ARQ_ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def pode_postar(oferta: Oferta, estado: dict, dias_repetir: int) -> bool:
+    if oferta.chave.startswith("vigiado:"):
+        return True  # regra propria em verificar_lista
+    postado = estado.get("postados", {}).get(oferta.chave)
+    if not postado:
+        return True
+    quando = datetime.fromisoformat(postado["em"])
+    mais_barato = oferta.preco < postado["preco"] * 0.95
+    return mais_barato or datetime.now() - quando > timedelta(days=dias_repetir)
+
+
+def marcar_postado(oferta: Oferta, estado: dict) -> None:
+    agora = datetime.now().isoformat(timespec="minutes")
+    if oferta.chave.startswith("vigiado:"):
+        url = oferta.chave.split(":", 1)[1]
+        reg = estado.setdefault("vigiados", {}).setdefault(url, {})
+        reg["ultimo_postado"] = oferta.preco
+        reg["referencia"] = oferta.preco
+        reg.pop("_candidato", None)
+    else:
+        estado.setdefault("postados", {})[oferta.chave] = {"preco": oferta.preco, "em": agora}
+
+
+def limpar_estado(estado: dict) -> None:
+    limite = datetime.now() - timedelta(days=60)
+    postados = estado.get("postados", {})
+    for chave in [k for k, v in postados.items() if datetime.fromisoformat(v["em"]) < limite]:
+        del postados[chave]
+    for reg in estado.get("vigiados", {}).values():
+        reg.pop("_candidato", None)
+
+
+# --------------------------------------------------------------------------- #
+# Rodada principal
+# --------------------------------------------------------------------------- #
+
+def dentro_do_horario(cfg: dict) -> bool:
+    ag = cfg.get("agenda", {})
+    inicio, fim = ag.get("postar_a_partir_de", "08:00"), ag.get("postar_ate", "23:00")
+    agora = datetime.now().strftime("%H:%M")
+    return inicio <= agora <= fim if inicio <= fim else (agora >= inicio or agora <= fim)
+
+
+def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
+    estado = carregar_estado()
+    ag = cfg.get("agenda", {})
+    max_posts = int(ag.get("maximo_de_posts_por_rodada", 5))
+    pausa = int(ag.get("segundos_entre_posts", 60))
+    dias_repetir = int(ag.get("dias_para_repetir_oferta", 7))
+
+    ofertas = (buscar_shopee(cfg) + buscar_shopee_feed(cfg) + buscar_feed_awin(cfg) + buscar_renner_promocoes(cfg)
+               + buscar_hardyn(cfg)
+               + verificar_lista(cfg, estado))
+    # Filtros gerais: conteudo que nao combina com o canal e descontos "bons demais"
+    # (preco antigo inflado so para parecer promocao).
+    filtros = cfg.get("filtros", {})
+    bloqueadas = [p.lower() for p in filtros.get("palavras_bloqueadas", [])]
+    desconto_max = filtros.get("desconto_maximo", 0)
+    ofertas = [
+        o for o in ofertas
+        if not any(p in o.nome.lower() for p in bloqueadas)
+        and not (desconto_max and o.desconto > desconto_max)
+    ]
+    ofertas = [o for o in ofertas if pode_postar(o, estado, dias_repetir)]
+
+    # Vigiados primeiro (sao quedas reais de preco), depois maiores descontos.
+    # Intercala as lojas para o canal nao ficar so com uma.
+    ofertas.sort(key=lambda o: (not o.chave.startswith("vigiado:"), -o.ordem))
+    # Evita postar varias versoes do mesmo produto (ex.: o mesmo item em 3 cores)
+    parecidos, unicas = set(), []
+    for o in ofertas:
+        base = re.sub(r"[^a-z0-9]", "", o.nome.lower())[:22]
+        if base not in parecidos:
+            parecidos.add(base)
+            unicas.append(o)
+    ofertas = unicas
+    por_loja: dict[str, list[Oferta]] = {}
+    for o in ofertas:
+        por_loja.setdefault(o.loja, []).append(o)
+    # Reveza as lojas: comeca pela que esta ha mais tempo sem aparecer no canal
+    vez = estado.get("ultima_vez_loja", {})
+    por_loja = dict(sorted(por_loja.items(), key=lambda kv: vez.get(kv[0], "")))
+    fila = []
+    while any(por_loja.values()):
+        for lista in por_loja.values():
+            if lista:
+                fila.append(lista.pop(0))
+    fila = fila[:max_posts]
+
+    # Respeita o intervalo entre posts mesmo se o robo for reiniciado
+    intervalo = int(ag.get("verificar_a_cada_minutos", 30))
+    ultimo = estado.get("ultimo_post")
+    if fila and not modo_teste and ultimo:
+        minutos = (datetime.now() - datetime.fromisoformat(ultimo)).total_seconds() / 60
+        if minutos < intervalo * 0.75:  # folga para atrasos do agendador da nuvem
+            log.info(f"Ultimo post foi ha {minutos:.0f} min — esperando completar {intervalo} min.")
+            fila = []
+
+    log.info(f"{len(ofertas)} ofertas novas encontradas; postando {len(fila)}.")
+    if fila and not modo_teste and not dentro_do_horario(cfg):
+        log.info("Fora do horario de postagem — guardando para a proxima rodada.")
+        fila = []
+
+    for i, oferta in enumerate(fila):
+        try:
+            tg.enviar(montar_mensagem(oferta, cfg), oferta.imagem)
+            if not modo_teste:
+                marcar_postado(oferta, estado)
+                estado["ultimo_post"] = datetime.now().isoformat(timespec="seconds")
+                estado.setdefault("ultima_vez_loja", {})[oferta.loja] = estado["ultimo_post"]
+                log.info(f"  ✔ postado: [{oferta.loja}] {oferta.nome[:50]}")
+        except Exception as erro:
+            log.info(f"  ✘ erro ao postar '{oferta.nome[:40]}': {erro}")
+        if not modo_teste and i < len(fila) - 1:
+            time.sleep(pausa)
+
+    limpar_estado(estado)
+    if not modo_teste:
+        salvar_estado(estado)
+
+
+def carregar_config() -> dict:
+    if not ARQ_CONFIG.exists():
+        raise SystemExit("Nao achei o config.toml na pasta do robo.")
+    try:
+        with open(ARQ_CONFIG, "rb") as f:
+            cfg = tomllib.load(f)
+        # Senhas ficam fora do config.toml (que vai para o GitHub):
+        # no computador, em segredos.toml; na nuvem, em variaveis de ambiente.
+        arq_segredos = PASTA / "segredos.toml"
+        if arq_segredos.exists():
+            with open(arq_segredos, "rb") as f:
+                for secao, valores in tomllib.load(f).items():
+                    cfg.setdefault(secao, {}).update(valores)
+    except tomllib.TOMLDecodeError as erro:
+        raise SystemExit(f"Tem um erro de digitacao no config.toml ou segredos.toml: {erro}")
+    if os.environ.get("TELEGRAM_TOKEN"):
+        cfg.setdefault("telegram", {})["token_do_bot"] = os.environ["TELEGRAM_TOKEN"].strip()
+    if os.environ.get("SHOPEE_FEED_URL"):
+        cfg.setdefault("shopee", {})["urls_do_feed"] = os.environ["SHOPEE_FEED_URL"].split()
+    return cfg
+
+
+def main() -> None:
+    configurar_log()
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+    p = argparse.ArgumentParser(description="Robo de Achadinhos")
+    sub = p.add_subparsers(dest="comando")
+    sub.add_parser("teste", help="uma verificacao, so mostra (nao posta)")
+    sub.add_parser("uma-vez", help="uma verificacao, posta de verdade")
+    sub.add_parser("testar-telegram", help="manda mensagem de teste no canal")
+    lr = sub.add_parser("link-renner", help="gera link de afiliado Awin para a Renner")
+    lr.add_argument("url")
+    mp = sub.add_parser("postar", help="posta uma oferta manual")
+    mp.add_argument("--loja")
+    mp.add_argument("--nome")
+    mp.add_argument("--preco")
+    mp.add_argument("--de", default=None, help="preco antigo (opcional)")
+    mp.add_argument("--link", help="seu link de afiliado")
+    mp.add_argument("--imagem", default=None)
+    mp.add_argument("--so-mostrar", action="store_true")
+    mp.add_argument("--confirmar", action="store_true", help="posta sem perguntar")
+    mp.add_argument("--cupom", default=None)
+    mp.add_argument("--chamada", default=None, help="frase de impacto no topo")
+    args = p.parse_args()
+    cfg = carregar_config()
+
+    if args.comando == "link-renner":
+        link = link_awin(cfg, args.url)
+        print(link or "Preencha id_publisher e id_anunciante_renner na secao [awin] do config.toml.")
+        return
+
+    if args.comando == "postar":
+        if not args.loja:  # modo perguntas (usado pelo postar-oferta.bat)
+            print("\n=== Postar uma oferta no canal ===")
+            args.loja = input("Loja (shein / shopee / renner / mercadolivre): ").strip() or "shein"
+            args.nome = input("Nome do produto: ").strip()
+            args.preco = input("Preço AGORA (ex.: 59,90): ").strip()
+            args.de = input("Preço ANTES (ex.: 99,90 — deixe vazio se não souber): ").strip() or None
+            args.link = input("Seu link de afiliado: ").strip()
+            args.imagem = input("Link da foto (opcional, Enter para pular): ").strip() or None
+        if not (args.nome and args.preco and args.link and parse_preco(args.preco)):
+            raise SystemExit("Faltou nome, preço ou link (ou o preço está em formato estranho).")
+        loja = args.loja.lower().replace(" ", "")
+        link = args.link
+        if loja == "renner" and "awin1.com" not in link:
+            link = link_awin(cfg, link) or link
+        oferta = Oferta(
+            loja=loja, nome=args.nome, preco=parse_preco(args.preco),
+            preco_antigo=parse_preco(args.de), link=link, imagem=args.imagem,
+            cupom=args.cupom or cfg.get("cupons", {}).get(loja), chamada=args.chamada,
+        )
+        texto = montar_mensagem(oferta, cfg)
+        Telegram(cfg, True).enviar(texto, oferta.imagem)  # mostra antes
+        if args.so_mostrar:
+            return
+        if args.confirmar or input("Postar no canal? (s/n): ").strip().lower().startswith("s"):
+            Telegram(cfg, False).enviar(texto, oferta.imagem)
+            log.info("Oferta postada.")
+        else:
+            print("Cancelado, nada foi postado.")
+        return
+
+    if args.comando == "testar-telegram":
+        Telegram(cfg, False).enviar("✅ Robô de Achadinhos conectado ao canal!")
+        log.info("Mensagem de teste enviada. Confira o canal.")
+        return
+
+    modo_teste = args.comando == "teste"
+    tg = Telegram(cfg, modo_teste)
+    if args.comando in ("teste", "uma-vez"):
+        rodada(cfg, tg, modo_teste)
+        return
+
+    minutos = int(cfg.get("agenda", {}).get("verificar_a_cada_minutos", 60))
+    log.info(f"Robo ligado. Verificando a cada {minutos} minutos. (Ctrl+C para parar)")
+    while True:
+        try:
+            rodada(cfg, tg, False)
+        except Exception as erro:
+            log.info(f"Erro inesperado na rodada (tento de novo depois): {erro}")
+        time.sleep(minutos * 60)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\nRobo desligado.")

@@ -1,0 +1,203 @@
+# =====================================================================
+#  CONFIGURAÇÃO DO ROBÔ DE ACHADINHOS
+#  - Troque os textos "COLOQUE_AQUI..." pelos seus dados.
+#  - Linhas que começam com # são comentários (o robô ignora).
+#  - Textos ficam entre aspas "assim". Números ficam sem aspas.
+#  - NÃO compartilhe este arquivo com ninguém: ele tem suas senhas de API.
+# =====================================================================
+
+[telegram]
+# Token que o @BotFather te dá (parece 123456789:AAH...)
+token_do_bot = ""   # fica no segredos.toml (computador) ou no segredo TELEGRAM_TOKEN (GitHub)
+# Nome do canal com @ (ex.: "@achadinhosdanicole")
+canal = "@achadosdabonentti"
+
+[mensagem]
+# Aparece no fim de toda postagem (aviso de link de afiliado - recomendado)
+rodape = "⚠️ Preço e estoque podem mudar a qualquer momento.\n#publi 🔗 Links e cupons de parceria: posso ganhar uma comissão, sem custo extra pra você."
+# Mostra o % de desconto no topo do post (ex.: "🔥 67% OFF")
+usar_chamadas = true
+
+[filtros]
+# Ofertas com estas palavras no nome nunca são postadas
+palavras_bloqueadas = ["erótic", "erotic", "sexy", "sensual", "fetiche", "sex shop", "sexshop",
+                       "vibrador", "bodystocking", "fantasia sensual", "réplica", "replica", "1:1"]
+# Desconto acima disso costuma ser preço antigo inflado (promoção falsa)
+desconto_maximo = 80
+
+# Critérios baseados na análise dos canais de ofertas grandes (nov/2026):
+# eles postam de manhã (9-11h), no almoço (12-13h) e à noite (17-21h).
+# Para um canal novo, ~15 posts por dia é um bom ritmo (sem virar spam).
+[agenda]
+verificar_a_cada_minutos = 30
+maximo_de_posts_por_rodada = 1
+segundos_entre_posts = 120
+# Não posta de madrugada (as ofertas esperam a próxima rodada)
+postar_a_partir_de = "08:00"
+postar_ate = "23:00"
+# Depois de quantos dias a mesma oferta pode ser postada de novo
+dias_para_repetir_oferta = 7
+
+# ---------------------------------------------------------------------
+#  SHOPEE  (busca automática de achadinhos pela API oficial de afiliados)
+#  Pegue o app_id e o segredo em: affiliate.shopee.com.br > Open API
+# ---------------------------------------------------------------------
+[shopee]
+ativo = true
+app_id = "COLOQUE_AQUI_O_APP_ID"
+segredo = "COLOQUE_AQUI_O_SEGREDO"
+# Tema do canal: feminino (roupas, sapatos, beleza e higiene)
+# Produtos femininos que mais aparecem nos canais de achadinhos analisados
+palavras_chave = [
+  # beleza e perfumaria (o que mais aparece)
+  "body splash", "perfume árabe feminino", "colônia feminina", "hidratante corporal kit",
+  "sérum facial", "protetor solar facial", "batom", "delineador", "paleta de sombras",
+  # cabelo
+  "kit shampoo condicionador", "óleo capilar", "máscara capilar", "acidificante capilar",
+  # higiene feminina
+  "sabonete íntimo", "desodorante feminino kit",
+  # roupas e calçados
+  "calça jeans flare feminina", "conjunto fitness feminino", "vestido feminino", "blusa cropped",
+  "papete feminina", "rasteirinha", "tênis feminino",
+]
+resultados_por_busca = 30
+# Qualidade acima de tudo: só marcas e lojas oficiais, bem avaliadas e populares
+desconto_minimo = 30      # em % (lojas oficiais dão descontos reais, menores que os "inflados")
+nota_minima = 4.7         # estrelas do produto
+nota_minima_loja = 4.7    # estrelas da loja
+curtidas_minimas = 500    # produtos que muita gente já aprovou
+vendas_minimas = 100      # (usado só quando a API for liberada)
+preco_maximo = 150        # em R$
+excluir_palavras = ["masculin", "infantil", "kids", "menino", "inspirad", "contratipo", "similar ao"]
+# Lojas "oficiais" de produtos genéricos/imitações que não queremos indicar (pode acrescentar)
+lojas_bloqueadas = ["beiermei", "ana 1108", "maimeite"]
+
+# Enquanto a API não é liberada: feed "Shopee Oficial BR" do painel de afiliados
+# (só lojas oficiais). Criativo > Feed de produto > Ver Link > Copiar. Atualiza 1x por dia.
+usar_feed = true
+id_afiliado = "18326310376"   # seu ID de afiliada (vai em todo link, senão não há comissão)
+urls_do_feed = []   # fica no segredos.toml (computador) ou no segredo SHOPEE_FEED_URL (GitHub)
+categorias_feed = ["Women Clothes", "Women Shoes", "Women Bags", "Beauty"]
+
+# ---------------------------------------------------------------------
+#  RENNER pela AWIN
+#  id_publisher: seu número de publisher na Awin (aparece no topo do painel)
+#  id_anunciante_renner: o número da Renner na Awin (Anunciantes > Meus programas)
+# ---------------------------------------------------------------------
+[awin]
+id_publisher = "1720641"
+# Programa "Favoritos Renner + Ashua Team | Influenciadores BR" (você está inscrita nele)
+id_anunciante_renner = "70694"
+# Opcional: feed de produtos da Renner (Awin > Ferramentas > Create-a-Feed).
+# Se a Renner oferecer feed, cole a URL e mude usar_feed para true.
+usar_feed = false
+url_do_feed = "COLOQUE_AQUI_A_URL_DO_FEED"
+palavras_chave = ["feminin", "vestido", "blusa", "saia", "sandália", "tênis", "bota", "bolsa", "perfume"]
+desconto_minimo = 40
+preco_maximo = 200
+
+# ---------------------------------------------------------------------
+#  RENNER AUTOMÁTICA
+#  O robô abre as listas de promoção que estão na página inicial da Renner
+#  (elas mudam sozinhas a cada campanha), pega só peças femininas, bolsas,
+#  calçados e perfumaria com desconto alto e posta com o seu link da Awin.
+# ---------------------------------------------------------------------
+[renner_auto]
+ativo = true
+desconto_minimo = 50      # em %
+preco_maximo = 120        # em R$ (0 = sem limite)
+categorias = ["feminino", "bolsas-e-calcados", "perfumaria-e-cosmeticos"]
+# Outras páginas da Renner para olhar também (opcional), ex.: "/lista/-/N-19b3qyb"
+paginas_extras = ["/lista/-/N-19b3qyb"]
+
+# ---------------------------------------------------------------------
+#  CUPONS DE PARCERIA (marcas que pagam pelo seu cupom, não por link)
+#  O cupom aparece em todo post da marca: "🎟️ Cupom: BONENTTI"
+# ---------------------------------------------------------------------
+[cupons]
+hardyn = "BONENTTI"
+kaisan = "BONENTTI"
+
+# ---------------------------------------------------------------------
+#  HARDYN (parceria por cupom) — o robô lê o Outlet do site
+# ---------------------------------------------------------------------
+[hardyn]
+ativo = true
+cupom = "BONENTTI"
+desconto_minimo = 30      # em %
+preco_maximo = 0          # em R$ (0 = sem limite)
+paginas = ["/hotsite/outlet"]
+
+# ---------------------------------------------------------------------
+#  MERCADO LIVRE (para o robô conseguir ler os preços)
+#  O site bloqueia robôs, então usamos a API oficial. Crie um "aplicativo"
+#  grátis em developers.mercadolivre.com.br e cole aqui o Client ID e a
+#  Client Secret (o LEIA-ME explica o passo a passo).
+# ---------------------------------------------------------------------
+[mercadolivre]
+client_id = "COLOQUE_AQUI"
+client_secret = "COLOQUE_AQUI"
+
+# ---------------------------------------------------------------------
+#  PRODUTOS VIGIADOS (Mercado Livre, Renner, Shein ou outra loja)
+#  O robô olha o preço de cada um e posta quando:
+#   - o preço cai pelo menos "queda_minima_percentual", ou
+#   - o preço chega no "preco_alvo" (se você colocar um).
+#
+#  Para cada produto, copie um bloco [[produto]]:
+#   loja          = "mercadolivre", "renner" ou "shein"
+#   url           = link normal do produto (do navegador)
+#   link_afiliado = SEU link de afiliado desse produto
+#                   (Mercado Livre e Shein: gere no painel de afiliado e cole aqui;
+#                    Renner: pode deixar vazio, o robô gera pela Awin)
+#   preco_alvo    = opcional, ex.: 79.90
+#   nome          = opcional, para encurtar o nome na postagem
+# ---------------------------------------------------------------------
+[vigiados]
+queda_minima_percentual = 15
+
+# Exemplo (apague ou edite):
+# [[produto]]
+# loja = "mercadolivre"
+# url = "https://produto.mercadolivre.com.br/MLB-0000000000-exemplo"
+# link_afiliado = "https://meli.la/xxxxxx"
+# preco_alvo = 99.90
+# nome = "Air Fryer 4L"
+
+# Kaisan - peças da Black Kaisan escolhidas em 15/11/2026 (cupom BONENTTI)
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/top-triangulo-slim-alquimia-ref-k5340-f-k5340-f"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/top-com-decote-reto-e-alcas-duplas-preto-ref-k5309-a-k5309-a"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/wide-leg-com-cos-dobrado-ambar-ref-k5533-i-k5533-i"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/macacao-com-bolsos-e-abertura-nas-costas-imperial-ref-k5444-a-k5444-a"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/wide-leg-sem-gancho-frente-avela-ref-k5536-g-k5536-g"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/calca-legging-com-cos-em-v-e-bolso-nas-costas-militar-ref-k5313-b-k5313-b"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/macaquinho-sem-gancho-com-alcas-cruzadas-marrom-off-white-ref-k4701-d-k4701-d"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a"
+
+[[produto]]
+loja = "kaisan"
+url = "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c"
+

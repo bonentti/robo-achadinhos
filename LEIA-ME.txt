@@ -1,0 +1,112 @@
+=====================================================================
+  ROBÔ DE ACHADINHOS — GUIA DE CONFIGURAÇÃO
+=====================================================================
+
+O QUE O ROBÔ FAZ
+----------------
+- SHOPEE: procura sozinho produtos com bom desconto, nota alta e muitas
+  vendas (pelas palavras-chave que você escolher) e posta com o seu link.
+- RENNER (Awin): vigia o preço dos produtos que você colocar na lista e
+  posta quando o preço cai. O seu link de afiliado é gerado sozinho.
+- MERCADO LIVRE: vigia o preço dos produtos da sua lista e posta quando
+  o preço cai, usando o link de afiliado que você gerou para cada um.
+- SHEIN: a Shein bloqueia robôs (captcha), então não dá para vigiar preço.
+  Quando você achar uma oferta, use o "postar-oferta.bat": ele pergunta
+  nome, preço e link e monta o post bonitinho no canal.
+
+Tudo é configurado no arquivo  config.toml  (abra com o Bloco de Notas).
+NUNCA mande esse arquivo para ninguém: ele guarda as suas chaves.
+
+
+PASSO 1 — CRIAR O CANAL E O BOT NO TELEGRAM
+-------------------------------------------
+1. No Telegram: menu > Novo Canal. Dê um nome (ex.: "Achadinhos da Nicole"),
+   escolha "Público" e crie um link, ex.: t.me/achadinhosdanicole
+   -> o @ do canal será  @achadinhosdanicole
+2. Procure o contato  @BotFather  (tem selo azul) e mande:  /newbot
+   Escolha um nome e um usuário terminando em "bot" (ex.: achadinhosnicole_bot).
+   Ele responde com um TOKEN (parece 123456789:AAH...). Copie.
+3. Abra o seu canal > Administradores > Adicionar administrador > procure o
+   seu bot > deixe "Publicar mensagens" ligado > Salvar.
+4. No config.toml, seção [telegram], cole o token e o @ do canal.
+5. Dê dois cliques em  testar-telegram.bat . Deve aparecer uma mensagem
+   no canal.
+
+
+PASSO 2 — SHOPEE (busca automática)
+-----------------------------------
+1. Entre em affiliate.shopee.com.br > procure "Open API" no menu.
+2. Peça o acesso (se pedir) e copie o "AppID" e o "Secret".
+3. No config.toml, seção [shopee], cole em app_id e segredo.
+4. Ajuste as palavras_chave para o tema do seu canal e os filtros
+   (desconto mínimo, nota mínima, preço máximo).
+
+
+PASSO 3 — RENNER (Awin)
+-----------------------
+1. Entre na Awin. O seu "Publisher ID" aparece no canto superior do painel
+   (um número). Cole em id_publisher.
+2. Vá em Anunciantes > Meus programas, ache a Renner e copie o ID dela
+   (o número ao lado do nome / no link). Cole em id_anunciante_renner.
+3. Para vigiar um produto, adicione no fim do config.toml:
+
+   [[produto]]
+   loja = "renner"
+   url = "https://www.lojasrenner.com.br/p/....."
+
+   (não precisa de link_afiliado: o robô gera o seu link da Awin)
+
+4. Opcional: se em Awin > Ferramentas > Create-a-Feed a Renner tiver
+   "feed de produtos", gere o link do feed em CSV, cole em url_do_feed e
+   mude usar_feed para true. Aí o robô procura ofertas na loja inteira.
+
+
+PASSO 4 — MERCADO LIVRE
+-----------------------
+A) Chave para o robô ler os preços (uma vez só):
+   1. Entre em developers.mercadolivre.com.br com a sua conta do ML.
+   2. "Criar aplicação". Preencha nome e descrição. Em "URI de
+      redirecionamento" pode colocar https://www.google.com
+   3. Copie o "Client ID" e a "Client Secret" para a seção [mercadolivre].
+
+B) Para cada produto que você quer vigiar:
+   1. Abra o produto no site e gere o seu link de afiliado (painel de
+      Afiliados do ML ou a barra de afiliado que aparece no topo do site).
+   2. Adicione no fim do config.toml:
+
+   [[produto]]
+   loja = "mercadolivre"
+   url = "https://produto.mercadolivre.com.br/MLB-...."   (link normal)
+   link_afiliado = "https://meli.la/...."                  (SEU link)
+   preco_alvo = 99.90                                      (opcional)
+
+
+PASSO 5 — TESTAR E LIGAR
+------------------------
+- testar-robo.bat   -> faz uma busca e MOSTRA as mensagens, sem postar nada.
+                       Use sempre que mudar o config.toml.
+- ligar-robo.bat    -> liga o robô de verdade. Ele verifica a cada 60 min
+                       (dá para mudar em [agenda]) e só posta das 08h às 23h.
+                       Deixe a janela aberta; para desligar, feche a janela.
+- postar-oferta.bat -> posta uma oferta que você achou (Shein, ou qualquer
+                       loja). Mostra como vai ficar e pergunta antes de postar.
+
+Importante: o robô só funciona com o computador LIGADO e a janela aberta.
+Se quiser que ele rode 24h, dá para colocar num servidor barato depois.
+
+Na PRIMEIRA vez, os produtos vigiados só têm o preço "anotado"; o post
+acontece quando o preço CAIR depois disso (ou se bater o preco_alvo).
+
+
+E O WHATSAPP?
+-------------
+O WhatsApp não permite robô postando em grupos (risco de banir o número).
+O jeito seguro: o robô posta no Telegram e você encaminha/copia as melhores
+ofertas para o grupo do WhatsApp. Use um número separado do pessoal.
+
+
+SE DER ERRO
+-----------
+- Abra o arquivo  robo.log  : ele conta tudo o que o robô fez.
+- "erro de digitação no config.toml": confira se os textos estão entre
+  aspas e se não apagou nenhuma aspa.
