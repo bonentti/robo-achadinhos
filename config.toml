@@ -216,3 +216,16 @@ rodape = """#publi Links e cupons de parceria: posso ganhar uma comissão, sem c
 
 📲 Quer ofertas o dia todo? Entra no meu canal do Telegram: t.me/achadosdabonentti
 💬 Canal no WhatsApp: https://whatsapp.com/channel/0029VbEqyLMFi8xUgzfgQ53N"""
+
+# ---------------------------------------------------------------------
+#  MARCAS FAVORITAS (maquiagem e beleza)
+#  Produtos dessas marcas entram com desconto menor, sem exigir curtidas,
+#  e vão para o TOPO da fila de postagem. Pode acrescentar ou tirar marcas.
+# ---------------------------------------------------------------------
+[marcas_favoritas]
+desconto_minimo = 15      # em %
+marcas = [
+  "Mascavo", "MAC", "M.A.C", "Kiko Milano", "Kiko", "Bruna Tavares", "Boca Rosa",
+  "Mari Maria", "Océane", "Oceane", "Quem Disse, Berenice", "Vizzela", "Fran by Franciny Ehlke",
+  "Payot", "Eudora", "Sallve", "Principia", "Creamy", "Maybelline", "L'Oréal", "Natura",
+]

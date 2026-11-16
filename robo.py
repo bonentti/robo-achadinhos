@@ -128,6 +128,12 @@ class Oferta:
     cupom: str | None = None
     prioridade: float | None = None  # quanto maior, antes posta (padrao: o desconto)
     categoria: str = ""
+    favorita: str | None = None  # marca favorita (maquiagem/beleza)
+
+    @property
+    def grupo(self) -> str:
+        """Vez no revezamento: cada loja, e as marcas favoritas como um grupo proprio."""
+        return "favoritas" if self.favorita else self.loja
 
     @property
     def desconto(self) -> int:
@@ -311,6 +317,16 @@ def buscar_shopee(cfg: dict) -> list[Oferta]:
 ARQ_FEED_SHOPEE = PASTA / "shopee_feed.csv"
 
 
+def marca_favorita(cfg: dict, texto: str) -> str | None:
+    """Devolve a marca favorita citada no texto (nome do produto/loja), se houver."""
+    t = " " + re.sub(r"[^a-z0-9à-ú]+", " ", texto.lower()) + " "
+    for marca in cfg.get("marcas_favoritas", {}).get("marcas", []):
+        m = " " + re.sub(r"[^a-z0-9à-ú]+", " ", marca.lower()).strip() + " "
+        if m.strip() and m in t:
+            return marca
+    return None
+
+
 def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") -> str:
     """Os links do feed nao levam o ID de afiliada; sem ele nao ha comissao."""
     if "affiliate_id=" in link:
@@ -390,8 +406,12 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                 curtidas = int(float(linha.get("like") or 0))
             except ValueError:
                 continue
-            if (not preco or desconto < desconto_min or nota < nota_min or nota_loja < nota_loja_min
-                    or curtidas < curtidas_min or (preco_max and preco > preco_max)):
+            # Marcas favoritas: entram com desconto menor e sem exigir curtidas, e vao para o topo da fila
+            favorita = marca_favorita(cfg, titulo + " " + (linha.get("shop_name") or ""))
+            d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
+            c_min = 0 if favorita else curtidas_min
+            if (not preco or desconto < d_min or nota < nota_min or nota_loja < nota_loja_min
+                    or curtidas < c_min or (preco_max and preco > preco_max)):
                 continue
             link = linha.get("product_short link") or linha.get("product_link")
             if not link:
@@ -411,6 +431,7 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
             )
             # Prioriza produtos populares (curtidas) com bom desconto, e nao so o maior %
             o.prioridade = desconto + 10 * math.log10(max(curtidas, 1))
+            o.favorita = favorita
             ofertas.append(o)
     log.info(f"Shopee (lojas oficiais): {total} produtos do tema, {len(ofertas)} passaram nos filtros")
     return ofertas
@@ -545,16 +566,23 @@ def buscar_renner_promocoes(cfg: dict) -> list[Oferta]:
             if not (preco and antigo) or antigo <= preco:
                 continue
             desconto = (1 - preco / antigo) * 100
-            if desconto < desconto_min or (preco_max and preco > preco_max):
+            marca = g("prop.product.brand.name")
+            favorita = marca_favorita(cfg, marca + " " + g("prop.product.displayName"))
+            d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
+            if desconto < d_min or (preco_max and preco > preco_max):
                 continue
             caminho = g("prop.product.url")
             imagem = g("prop.product.smallImageUrl").replace("/small/", "/zoom/")
             if imagem.startswith("//"):
                 imagem = "https:" + imagem
+            nome = g("prop.product.displayName")
+            if favorita and marca and marca.lower() not in nome.lower():
+                nome = f"{marca} — {nome}"  # deixa a marca visivel no post
             ofertas.append(Oferta(
-                loja="renner", nome=g("prop.product.displayName"), preco=preco, preco_antigo=antigo,
+                loja="renner", nome=nome, preco=preco, preco_antigo=antigo,
                 link=link_awin(cfg, RENNER + caminho), imagem=imagem or None, chave=f"renner:{pid}",
                 categoria=hierarquia.split("|")[0],
+                favorita=favorita,
             ))
         time.sleep(1)
     log.info(f"Renner automatica: {len(paginas)} listas, {total} pecas lidas, {len(ofertas)} passaram nos filtros")
@@ -901,7 +929,7 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     ofertas = unicas
     por_loja: dict[str, list[Oferta]] = {}
     for o in ofertas:
-        por_loja.setdefault(o.loja, []).append(o)
+        por_loja.setdefault(o.grupo, []).append(o)
     # Reveza as lojas: comeca pela que esta ha mais tempo sem aparecer no canal
     vez = estado.get("ultima_vez_loja", {})
     por_loja = dict(sorted(por_loja.items(), key=lambda kv: vez.get(kv[0], "")))
@@ -932,7 +960,7 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
             if not modo_teste:
                 marcar_postado(oferta, estado)
                 estado["ultimo_post"] = datetime.now().isoformat(timespec="seconds")
-                estado.setdefault("ultima_vez_loja", {})[oferta.loja] = estado["ultimo_post"]
+                estado.setdefault("ultima_vez_loja", {})[oferta.grupo] = estado["ultimo_post"]
                 log.info(f"  ✔ postado: [{oferta.loja}] {oferta.nome[:50]}")
         except Exception as erro:
             log.info(f"  ✘ erro ao postar '{oferta.nome[:40]}': {erro}")
@@ -960,7 +988,8 @@ def escolher_para_resumo(ofertas: list[Oferta], qtd: int) -> list[Oferta]:
     """O melhor de cada loja, revezando, sem repetir produto parecido."""
     filas: dict[str, list[Oferta]] = {}
     for o in sorted(ofertas, key=lambda o: -o.ordem):
-        filas.setdefault(o.loja, []).append(o)
+        filas.setdefault(o.grupo, []).append(o)
+    filas = dict(sorted(filas.items(), key=lambda kv: kv[0] != "favoritas"))  # favoritas primeiro
     escolhidas = []
     while len(escolhidas) < qtd and any(filas.values()):
         for fila in filas.values():
