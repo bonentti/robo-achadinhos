@@ -1227,6 +1227,8 @@ def main() -> None:
     sub.add_parser("testar-telegram", help="manda mensagem de teste no canal")
     lr = sub.add_parser("link-renner", help="gera link de afiliado Awin para a Renner")
     lr.add_argument("url")
+    ls = sub.add_parser("link-shopee", help="gera o seu link de afiliada para qualquer pagina da Shopee")
+    ls.add_argument("url", nargs="?")
     mp = sub.add_parser("postar", help="posta uma oferta manual")
     mp.add_argument("--loja")
     mp.add_argument("--nome")
@@ -1240,6 +1242,16 @@ def main() -> None:
     mp.add_argument("--chamada", default=None, help="frase de impacto no topo")
     args = p.parse_args()
     cfg = carregar_config()
+
+    if args.comando == "link-shopee":
+        url = args.url or input("Cole o link da Shopee (produto, loja ou pagina de cupons): ").strip()
+        id_af = str(cfg.get("shopee", {}).get("id_afiliado", ""))
+        url = url.split("?")[0] if "/m/" in url else url  # paginas de campanha: tira rastros de outros
+        origem = input("Onde vai postar? (whatsapp/instagram/telegram) [whatsapp]: ").strip() or "whatsapp"
+        print()
+        print("Seu link de afiliada (copie e use):")
+        print(link_shopee_afiliado(url, id_af, origem))
+        return
 
     if args.comando == "link-renner":
         link = link_awin(cfg, args.url)
