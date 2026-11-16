@@ -858,6 +858,12 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     ofertas = (buscar_shopee(cfg) + buscar_shopee_feed(cfg) + buscar_feed_awin(cfg) + buscar_renner_promocoes(cfg)
                + buscar_hardyn(cfg)
                + verificar_lista(cfg, estado))
+    # Resumo da rodada (para conferir de longe se todas as lojas responderam)
+    contagem: dict[str, int] = {}
+    for o in ofertas:
+        contagem[o.loja] = contagem.get(o.loja, 0) + 1
+    estado["ultima_rodada"] = {"em": datetime.now().isoformat(timespec="minutes"), "ofertas_por_loja": contagem}
+
     # Filtros gerais: conteudo que nao combina com o canal e descontos "bons demais"
     # (preco antigo inflado so para parecer promocao).
     filtros = cfg.get("filtros", {})
