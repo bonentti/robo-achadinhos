@@ -29,7 +29,9 @@ desconto_maximo = 80
 # eles postam de manhã (9-11h), no almoço (12-13h) e à noite (17-21h).
 # Para um canal novo, ~15 posts por dia é um bom ritmo (sem virar spam).
 [agenda]
-verificar_a_cada_minutos = 30
+verificar_a_cada_minutos = 20   # 1 post a cada ~20 min (cerca de 40 por dia)
+# Minutos mínimos entre dois posts da MESMA loja de roupa (para o canal não virar só roupa)
+intervalo_por_loja = { renner = 120, hardyn = 180, kaisan = 180 }
 maximo_de_posts_por_rodada = 1
 segundos_entre_posts = 120
 # Não posta de madrugada (as ofertas esperam a próxima rodada)
@@ -67,8 +69,16 @@ nota_minima = 4.7         # estrelas do produto
 nota_minima_loja = 4.7    # estrelas da loja
 curtidas_minimas = 500    # produtos que muita gente já aprovou
 vendas_minimas = 100      # (usado só quando a API for liberada)
-preco_maximo = 150        # em R$
-excluir_palavras = ["masculin", "infantil", "kids", "menino", "inspirad", "contratipo", "similar ao"]
+preco_maximo = 300        # em R$
+preco_minimo = 15         # evita itens muito baratinhos (sabonete avulso etc.)
+excluir_palavras = ["masculin", "infantil", "kids", "menino", "inspirad", "contratipo", "similar ao",
+                    "atacado", "revenda", "kit 12", "kit 24", "caixa com 12"]
+# SÓ MARCAS CONHECIDAS: o produto só entra se a loja ou o nome do produto tiver
+# uma marca da lista [marcas_conhecidas] (lá embaixo) ou das marcas favoritas.
+so_marcas_conhecidas = true
+desconto_minimo_marcas = 20   # marca conhecida dá desconto real menor que loja genérica
+curtidas_minimas_marcas = 30
+nota_minima_marcas = 4.6
 # Lojas "oficiais" de produtos genéricos/imitações que não queremos indicar (pode acrescentar)
 lojas_bloqueadas = ["beiermei", "ana 1108", "maimeite"]
 
@@ -77,7 +87,14 @@ lojas_bloqueadas = ["beiermei", "ana 1108", "maimeite"]
 usar_feed = true
 id_afiliado = "18326310376"   # seu ID de afiliada (vai em todo link, senão não há comissão)
 urls_do_feed = []   # fica no segredos.toml (computador) ou no segredo SHOPEE_FEED_URL (GitHub)
-categorias_feed = ["Women Clothes", "Women Shoes", "Women Bags", "Beauty"]
+categorias_feed = ["Beauty", "Home & Living", "Home Appliances", "Health", "Women Shoes",
+                   "Women Bags", "Women Clothes", "Fashion Accessories", "Watches", "Sports & Outdoors"]
+# Partes dessas categorias que não combinam com o canal
+subcategorias_bloqueadas = ["Men's Care", "Furniture", "Tools & Home Improvement", "Party Supplies",
+  "Gardening", "Lighting", "Safety & Security", "Large Household Appliances",
+  "Electrical Circuitry & Parts", "TVs & Accessories", "Batteries", "Remote Controls",
+  "Projectors & Accessories", "Food Supplement", "Medical Supplies", "Sexual Wellness",
+  "Sports & Outdoor Recreation Equipments", "Others"]
 
 # ---------------------------------------------------------------------
 #  RENNER pela AWIN
@@ -292,4 +309,39 @@ marcas = ["L'OR", "Lor", "L’or", "Orfeu", "Baggio"]
 desconto_minimo = 20      # em %
 itens = [
   { nome = "Óleo de Banho Nivea", termos = ["nivea", "óleo de banho"], loja = "NIVEA OFICIAL" },
+]
+
+# ---------------------------------------------------------------------
+#  MARCAS CONHECIDAS (filtro de qualidade da Shopee)
+#  Só entram produtos destas marcas (ou das marcas favoritas).
+#  Pode acrescentar ou tirar à vontade.
+# ---------------------------------------------------------------------
+[marcas_conhecidas]
+beleza = [
+  "Nivea", "L'Oréal", "Loreal", "Elseve", "Garnier", "Maybelline", "Wella", "Alfaparf", "Kérastase",
+  "Kerastase", "Truss", "Lola Cosmetics", "Natura", "O Boticário", "Boticario", "Eudora", "Avon",
+  "Granado", "Phebo", "Dove", "Rexona", "Vult", "Payot", "Principia", "Sallve", "Creamy",
+  "Simple Organic", "La Roche-Posay", "CeraVe", "Neutrogena", "Vichy", "Bioderma", "Eucerin", "Avène",
+  "Avene", "Darrow", "Adcos", "Océane", "Oceane", "Mari Maria", "Ruby Rose", "Salon Line", "Inoar",
+  "Cadiveu", "Joico", "Redken", "Schwarzkopf", "Pantene", "Tresemmé", "Tresemme", "Embelleze", "Skala",
+  "Bepantol", "Nuxe", "Isdin", "Episol", "Mantecorp", "Haskell", "Widi Care", "Brae", "Amend", "Felps",
+  "Lowell", "Siàge", "Siage", "Kokeshi", "Dailus", "Revlon", "Benefit", "Too Faced", "Tarte", "Fenty",
+  "Rare Beauty", "Clinique", "Lancôme", "Lancome", "Carolina Herrera", "Paco Rabanne", "Calvin Klein",
+  "Antonio Banderas", "Shakira", "Hinode", "Jequiti", "Taiff", "Gama Italy", "Babyliss", "Lizze",
+  "Wahl", "Oral-B", "Colgate", "Sensodyne", "Listerine",
+]
+casa = [
+  "Tramontina", "Electrolux", "Philips", "Walita", "Mondial", "Oster", "Britânia", "Britania", "Arno",
+  "Black+Decker", "Black Decker", "WAP", "Cadence", "Philco", "Midea", "Elgin", "Brinox", "Rojemac",
+  "Stanley", "Tupperware", "Nespresso", "Dolce Gusto", "Três Corações", "3 Corações", "Melitta",
+  "Hamilton Beach", "Karcher", "Kärcher", "Buddemeyer", "Altenburg", "Camesa", "Teka", "Trussardi",
+  "Ox Home", "OXO", "Le Creuset", "Ceraflame", "Mimo Style", "Samsung", "LG", "Xiaomi", "JBL",
+  "Pyrex", "Marinex", "Duralex", "Panasonic", "Santista",
+]
+moda = [
+  "Havaianas", "Ipanema", "Melissa", "Grendene", "Arezzo", "Schutz", "Vizzano", "Moleca", "Beira Rio",
+  "Modare", "Usaflex", "Piccadilly", "Azaleia", "Olympikus", "Adidas", "Nike", "Puma", "Fila", "Mizuno",
+  "Asics", "New Balance", "Vans", "Converse", "Hering", "Malwee", "Lupo", "Trifil", "Selene", "Puket",
+  "Valisere", "Colcci", "Levi's", "Petite Jolie", "Santa Lolla", "Capodarte", "Dakota", "Kipling",
+  "Chilli Beans", "Vivara", "Technos", "Casio", "Mormaii", "Oakley", "Ray-Ban", "Jansport", "Samsonite",
 ]

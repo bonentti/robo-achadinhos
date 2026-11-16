@@ -39,7 +39,7 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: shopee_feed.csv
-          key: shopee-feed-v2-${{ steps.dia.outputs.hoje }}
+          key: shopee-feed-v3-${{ steps.dia.outputs.hoje }}
 
       - name: Rodar o robo
         run: python robo.py uma-vez

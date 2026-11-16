@@ -133,8 +133,13 @@ class Oferta:
 
     @property
     def grupo(self) -> str:
-        """Vez no revezamento: cada loja, e as marcas favoritas como um grupo proprio."""
-        return "favoritas" if self.favorita else self.loja
+        """Vez no revezamento: cada loja, as marcas favoritas como um grupo proprio,
+        e a Shopee dividida por categoria (para o canal nao ficar so com beleza)."""
+        if self.favorita:
+            return "favoritas"
+        if self.loja == "shopee" and self.categoria:
+            return f"shopee-{self.categoria}"
+        return self.loja
 
     @property
     def desconto(self) -> int:
@@ -338,6 +343,31 @@ def marca_favorita(cfg: dict, texto: str) -> str | None:
     return None
 
 
+_MARCAS_CACHE: dict = {}
+
+
+def marca_conhecida(cfg: dict, titulo: str, loja: str) -> str | None:
+    """Marca reconhecida no nome da loja ou do produto (ignora 'compativel com X', 'tipo X')."""
+    chave = id(cfg)
+    if chave not in _MARCAS_CACHE:
+        mc = cfg.get("marcas_conhecidas", {})
+        nomes = {m for lista in mc.values() if isinstance(lista, list) for m in lista}
+        nomes |= set(cfg.get("marcas_favoritas", {}).get("marcas", []))
+        norm = lambda s: re.sub(r"[^a-z0-9à-ú+!]+", " ", s.lower()).strip()
+        _MARCAS_CACHE[chave] = sorted(((m, norm(m)) for m in nomes if norm(m)), key=lambda x: -len(x[1]))
+    norm = lambda s: " " + re.sub(r"[^a-z0-9à-ú+!]+", " ", s.lower()) + " "
+    lj, tt = norm(loja), norm(titulo)
+    for marca, m in _MARCAS_CACHE[chave]:
+        if f" {m} " in lj:
+            return marca
+    for marca, m in _MARCAS_CACHE[chave]:
+        if f" {m} " in tt and not re.search(
+                rf"(compat[ií]vel com|para|tipo|estilo|similar a?|inspirad[oa] (?:em|no|na)|r[eé]plica)\s+(?:o |a )?{re.escape(m)}\b",
+                tt):
+            return marca
+    return None
+
+
 def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") -> str:
     """Os links do feed nao levam o ID de afiliada; sem ele nao ha comissao."""
     if "affiliate_id=" in link:
@@ -437,12 +467,19 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
     preco_max = sp.get("preco_maximo", 0)
     excluir = [p.lower() for p in sp.get("excluir_palavras", ["masculin", "infantil", "kids"])]
     lojas_bloqueadas = [p.lower() for p in sp.get("lojas_bloqueadas", [])]
+    sub_bloqueadas = set(sp.get("subcategorias_bloqueadas", []))
+    so_marcas = sp.get("so_marcas_conhecidas", False)
+    d_marca = sp.get("desconto_minimo_marcas", desconto_min)
+    c_marca = sp.get("curtidas_minimas_marcas", curtidas_min)
+    preco_min = sp.get("preco_minimo", 0)
     ofertas, total = [], 0
     with open(ARQ_FEED_SHOPEE, encoding="utf-8", newline="") as f:
         for linha in csv.DictReader(f):
             total += 1
             if linha.get("global_category1") not in categorias:
                 continue
+            if linha.get("global_category2") in sub_bloqueadas:
+                continue  # ex.: moveis, ferramentas, jardim, cuidados masculinos
             if linha.get("cb_option", "Non-Cross border") != "Non-Cross border":  # vendedor no Brasil
                 continue
             if linha.get("condition", "New") != "New":
@@ -460,6 +497,7 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
             except ValueError:
                 continue
             # Marcas favoritas: entram com desconto menor e sem exigir curtidas, e vao para o topo da fila
+            n_min = nota_min
             texto_busca = titulo + " " + (linha.get("shop_name") or "")
             produto_fav = produto_favorito(cfg, titulo, linha.get("shop_name") or "")
             if cat_cafe and linha.get("global_category1") == cat_cafe:
@@ -473,9 +511,18 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                 d_min, c_min = cfg.get("produtos_favoritos", {}).get("desconto_minimo", 20), 0
             else:
                 favorita = marca_favorita(cfg, texto_busca)
-                d_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15) if favorita else desconto_min
-                c_min = 0 if favorita else curtidas_min
-            if (not preco or desconto < d_min or nota < nota_min or nota_loja < nota_loja_min
+                if favorita:
+                    d_min, c_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15), 0
+                else:
+                    marca = marca_conhecida(cfg, titulo, linha.get("shop_name") or "")
+                    if so_marcas and not marca:
+                        continue  # so marcas que as pessoas reconhecem
+                    d_min, c_min = (d_marca, c_marca) if marca else (desconto_min, curtidas_min)
+                    if marca:
+                        n_min = sp.get("nota_minima_marcas", nota_min)
+            if preco_min and preco and preco < preco_min:
+                continue
+            if (not preco or desconto < d_min or nota < n_min or nota_loja < min(nota_loja_min, n_min)
                     or curtidas < c_min or (preco_max and preco > preco_max)):
                 continue
             link = linha.get("product_short link") or linha.get("product_link")
@@ -909,9 +956,17 @@ def salvar_estado(estado: dict) -> None:
     ARQ_ESTADO.write_text(json.dumps(estado, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def nome_base(nome: str) -> str:
+    """Mesmo produto em outra cor/tamanho tem o mesmo comeco de nome (ex.: 'Short Canelado Azul/Rosa')."""
+    return re.sub(r"[^a-z0-9]", "", nome.lower())[:22]
+
+
 def pode_postar(oferta: Oferta, estado: dict, dias_repetir: int) -> bool:
     if oferta.chave.startswith("vigiado:"):
         return True  # regra propria em verificar_lista
+    parecido = estado.get("nomes_postados", {}).get(nome_base(oferta.nome))
+    if parecido and datetime.now() - datetime.fromisoformat(parecido) < timedelta(days=dias_repetir):
+        return False  # outra cor/versao do mesmo produto saiu ha pouco
     postado = estado.get("postados", {}).get(oferta.chave)
     if not postado:
         return True
@@ -930,6 +985,7 @@ def marcar_postado(oferta: Oferta, estado: dict) -> None:
         reg.pop("_candidato", None)
     else:
         estado.setdefault("postados", {})[oferta.chave] = {"preco": oferta.preco, "em": agora}
+    estado.setdefault("nomes_postados", {})[nome_base(oferta.nome)] = agora
 
 
 def limpar_estado(estado: dict) -> None:
@@ -937,6 +993,9 @@ def limpar_estado(estado: dict) -> None:
     postados = estado.get("postados", {})
     for chave in [k for k, v in postados.items() if datetime.fromisoformat(v["em"]) < limite]:
         del postados[chave]
+    nomes = estado.get("nomes_postados", {})
+    for chave in [k for k, v in nomes.items() if datetime.fromisoformat(v) < datetime.now() - timedelta(days=30)]:
+        del nomes[chave]
     for reg in estado.get("vigiados", {}).values():
         reg.pop("_candidato", None)
 
@@ -1002,6 +1061,17 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
         por_loja.setdefault(o.grupo, []).append(o)
     # Reveza as lojas: comeca pela que esta ha mais tempo sem aparecer no canal
     vez = estado.get("ultima_vez_loja", {})
+    # Lojas de roupa (parceiras) aparecem com espaco entre um post e outro,
+    # para o canal nao virar so roupa. So entram antes se nao houver outra opcao.
+    espacos = ag.get("intervalo_por_loja", {})
+    def descansando(grupo: str) -> bool:
+        minimo = espacos.get(grupo.split("-")[0] if grupo.startswith("shopee-") else grupo, 0)
+        ultimo_g = vez.get(grupo)
+        return bool(minimo and ultimo_g and
+                    (datetime.now() - datetime.fromisoformat(ultimo_g)).total_seconds() / 60 < minimo)
+    livres = {g: l for g, l in por_loja.items() if not descansando(g)}
+    if livres:
+        por_loja = livres
     por_loja = dict(sorted(por_loja.items(), key=lambda kv: vez.get(kv[0], "")))
     fila = []
     while any(por_loja.values()):
