@@ -993,8 +993,11 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     if (rc.get("ativo") and preenchido(rc.get("chat_id")) and not modo_teste
             and datetime.now().hour >= int(rc.get("hora", 19)) and estado.get("resumo_enviado_em") != hoje):
         try:
-            if enviar_resumo_whatsapp(tg, candidatas_do_dia, cfg):
+            enviados = enviar_resumo_whatsapp(tg, candidatas_do_dia, cfg)
+            if enviados:
                 estado["resumo_enviado_em"] = hoje
+                for o in enviados:  # o que foi para o WhatsApp nao repete no Telegram por 7 dias
+                    marcar_postado(o, estado)
                 log.info("  ✔ resumo do dia enviado no seu privado")
         except Exception as erro:
             log.info(f"  ✘ erro ao enviar o resumo do dia: {erro}")
@@ -1036,7 +1039,7 @@ def legenda_whatsapp(o: Oferta) -> str:
     return "\n".join(linhas)
 
 
-def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> bool:
+def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> list[Oferta]:
     """Manda no privado cada achado separado (imagem pronta + legenda) para encaminhar ao WhatsApp."""
     from cartao import gerar_cartao  # so precisa do Pillow aqui
 
@@ -1044,7 +1047,7 @@ def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> 
     chat = str(rc["chat_id"])
     escolhidas = escolher_para_resumo(ofertas, int(rc.get("quantidade", 5)))
     if not escolhidas:
-        return False
+        return []
     tg.enviar_privado(chat, f"💸 Achados do dia ({datetime.now():%d/%m}) para o Canal do WhatsApp — "
                             f"{len(escolhidas)} posts abaixo, cada um com imagem e legenda.")
     for o in escolhidas:
@@ -1054,7 +1057,7 @@ def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> 
         time.sleep(1)
     if rc.get("rodape"):
         tg.enviar_privado(chat, rc["rodape"])
-    return True
+    return escolhidas
 
 
 def montar_resumo_whatsapp(ofertas: list[Oferta], cfg: dict) -> str:
