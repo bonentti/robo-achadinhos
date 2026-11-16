@@ -134,6 +134,15 @@ paginas = ["/hotsite/outlet"]
 #  grátis em developers.mercadolivre.com.br e cole aqui o Client ID e a
 #  Client Secret (o LEIA-ME explica o passo a passo).
 # ---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+#  AMAZON (Programa de Associados — tag bonentti-20)
+#  Encaminhe ofertas da Amazon para o @achadosdabonentti_bot no privado:
+#  o robô troca o link pelo seu e posta no canal na próxima rodada.
+#  (Busca automática só com a API oficial, liberada após 3 vendas.)
+# ---------------------------------------------------------------------
+[amazon]
+tag = "bonentti-20"
+
 [mercadolivre]
 client_id = "COLOQUE_AQUI"
 client_secret = "COLOQUE_AQUI"

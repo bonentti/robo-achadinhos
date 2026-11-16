@@ -33,7 +33,7 @@ import tomllib
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import parse_qs, quote, unquote, urlparse
 
 import requests
 
@@ -54,6 +54,7 @@ NOMES_LOJAS = {
     "shein": "Shein",
     "hardyn": "Hardyn",
     "kaisan": "Kaisan",
+    "amazon": "Amazon",
 }
 
 log = logging.getLogger("robo")
@@ -344,6 +345,44 @@ def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") 
     if "an_redir" not in link:
         link = "https://shope.ee/an_redir?origin_link=" + quote(link, safe="")
     return f"{link}&affiliate_id={id_afiliado}&sub_id={sub_id}"
+
+
+def link_amazon(cfg: dict, url: str) -> str | None:
+    """Link limpo do produto com a SUA tag de associada (tira a tag de quem divulgou antes)."""
+    tag = str(cfg.get("amazon", {}).get("tag", ""))
+    asin = re.search(r"/(?:dp|gp/product|gp/aw/d|d)/([A-Z0-9]{10})", url)
+    if not (preenchido(tag) and asin):
+        return None
+    return f"https://www.amazon.com.br/dp/{asin.group(1)}?tag={tag}"
+
+
+def converter_link(cfg: dict, url: str, sub_id: str = "telegram") -> str | None:
+    """Troca um link de qualquer divulgador pelo link de afiliada da Nicole.
+    Devolve None quando a loja nao e parceira (o link de outra pessoa nunca e usado)."""
+    url = html.unescape(url.strip())
+    if not url.lower().startswith("http"):
+        url = "https://" + url
+    final = url
+    if re.search(r"amzn\.to|a\.co/|shope\.ee|s\.shopee|tidd\.ly|bit\.ly", url):
+        try:  # link encurtado: descobre para onde ele leva
+            r = requests.get(url, headers={"User-Agent": NAVEGADOR}, timeout=20, allow_redirects=True)
+            final = r.url
+            if "origin_link=" in final:
+                final = unquote((parse_qs(urlparse(final).query).get("origin_link") or [final])[0])
+        except Exception as erro:
+            log.info(f"  nao consegui abrir o link encurtado {url}: {erro}")
+            return None
+    host = urlparse(final).netloc.lower()
+    if "amazon." in host:
+        return link_amazon(cfg, final)
+    if "shopee." in host:
+        if "origin_link=" in final:
+            final = unquote((parse_qs(urlparse(final).query).get("origin_link") or [final])[0])
+        limpo = final.split("?")[0]
+        return link_shopee_afiliado(limpo, str(cfg.get("shopee", {}).get("id_afiliado", "")), sub_id)
+    if "lojasrenner.com.br" in host:
+        return link_awin(cfg, final.split("?")[0])
+    return None
 
 
 def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
@@ -920,6 +959,11 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     pausa = int(ag.get("segundos_entre_posts", 60))
     dias_repetir = int(ag.get("dias_para_repetir_oferta", 7))
 
+    # Ofertas que a Nicole encaminhou para o bot: postam na hora, com os links dela
+    if not modo_teste:
+        if processar_encaminhados(cfg, estado, tg):
+            salvar_estado(estado)
+
     ofertas = (buscar_shopee(cfg) + buscar_shopee_feed(cfg) + buscar_feed_awin(cfg) + buscar_renner_promocoes(cfg)
                + buscar_hardyn(cfg)
                + verificar_lista(cfg, estado))
@@ -1222,6 +1266,94 @@ def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: 
     return True
 
 
+_URL = re.compile(r"(?:https?://|(?<![\w.])(?=(?:amzn\.to|a\.co|shope\.ee|s\.shopee\.com\.br)/))\S+", re.I)
+_LINHA_DE_DIVULGADOR = re.compile(
+    r"(@\w{3,}|t\.me|chat\.whatsapp|whatsapp\.com|entre no|entra no|participe|meu grupo|nosso grupo|"
+    r"meu canal|nosso canal|compartilhe|link na bio|#\w+)", re.I)
+
+
+def limpar_texto_encaminhado(texto: str) -> str:
+    """Tira links, @ e convites do divulgador original; mantem a descricao da oferta."""
+    linhas = []
+    for linha in texto.splitlines():
+        sem_link = _URL.sub("", linha)
+        if _LINHA_DE_DIVULGADOR.search(sem_link):
+            continue
+        sem_link = re.sub(r"\s+$", "", sem_link)
+        # linha que so tinha o link (ex.: "👉 https://...") fica vazia: descarta
+        if sem_link.strip() and not re.fullmatch(r"[\W_]*(comprar?|compre|link|aqui|clique)?[\W_]*",
+                                                  sem_link.strip(), re.I):
+            linhas.append(sem_link)
+        elif linhas and linhas[-1] != "":
+            linhas.append("")
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(linhas)).strip()
+
+
+def processar_encaminhados(cfg: dict, estado: dict, tg: "Telegram") -> int:
+    """Ofertas que a Nicole encaminha para o bot no privado (de outros grupos ou dela mesma):
+    o robo troca os links pelos dela (Amazon, Shopee, Renner) e posta no canal."""
+    dona = str(cfg.get("resumo_whatsapp", {}).get("chat_id", ""))
+    if not preenchido(dona):
+        return 0
+    try:
+        r = tg._api("getUpdates", {"offset": int(estado.get("telegram_offset", 0)) + 1, "timeout": 0,
+                                   "allowed_updates": json.dumps(["message"])})
+    except Exception as erro:
+        log.info(f"Encaminhados: nao consegui ler as mensagens do bot: {erro}")
+        return 0
+    postados = 0
+    for upd in r.get("result", []):
+        estado["telegram_offset"] = upd["update_id"]
+        msg = upd.get("message") or {}
+        if str((msg.get("from") or {}).get("id")) != dona:
+            continue  # so aceita ofertas mandadas pela propria Nicole
+        texto = msg.get("text") or msg.get("caption") or ""
+        entidades = msg.get("entities") or msg.get("caption_entities") or []
+        urls = [en["url"] for en in entidades if en.get("type") == "text_link"] + _URL.findall(texto)
+        if not urls:
+            continue
+        links, vistos = [], set()
+        for u in urls:
+            novo = converter_link(cfg, u.rstrip(").,!"))
+            if novo and novo not in vistos:
+                vistos.add(novo)
+                links.append(novo)
+        if not links:
+            tg.enviar_privado(dona, "⚠️ Não postei: não achei link da Amazon, Shopee ou Renner nessa "
+                                    "mensagem (link de outra loja eu não uso, porque a comissão iria para outra pessoa).")
+            continue
+        corpo = limpar_texto_encaminhado(texto)
+        e = html.escape
+        partes = [e(corpo), ""] if corpo else []
+        if len(links) == 1:
+            partes.append(f"🛒 Comprar aqui: {e(links[0])}")
+        else:
+            partes += [f"🛒 {e(l)}" for l in links]
+        rodape = cfg.get("mensagem", {}).get("rodape", "")
+        if rodape:
+            partes += ["", e(rodape)]
+        post = "\n".join(partes)
+        fotos = msg.get("photo") or []
+        try:
+            if fotos and len(post) <= 1024:
+                tg._api("sendPhoto", {"chat_id": tg.canal, "photo": fotos[-1]["file_id"],
+                                      "caption": post, "parse_mode": "HTML"})
+            else:
+                tg._api("sendMessage", {"chat_id": tg.canal, "text": post, "parse_mode": "HTML"})
+            postados += 1
+            estado["ultimo_post"] = datetime.now().isoformat(timespec="seconds")
+            zap = [corpo, ""] if corpo else []
+            zap += [f"🛒 {l.replace('sub_id=telegram', 'sub_id=whatsapp')}" for l in links]
+            zap += ["", "#publi"]
+            tg.enviar_privado(dona, "✅ Postei no canal com os seus links. Versão para o WhatsApp:")
+            tg.enviar_privado(dona, "\n".join(zap))
+            log.info(f"  ✔ oferta encaminhada postada ({len(links)} link(s))")
+        except Exception as erro:
+            log.info(f"  ✘ erro ao postar oferta encaminhada: {erro}")
+            tg.enviar_privado(dona, f"⚠️ Não consegui postar essa oferta: {erro}")
+    return postados
+
+
 def carregar_config() -> dict:
     if not ARQ_CONFIG.exists():
         raise SystemExit("Nao achei o config.toml na pasta do robo.")
@@ -1256,6 +1388,8 @@ def main() -> None:
     sub.add_parser("testar-telegram", help="manda mensagem de teste no canal")
     lr = sub.add_parser("link-renner", help="gera link de afiliado Awin para a Renner")
     lr.add_argument("url")
+    la = sub.add_parser("link-amazon", help="gera o seu link de associada para um produto da Amazon")
+    la.add_argument("url", nargs="?")
     ls = sub.add_parser("link-shopee", help="gera o seu link de afiliada para qualquer pagina da Shopee")
     ls.add_argument("url", nargs="?")
     mp = sub.add_parser("postar", help="posta uma oferta manual")
@@ -1282,6 +1416,11 @@ def main() -> None:
         print(link_shopee_afiliado(url, id_af, origem))
         return
 
+    if args.comando == "link-amazon":
+        url = args.url or input("Cole o link da Amazon: ").strip()
+        print(converter_link(cfg, url) or "Nao achei o codigo do produto (ASIN) nesse link.")
+        return
+
     if args.comando == "link-renner":
         link = link_awin(cfg, args.url)
         print(link or "Preencha id_publisher e id_anunciante_renner na secao [awin] do config.toml.")
@@ -1302,6 +1441,8 @@ def main() -> None:
         link = args.link
         if loja == "renner" and "awin1.com" not in link:
             link = link_awin(cfg, link) or link
+        if loja == "amazon":
+            link = converter_link(cfg, link) or link
         oferta = Oferta(
             loja=loja, nome=args.nome, preco=parse_preco(args.preco),
             preco_antigo=parse_preco(args.de), link=link, imagem=args.imagem,
