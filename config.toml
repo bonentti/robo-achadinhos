@@ -127,6 +127,20 @@ categorias = ["feminino", "bolsas-e-calcados", "perfumaria-e-cosmeticos"]
 # Outras páginas da Renner para olhar também (opcional), ex.: "/lista/-/N-19b3qyb"
 paginas_extras = ["/lista/-/N-19b3qyb"]
 
+# ---------------------------------------------------------------------
+#  ESTILO DA NICOLE (vale para todas as lojas)
+#  preferidos: peças com esses termos sobem na fila (+bonus)
+#  evitar: peças com esses termos nunca vão para o canal
+#  Base: a Seleção Renner que ela montou em 17/11/2026 (blusas lisas,
+#  canelado, tomara que caia, cropped de alfaiataria, crepe, ombro único,
+#  vestido curto de golinha; preto, bordô, verde, cinza).
+# ---------------------------------------------------------------------
+[estilo]
+bonus = 30
+preferidos = ["canelad", "tomara que caia", "cropped", "alfaiataria", "crepe", "ombro único",
+              "ombro unico", "golinha", "manga ampla", "bengaline", "decote coração", "vestido curto"]
+evitar = []
+
 # Cupom do programa Favoritos Renner (e-mails da Awin "Semana Pré-Black" e
 # "Natal chegou", 17/11/2026). Depois de "ate" o robô para de mostrar sozinho.
 # Para trocar: mude cupom/regra/ate. Para desligar: cupom = "".

@@ -1095,6 +1095,14 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
         if not any(p in o.nome.lower() for p in bloqueadas)
         and not (desconto_max and o.desconto > desconto_max)
     ]
+    # Gosto da Nicole ([estilo] no config): o que ela escolheria sobe na fila, o que ela acha feio sai
+    estilo = cfg.get("estilo", {})
+    evitar = [p.lower() for p in estilo.get("evitar", [])]
+    gosta = [p.lower() for p in estilo.get("preferidos", [])]
+    ofertas = [o for o in ofertas if not any(p in o.nome.lower() for p in evitar)]
+    for o in ofertas:
+        if any(p in o.nome.lower() for p in gosta):
+            o.prioridade = o.ordem + float(estilo.get("bonus", 30))
     candidatas_do_dia = list(ofertas)  # para o resumo diario (inclui as ja postadas)
     ofertas = [o for o in ofertas if pode_postar(o, estado, dias_repetir)]
 
