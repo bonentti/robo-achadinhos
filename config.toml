@@ -140,6 +140,10 @@ bonus = 30
 preferidos = ["canelad", "tomara que caia", "cropped", "alfaiataria", "crepe", "ombro único",
               "ombro unico", "golinha", "manga ampla", "bengaline", "decote coração", "vestido curto"]
 evitar = []
+# Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa")
+evitar_combinacoes = [
+  { pecas = ["legging", "leggin", "legue"], cores = ["rosa", "pink", "lilás", "lilas", "neon", "laranja", "amarel", "limão", "limao", "fúcsia", "fucsia", "pitaya", "coral", "turquesa"] },
+]
 
 # Cupom do programa Favoritos Renner (e-mails da Awin "Semana Pré-Black" e
 # "Natal chegou", 17/11/2026). Depois de "ate" o robô para de mostrar sozinho.
