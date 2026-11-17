@@ -147,9 +147,33 @@
   "shopee:9016411601": {
    "preco": 95.54,
    "em": "2026-11-17T18:38"
+  },
+  "renner:930553226": {
+   "preco": 25.9,
+   "em": "2026-11-17T19:13"
+  },
+  "renner:930618173": {
+   "preco": 29.9,
+   "em": "2026-11-17T19:13"
+  },
+  "renner:929682291": {
+   "preco": 29.9,
+   "em": "2026-11-17T19:14"
+  },
+  "renner:928023859": {
+   "preco": 29.9,
+   "em": "2026-11-17T19:14"
+  },
+  "renner:928615660": {
+   "preco": 29.9,
+   "em": "2026-11-17T19:15"
+  },
+  "renner:930670844": {
+   "preco": 29.9,
+   "em": "2026-11-17T19:15"
   }
  },
- "ultimo_post": "2026-11-17T18:38:19",
+ "ultimo_post": "2026-11-17T19:15:16",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-17T17:51:37",
@@ -264,6 +288,87 @@
   "calaleggingcomcsemvebo": "2026-11-17T15:56",
   "macaquinhoupsideempoli": "2026-11-17T17:00",
   "blusaemairflowcomestam": "2026-11-17T17:51",
-  "mscaracapilaroilreflec": "2026-11-17T18:38"
+  "mscaracapilaroilreflec": "2026-11-17T18:38",
+  "blusacaneladaemviscose": "2026-11-17T19:13",
+  "blusatomaraquecaiaembe": "2026-11-17T19:13",
+  "blusasupercroppedemalf": "2026-11-17T19:14",
+  "blusaemcrepecommangacu": "2026-11-17T19:14",
+  "vestidocurtoemalgodoco": "2026-11-17T19:15",
+  "blusaemombronicocomtex": "2026-11-17T19:15"
+ },
+ "seq_posts": 6,
+ "posts_rastreados": {
+  "1": {
+   "em": "2026-11-17T19:14:16",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Canelada em Viscose com Gola Redonda Bordô",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 25.9,
+   "de": 49.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "2": {
+   "em": "2026-11-17T19:14:31",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Tomara que Caia em Bengaline com Recorte no Busto Verde",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 79.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "3": {
+   "em": "2026-11-17T19:14:37",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Super Cropped em Alfaiataria com Decote Coração Preto",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 59.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "4": {
+   "em": "2026-11-17T19:15:03",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Crepe com Manga Curta Ampla Preto",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 69.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "5": {
+   "em": "2026-11-17T19:15:36",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Algodão com Golinha Alta Cinza",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 89.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "6": {
+   "em": "2026-11-17T19:15:53",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Ombro Único com Textura Preto",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 39.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  }
  }
 }
