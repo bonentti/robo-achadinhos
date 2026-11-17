@@ -564,6 +564,37 @@ def link_awin(cfg: dict, url_produto: str) -> str | None:
     )
 
 
+def link_rastreado(cfg: dict, link: str, canal: str, num: int | None = None) -> str:
+    """Etiqueta o link com o canal e o numero do post, para os relatorios de afiliado
+    mostrarem cliques/vendas de cada post: Shopee (sub_id), Awin (clickref) e Amazon (tag propria)."""
+    etiqueta = f"{canal}-{num}" if num else canal
+    if "affiliate_id=" in link:  # Shopee: sub_id = canal-numero (aparece como Sub_id1/Sub_id2 no relatorio)
+        return re.sub(r"sub_id=[^&]*", f"sub_id={etiqueta}", link) if "sub_id=" in link else f"{link}&sub_id={etiqueta}"
+    if "awin1.com/cread.php" in link:
+        link = re.sub(r"&clickref=[^&]*", "", link)
+        return link.replace("&ued=", f"&clickref={etiqueta}&ued=", 1)
+    if "amazon.com.br" in link:
+        tag = str(cfg.get("amazon", {}).get(f"tag_{canal}", ""))
+        if preenchido(tag):
+            return re.sub(r"tag=[^&]*", f"tag={tag}", link)
+    return link
+
+
+def registrar_post(cfg: dict, estado: dict, canal: str, nome: str, loja: str, link: str,
+                   preco: float | None = None, preco_antigo: float | None = None,
+                   categoria: str = "", cupom: str | None = None) -> int:
+    """Da um numero ao post e guarda o que ele era (para o painel cruzar com os relatorios de venda)."""
+    num = int(estado.get("seq_posts", 0)) + 1
+    estado["seq_posts"] = num
+    asin = re.search(r"/dp/([A-Z0-9]{10})", link)
+    estado.setdefault("posts_rastreados", {})[str(num)] = {
+        "em": datetime.now().isoformat(timespec="seconds"), "canal": canal, "loja": loja,
+        "nome": nome[:120], "marca": marca_conhecida(cfg, nome, loja) or "", "categoria": categoria,
+        "preco": preco, "de": preco_antigo, "cupom": cupom or "", "asin": asin.group(1) if asin else "",
+    }
+    return num
+
+
 def buscar_feed_awin(cfg: dict) -> list[Oferta]:
     aw = cfg.get("awin", {})
     url = aw.get("url_do_feed", "")
@@ -1015,6 +1046,9 @@ def limpar_estado(estado: dict) -> None:
     nomes = estado.get("nomes_postados", {})
     for chave in [k for k, v in nomes.items() if datetime.fromisoformat(v) < datetime.now() - timedelta(days=30)]:
         del nomes[chave]
+    rastreados = estado.get("posts_rastreados", {})
+    for chave in [k for k, v in rastreados.items() if datetime.fromisoformat(v["em"]) < datetime.now() - timedelta(days=180)]:
+        del rastreados[chave]
     for reg in estado.get("vigiados", {}).values():
         reg.pop("_candidato", None)
 
@@ -1140,7 +1174,7 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     if (rc.get("ativo") and preenchido(rc.get("chat_id")) and not modo_teste
             and datetime.now().hour >= int(rc.get("hora", 19)) and estado.get("resumo_enviado_em") != hoje):
         try:
-            enviados = enviar_resumo_whatsapp(tg, candidatas_do_dia, cfg)
+            enviados = enviar_resumo_whatsapp(tg, candidatas_do_dia, cfg, estado)
             if enviados:
                 estado["resumo_enviado_em"] = hoje
                 for o in enviados:  # o que foi para o WhatsApp nao repete no Telegram por 7 dias
@@ -1168,7 +1202,7 @@ def escolher_para_resumo(ofertas: list[Oferta], qtd: int) -> list[Oferta]:
     return escolhidas
 
 
-def legenda_whatsapp(o: Oferta) -> str:
+def legenda_whatsapp(o: Oferta, link: str | None = None) -> str:
     """Legenda pronta para o WhatsApp (*negrito*, ~riscado~)."""
     loja = NOMES_LOJAS.get(o.loja, o.loja.title())
     nome = o.nome.strip()
@@ -1181,12 +1215,12 @@ def legenda_whatsapp(o: Oferta) -> str:
         linhas.append(f"💰 *{reais(o.preco)}* na {loja}")
     if o.cupom:
         linhas.append(f"🎟️ Cupom: *{o.cupom}*")
-    linhas += ["", f"🛒 {o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "",
+    linhas += ["", f"🛒 {link or o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "",
                "#publi Link/cupom de parceria: posso ganhar uma comissão, sem custo extra pra você."]
     return "\n".join(linhas)
 
 
-def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> list[Oferta]:
+def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict, estado: dict) -> list[Oferta]:
     """Manda no privado cada achado separado (imagem pronta + legenda) para encaminhar ao WhatsApp."""
     from cartao import gerar_cartao  # so precisa do Pillow aqui
 
@@ -1200,7 +1234,9 @@ def enviar_resumo_whatsapp(tg: "Telegram", ofertas: list[Oferta], cfg: dict) -> 
     for o in escolhidas:
         loja = NOMES_LOJAS.get(o.loja, o.loja.title())
         foto = gerar_cartao(o.nome, o.preco, o.preco_antigo, loja, o.imagem, o.cupom, "Achados da @bonentti")
-        tg.enviar_foto_privado(chat, foto, legenda_whatsapp(o))
+        num = registrar_post(cfg, estado, "whatsapp", o.nome, o.loja, o.link, o.preco, o.preco_antigo,
+                             o.categoria, o.cupom)
+        tg.enviar_foto_privado(chat, foto, legenda_whatsapp(o, link_rastreado(cfg, o.link, "whatsapp", num)))
         time.sleep(1)
     if rc.get("rodape"):
         tg.enviar_privado(chat, rc["rodape"])
@@ -1432,7 +1468,11 @@ def processar_encaminhados(cfg: dict, estado: dict, tg: "Telegram") -> int:
             postados += 1
             estado["ultimo_post"] = datetime.now().isoformat(timespec="seconds")
             zap = [corpo, ""] if corpo else []
-            zap += [f"🛒 {l.replace('sub_id=telegram', 'sub_id=whatsapp')}" for l in links]
+            titulo = next((l.strip() for l in corpo.splitlines() if len(l.strip()) > 8), "oferta encaminhada")
+            for l in links:
+                loja_l = "amazon" if "amazon." in l else "renner" if "awin1.com" in l else "shopee"
+                num = registrar_post(cfg, estado, "whatsapp", titulo, loja_l, l)
+                zap.append(f"🛒 {link_rastreado(cfg, l, 'whatsapp', num)}")
             zap += ["", "#publi"]
             tg.enviar_privado(dona, "✅ Postei no canal com os seus links. Versão para o WhatsApp:")
             tg.enviar_privado(dona, "\n".join(zap))

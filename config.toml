@@ -175,6 +175,9 @@ paginas = ["/hotsite/outlet"]
 # ---------------------------------------------------------------------
 [amazon]
 tag = "bonentti-20"
+# Código só para os links do WhatsApp (criado em 17/11/2026): no relatório da Amazon
+# dá para separar o que veio do WhatsApp e do Telegram.
+tag_whatsapp = "bonentti-zap-20"
 
 [mercadolivre]
 client_id = "COLOQUE_AQUI"
