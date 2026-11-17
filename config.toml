@@ -127,6 +127,19 @@ categorias = ["feminino", "bolsas-e-calcados", "perfumaria-e-cosmeticos"]
 # Outras páginas da Renner para olhar também (opcional), ex.: "/lista/-/N-19b3qyb"
 paginas_extras = ["/lista/-/N-19b3qyb"]
 
+# Cupom do programa Favoritos Renner (e-mails da Awin "Semana Pré-Black" e
+# "Natal chegou", 17/11/2026). Depois de "ate" o robô para de mostrar sozinho.
+# Para trocar: mude cupom/regra/ate. Para desligar: cupom = "".
+[renner_cupom]
+cupom = "FAVORITOS"
+regra = "💸 25% OFF no carrinho acima de R$ 149"
+ate = "2026-11-30"
+exceto = ["perfumaria", "cosmético", "cosmetico", "beleza", "maquiagem", "new balance"]
+categorias = [
+  { termos = ["vestido"], cupom = "VESTIDOS10", texto = "+10% OFF em vestidos" },
+  { termos = ["bolsa", "calçado", "calcado", "sandália", "sandalia", "tênis", "tenis", "bota", "sapat", "scarpin", "rasteira", "mule", "mochila"], cupom = "ACESSORIOS10", texto = "+10% OFF em bolsas e calçados" },
+]
+
 # ---------------------------------------------------------------------
 #  CUPONS DE PARCERIA (marcas que pagam pelo seu cupom, não por link)
 #  O cupom aparece em todo post da marca: "🎟️ Cupom: BONENTTI"
@@ -134,6 +147,9 @@ paginas_extras = ["/lista/-/N-19b3qyb"]
 [cupons]
 hardyn = "BONENTTI"
 kaisan = "BONENTTI"
+# SHEIN não tem cupom fixo (resposta da SHEIN em 17/11/2026): cada campanha gera
+# um código novo. Atualize aqui quando chegar o próximo.
+shein = "BONENTTI2332"
 
 # ---------------------------------------------------------------------
 #  HARDYN (parceria por cupom) — o robô lê o Outlet do site

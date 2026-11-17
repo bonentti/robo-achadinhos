@@ -635,6 +635,24 @@ def _renner_registros(url: str) -> list[dict]:
     return achados
 
 
+def cupom_renner(cfg: dict, nome: str, marca: str, hierarquia: str) -> tuple[str | None, list[str]]:
+    """Cupom do programa Favoritos Renner (vem por e-mail da Awin). Some sozinho depois de 'ate'."""
+    rc = cfg.get("renner_cupom", {})
+    cupom = rc.get("cupom", "")
+    ate = rc.get("ate", "")
+    if not preenchido(cupom) or (ate and datetime.now().strftime("%Y-%m-%d") > ate):
+        return None, []
+    texto = f"{nome} {marca} {hierarquia}".lower()
+    if any(x.lower() in texto for x in rc.get("exceto", [])):
+        return None, []
+    extras = [rc["regra"]] if rc.get("regra") else []
+    for c in rc.get("categorias", []):
+        if any(t.lower() in texto for t in c.get("termos", [])):
+            extras.append(f"➕ Junte com o cupom {c['cupom']}: {c['texto']}")
+            break
+    return cupom, extras
+
+
 def buscar_renner_promocoes(cfg: dict) -> list[Oferta]:
     """Percorre as listas de promocao da Renner e pega pecas femininas com desconto alto."""
     rc = cfg.get("renner_auto", {})
@@ -690,11 +708,12 @@ def buscar_renner_promocoes(cfg: dict) -> list[Oferta]:
             nome = g("prop.product.displayName")
             if favorita and marca and marca.lower() not in nome.lower():
                 nome = f"{marca} — {nome}"  # deixa a marca visivel no post
+            cupom, extras = cupom_renner(cfg, nome, marca, hierarquia)
             ofertas.append(Oferta(
                 loja="renner", nome=nome, preco=preco, preco_antigo=antigo,
                 link=link_awin(cfg, RENNER + caminho), imagem=imagem or None, chave=f"renner:{pid}",
                 categoria=hierarquia.split("|")[0],
-                favorita=favorita,
+                favorita=favorita, cupom=cupom, extras=extras,
             ))
         time.sleep(1)
     log.info(f"Renner automatica: {len(paginas)} listas, {total} pecas lidas, {len(ofertas)} passaram nos filtros")
