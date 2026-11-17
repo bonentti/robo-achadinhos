@@ -111,9 +111,13 @@
   "shopee:23197632475": {
    "preco": 117.88,
    "em": "2026-11-17T08:47"
+  },
+  "shopee:23896064317": {
+   "preco": 99.9,
+   "em": "2026-11-17T09:40"
   }
  },
- "ultimo_post": "2026-11-17T08:47:23",
+ "ultimo_post": "2026-11-17T09:40:16",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-16T19:30:40",
@@ -123,14 +127,15 @@
   "shopee-Beauty": "2026-11-16T20:16:41",
   "shopee-Women Shoes": "2026-11-16T20:55:21",
   "shopee-Sports & Outdoors": "2026-11-16T21:57:47",
-  "shopee-Home & Living": "2026-11-17T08:47:23"
+  "shopee-Home & Living": "2026-11-17T08:47:23",
+  "shopee-Home Appliances": "2026-11-17T09:40:16"
  },
  "vigiados": {
   "https://www.kaisan.com.br/top-triangulo-slim-alquimia-ref-k5340-f-k5340-f": {
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -138,7 +143,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -146,7 +151,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -154,7 +159,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -162,7 +167,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -170,36 +175,36 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 112.43
   },
   "https://www.kaisan.com.br/macaquinho-sem-gancho-com-alcas-cruzadas-marrom-off-white-ref-k4701-d-k4701-d": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-17T08:47",
+   "visto_em": "2026-11-17T09:40",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-17T08:47",
+  "em": "2026-11-17T09:40",
   "ofertas_por_loja": {
    "shopee": 1182,
-   "renner": 38,
+   "renner": 39,
    "hardyn": 19,
    "kaisan": 4
   }
@@ -212,6 +217,7 @@
   "kitshampooecondicionad": "2026-11-16T20:16",
   "papetefemininamolecasl": "2026-11-16T20:55",
   "topselenenadadorsemboj": "2026-11-16T21:57",
-  "pipoqueirabrinoxcerami": "2026-11-17T08:47"
+  "pipoqueirabrinoxcerami": "2026-11-17T08:47",
+  "ferroavaporphilcopfv31": "2026-11-17T09:40"
  }
 }
