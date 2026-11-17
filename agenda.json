@@ -1,0 +1,148 @@
+[
+ {
+  "id": "perfumes-bf-abertura",
+  "quando": "2026-11-18T09:00",
+  "texto": "<b>🖤 Seleção de perfumes da Black Friday</b>\n\nBlack Friday é a melhor época do ano pra comprar perfume importado. Separei os femininos famosos que estão com desconto na Amazon, todos <b>vendidos e entregues pela própria Amazon</b> (nada de revendedor).\n\nVou postando ao longo do dia 👇\n\n💡 Preço de Black Friday muda rápido: se algum estiver na sua lista, vale conferir logo.",
+  "zap": "📲 Seleção de perfumes (abertura) para o Canal do WhatsApp:\n\n*🖤 Seleção de perfumes da Black Friday*\n\nBlack Friday é a melhor época do ano pra comprar perfume importado. Separei os femininos famosos que estão com desconto na Amazon, todos *vendidos e entregues pela própria Amazon* (nada de revendedor).\n\nVou postando ao longo do dia 👇\n\n💡 Preço de Black Friday muda rápido: se algum estiver na sua lista, vale conferir logo."
+ },
+ {
+  "id": "perfumes-bf-B008SBKTLI",
+  "quando": "2026-11-18T09:10",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Lancôme La Vie est Belle Eau de Parfum 50ml",
+  "preco": 404.99,
+  "de": 809.0,
+  "link": "https://www.amazon.com.br/dp/B008SBKTLI",
+  "imagem": "https://m.media-amazon.com/images/I/71EoeGFUpHL._AC_SL1500_.jpg",
+  "chave": "amazon:B008SBKTLI",
+  "extras": [
+   "⭐ 4,6 (28 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,6 (28 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B071VCX893",
+  "quando": "2026-11-18T10:40",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Gabriela Sabatini Eau de Toilette 60ml",
+  "preco": 75.78,
+  "de": 169.0,
+  "link": "https://www.amazon.com.br/dp/B071VCX893",
+  "imagem": "https://m.media-amazon.com/images/I/51UZdhsKyXL._AC_SL1000_.jpg",
+  "chave": "amazon:B071VCX893",
+  "extras": [
+   "⭐ 4,5 (8 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,5 (8 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B07WCVW56S",
+  "quando": "2026-11-18T12:10",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Lancôme Idôle Eau de Parfum 25ml",
+  "preco": 292.99,
+  "de": 509.0,
+  "link": "https://www.amazon.com.br/dp/B07WCVW56S",
+  "imagem": "https://m.media-amazon.com/images/I/61Yf6Mzgd5L._AC_SL1500_.jpg",
+  "chave": "amazon:B07WCVW56S",
+  "extras": [
+   "⭐ 4,6 (7,9 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,6 (7,9 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B076X8YRLC",
+  "quando": "2026-11-18T13:40",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Cacharel Amor Amor Eau de Toilette 30ml",
+  "preco": 116.91,
+  "de": 229.0,
+  "link": "https://www.amazon.com.br/dp/B076X8YRLC",
+  "imagem": "https://m.media-amazon.com/images/I/51F+mN4yzKL._AC_SL1500_.jpg",
+  "chave": "amazon:B076X8YRLC",
+  "extras": [
+   "⭐ 4,6 (14 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,6 (14 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B08DHW4CT9",
+  "quando": "2026-11-18T15:10",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Giorgio Armani My Way Eau de Parfum 30ml",
+  "preco": 314.9,
+  "de": 569.0,
+  "link": "https://www.amazon.com.br/dp/B08DHW4CT9",
+  "imagem": "https://m.media-amazon.com/images/I/61rNxZ4QCrL._AC_SL1500_.jpg",
+  "chave": "amazon:B08DHW4CT9",
+  "extras": [
+   "⭐ 4,6 (6,1 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,6 (6,1 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B08M2PP78L",
+  "quando": "2026-11-18T16:40",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Jimmy Choo I Want Choo Eau de Parfum 40ml",
+  "preco": 297.0,
+  "de": 549.0,
+  "link": "https://www.amazon.com.br/dp/B08M2PP78L",
+  "imagem": "https://m.media-amazon.com/images/I/61eWOIxKvML._AC_SL1500_.jpg",
+  "chave": "amazon:B08M2PP78L",
+  "extras": [
+   "⭐ 4,6 (4,9 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,6 (4,9 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ },
+ {
+  "id": "perfumes-bf-B01B897EKA",
+  "quando": "2026-11-18T18:10",
+  "loja": "amazon",
+  "categoria": "perfume",
+  "nome": "Lancôme La Nuit Trésor Eau de Parfum 100ml",
+  "preco": 656.09,
+  "de": 1299.0,
+  "link": "https://www.amazon.com.br/dp/B01B897EKA",
+  "imagem": "https://m.media-amazon.com/images/I/710XHwgF-BL._AC_SL1500_.jpg",
+  "chave": "amazon:B01B897EKA",
+  "extras": [
+   "⭐ 4,7 (1,7 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ],
+  "extras_zap": [
+   "⭐ 4,7 (1,7 mil avaliações)",
+   "✅ Vendido e entregue pela Amazon"
+  ]
+ }
+]

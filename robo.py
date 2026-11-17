@@ -1089,6 +1089,8 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     if not modo_teste:
         if processar_encaminhados(cfg, estado, tg):
             salvar_estado(estado)
+        if postar_agenda(cfg, estado, tg):
+            salvar_estado(estado)
 
     ofertas = (buscar_shopee(cfg) + buscar_shopee_feed(cfg) + buscar_feed_awin(cfg) + buscar_renner_promocoes(cfg)
                + buscar_hardyn(cfg)
@@ -1507,6 +1509,69 @@ def processar_encaminhados(cfg: dict, estado: dict, tg: "Telegram") -> int:
         except Exception as erro:
             log.info(f"  ✘ erro ao postar oferta encaminhada: {erro}")
             tg.enviar_privado(dona, f"⚠️ Não consegui postar essa oferta: {erro}")
+    return postados
+
+
+ARQ_AGENDA = PASTA / "agenda.json"
+
+
+def postar_agenda(cfg: dict, estado: dict, tg: "Telegram") -> int:
+    """Posts com hora marcada (agenda.json), ex.: uma selecao montada a mao para amanha.
+    Cada item vai para o canal e a versao do WhatsApp (link etiquetado) vai para o privado da Nicole."""
+    if not ARQ_AGENDA.exists():
+        return 0
+    try:
+        itens = json.loads(ARQ_AGENDA.read_text(encoding="utf-8"))
+    except Exception as erro:
+        log.info(f"Agenda: arquivo com erro: {erro}")
+        return 0
+    feitos = estado.setdefault("agenda_feitos", [])
+    dona = str(cfg.get("resumo_whatsapp", {}).get("chat_id", ""))
+    agora = datetime.now()
+    postados = 0
+    for item in sorted(itens, key=lambda i: i["quando"]):
+        quando = datetime.fromisoformat(item["quando"])
+        if item["id"] in feitos or quando > agora:
+            continue
+        feitos.append(item["id"])  # marca antes: nunca posta duas vezes, mesmo com erro
+        if agora - quando > timedelta(hours=6):
+            log.info(f"Agenda: '{item['id']}' passou da hora (mais de 6h), pulando")
+            continue
+        try:
+            if item.get("texto"):  # aviso / abertura de selecao
+                tg._api("sendMessage", {"chat_id": tg.canal, "text": item["texto"], "parse_mode": "HTML"})
+                if preenchido(dona) and item.get("zap"):
+                    tg.enviar_privado(dona, item["zap"])
+            else:
+                link = item["link"]
+                if item["loja"] == "amazon":
+                    link = link_amazon(cfg, link) or link
+                elif item["loja"] == "renner" and "awin1.com" not in link:
+                    link = link_awin(cfg, link) or link
+                o = Oferta(loja=item["loja"], nome=item["nome"], preco=float(item["preco"]),
+                           preco_antigo=float(item["de"]) if item.get("de") else None, link=link,
+                           imagem=item.get("imagem"), chave=item.get("chave", f"agenda:{item['id']}"),
+                           cupom=item.get("cupom"), extras=item.get("extras", []),
+                           chamada=item.get("chamada"), categoria=item.get("categoria", ""))
+                tg.enviar(montar_mensagem(o, cfg), o.imagem)
+                marcar_postado(o, estado)
+                if preenchido(dona):
+                    from cartao import gerar_cartao
+                    num = registrar_post(cfg, estado, "whatsapp", o.nome, o.loja, o.link, o.preco,
+                                         o.preco_antigo, o.categoria, o.cupom)
+                    legenda = legenda_whatsapp(o, link_rastreado(cfg, o.link, "whatsapp", num))
+                    if item.get("extras_zap"):
+                        legenda = legenda.replace("\n\n🛒", "\n" + "\n".join(item["extras_zap"]) + "\n\n🛒", 1)
+                    loja = NOMES_LOJAS.get(o.loja, o.loja.title())
+                    foto = gerar_cartao(o.nome, o.preco, o.preco_antigo, loja, o.imagem, o.cupom, "Achados da @bonentti")
+                    tg.enviar_foto_privado(dona, foto, legenda)
+            postados += 1
+            estado["ultimo_post"] = agora.isoformat(timespec="seconds")
+            log.info(f"  ✔ agenda: {item['id']}")
+            time.sleep(3)
+        except Exception as erro:
+            log.info(f"  ✘ agenda: erro em {item['id']}: {erro}")
+    del feitos[:-300]
     return postados
 
 
