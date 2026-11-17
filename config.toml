@@ -76,6 +76,15 @@ excluir_palavras = ["masculin", "infantil", "kids", "menino", "inspirad", "contr
 # SÓ MARCAS CONHECIDAS: o produto só entra se a loja ou o nome do produto tiver
 # uma marca da lista [marcas_conhecidas] (lá embaixo) ou das marcas favoritas.
 so_marcas_conhecidas = true
+# Produto de marca só entra se vendido pela loja da própria marca (ex.: "Moleca Oficial")
+# ou por uma grande varejista abaixo. Revendedora qualquer fica de fora (17/11: rasteirinha
+# "Moleca" vendida pela DIGOS ONLINE).
+exigir_loja_da_marca = true
+lojas_multimarcas = ["Webcontinental", "Gazin", "Fast Shop", "Lojas REDE", "REDE marketplace",
+                     "Centersport", "Beleza na Web", "Epoca Cosmeticos", "Época Cosméticos",
+                     "Magazine Luiza", "Magalu", "Casas Bahia", "Americanas", "Netshoes", "Zattini",
+                     "Dafiti", "Centauro", "Drogasil", "Drogaria São Paulo", "Panvel", "Pague Menos",
+                     "Sephora", "Polishop", "Lojas Mineiras", "Cobasi", "Petz", "Leroy Merlin"]
 desconto_minimo_marcas = 20   # marca conhecida dá desconto real menor que loja genérica
 curtidas_minimas_marcas = 30
 nota_minima_marcas = 4.6
@@ -143,6 +152,8 @@ evitar = ["rasteirinha moleca com laço"]   # 17/11: ela não gostou
 # Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa";
 # depois: "vale sim" para calça e short também)
 evitar_combinacoes = [
+  # rasteirinha/chinelo com laço (17/11: não gostou da Moleca com laços)
+  { pecas = ["rasteirinha", "rasteira", "chinelo", "slide"], cores = ["laço", "laços", "laco", "lacinho"] },
   { pecas = ["legging", "leggin", "legue", "calça", "calca", "short", "shortinho", "bermuda"], cores = ["rosa", "pink", "lilás", "lilas", "neon", "laranja", "amarel", "limão", "limao", "fúcsia", "fucsia", "pitaya", "coral", "turquesa"] },
 ]
 

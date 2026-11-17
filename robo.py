@@ -368,6 +368,18 @@ def marca_conhecida(cfg: dict, titulo: str, loja: str) -> str | None:
     return None
 
 
+def loja_confiavel(cfg: dict, titulo: str, loja: str) -> bool:
+    """Produto de marca so entra se vendido pela loja da propria marca ou por uma grande
+    varejista conhecida ([shopee] lojas_multimarcas). Revendedora qualquer fica de fora."""
+    sp = cfg.get("shopee", {})
+    if not sp.get("exigir_loja_da_marca", False):
+        return True
+    if marca_conhecida(cfg, "", loja) or marca_favorita(cfg, loja):
+        return True  # a marca esta no nome da loja (ex.: "Moleca Oficial")
+    norm = lambda s: re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+    return any(norm(v) in norm(loja) for v in sp.get("lojas_multimarcas", []))
+
+
 def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") -> str:
     """Os links do feed nao levam o ID de afiliada; sem ele nao ha comissao."""
     if "affiliate_id=" in link:
@@ -511,6 +523,8 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                 d_min, c_min = cfg.get("produtos_favoritos", {}).get("desconto_minimo", 20), 0
             else:
                 favorita = marca_favorita(cfg, texto_busca)
+                if not loja_confiavel(cfg, titulo, linha.get("shop_name") or ""):
+                    continue  # marca vendida por revendedora (ex.: "Moleca" na loja DIGOS ONLINE)
                 if favorita:
                     d_min, c_min = cfg.get("marcas_favoritas", {}).get("desconto_minimo", 15), 0
                 else:
