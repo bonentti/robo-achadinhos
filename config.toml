@@ -140,9 +140,10 @@ bonus = 30
 preferidos = ["canelad", "tomara que caia", "cropped", "alfaiataria", "crepe", "ombro único",
               "ombro unico", "golinha", "manga ampla", "bengaline", "decote coração", "vestido curto"]
 evitar = []
-# Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa")
+# Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa";
+# depois: "vale sim" para calça e short também)
 evitar_combinacoes = [
-  { pecas = ["legging", "leggin", "legue"], cores = ["rosa", "pink", "lilás", "lilas", "neon", "laranja", "amarel", "limão", "limao", "fúcsia", "fucsia", "pitaya", "coral", "turquesa"] },
+  { pecas = ["legging", "leggin", "legue", "calça", "calca", "short", "shortinho", "bermuda"], cores = ["rosa", "pink", "lilás", "lilas", "neon", "laranja", "amarel", "limão", "limao", "fúcsia", "fucsia", "pitaya", "coral", "turquesa"] },
 ]
 
 # Cupom do programa Favoritos Renner (e-mails da Awin "Semana Pré-Black" e

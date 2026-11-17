@@ -1101,7 +1101,8 @@ def rodada(cfg: dict, tg: Telegram, modo_teste: bool) -> None:
     gosta = [p.lower() for p in estilo.get("preferidos", [])]
     def combina_mal(nome: str) -> bool:  # ex.: legging + cor dificil de combinar
         n = nome.lower()
-        return any(any(t in n for t in c.get("pecas", [])) and any(cor in n for cor in c.get("cores", []))
+        return any(any(re.search(rf"\b{re.escape(t)}s?\b", n) for t in c.get("pecas", []))  # "calça" != "calçado"
+                   and any(cor in n for cor in c.get("cores", []))
                    for c in estilo.get("evitar_combinacoes", []))
     ofertas = [o for o in ofertas if not any(p in o.nome.lower() for p in evitar) and not combina_mal(o.nome)]
     for o in ofertas:
