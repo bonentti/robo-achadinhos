@@ -197,7 +197,7 @@
    "em": "2026-11-17T22:52"
   }
  },
- "ultimo_post": "2026-11-17T22:52:10",
+ "ultimo_post": "2026-11-18T08:56:08",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-17T17:51:37",
@@ -219,7 +219,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -227,7 +227,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -235,7 +235,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -243,7 +243,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -251,7 +251,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -259,7 +259,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -267,29 +267,28 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-18T00:39",
+   "visto_em": "2026-11-18T08:56",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-18T00:39",
+  "em": "2026-11-18T08:56",
   "ofertas_por_loja": {
    "shopee": 686,
-   "renner": 38,
    "hardyn": 19,
    "kaisan": 3
   }
@@ -297,7 +296,7 @@
  "resumo_enviado_em": "2026-11-17",
  "dia_promocional_avisado": "2026-11-16",
  "cupons_ultimo_id": 8028,
- "telegram_offset": 474373499,
+ "telegram_offset": 474373500,
  "nomes_postados": {
   "kitshampooecondicionad": "2026-11-16T20:16",
   "papetefemininamolecasl": "2026-11-16T20:55",
@@ -328,7 +327,7 @@
   "poteshermticoselectrol": "2026-11-17T21:22",
   "grillesanduicheiraphil": "2026-11-17T22:52"
  },
- "seq_posts": 11,
+ "seq_posts": 12,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -461,6 +460,18 @@
    "de": 139.9,
    "cupom": "FAVORITOS",
    "asin": ""
+  },
+  "12": {
+   "em": "2026-11-18T08:56:08",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "oferta encaminhada",
+   "marca": "",
+   "categoria": "",
+   "preco": null,
+   "de": null,
+   "cupom": "",
+   "asin": "B0D9YTVXWT"
   }
  },
  "agenda_feitos": []
