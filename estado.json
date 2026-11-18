@@ -307,6 +307,10 @@
   "kaisan:K5433-B": {
    "preco": 191.9,
    "em": "2026-11-18T17:41"
+  },
+  "amazon:B0DNY5FQY3": {
+   "preco": 41.65,
+   "em": "2026-11-18T17:53"
   }
  },
  "ultimo_post": "2026-11-18T17:12:48",
@@ -467,9 +471,10 @@
   "macaquinhocomtirascruz": "2026-11-18T17:39",
   "blusaraglanmangalongae": "2026-11-18T17:39",
   "macaquinhodecotealtoea": "2026-11-18T17:41",
-  "macacoflaredecotealtoe": "2026-11-18T17:41"
+  "macacoflaredecotealtoe": "2026-11-18T17:41",
+  "tapetedepedradiatomita": "2026-11-18T17:53"
  },
- "seq_posts": 36,
+ "seq_posts": 37,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -902,6 +907,18 @@
    "de": 239.9,
    "cupom": "BONENTTI",
    "asin": ""
+  },
+  "37": {
+   "em": "2026-11-18T17:53:48",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Tapete de Pedra Diatomita LYOR para Banheiro 60x39cm",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 41.65,
+   "de": 121.6,
+   "cupom": "",
+   "asin": "B0DNY5FQY3"
   }
  },
  "agenda_feitos": [
