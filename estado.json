@@ -231,9 +231,17 @@
   "shopee:22797770341": {
    "preco": 19.56,
    "em": "2026-11-18T12:13"
+  },
+  "amazon:B076X8YRLC": {
+   "preco": 116.91,
+   "em": "2026-11-18T13:16"
+  },
+  "shopee:58270659010": {
+   "preco": 53.99,
+   "em": "2026-11-18T13:18"
   }
  },
- "ultimo_post": "2026-11-18T12:13:26",
+ "ultimo_post": "2026-11-18T13:18:32",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-17T17:51:37",
@@ -245,7 +253,7 @@
   "shopee-Sports & Outdoors": "2026-11-17T20:35:09",
   "shopee-Home & Living": "2026-11-17T21:22:53",
   "shopee-Home Appliances": "2026-11-17T22:52:10",
-  "shopee-Women Clothes": "2026-11-17T10:58:47",
+  "shopee-Women Clothes": "2026-11-18T13:18:32",
   "shopee-Health": "2026-11-17T11:53:01",
   "shopee-Watches": "2026-11-17T12:54:11",
   "shopee-Fashion Accessories": "2026-11-17T13:59:33",
@@ -256,7 +264,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:17",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -264,7 +272,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:17",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -272,7 +280,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:17",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -280,7 +288,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -288,7 +296,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -296,7 +304,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -304,26 +312,26 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-18T12:13",
+   "visto_em": "2026-11-18T13:18",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-18T12:13",
+  "em": "2026-11-18T13:18",
   "ofertas_por_loja": {
    "shopee": 686,
    "renner": 38,
@@ -372,9 +380,11 @@
   "dolcegabbanadevotioned": "2026-11-18T10:58",
   "lancmelavieestbelleeau": "2026-11-18T11:17",
   "playstation5slimdigita": "2026-11-18T11:27",
-  "bolsaclutchnighthinode": "2026-11-18T12:13"
+  "bolsaclutchnighthinode": "2026-11-18T12:13",
+  "cacharelamoramoreaudet": "2026-11-18T13:16",
+  "kit2regatasfemininasem": "2026-11-18T13:18"
  },
- "seq_posts": 19,
+ "seq_posts": 20,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -603,11 +613,24 @@
    "de": 4498.83,
    "cupom": "300TAO",
    "asin": "B0FPGF9J2J"
+  },
+  "20": {
+   "em": "2026-11-18T13:16:33",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Cacharel Amor Amor Eau de Toilette 30ml",
+   "marca": "",
+   "categoria": "perfume",
+   "preco": 116.91,
+   "de": 229.0,
+   "cupom": "",
+   "asin": "B076X8YRLC"
   }
  },
  "agenda_feitos": [
   "perfumes-bf-abertura",
   "perfumes-bf-B08M2PP78L",
-  "perfumes-bf-B008SBKTLI"
+  "perfumes-bf-B008SBKTLI",
+  "perfumes-bf-B076X8YRLC"
  ]
 }
