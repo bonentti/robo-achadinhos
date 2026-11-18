@@ -339,6 +339,22 @@
   "shopee:23193188032": {
    "preco": 59.9,
    "em": "2026-11-18T19:04"
+  },
+  "renner:930267107": {
+   "preco": 9.9,
+   "em": "2026-11-18T19:41"
+  },
+  "renner:929949039": {
+   "preco": 15.9,
+   "em": "2026-11-18T19:41"
+  },
+  "renner:929496631": {
+   "preco": 15.9,
+   "em": "2026-11-18T19:42"
+  },
+  "renner:931357201": {
+   "preco": 39.9,
+   "em": "2026-11-18T19:42"
   }
  },
  "ultimo_post": "2026-11-18T19:04:31",
@@ -510,9 +526,13 @@
   "microfonedelapelasemfi": "2026-11-18T19:02",
   "macaquinhosemganchocom": "2026-11-18T19:04",
   "cremehidratantefacialc": "2026-11-18T19:04",
-  "cacheadorbritnia25mmre": "2026-11-18T19:04"
+  "cacheadorbritnia25mmre": "2026-11-18T19:04",
+  "blusafrentenicaemcotto": "2026-11-18T19:41",
+  "blusafrentenicaemmicro": "2026-11-18T19:41",
+  "blusaemmicrofibratomar": "2026-11-18T19:42",
+  "blusafrentenicacombarr": "2026-11-18T19:42"
  },
- "seq_posts": 47,
+ "seq_posts": 51,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1075,6 +1095,54 @@
    "categoria": "feminino",
    "preco": 39.9,
    "de": 139.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "48": {
+   "em": "2026-11-18T19:41:36",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única em Cotton com Amarração Cinza",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 9.9,
+   "de": 49.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "49": {
+   "em": "2026-11-18T19:41:50",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única em Microfibra com Decote V Transpassado Marrom",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 15.9,
+   "de": 59.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "50": {
+   "em": "2026-11-18T19:42:05",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Microfibra Tomara que Caia com Fenda Lateral Cinza Escuro",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 15.9,
+   "de": 49.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "51": {
+   "em": "2026-11-18T19:42:37",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única com Barra Rendada Branco",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 39.9,
+   "de": 69.9,
    "cupom": "FAVORITOS",
    "asin": ""
   }
