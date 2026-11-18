@@ -359,6 +359,26 @@
   "hardyn:2863": {
    "preco": 54.95,
    "em": "2026-11-18T19:52"
+  },
+  "shopee:22199401010": {
+   "preco": 32.18,
+   "em": "2026-11-18T20:13"
+  },
+  "shopee:22694938629": {
+   "preco": 36.79,
+   "em": "2026-11-18T20:13"
+  },
+  "shopee:22494927391": {
+   "preco": 35.96,
+   "em": "2026-11-18T20:13"
+  },
+  "shopee:23194917781": {
+   "preco": 27.96,
+   "em": "2026-11-18T20:14"
+  },
+  "shopee:58257002926": {
+   "preco": 27.96,
+   "em": "2026-11-18T20:14"
   }
  },
  "ultimo_post": "2026-11-18T19:52:04",
@@ -535,9 +555,14 @@
   "blusafrentenicaemmicro": "2026-11-18T19:41",
   "blusaemmicrofibratomar": "2026-11-18T19:42",
   "blusafrentenicacombarr": "2026-11-18T19:42",
-  "topdecoteuempoliamidac": "2026-11-18T19:52"
+  "topdecoteuempoliamidac": "2026-11-18T19:52",
+  "corretivobtskinplushbr": "2026-11-18T20:13",
+  "glossbtglazebrunatavar": "2026-11-18T20:13",
+  "blushstickbtcocacolabr": "2026-11-18T20:13",
+  "oiltintbtcocacolabruna": "2026-11-18T20:14",
+  "lipglossbtcocacolabrun": "2026-11-18T20:14"
  },
- "seq_posts": 51,
+ "seq_posts": 57,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1149,6 +1174,78 @@
    "preco": 39.9,
    "de": 69.9,
    "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "52": {
+   "em": "2026-11-18T20:12:37",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Cupom 20% lojas oficiais - loja Bruna Tavares (Shopee)",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": null,
+   "de": null,
+   "cupom": "",
+   "asin": ""
+  },
+  "53": {
+   "em": "2026-11-18T20:13:09",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Corretivo BT Skinplush Bruna Tavares",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 32.18,
+   "de": 76.62,
+   "cupom": "",
+   "asin": ""
+  },
+  "54": {
+   "em": "2026-11-18T20:13:36",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Gloss BT Glaze Bruna Tavares",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 36.79,
+   "de": 69.42,
+   "cupom": "",
+   "asin": ""
+  },
+  "55": {
+   "em": "2026-11-18T20:13:49",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Blush Stick BT Coca-Cola Bruna Tavares",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 35.96,
+   "de": 89.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "56": {
+   "em": "2026-11-18T20:14:22",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Oil Tint BT Coca-Cola Bruna Tavares",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 27.96,
+   "de": 69.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "57": {
+   "em": "2026-11-18T20:14:38",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Lip Gloss BT Coca-Cola Bruna Tavares",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 27.96,
+   "de": 69.9,
+   "cupom": "",
    "asin": ""
   }
  },
