@@ -239,6 +239,10 @@
   "shopee:58270659010": {
    "preco": 53.99,
    "em": "2026-11-18T13:18"
+  },
+  "ml:MLB63247306": {
+   "preco": 42.7,
+   "em": "2026-11-18T13:33"
   }
  },
  "ultimo_post": "2026-11-18T13:18:32",
@@ -382,9 +386,10 @@
   "playstation5slimdigita": "2026-11-18T11:27",
   "bolsaclutchnighthinode": "2026-11-18T12:13",
   "cacharelamoramoreaudet": "2026-11-18T13:16",
-  "kit2regatasfemininasem": "2026-11-18T13:18"
+  "kit2regatasfemininasem": "2026-11-18T13:18",
+  "blushstickbrunatavares": "2026-11-18T13:33"
  },
- "seq_posts": 20,
+ "seq_posts": 21,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -625,6 +630,18 @@
    "de": 229.0,
    "cupom": "",
    "asin": "B076X8YRLC"
+  },
+  "21": {
+   "em": "2026-11-18T13:33:56",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Blush Stick Bruna Tavares BT Coca Cola Flush Vibes",
+   "marca": "Bruna Tavares",
+   "categoria": "maquiagem",
+   "preco": 42.7,
+   "de": 89.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
