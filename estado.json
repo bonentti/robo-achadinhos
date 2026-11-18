@@ -2,7 +2,7 @@
  "postados": {
   "renner:930326832": {
    "preco": 39.9,
-   "em": "2026-11-17T19:38"
+   "em": "2026-11-18T19:04"
   },
   "renner:930930722": {
    "preco": 69.9,
@@ -61,8 +61,8 @@
    "em": "2026-11-16T19:31"
   },
   "shopee:21597224409": {
-   "preco": 69.89,
-   "em": "2026-11-16T08:58"
+   "preco": 69.9,
+   "em": "2026-11-18T19:04"
   },
   "shopee:23694341711": {
    "preco": 56.9,
@@ -194,7 +194,7 @@
   },
   "shopee:21797087665": {
    "preco": 99.9,
-   "em": "2026-11-17T22:52"
+   "em": "2026-11-18T19:04"
   },
   "amazon:B09GSR58JF": {
    "preco": 120.94,
@@ -238,7 +238,7 @@
   },
   "shopee:58270659010": {
    "preco": 53.99,
-   "em": "2026-11-18T13:18"
+   "em": "2026-11-18T19:04"
   },
   "ml:MLB63247306": {
    "preco": 42.7,
@@ -335,13 +335,17 @@
   "amazon:B0CP7QXWPN": {
    "preco": 573.08,
    "em": "2026-11-18T19:02"
+  },
+  "shopee:23193188032": {
+   "preco": 59.9,
+   "em": "2026-11-18T19:04"
   }
  },
- "ultimo_post": "2026-11-18T18:08:19",
+ "ultimo_post": "2026-11-18T19:04:31",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-17T17:51:37",
-  "kaisan": "2026-11-17T15:56:19",
+  "kaisan": "2026-11-18T19:04:31",
   "hardyn": "2026-11-17T17:00:36",
   "favoritas": "2026-11-18T18:08:19",
   "shopee-Beauty": "2026-11-17T18:38:19",
@@ -360,7 +364,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -368,7 +372,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -376,7 +380,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -384,7 +388,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -392,7 +396,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -400,7 +404,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -408,26 +412,27 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T18:08",
-   "referencia": 97.43
+   "visto_em": "2026-11-18T19:04",
+   "referencia": 97.43,
+   "ultimo_postado": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-18T18:08",
+   "visto_em": "2026-11-18T19:04",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-18T18:08",
+  "em": "2026-11-18T19:04",
   "ofertas_por_loja": {
    "shopee": 686,
    "renner": 38,
@@ -435,7 +440,7 @@
    "kaisan": 3
   }
  },
- "resumo_enviado_em": "2026-11-17",
+ "resumo_enviado_em": "2026-11-18",
  "dia_promocional_avisado": "2026-11-16",
  "cupons_ultimo_id": 8033,
  "telegram_offset": 474373500,
@@ -464,10 +469,10 @@
   "reparadordepontascrist": "2026-11-17T19:38",
   "blusacroppedfemininade": "2026-11-17T19:38",
   "shortselenefitnessorig": "2026-11-17T19:38",
-  "shortsaiaemalfaiataria": "2026-11-17T19:38",
+  "shortsaiaemalfaiataria": "2026-11-18T19:04",
   "bermudaacademiamaxcore": "2026-11-17T20:35",
   "poteshermticoselectrol": "2026-11-17T21:22",
-  "grillesanduicheiraphil": "2026-11-17T22:52",
+  "grillesanduicheiraphil": "2026-11-18T19:04",
   "mscaraloralprofessionn": "2026-11-18T09:43",
   "jimmychooiwantchooeaud": "2026-11-18T10:03",
   "pulseiralifecoraoempra": "2026-11-18T10:03",
@@ -478,7 +483,7 @@
   "playstation5slimdigita": "2026-11-18T11:27",
   "bolsaclutchnighthinode": "2026-11-18T12:13",
   "cacharelamoramoreaudet": "2026-11-18T13:16",
-  "kit2regatasfemininasem": "2026-11-18T13:18",
+  "kit2regatasfemininasem": "2026-11-18T19:04",
   "blushstickbrunatavares": "2026-11-18T13:33",
   "mscaradecliosmaybellin": "2026-11-18T13:42",
   "kit2mscarasdecliosmayb": "2026-11-18T13:43",
@@ -502,9 +507,12 @@
   "macaquinhoassimtricoda": "2026-11-18T18:48",
   "topdecorridacomalasdup": "2026-11-18T18:49",
   "regatadecorridacombols": "2026-11-18T18:49",
-  "microfonedelapelasemfi": "2026-11-18T19:02"
+  "microfonedelapelasemfi": "2026-11-18T19:02",
+  "macaquinhosemganchocom": "2026-11-18T19:04",
+  "cremehidratantefacialc": "2026-11-18T19:04",
+  "cacheadorbritnia25mmre": "2026-11-18T19:04"
  },
- "seq_posts": 42,
+ "seq_posts": 47,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1009,6 +1017,66 @@
    "de": 680.0,
    "cupom": "",
    "asin": "B0CP7QXWPN"
+  },
+  "43": {
+   "em": "2026-11-18T19:04:32",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Creme Hidratante Facial com Vitamina C – Vitamin C Cream 50g",
+   "marca": "",
+   "categoria": "Beauty",
+   "preco": 69.9,
+   "de": 159.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "44": {
+   "em": "2026-11-18T19:04:35",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Kit 2 Regatas Femininas Em Ribana Canelada",
+   "marca": "",
+   "categoria": "Women Clothes",
+   "preco": 53.99,
+   "de": 129.99,
+   "cupom": "",
+   "asin": ""
+  },
+  "45": {
+   "em": "2026-11-18T19:04:38",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Grill e Sanduicheira Philco PGR21PI Maxx Clean 1000W",
+   "marca": "Philco",
+   "categoria": "Home Appliances",
+   "preco": 99.9,
+   "de": 249.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "46": {
+   "em": "2026-11-18T19:04:41",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Cacheador Britânia 25mm Revestimento Cerâmico BECE01",
+   "marca": "Britânia",
+   "categoria": "Beauty",
+   "preco": 59.9,
+   "de": 149.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "47": {
+   "em": "2026-11-18T19:04:44",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Short Saia em Alfaiataria com Pregas",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 39.9,
+   "de": 139.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
   }
  },
  "agenda_feitos": [
