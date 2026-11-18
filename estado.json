@@ -287,6 +287,18 @@
   "ml:MLB77283320": {
    "preco": 135.15,
    "em": "2026-11-18T17:31"
+  },
+  "kaisan:K4817-AL": {
+   "preco": 62.91,
+   "em": "2026-11-18T17:39"
+  },
+  "kaisan:K5216-B": {
+   "preco": 111.9,
+   "em": "2026-11-18T17:39"
+  },
+  "kaisan:K5368-A": {
+   "preco": 103.9,
+   "em": "2026-11-18T17:39"
   }
  },
  "ultimo_post": "2026-11-18T17:12:48",
@@ -442,9 +454,12 @@
   "giorgioarmanimywayeaud": "2026-11-18T16:13",
   "lancmeidleeaudeparfum2": "2026-11-18T17:12",
   "leaveinkrastasenutriti": "2026-11-18T17:28",
-  "srumkrastasenutritive8": "2026-11-18T17:31"
+  "srumkrastasenutritive8": "2026-11-18T17:31",
+  "topbsicocomalasregulve": "2026-11-18T17:39",
+  "macaquinhocomtirascruz": "2026-11-18T17:39",
+  "blusaraglanmangalongae": "2026-11-18T17:39"
  },
- "seq_posts": 31,
+ "seq_posts": 34,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -816,6 +831,42 @@
    "preco": 135.15,
    "de": 199.0,
    "cupom": "",
+   "asin": ""
+  },
+  "32": {
+   "em": "2026-11-18T17:39:08",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Top Básico com Alças Reguláveis Kaisan (Siena)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 62.91,
+   "de": 69.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "33": {
+   "em": "2026-11-18T17:39:41",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Macaquinho com Tiras Cruzadas nas Costas Kaisan (Lemon)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 111.9,
+   "de": 139.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "34": {
+   "em": "2026-11-18T17:39:59",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Blusa Raglan Manga Longa e Gola Alta Kaisan (Off-White)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 103.9,
+   "de": 129.9,
+   "cupom": "BONENTTI",
    "asin": ""
   }
  },
