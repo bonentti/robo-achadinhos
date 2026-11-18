@@ -283,6 +283,10 @@
   "amazon:B0CD9F8FM7": {
    "preco": 99.0,
    "em": "2026-11-18T17:28"
+  },
+  "ml:MLB77283320": {
+   "preco": 135.15,
+   "em": "2026-11-18T17:31"
   }
  },
  "ultimo_post": "2026-11-18T17:12:48",
@@ -437,9 +441,10 @@
   "blushempmacskinfinishc": "2026-11-18T15:16",
   "giorgioarmanimywayeaud": "2026-11-18T16:13",
   "lancmeidleeaudeparfum2": "2026-11-18T17:12",
-  "leaveinkrastasenutriti": "2026-11-18T17:28"
+  "leaveinkrastasenutriti": "2026-11-18T17:28",
+  "srumkrastasenutritive8": "2026-11-18T17:31"
  },
- "seq_posts": 30,
+ "seq_posts": 31,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -800,6 +805,18 @@
    "de": 129.0,
    "cupom": "",
    "asin": "B0CD9F8FM7"
+  },
+  "31": {
+   "em": "2026-11-18T17:31:45",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Sérum Kérastase Nutritive 8H Magic Night 30ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 135.15,
+   "de": 199.0,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
