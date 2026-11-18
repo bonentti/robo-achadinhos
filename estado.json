@@ -223,6 +223,10 @@
   "amazon:B008SBKTLI": {
    "preco": 404.99,
    "em": "2026-11-18T11:17"
+  },
+  "amazon:B0FPGF9J2J": {
+   "preco": 3884.07,
+   "em": "2026-11-18T11:27"
   }
  },
  "ultimo_post": "2026-11-18T11:17:29",
@@ -361,9 +365,10 @@
   "carolinaherrera212vipr": "2026-11-18T10:05",
   "kit10cuecasboxerlupo": "2026-11-18T10:35",
   "dolcegabbanadevotioned": "2026-11-18T10:58",
-  "lancmelavieestbelleeau": "2026-11-18T11:17"
+  "lancmelavieestbelleeau": "2026-11-18T11:17",
+  "playstation5slimdigita": "2026-11-18T11:27"
  },
- "seq_posts": 18,
+ "seq_posts": 19,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -580,6 +585,18 @@
    "de": 809.0,
    "cupom": "",
    "asin": "B008SBKTLI"
+  },
+  "19": {
+   "em": "2026-11-18T11:27:38",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "PlayStation 5 Slim Digital 825GB + ASTRO BOT e Gran Turismo 7",
+   "marca": "",
+   "categoria": "games",
+   "preco": 3884.07,
+   "de": 4498.83,
+   "cupom": "300TAO",
+   "asin": "B0FPGF9J2J"
   }
  },
  "agenda_feitos": [
