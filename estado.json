@@ -299,6 +299,14 @@
   "kaisan:K5368-A": {
    "preco": 103.9,
    "em": "2026-11-18T17:39"
+  },
+  "kaisan:K5331-A": {
+   "preco": 127.92,
+   "em": "2026-11-18T17:41"
+  },
+  "kaisan:K5433-B": {
+   "preco": 191.9,
+   "em": "2026-11-18T17:41"
   }
  },
  "ultimo_post": "2026-11-18T17:12:48",
@@ -457,9 +465,11 @@
   "srumkrastasenutritive8": "2026-11-18T17:31",
   "topbsicocomalasregulve": "2026-11-18T17:39",
   "macaquinhocomtirascruz": "2026-11-18T17:39",
-  "blusaraglanmangalongae": "2026-11-18T17:39"
+  "blusaraglanmangalongae": "2026-11-18T17:39",
+  "macaquinhodecotealtoea": "2026-11-18T17:41",
+  "macacoflaredecotealtoe": "2026-11-18T17:41"
  },
- "seq_posts": 34,
+ "seq_posts": 36,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -866,6 +876,30 @@
    "categoria": "moda",
    "preco": 103.9,
    "de": 129.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "35": {
+   "em": "2026-11-18T17:41:27",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Macaquinho Decote Alto e Alças Mistas Cruzadas Kaisan (Militar)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 127.92,
+   "de": 159.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "36": {
+   "em": "2026-11-18T17:41:40",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Macacão Flare Decote Alto e Abertura nas Costas Kaisan (Trufa)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 191.9,
+   "de": 239.9,
    "cupom": "BONENTTI",
    "asin": ""
   }
