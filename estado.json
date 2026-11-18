@@ -215,6 +215,10 @@
   "ml:MLBU4055451046": {
    "preco": 107.92,
    "em": "2026-11-18T10:35"
+  },
+  "ml:MLB28053519": {
+   "preco": 331.0,
+   "em": "2026-11-18T10:58"
   }
  },
  "ultimo_post": "2026-11-18T10:03:12",
@@ -350,9 +354,10 @@
   "jimmychooiwantchooeaud": "2026-11-18T10:03",
   "pulseiralifecoraoempra": "2026-11-18T10:03",
   "carolinaherrera212vipr": "2026-11-18T10:05",
-  "kit10cuecasboxerlupo": "2026-11-18T10:35"
+  "kit10cuecasboxerlupo": "2026-11-18T10:35",
+  "dolcegabbanadevotioned": "2026-11-18T10:58"
  },
- "seq_posts": 16,
+ "seq_posts": 17,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -543,6 +548,18 @@
    "categoria": "moda",
    "preco": 107.92,
    "de": 327.9,
+   "cupom": "CORREHOJEPROML",
+   "asin": ""
+  },
+  "17": {
+   "em": "2026-11-18T10:58:52",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Dolce & Gabbana Devotion EDP 50ml",
+   "marca": "",
+   "categoria": "perfume",
+   "preco": 331.0,
+   "de": 886.85,
    "cupom": "CORREHOJEPROML",
    "asin": ""
   }
