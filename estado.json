@@ -267,6 +267,10 @@
   "shopee:23798790576": {
    "preco": 209.0,
    "em": "2026-11-18T15:09"
+  },
+  "ml:MLBU5193851575": {
+   "preco": 170.19,
+   "em": "2026-11-18T15:16"
   }
  },
  "ultimo_post": "2026-11-18T15:09:17",
@@ -417,9 +421,10 @@
   "corretivomaybellineins": "2026-11-18T13:43",
   "batomlquidomaybellines": "2026-11-18T13:43",
   "kit2pastadedentespreve": "2026-11-18T14:20",
-  "kitdumontfemininoladyd": "2026-11-18T15:09"
+  "kitdumontfemininoladyd": "2026-11-18T15:09",
+  "blushempmacskinfinishc": "2026-11-18T15:16"
  },
- "seq_posts": 26,
+ "seq_posts": 27,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -730,6 +735,18 @@
    "categoria": "maquiagem",
    "preco": 71.9,
    "de": 108.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "27": {
+   "em": "2026-11-18T15:16:28",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Blush em Pó MAC Skinfinish Colourstruck",
+   "marca": "MAC",
+   "categoria": "maquiagem",
+   "preco": 170.19,
+   "de": 229.0,
    "cupom": "",
    "asin": ""
   }
