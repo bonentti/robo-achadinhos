@@ -275,9 +275,13 @@
   "amazon:B08DHW4CT9": {
    "preco": 314.9,
    "em": "2026-11-18T16:13"
+  },
+  "amazon:B07WCVW56S": {
+   "preco": 292.99,
+   "em": "2026-11-18T17:12"
   }
  },
- "ultimo_post": "2026-11-18T16:13:02",
+ "ultimo_post": "2026-11-18T17:12:48",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-17T17:51:37",
@@ -300,7 +304,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -308,7 +312,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -316,7 +320,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -324,7 +328,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -332,7 +336,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -340,7 +344,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -348,26 +352,26 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-bolsos-no-cos-off-white-ref-k5421-a-k5421-a": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-18T16:13",
+   "visto_em": "2026-11-18T17:13",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-18T16:13",
+  "em": "2026-11-18T17:13",
   "ofertas_por_loja": {
    "shopee": 686,
    "renner": 38,
@@ -427,9 +431,10 @@
   "kit2pastadedentespreve": "2026-11-18T14:20",
   "kitdumontfemininoladyd": "2026-11-18T15:09",
   "blushempmacskinfinishc": "2026-11-18T15:16",
-  "giorgioarmanimywayeaud": "2026-11-18T16:13"
+  "giorgioarmanimywayeaud": "2026-11-18T16:13",
+  "lancmeidleeaudeparfum2": "2026-11-18T17:12"
  },
- "seq_posts": 28,
+ "seq_posts": 29,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -766,6 +771,18 @@
    "de": 569.0,
    "cupom": "",
    "asin": "B08DHW4CT9"
+  },
+  "29": {
+   "em": "2026-11-18T17:12:50",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Lancôme Idôle Eau de Parfum 25ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 292.99,
+   "de": 509.0,
+   "cupom": "",
+   "asin": "B07WCVW56S"
   }
  },
  "agenda_feitos": [
@@ -773,6 +790,7 @@
   "perfumes-bf-B08M2PP78L",
   "perfumes-bf-B008SBKTLI",
   "perfumes-bf-B076X8YRLC",
-  "perfumes-bf-B08DHW4CT9"
+  "perfumes-bf-B08DHW4CT9",
+  "perfumes-bf-B07WCVW56S"
  ]
 }
