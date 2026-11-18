@@ -279,6 +279,10 @@
   "amazon:B07WCVW56S": {
    "preco": 292.99,
    "em": "2026-11-18T17:12"
+  },
+  "amazon:B0CD9F8FM7": {
+   "preco": 99.0,
+   "em": "2026-11-18T17:28"
   }
  },
  "ultimo_post": "2026-11-18T17:12:48",
@@ -432,9 +436,10 @@
   "kitdumontfemininoladyd": "2026-11-18T15:09",
   "blushempmacskinfinishc": "2026-11-18T15:16",
   "giorgioarmanimywayeaud": "2026-11-18T16:13",
-  "lancmeidleeaudeparfum2": "2026-11-18T17:12"
+  "lancmeidleeaudeparfum2": "2026-11-18T17:12",
+  "leaveinkrastasenutriti": "2026-11-18T17:28"
  },
- "seq_posts": 29,
+ "seq_posts": 30,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -783,6 +788,18 @@
    "de": 509.0,
    "cupom": "",
    "asin": "B07WCVW56S"
+  },
+  "30": {
+   "em": "2026-11-18T17:28:27",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Leave-in Kérastase Nutritive Nectar Thermique 50ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 99.0,
+   "de": 129.0,
+   "cupom": "",
+   "asin": "B0CD9F8FM7"
   }
  },
  "agenda_feitos": [
