@@ -243,6 +243,22 @@
   "ml:MLB63247306": {
    "preco": 42.7,
    "em": "2026-11-18T13:33"
+  },
+  "shopee:58212710640": {
+   "preco": 42.9,
+   "em": "2026-11-18T13:42"
+  },
+  "shopee:58221809610": {
+   "preco": 74.9,
+   "em": "2026-11-18T13:43"
+  },
+  "shopee:22799527039": {
+   "preco": 74.9,
+   "em": "2026-11-18T13:43"
+  },
+  "shopee:58212699441": {
+   "preco": 71.9,
+   "em": "2026-11-18T13:43"
   }
  },
  "ultimo_post": "2026-11-18T13:18:32",
@@ -387,9 +403,13 @@
   "bolsaclutchnighthinode": "2026-11-18T12:13",
   "cacharelamoramoreaudet": "2026-11-18T13:16",
   "kit2regatasfemininasem": "2026-11-18T13:18",
-  "blushstickbrunatavares": "2026-11-18T13:33"
+  "blushstickbrunatavares": "2026-11-18T13:33",
+  "mscaradecliosmaybellin": "2026-11-18T13:42",
+  "kit2mscarasdecliosmayb": "2026-11-18T13:43",
+  "corretivomaybellineins": "2026-11-18T13:43",
+  "batomlquidomaybellines": "2026-11-18T13:43"
  },
- "seq_posts": 22,
+ "seq_posts": 26,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -652,6 +672,54 @@
    "categoria": "maquiagem",
    "preco": null,
    "de": null,
+   "cupom": "",
+   "asin": ""
+  },
+  "23": {
+   "em": "2026-11-18T13:42:40",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Máscara de Cílios Maybelline The Colossal Volum' Express Lavável",
+   "marca": "Maybelline",
+   "categoria": "maquiagem",
+   "preco": 42.9,
+   "de": 68.1,
+   "cupom": "",
+   "asin": ""
+  },
+  "24": {
+   "em": "2026-11-18T13:43:15",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Kit 2 Máscaras de Cílios Maybelline The Colossal Lavável",
+   "marca": "Maybelline",
+   "categoria": "maquiagem",
+   "preco": 74.9,
+   "de": 117.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "25": {
+   "em": "2026-11-18T13:43:27",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Corretivo Maybelline Instant Age Rewind Eraser 6ml",
+   "marca": "Maybelline",
+   "categoria": "maquiagem",
+   "preco": 74.9,
+   "de": 117.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "26": {
+   "em": "2026-11-18T13:43:57",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Batom Líquido Maybelline SuperStay Vinyl Ink",
+   "marca": "Maybelline",
+   "categoria": "maquiagem",
+   "preco": 71.9,
+   "de": 108.9,
    "cupom": "",
    "asin": ""
   }
