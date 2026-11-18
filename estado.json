@@ -315,6 +315,22 @@
   "shopee:58272934294": {
    "preco": 23.5,
    "em": "2026-11-18T18:08"
+  },
+  "hardyn:2880": {
+   "preco": 59.94,
+   "em": "2026-11-18T18:48"
+  },
+  "hardyn:2335": {
+   "preco": 76.93,
+   "em": "2026-11-18T18:48"
+  },
+  "hardyn:2687": {
+   "preco": 41.94,
+   "em": "2026-11-18T18:49"
+  },
+  "hardyn:2673": {
+   "preco": 54.95,
+   "em": "2026-11-18T18:49"
   }
  },
  "ultimo_post": "2026-11-18T18:08:19",
@@ -477,9 +493,13 @@
   "macaquinhodecotealtoea": "2026-11-18T17:41",
   "macacoflaredecotealtoe": "2026-11-18T17:41",
   "tapetedepedradiatomita": "2026-11-18T17:53",
-  "combominimscaradeclios": "2026-11-18T18:08"
+  "combominimscaradeclios": "2026-11-18T18:08",
+  "macaquinhodecotetringu": "2026-11-18T18:48",
+  "macaquinhoassimtricoda": "2026-11-18T18:48",
+  "topdecorridacomalasdup": "2026-11-18T18:49",
+  "regatadecorridacombols": "2026-11-18T18:49"
  },
- "seq_posts": 37,
+ "seq_posts": 41,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -924,6 +944,54 @@
    "de": 121.6,
    "cupom": "",
    "asin": "B0DNY5FQY3"
+  },
+  "38": {
+   "em": "2026-11-18T18:48:23",
+   "canal": "whatsapp",
+   "loja": "hardyn",
+   "nome": "Macaquinho Decote Triângulo Hardyn em Poliamida (Rosé)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 59.94,
+   "de": 111.0,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "39": {
+   "em": "2026-11-18T18:48:49",
+   "canal": "whatsapp",
+   "loja": "hardyn",
+   "nome": "Macaquinho Assimétrico Dani Hardyn em Poliamida (Preto)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 76.93,
+   "de": 122.11,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "40": {
+   "em": "2026-11-18T18:49:13",
+   "canal": "whatsapp",
+   "loja": "hardyn",
+   "nome": "Top de Corrida com Alças Duplas Hardyn (Marsala)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 41.94,
+   "de": 77.67,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "41": {
+   "em": "2026-11-18T18:49:46",
+   "canal": "whatsapp",
+   "loja": "hardyn",
+   "nome": "Regata de Corrida com Bolsos Laterais Hardyn (Mocha Mousse)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 54.95,
+   "de": 111.0,
+   "cupom": "BONENTTI",
+   "asin": ""
   }
  },
  "agenda_feitos": [
