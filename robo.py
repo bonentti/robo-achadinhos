@@ -585,8 +585,9 @@ def link_rastreado(cfg: dict, link: str, canal: str, num: int | None = None) -> 
     if "affiliate_id=" in link:  # Shopee: sub_id = canal-numero (aparece como Sub_id1/Sub_id2 no relatorio)
         return re.sub(r"sub_id=[^&]*", f"sub_id={etiqueta}", link) if "sub_id=" in link else f"{link}&sub_id={etiqueta}"
     if "awin1.com/cread.php" in link:
+        # A Awin corta a clickref no hifen ("whatsapp-3" vira "whatsapp"): sem hifen, "whatsapp3"
         link = re.sub(r"&clickref=[^&]*", "", link)
-        return link.replace("&ued=", f"&clickref={etiqueta}&ued=", 1)
+        return link.replace("&ued=", f"&clickref={etiqueta.replace('-', '')}&ued=", 1)
     if "amazon.com.br" in link:
         tag = str(cfg.get("amazon", {}).get(f"tag_{canal}", ""))
         if preenchido(tag):
