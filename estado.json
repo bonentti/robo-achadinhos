@@ -331,6 +331,10 @@
   "hardyn:2673": {
    "preco": 54.95,
    "em": "2026-11-18T18:49"
+  },
+  "amazon:B0CP7QXWPN": {
+   "preco": 573.08,
+   "em": "2026-11-18T19:02"
   }
  },
  "ultimo_post": "2026-11-18T18:08:19",
@@ -497,9 +501,10 @@
   "macaquinhodecotetringu": "2026-11-18T18:48",
   "macaquinhoassimtricoda": "2026-11-18T18:48",
   "topdecorridacomalasdup": "2026-11-18T18:49",
-  "regatadecorridacombols": "2026-11-18T18:49"
+  "regatadecorridacombols": "2026-11-18T18:49",
+  "microfonedelapelasemfi": "2026-11-18T19:02"
  },
- "seq_posts": 41,
+ "seq_posts": 42,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -992,6 +997,18 @@
    "de": 111.0,
    "cupom": "BONENTTI",
    "asin": ""
+  },
+  "42": {
+   "em": "2026-11-18T19:02:59",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Microfone de Lapela Sem Fio Hollyland Lark M2 (2 microfones + 3 receptores)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 573.08,
+   "de": 680.0,
+   "cupom": "",
+   "asin": "B0CP7QXWPN"
   }
  },
  "agenda_feitos": [
