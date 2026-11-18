@@ -389,7 +389,7 @@
   "kit2regatasfemininasem": "2026-11-18T13:18",
   "blushstickbrunatavares": "2026-11-18T13:33"
  },
- "seq_posts": 21,
+ "seq_posts": 22,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -640,6 +640,18 @@
    "categoria": "maquiagem",
    "preco": 42.7,
    "de": 89.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "22": {
+   "em": "2026-11-18T13:40:34",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Live Maybelline na Shopee (loja oficial)",
+   "marca": "Maybelline",
+   "categoria": "maquiagem",
+   "preco": null,
+   "de": null,
    "cupom": "",
    "asin": ""
   }
