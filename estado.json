@@ -211,6 +211,10 @@
   "ml:MLB6137685": {
    "preco": 478.2,
    "em": "2026-11-18T10:05"
+  },
+  "ml:MLBU4055451046": {
+   "preco": 107.92,
+   "em": "2026-11-18T10:35"
   }
  },
  "ultimo_post": "2026-11-18T10:03:12",
@@ -345,9 +349,10 @@
   "mscaraloralprofessionn": "2026-11-18T09:43",
   "jimmychooiwantchooeaud": "2026-11-18T10:03",
   "pulseiralifecoraoempra": "2026-11-18T10:03",
-  "carolinaherrera212vipr": "2026-11-18T10:05"
+  "carolinaherrera212vipr": "2026-11-18T10:05",
+  "kit10cuecasboxerlupo": "2026-11-18T10:35"
  },
- "seq_posts": 15,
+ "seq_posts": 16,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -527,6 +532,18 @@
    "preco": 478.2,
    "de": 911.9,
    "cupom": "SITETODO1811",
+   "asin": ""
+  },
+  "16": {
+   "em": "2026-11-18T10:35:22",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Kit 10 Cuecas Boxer Lupo",
+   "marca": "Lupo",
+   "categoria": "moda",
+   "preco": 107.92,
+   "de": 327.9,
+   "cupom": "CORREHOJEPROML",
    "asin": ""
   }
  },
