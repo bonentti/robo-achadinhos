@@ -531,6 +531,22 @@
   "amazon:B0CXBJMSQF": {
    "preco": 24.0,
    "em": "2026-11-19T15:13"
+  },
+  "amazon:8532520669": {
+   "preco": 34.69,
+   "em": "2026-11-19T15:19"
+  },
+  "amazon:6555521856": {
+   "preco": 8.84,
+   "em": "2026-11-19T15:19"
+  },
+  "amazon:6555872233": {
+   "preco": 34.95,
+   "em": "2026-11-19T15:19"
+  },
+  "amazon:6555327073": {
+   "preco": 40.95,
+   "em": "2026-11-19T15:20"
   }
  },
  "ultimo_post": "2026-11-19T14:28:26",
@@ -747,9 +763,13 @@
   "calaleggingfemininacan": "2026-11-19T13:32",
   "cremedentalcolgatelumi": "2026-11-19T14:28",
   "guamicelardemaquilante": "2026-11-19T14:31",
-  "doveleosrumbifsicobond": "2026-11-19T15:13"
+  "doveleosrumbifsicobond": "2026-11-19T15:13",
+  "ocontodaaiamargaretatw": "2026-11-19T15:19",
+  "arevoluodosbichosgeorg": "2026-11-19T15:19",
+  "anaturezadamordidacarl": "2026-11-19T15:19",
+  "bonstemposyesteryearca": "2026-11-19T15:20"
  },
- "seq_posts": 89,
+ "seq_posts": 93,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1818,6 +1838,54 @@
    "de": 33.0,
    "cupom": "",
    "asin": "B0CXBJMSQF"
+  },
+  "90": {
+   "em": "2026-11-19T15:19:13",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "O conto da aia – Margaret Atwood",
+   "marca": "",
+   "categoria": "livros",
+   "preco": 34.69,
+   "de": 56.84,
+   "cupom": "",
+   "asin": "8532520669"
+  },
+  "91": {
+   "em": "2026-11-19T15:19:23",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "A revolução dos bichos – George Orwell (capa comum)",
+   "marca": "",
+   "categoria": "livros",
+   "preco": 8.84,
+   "de": 19.0,
+   "cupom": "",
+   "asin": "6555521856"
+  },
+  "92": {
+   "em": "2026-11-19T15:19:41",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "A natureza da mordida – Carla Madeira",
+   "marca": "",
+   "categoria": "livros",
+   "preco": 34.95,
+   "de": 46.0,
+   "cupom": "",
+   "asin": "6555872233"
+  },
+  "93": {
+   "em": "2026-11-19T15:20:24",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Bons tempos (Yesteryear) – Caro Claire Burke",
+   "marca": "",
+   "categoria": "livros",
+   "preco": 40.95,
+   "de": 50.0,
+   "cupom": "",
+   "asin": "6555327073"
   }
  },
  "agenda_feitos": [
