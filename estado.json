@@ -551,6 +551,10 @@
   "shopee:19397871253": {
    "preco": 29.9,
    "em": "2026-11-19T15:23"
+  },
+  "amazon:B0DDDKZLJP": {
+   "preco": 48.99,
+   "em": "2026-11-19T17:05"
   }
  },
  "ultimo_post": "2026-11-19T16:35:08",
@@ -774,9 +778,10 @@
   "anaturezadamordidacarl": "2026-11-19T15:19",
   "bonstemposyesteryearca": "2026-11-19T15:20",
   "hidratantecorporalcoml": "2026-11-19T15:23",
-  "calaleggingcombolsosno": "2026-11-19T16:35"
+  "calaleggingcombolsosno": "2026-11-19T16:35",
+  "loralprofessionnelvita": "2026-11-19T17:05"
  },
- "seq_posts": 93,
+ "seq_posts": 94,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1893,6 +1898,18 @@
    "de": 50.0,
    "cupom": "",
    "asin": "6555327073"
+  },
+  "94": {
+   "em": "2026-11-19T17:05:00",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "L’Oréal Professionnel Vitamino Color Shampoo Refil 240 ml (cabelos coloridos)",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 48.99,
+   "de": 60.0,
+   "cupom": "",
+   "asin": "B0DDDKZLJP"
   }
  },
  "agenda_feitos": [
