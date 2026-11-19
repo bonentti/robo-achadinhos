@@ -519,9 +519,13 @@
   "shopee:23292867682": {
    "preco": 79.99,
    "em": "2026-11-19T13:32"
+  },
+  "shopee:21197658752": {
+   "preco": 33.08,
+   "em": "2026-11-19T14:28"
   }
  },
- "ultimo_post": "2026-11-19T13:32:36",
+ "ultimo_post": "2026-11-19T14:28:26",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-18T20:36:46",
@@ -534,7 +538,7 @@
   "shopee-Home & Living": "2026-11-19T10:07:27",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-19T13:32:36",
-  "shopee-Health": "2026-11-18T14:20:49",
+  "shopee-Health": "2026-11-19T14:28:26",
   "shopee-Watches": "2026-11-18T15:09:17",
   "shopee-Fashion Accessories": "2026-11-17T13:59:33",
   "shopee-Women Bags": "2026-11-19T12:29:01"
@@ -544,7 +548,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -552,7 +556,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -560,7 +564,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -568,7 +572,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -576,7 +580,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -584,7 +588,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -592,7 +596,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -600,19 +604,19 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-19T13:32",
+   "visto_em": "2026-11-19T14:28",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-19T13:32",
+  "em": "2026-11-19T14:28",
   "ofertas_por_loja": {
    "shopee": 641,
    "renner": 38,
@@ -732,7 +736,8 @@
   "aparelhodejantaroxford": "2026-11-19T12:04",
   "culosdesolraybanhexago": "2026-11-19T12:04",
   "shoulderbaghavaianasco": "2026-11-19T12:29",
-  "calaleggingfemininacan": "2026-11-19T13:32"
+  "calaleggingfemininacan": "2026-11-19T13:32",
+  "cremedentalcolgatelumi": "2026-11-19T14:28"
  },
  "seq_posts": 87,
  "posts_rastreados": {
