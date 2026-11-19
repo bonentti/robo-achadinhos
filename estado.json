@@ -221,8 +221,8 @@
    "em": "2026-11-18T10:58"
   },
   "amazon:B008SBKTLI": {
-   "preco": 404.99,
-   "em": "2026-11-18T11:17"
+   "preco": 382.5,
+   "em": "2026-11-19T11:59"
   },
   "amazon:B0FPGF9J2J": {
    "preco": 3884.07,
@@ -455,6 +455,62 @@
   "shopee:20975432830": {
    "preco": 89.9,
    "em": "2026-11-19T11:23"
+  },
+  "amazon:B09B8VGCR8": {
+   "preco": 289.0,
+   "em": "2026-11-19T11:59"
+  },
+  "amazon:B0DHL63KWK": {
+   "preco": 188.09,
+   "em": "2026-11-19T11:59"
+  },
+  "amazon:B0DBW2Y9VH": {
+   "preco": 291.54,
+   "em": "2026-11-19T12:00"
+  },
+  "amazon:B0F22PGY7K": {
+   "preco": 297.33,
+   "em": "2026-11-19T12:00"
+  },
+  "amazon:B071VCX893": {
+   "preco": 75.78,
+   "em": "2026-11-19T12:01"
+  },
+  "amazon:B0924ZWDFL": {
+   "preco": 147.15,
+   "em": "2026-11-19T12:01"
+  },
+  "amazon:B0F4LT38LJ": {
+   "preco": 29.99,
+   "em": "2026-11-19T12:01"
+  },
+  "amazon:B0G3YGYW4Z": {
+   "preco": 28.62,
+   "em": "2026-11-19T12:02"
+  },
+  "amazon:B077BY4FMF": {
+   "preco": 39.13,
+   "em": "2026-11-19T12:02"
+  },
+  "amazon:B0DSJV84BR": {
+   "preco": 54.9,
+   "em": "2026-11-19T12:02"
+  },
+  "amazon:B08YLQNL4W": {
+   "preco": 64.88,
+   "em": "2026-11-19T12:03"
+  },
+  "amazon:B07LFLRQXP": {
+   "preco": 11.58,
+   "em": "2026-11-19T12:03"
+  },
+  "amazon:B0CJFY1F24": {
+   "preco": 246.99,
+   "em": "2026-11-19T12:04"
+  },
+  "amazon:B07RHFXSN2": {
+   "preco": 399.9,
+   "em": "2026-11-19T12:04"
   }
  },
  "ultimo_post": "2026-11-19T11:23:53",
@@ -601,7 +657,7 @@
   "cacharelamoramoreaudet": "2026-11-18T13:16",
   "kit2regatasfemininasem": "2026-11-18T19:04",
   "blushstickbrunatavares": "2026-11-18T13:33",
-  "mscaradecliosmaybellin": "2026-11-18T13:42",
+  "mscaradecliosmaybellin": "2026-11-19T12:02",
   "kit2mscarasdecliosmayb": "2026-11-18T13:43",
   "corretivomaybellineins": "2026-11-18T13:43",
   "batomlquidomaybellines": "2026-11-18T13:43",
@@ -654,9 +710,21 @@
   "mantacasalcobertorsolt": "2026-11-19T10:07",
   "kitde3anisdouradoscomd": "2026-11-19T10:29",
   "blusamangacurtaassimtr": "2026-11-19T10:31",
-  "miniprocessadordealime": "2026-11-19T11:23"
+  "miniprocessadordealime": "2026-11-19T11:23",
+  "echodot5geraocomalexap": "2026-11-19T11:59",
+  "fonedeouvidosemfiojblw": "2026-11-19T11:59",
+  "perfumelancmelavieestb": "2026-11-19T12:00",
+  "perfumegabrielasabatin": "2026-11-19T12:01",
+  "mscararedkenextremepar": "2026-11-19T12:01",
+  "loralpariselsevebondre": "2026-11-19T12:01",
+  "srumleaveinelsevecabel": "2026-11-19T12:02",
+  "eucerindermopureclinic": "2026-11-19T12:02",
+  "nivealuminous630sruman": "2026-11-19T12:03",
+  "niveahidratantelabiala": "2026-11-19T12:03",
+  "aparelhodejantaroxford": "2026-11-19T12:04",
+  "culosdesolraybanhexago": "2026-11-19T12:04"
  },
- "seq_posts": 70,
+ "seq_posts": 85,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1497,6 +1565,186 @@
    "de": 59.9,
    "cupom": "FAVORITOS",
    "asin": ""
+  },
+  "71": {
+   "em": "2026-11-19T11:59:04",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Echo Dot (5ª geração) com Alexa, preto",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 289.0,
+   "de": 459,
+   "cupom": "",
+   "asin": "B09B8VGCR8"
+  },
+  "72": {
+   "em": "2026-11-19T11:59:17",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Fone de Ouvido Sem Fio JBL Wave Buds 2",
+   "marca": "JBL",
+   "categoria": "eletronicos",
+   "preco": 188.09,
+   "de": 235,
+   "cupom": "",
+   "asin": "B0DHL63KWK"
+  },
+  "73": {
+   "em": "2026-11-19T11:59:35",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle EDP 50 ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 382.5,
+   "de": 480,
+   "cupom": "",
+   "asin": "B008SBKTLI"
+  },
+  "74": {
+   "em": "2026-11-19T12:00:12",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle Elixir",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 291.54,
+   "de": 380,
+   "cupom": "",
+   "asin": "B0DBW2Y9VH"
+  },
+  "75": {
+   "em": "2026-11-19T12:00:51",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle Vanille Nude EDP 30 ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 297.33,
+   "de": 410,
+   "cupom": "",
+   "asin": "B0F22PGY7K"
+  },
+  "76": {
+   "em": "2026-11-19T12:01:17",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Gabriela Sabatini EDT 60 ml",
+   "marca": "",
+   "categoria": "perfume",
+   "preco": 75.78,
+   "de": 89,
+   "cupom": "",
+   "asin": "B071VCX893"
+  },
+  "77": {
+   "em": "2026-11-19T12:01:48",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara Redken Extreme para cabelos danificados",
+   "marca": "Redken",
+   "categoria": "beleza",
+   "preco": 147.15,
+   "de": 190,
+   "cupom": "",
+   "asin": "B0924ZWDFL"
+  },
+  "78": {
+   "em": "2026-11-19T12:01:57",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "L'Oréal Paris Elseve Bond Repair Pré-Shampoo",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 29.99,
+   "de": 39,
+   "cupom": "",
+   "asin": "B0F4LT38LJ"
+  },
+  "79": {
+   "em": "2026-11-19T12:02:23",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum Leave-in Elseve Cabelos Finos Colágeno Encorpador 100 ml",
+   "marca": "Elseve",
+   "categoria": "beleza",
+   "preco": 28.62,
+   "de": 37,
+   "cupom": "",
+   "asin": "B0G3YGYW4Z"
+  },
+  "80": {
+   "em": "2026-11-19T12:02:40",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara de Cílios Maybelline The Colossal Volum' Express",
+   "marca": "Maybelline",
+   "categoria": "beleza",
+   "preco": 39.13,
+   "de": 45,
+   "cupom": "",
+   "asin": "B077BY4FMF"
+  },
+  "81": {
+   "em": "2026-11-19T12:02:53",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Eucerin Dermopure Clinical Gel de Limpeza 400 ml",
+   "marca": "Eucerin",
+   "categoria": "beleza",
+   "preco": 54.9,
+   "de": 70,
+   "cupom": "",
+   "asin": "B0DSJV84BR"
+  },
+  "82": {
+   "em": "2026-11-19T12:03:19",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Nivea Luminous 630 Sérum Antimarcas 30 ml",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 64.88,
+   "de": 95,
+   "cupom": "",
+   "asin": "B08YLQNL4W"
+  },
+  "83": {
+   "em": "2026-11-19T12:03:29",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Nivea Hidratante Labial Amora Shine 4,8 g",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 11.58,
+   "de": 16,
+   "cupom": "",
+   "asin": "B07LFLRQXP"
+  },
+  "84": {
+   "em": "2026-11-19T12:04:04",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Aparelho de Jantar Oxford Flat Chuvisco 20 peças",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 246.99,
+   "de": 390,
+   "cupom": "",
+   "asin": "B0CJFY1F24"
+  },
+  "85": {
+   "em": "2026-11-19T12:04:13",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Óculos de Sol Ray-Ban Hexagonal RB3548NL Dourado",
+   "marca": "Ray-Ban",
+   "categoria": "acessorios",
+   "preco": 399.9,
+   "de": 520,
+   "cupom": "",
+   "asin": "B07RHFXSN2"
   }
  },
  "agenda_feitos": [
