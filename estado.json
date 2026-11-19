@@ -423,6 +423,10 @@
   "ml:MLB52860706": {
    "preco": 26.19,
    "em": "2026-11-19T06:46"
+  },
+  "amazon:B0941VNWN2": {
+   "preco": 65.45,
+   "em": "2026-11-19T08:00"
   }
  },
  "ultimo_post": "2026-11-18T22:49:20",
@@ -614,9 +618,10 @@
   "kindlecolorsoft16gbmod": "2026-11-19T06:33",
   "parafusadeiraefuradeir": "2026-11-19T06:33",
   "cremereparadorbioderma": "2026-11-19T06:34",
-  "iluminadorcompactoinst": "2026-11-19T06:46"
+  "iluminadorcompactoinst": "2026-11-19T06:46",
+  "conjunto6pratosdesobre": "2026-11-19T08:00"
  },
- "seq_posts": 65,
+ "seq_posts": 66,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1397,6 +1402,18 @@
    "de": 52.0,
    "cupom": "",
    "asin": ""
+  },
+  "66": {
+   "em": "2026-11-19T08:00:37",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Conjunto 6 Pratos de Sobremesa Oxford Ryo Maresia 21,5cm",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 65.45,
+   "de": 109.99,
+   "cupom": "",
+   "asin": "B0941VNWN2"
   }
  },
  "agenda_feitos": [
