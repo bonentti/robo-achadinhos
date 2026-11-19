@@ -431,6 +431,10 @@
   "shopee:57302326288": {
    "preco": 186.99,
    "em": "2026-11-19T08:55"
+  },
+  "amazon:B0H6KT2RWH": {
+   "preco": 418.41,
+   "em": "2026-11-19T09:26"
   }
  },
  "ultimo_post": "2026-11-19T08:55:25",
@@ -624,9 +628,10 @@
   "cremereparadorbioderma": "2026-11-19T06:34",
   "iluminadorcompactoinst": "2026-11-19T06:46",
   "conjunto6pratosdesobre": "2026-11-19T08:00",
-  "tnisfilavectorfeminino": "2026-11-19T08:55"
+  "tnisfilavectorfeminino": "2026-11-19T08:55",
+  "gtavigrandtheftautovip": "2026-11-19T09:26"
  },
- "seq_posts": 66,
+ "seq_posts": 67,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1419,6 +1424,18 @@
    "de": 109.99,
    "cupom": "",
    "asin": "B0941VNWN2"
+  },
+  "67": {
+   "em": "2026-11-19T09:26:13",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "GTA VI (Grand Theft Auto VI) para PlayStation 5 – mídia física",
+   "marca": "",
+   "categoria": "games",
+   "preco": 418.41,
+   "de": 449.9,
+   "cupom": "",
+   "asin": "B0H6KT2RWH"
   }
  },
  "agenda_feitos": [
