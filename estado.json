@@ -395,6 +395,30 @@
   "ml:MLB38202291": {
    "preco": 288.7,
    "em": "2026-11-19T06:30"
+  },
+  "amazon:B0DXR7GNWJ": {
+   "preco": 3129.0,
+   "em": "2026-11-19T06:32"
+  },
+  "amazon:B0CFPL6CFY": {
+   "preco": 719.0,
+   "em": "2026-11-19T06:33"
+  },
+  "amazon:B0CX8MT2M2": {
+   "preco": 999.0,
+   "em": "2026-11-19T06:33"
+  },
+  "amazon:B08XQWLDKP": {
+   "preco": 229.0,
+   "em": "2026-11-19T06:33"
+  },
+  "amazon:B00OCJ0ZKA": {
+   "preco": 51.99,
+   "em": "2026-11-19T06:34"
+  },
+  "amazon:B09GSQMJ5T": {
+   "preco": 139.0,
+   "em": "2026-11-19T06:34"
   }
  },
  "ultimo_post": "2026-11-18T22:49:20",
@@ -529,7 +553,7 @@
   "bermudaacademiamaxcore": "2026-11-17T20:35",
   "poteshermticoselectrol": "2026-11-17T21:22",
   "grillesanduicheiraphil": "2026-11-18T19:04",
-  "mscaraloralprofessionn": "2026-11-18T09:43",
+  "mscaraloralprofessionn": "2026-11-19T06:34",
   "jimmychooiwantchooeaud": "2026-11-18T10:03",
   "pulseiralifecoraoempra": "2026-11-18T10:03",
   "carolinaherrera212vipr": "2026-11-18T10:05",
@@ -580,9 +604,14 @@
   "shortsaiaembengalineco": "2026-11-18T20:36",
   "pranchadecabelobritnia": "2026-11-18T21:27",
   "scarpinvizzanofeminino": "2026-11-18T22:49",
-  "aparelhodejantarech20p": "2026-11-19T06:30"
+  "aparelhodejantarech20p": "2026-11-19T06:30",
+  "appleiphone16e128gbpre": "2026-11-19T06:32",
+  "kindlepaperwhite16gbmo": "2026-11-19T06:33",
+  "kindlecolorsoft16gbmod": "2026-11-19T06:33",
+  "parafusadeiraefuradeir": "2026-11-19T06:33",
+  "cremereparadorbioderma": "2026-11-19T06:34"
  },
- "seq_posts": 58,
+ "seq_posts": 64,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1279,6 +1308,78 @@
    "de": 849.9,
    "cupom": "",
    "asin": ""
+  },
+  "59": {
+   "em": "2026-11-19T06:32:54",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Apple iPhone 16e 128 GB Preto",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 3129.0,
+   "de": 5799.0,
+   "cupom": "",
+   "asin": "B0DXR7GNWJ"
+  },
+  "60": {
+   "em": "2026-11-19T06:33:24",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Kindle Paperwhite 16 GB (modelo 2024)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 719.0,
+   "de": 1149.0,
+   "cupom": "",
+   "asin": "B0CFPL6CFY"
+  },
+  "61": {
+   "em": "2026-11-19T06:33:35",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Kindle Colorsoft 16 GB (modelo 2024)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 999.0,
+   "de": 1499.0,
+   "cupom": "",
+   "asin": "B0CX8MT2M2"
+  },
+  "62": {
+   "em": "2026-11-19T06:33:53",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Parafusadeira e Furadeira Bosch GSR 1000 Smart 12V com Maleta",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 229.0,
+   "de": 399.0,
+   "cupom": "",
+   "asin": "B08XQWLDKP"
+  },
+  "63": {
+   "em": "2026-11-19T06:34:23",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Creme Reparador Bioderma Cicabio Crème+ 40ml",
+   "marca": "Bioderma",
+   "categoria": "beleza",
+   "preco": 51.99,
+   "de": 85.9,
+   "cupom": "",
+   "asin": "B00OCJ0ZKA"
+  },
+  "64": {
+   "em": "2026-11-19T06:34:33",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara L'Oréal Professionnel Pro Longer",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 139.0,
+   "de": 214.9,
+   "cupom": "",
+   "asin": "B09GSQMJ5T"
   }
  },
  "agenda_feitos": [
