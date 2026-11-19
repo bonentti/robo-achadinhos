@@ -435,6 +435,10 @@
   "amazon:B0H6KT2RWH": {
    "preco": 418.41,
    "em": "2026-11-19T09:26"
+  },
+  "amazon:B0GF8LBQ47": {
+   "preco": 6.99,
+   "em": "2026-11-19T09:27"
   }
  },
  "ultimo_post": "2026-11-19T08:55:25",
@@ -629,9 +633,10 @@
   "iluminadorcompactoinst": "2026-11-19T06:46",
   "conjunto6pratosdesobre": "2026-11-19T08:00",
   "tnisfilavectorfeminino": "2026-11-19T08:55",
-  "gtavigrandtheftautovip": "2026-11-19T09:26"
+  "gtavigrandtheftautovip": "2026-11-19T09:26",
+  "gelfixadordesobrancelh": "2026-11-19T09:27"
  },
- "seq_posts": 67,
+ "seq_posts": 68,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1436,6 +1441,18 @@
    "de": 449.9,
    "cupom": "",
    "asin": "B0H6KT2RWH"
+  },
+  "68": {
+   "em": "2026-11-19T09:27:02",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Gel Fixador de Sobrancelhas Ruby Rose Blow Girly Club",
+   "marca": "Ruby Rose",
+   "categoria": "maquiagem",
+   "preco": 6.99,
+   "de": 11.36,
+   "cupom": "",
+   "asin": "B0GF8LBQ47"
   }
  },
  "agenda_feitos": [
