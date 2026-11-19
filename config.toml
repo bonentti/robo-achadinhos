@@ -321,7 +321,7 @@ marcas = [
 #  ele avisa no seu canal com o SEU link de afiliada.
 # ---------------------------------------------------------------------
 [cupons_shopee]
-ativo = true
+ativo = false   # 19/11: Nicole pediu para parar ("post ruim": parafusadeira + cupom sem valor/código)
 validade_horas = 6        # ignora cupons divulgados há mais tempo que isso
 maximo_por_rodada = 2
 
