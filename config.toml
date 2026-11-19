@@ -292,7 +292,7 @@ url = "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c
 #  Telegram os melhores achados, já formatados para colar no WhatsApp.
 # ---------------------------------------------------------------------
 [resumo_whatsapp]
-ativo = true
+ativo = false   # 19/11: Nicole já reposta tudo ao mesmo tempo; chat_id continua para os cards manuais
 chat_id = "1713332589"   # seu chat privado com o bot
 hora = 19             # a partir das 19h
 quantidade = 5
