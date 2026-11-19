@@ -547,15 +547,19 @@
   "amazon:6555327073": {
    "preco": 40.95,
    "em": "2026-11-19T15:20"
+  },
+  "shopee:19397871253": {
+   "preco": 29.9,
+   "em": "2026-11-19T15:23"
   }
  },
- "ultimo_post": "2026-11-19T14:28:26",
+ "ultimo_post": "2026-11-19T15:23:21",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-18T20:36:46",
   "kaisan": "2026-11-18T19:04:31",
   "hardyn": "2026-11-18T19:52:04",
-  "favoritas": "2026-11-18T18:08:19",
+  "favoritas": "2026-11-19T15:23:21",
   "shopee-Beauty": "2026-11-18T21:27:14",
   "shopee-Women Shoes": "2026-11-18T22:49:20",
   "shopee-Sports & Outdoors": "2026-11-19T08:55:25",
@@ -572,7 +576,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:22",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -580,7 +584,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:22",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -588,7 +592,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -596,7 +600,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -604,7 +608,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -612,7 +616,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -620,7 +624,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -628,23 +632,23 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-19T14:28",
+   "visto_em": "2026-11-19T15:23",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-19T14:28",
+  "em": "2026-11-19T15:23",
   "ofertas_por_loja": {
    "shopee": 641,
    "renner": 38,
-   "hardyn": 19,
+   "hardyn": 21,
    "kaisan": 2
   }
  },
@@ -767,7 +771,8 @@
   "ocontodaaiamargaretatw": "2026-11-19T15:19",
   "arevoluodosbichosgeorg": "2026-11-19T15:19",
   "anaturezadamordidacarl": "2026-11-19T15:19",
-  "bonstemposyesteryearca": "2026-11-19T15:20"
+  "bonstemposyesteryearca": "2026-11-19T15:20",
+  "hidratantecorporalcoml": "2026-11-19T15:23"
  },
  "seq_posts": 93,
  "posts_rastreados": {
