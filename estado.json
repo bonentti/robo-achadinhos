@@ -595,9 +595,13 @@
   "amazon:B0F8QN7QT7": {
    "preco": 162.45,
    "em": "2026-11-19T19:51"
+  },
+  "shopee:22198733629": {
+   "preco": 78.9,
+   "em": "2026-11-19T20:01"
   }
  },
- "ultimo_post": "2026-11-19T19:11:40",
+ "ultimo_post": "2026-11-19T20:01:25",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-19T18:22:51",
@@ -605,7 +609,7 @@
   "hardyn": "2026-11-19T17:28:13",
   "favoritas": "2026-11-19T15:23:21",
   "shopee-Beauty": "2026-11-19T19:11:40",
-  "shopee-Women Shoes": "2026-11-18T22:49:20",
+  "shopee-Women Shoes": "2026-11-19T20:01:25",
   "shopee-Sports & Outdoors": "2026-11-19T08:55:25",
   "shopee-Home & Living": "2026-11-19T10:07:27",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
@@ -620,7 +624,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -628,7 +632,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -636,7 +640,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -644,7 +648,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -652,7 +656,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -660,7 +664,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -668,7 +672,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -676,7 +680,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -684,16 +688,16 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-19T19:11",
+   "visto_em": "2026-11-19T20:01",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-19T19:11",
+  "em": "2026-11-19T20:01",
   "ofertas_por_loja": {
    "shopee": 641,
    "renner": 38,
-   "hardyn": 21,
+   "hardyn": 20,
    "kaisan": 1
   }
  },
@@ -828,7 +832,8 @@
   "tripebastoulanzima09pa": "2026-11-19T19:48",
   "luzdevdeoledulanzivl49": "2026-11-19T19:50",
   "luzdevdeoulanzivl120rg": "2026-11-19T19:51",
-  "luzdevdeoledulanzivl20": "2026-11-19T19:51"
+  "luzdevdeoledulanzivl20": "2026-11-19T19:51",
+  "scarpinanabelamodaresa": "2026-11-19T20:01"
  },
  "seq_posts": 106,
  "posts_rastreados": {
