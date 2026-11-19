@@ -157,7 +157,7 @@ evitar = ["rasteirinha moleca com laço",   # 17/11: ela não gostou
   "multiprocessador", "forno elétrico", "forno eletrico", "micro-ondas", "microondas", "aspirador",
   "robô aspirador", "ventilador", "ferro de passar", "vaporizador de roupa", "purificador",
   "umidificador", "mop giratório", "mop giratorio", "geladeira", "fogão", "fogao", "cooktop", "lava-louça", "lava louça",
-  "utensílio", "utensilio", "espátula", "espatula", "tábua de corte", "potes herméticos", "pote hermético"]
+  "utensílio", "utensilio", "espátula", "espatula", "tábua de corte", "potes herméticos", "pote hermético", "parafusadeira", "furadeira"]
 # Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa";
 # depois: "vale sim" para calça e short também)
 evitar_combinacoes = [
