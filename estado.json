@@ -523,6 +523,10 @@
   "shopee:21197658752": {
    "preco": 33.08,
    "em": "2026-11-19T14:28"
+  },
+  "amazon:B08FDS9JT9": {
+   "preco": 23.06,
+   "em": "2026-11-19T14:31"
   }
  },
  "ultimo_post": "2026-11-19T14:28:26",
@@ -737,9 +741,10 @@
   "culosdesolraybanhexago": "2026-11-19T12:04",
   "shoulderbaghavaianasco": "2026-11-19T12:29",
   "calaleggingfemininacan": "2026-11-19T13:32",
-  "cremedentalcolgatelumi": "2026-11-19T14:28"
+  "cremedentalcolgatelumi": "2026-11-19T14:28",
+  "guamicelardemaquilante": "2026-11-19T14:31"
  },
- "seq_posts": 87,
+ "seq_posts": 88,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1784,6 +1789,18 @@
    "de": null,
    "cupom": "20BLACKPRIME",
    "asin": ""
+  },
+  "88": {
+   "em": "2026-11-19T14:31:39",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Água Micelar Demaquilante 7 em 1 Neutrogena Hydro Boost 200 ml",
+   "marca": "Neutrogena",
+   "categoria": "beleza",
+   "preco": 23.06,
+   "de": 35.0,
+   "cupom": "RELAMPAGO20",
+   "asin": "B08FDS9JT9"
   }
  },
  "agenda_feitos": [
