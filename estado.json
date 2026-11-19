@@ -391,6 +391,10 @@
   "shopee:22494206748": {
    "preco": 99.9,
    "em": "2026-11-18T22:49"
+  },
+  "ml:MLB38202291": {
+   "preco": 288.7,
+   "em": "2026-11-19T06:30"
   }
  },
  "ultimo_post": "2026-11-18T22:49:20",
@@ -575,9 +579,10 @@
   "lipglossbtcocacolabrun": "2026-11-18T20:14",
   "shortsaiaembengalineco": "2026-11-18T20:36",
   "pranchadecabelobritnia": "2026-11-18T21:27",
-  "scarpinvizzanofeminino": "2026-11-18T22:49"
+  "scarpinvizzanofeminino": "2026-11-18T22:49",
+  "aparelhodejantarech20p": "2026-11-19T06:30"
  },
- "seq_posts": 57,
+ "seq_posts": 58,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1260,6 +1265,18 @@
    "categoria": "maquiagem",
    "preco": 27.96,
    "de": 69.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "58": {
+   "em": "2026-11-19T06:30:19",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Aparelho de Jantar e Chá 20 Peças Oxford Ryo Bambu",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 288.7,
+   "de": 849.9,
    "cupom": "",
    "asin": ""
   }
