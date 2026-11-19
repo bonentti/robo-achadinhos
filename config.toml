@@ -97,7 +97,7 @@ usar_feed = true
 id_afiliado = "18326310376"   # seu ID de afiliada (vai em todo link, senão não há comissão)
 urls_do_feed = []   # fica no segredos.toml (computador) ou no segredo SHOPEE_FEED_URL (GitHub)
 categorias_feed = ["Beauty", "Home & Living", "Health",   # 19/11: sem "Home Appliances" (ela não quer eletros)
-                   "Women Shoes",
+                   # 19/11: sem "Women Shoes" (ela apagou um scarpin anabela "horrível" do feed)
                    "Women Bags", "Women Clothes", "Fashion Accessories", "Watches", "Sports & Outdoors"]
 # Partes dessas categorias que não combinam com o canal
 subcategorias_bloqueadas = ["Men's Care", "Furniture", "Tools & Home Improvement", "Party Supplies",
