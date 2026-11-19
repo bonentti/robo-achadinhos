@@ -419,6 +419,10 @@
   "amazon:B09GSQMJ5T": {
    "preco": 139.0,
    "em": "2026-11-19T06:34"
+  },
+  "ml:MLB52860706": {
+   "preco": 26.19,
+   "em": "2026-11-19T06:46"
   }
  },
  "ultimo_post": "2026-11-18T22:49:20",
@@ -609,9 +613,10 @@
   "kindlepaperwhite16gbmo": "2026-11-19T06:33",
   "kindlecolorsoft16gbmod": "2026-11-19T06:33",
   "parafusadeiraefuradeir": "2026-11-19T06:33",
-  "cremereparadorbioderma": "2026-11-19T06:34"
+  "cremereparadorbioderma": "2026-11-19T06:34",
+  "iluminadorcompactoinst": "2026-11-19T06:46"
  },
- "seq_posts": 64,
+ "seq_posts": 65,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1380,6 +1385,18 @@
    "de": 214.9,
    "cupom": "",
    "asin": "B09GSQMJ5T"
+  },
+  "65": {
+   "em": "2026-11-19T06:46:42",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Iluminador Compacto Instant Glow Nina Makeup Rosé",
+   "marca": "",
+   "categoria": "maquiagem",
+   "preco": 26.19,
+   "de": 52.0,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
