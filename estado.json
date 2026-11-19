@@ -567,6 +567,34 @@
   "shopee:22596095331": {
    "preco": 119.9,
    "em": "2026-11-19T19:11"
+  },
+  "amazon:B0CSXT88G1": {
+   "preco": 124.45,
+   "em": "2026-11-19T19:47"
+  },
+  "amazon:B09T92NK4J": {
+   "preco": 132.05,
+   "em": "2026-11-19T19:48"
+  },
+  "amazon:B0C4F7DXPR": {
+   "preco": 156.56,
+   "em": "2026-11-19T19:48"
+  },
+  "amazon:B07YSF3X8K": {
+   "preco": 72.05,
+   "em": "2026-11-19T19:50"
+  },
+  "amazon:B08MDQ3CJY": {
+   "preco": 112.55,
+   "em": "2026-11-19T19:50"
+  },
+  "amazon:B093LHRL42": {
+   "preco": 170.05,
+   "em": "2026-11-19T19:51"
+  },
+  "amazon:B0F8QN7QT7": {
+   "preco": 162.45,
+   "em": "2026-11-19T19:51"
   }
  },
  "ultimo_post": "2026-11-19T19:11:40",
@@ -794,9 +822,15 @@
   "loralprofessionnelvita": "2026-11-19T17:05",
   "regataalongadaemtelapr": "2026-11-19T17:28",
   "vestidocurtosemmangase": "2026-11-19T18:22",
-  "secadordecabelosbritni": "2026-11-19T19:11"
+  "secadordecabelosbritni": "2026-11-19T19:11",
+  "tripulanzimt70paracelu": "2026-11-19T19:47",
+  "tripulanzimt44paracelu": "2026-11-19T19:48",
+  "tripebastoulanzima09pa": "2026-11-19T19:48",
+  "luzdevdeoledulanzivl49": "2026-11-19T19:50",
+  "luzdevdeoulanzivl120rg": "2026-11-19T19:51",
+  "luzdevdeoledulanzivl20": "2026-11-19T19:51"
  },
- "seq_posts": 99,
+ "seq_posts": 106,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -1985,6 +2019,90 @@
    "de": 89.0,
    "cupom": "",
    "asin": ""
+  },
+  "100": {
+   "em": "2026-11-19T19:47:40",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Tripé Ulanzi MT-70 para celular, 1,60 m com 2 clipes",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 124.45,
+   "de": 160.0,
+   "cupom": "",
+   "asin": "B0CSXT88G1"
+  },
+  "101": {
+   "em": "2026-11-19T19:48:16",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Tripé Ulanzi MT-44 para celular, 1,50 m com cabeça 360°",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 132.05,
+   "de": 150.0,
+   "cupom": "",
+   "asin": "B09T92NK4J"
+  },
+  "102": {
+   "em": "2026-11-19T19:48:40",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Tripé e bastão Ulanzi MA09 para celular, 1,80 m",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 156.56,
+   "de": 190.0,
+   "cupom": "",
+   "asin": "B0C4F7DXPR"
+  },
+  "103": {
+   "em": "2026-11-19T19:50:14",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Luz de vídeo LED Ulanzi VL49 (pequenininha, cabe no bolso)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 72.05,
+   "de": 99.0,
+   "cupom": "",
+   "asin": "B07YSF3X8K"
+  },
+  "104": {
+   "em": "2026-11-19T19:50:50",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Luz de vídeo LED Ulanzi VL49 RGB (colorida)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 112.55,
+   "de": 150.0,
+   "cupom": "",
+   "asin": "B08MDQ3CJY"
+  },
+  "105": {
+   "em": "2026-11-19T19:51:27",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Luz de vídeo Ulanzi VL120 RGB com bateria recarregável",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 170.05,
+   "de": 220.0,
+   "cupom": "",
+   "asin": "B093LHRL42"
+  },
+  "106": {
+   "em": "2026-11-19T19:51:59",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Luz de vídeo LED Ulanzi VL200 recarregável (USB-C)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 162.45,
+   "de": 199.0,
+   "cupom": "",
+   "asin": "B0F8QN7QT7"
   }
  },
  "agenda_feitos": [
