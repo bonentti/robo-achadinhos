@@ -96,7 +96,8 @@ lojas_bloqueadas = ["beiermei", "ana 1108", "maimeite"]
 usar_feed = true
 id_afiliado = "18326310376"   # seu ID de afiliada (vai em todo link, senão não há comissão)
 urls_do_feed = []   # fica no segredos.toml (computador) ou no segredo SHOPEE_FEED_URL (GitHub)
-categorias_feed = ["Beauty", "Home & Living", "Home Appliances", "Health", "Women Shoes",
+categorias_feed = ["Beauty", "Home & Living", "Health",   # 19/11: sem "Home Appliances" (ela não quer eletros)
+                   "Women Shoes",
                    "Women Bags", "Women Clothes", "Fashion Accessories", "Watches", "Sports & Outdoors"]
 # Partes dessas categorias que não combinam com o canal
 subcategorias_bloqueadas = ["Men's Care", "Furniture", "Tools & Home Improvement", "Party Supplies",
@@ -148,7 +149,15 @@ paginas_extras = ["/lista/-/N-19b3qyb"]
 bonus = 30
 preferidos = ["canelad", "tomara que caia", "cropped", "alfaiataria", "crepe", "ombro único",
               "ombro unico", "golinha", "manga ampla", "bengaline", "decote coração", "vestido curto"]
-evitar = ["rasteirinha moleca com laço"]   # 17/11: ela não gostou
+evitar = ["rasteirinha moleca com laço",   # 17/11: ela não gostou
+  # 19/11: "nunca te pedi itens de cozinha... meu foco não são eletros pra casa"
+  # (pratos e conjuntos bonitos de mesa podem)
+  "processador de alimento", "mini processador", "liquidificador", "airfryer", "air fryer", "fritadeira", "panela", "frigideira",
+  "cafeteira", "batedeira", "mixer", "sanduicheira", "grill", "chaleira", "torradeira", "espremedor",
+  "multiprocessador", "forno elétrico", "forno eletrico", "micro-ondas", "microondas", "aspirador",
+  "robô aspirador", "ventilador", "ferro de passar", "vaporizador de roupa", "purificador",
+  "umidificador", "mop giratório", "mop giratorio", "geladeira", "fogão", "fogao", "cooktop", "lava-louça", "lava louça",
+  "utensílio", "utensilio", "espátula", "espatula", "tábua de corte", "potes herméticos", "pote hermético"]
 # Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa";
 # depois: "vale sim" para calça e short também)
 evitar_combinacoes = [
