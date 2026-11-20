@@ -861,7 +861,7 @@
   "relgiodumontfemininola": "2026-11-20T08:55",
   "kitcom3cremesdentaisco": "2026-11-20T10:02"
  },
- "seq_posts": 107,
+ "seq_posts": 108,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2146,6 +2146,18 @@
    "de": 459.0,
    "cupom": "",
    "asin": "B09B8VGCR8"
+  },
+  "108": {
+   "em": "2026-11-20T10:43:56",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Cupom Renner FAVORITOS 30% OFF acima de R$ 249",
+   "marca": "",
+   "categoria": "cupom",
+   "preco": 0.0,
+   "de": 0.0,
+   "cupom": "FAVORITOS",
+   "asin": ""
   }
  },
  "agenda_feitos": [
