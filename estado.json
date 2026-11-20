@@ -619,6 +619,54 @@
   "shopee:14102349293": {
    "preco": 33.94,
    "em": "2026-11-20T10:02"
+  },
+  "renner:931630203": {
+   "preco": 125.93,
+   "em": "2026-11-20T10:58"
+  },
+  "renner:929671161": {
+   "preco": 111.93,
+   "em": "2026-11-20T10:58"
+  },
+  "renner:930978558": {
+   "preco": 83.93,
+   "em": "2026-11-20T10:58"
+  },
+  "renner:932198521": {
+   "preco": 55.93,
+   "em": "2026-11-20T10:58"
+  },
+  "renner:932094457": {
+   "preco": 97.93,
+   "em": "2026-11-20T10:59"
+  },
+  "renner:930120834": {
+   "preco": 48.93,
+   "em": "2026-11-20T10:59"
+  },
+  "renner:932059328": {
+   "preco": 83.93,
+   "em": "2026-11-20T10:59"
+  },
+  "renner:931018698": {
+   "preco": 195.93,
+   "em": "2026-11-20T10:59"
+  },
+  "renner:914558844": {
+   "preco": 97.93,
+   "em": "2026-11-20T11:00"
+  },
+  "renner:930835135": {
+   "preco": 125.93,
+   "em": "2026-11-20T11:00"
+  },
+  "renner:931388621": {
+   "preco": 195.93,
+   "em": "2026-11-20T11:00"
+  },
+  "renner:930874521": {
+   "preco": 83.93,
+   "em": "2026-11-20T11:00"
   }
  },
  "ultimo_post": "2026-11-20T10:02:46",
@@ -859,9 +907,21 @@
   "echodotcomalexacorpret": "2026-11-19T22:27",
   "calawidelegfemininaemp": "2026-11-19T22:46",
   "relgiodumontfemininola": "2026-11-20T08:55",
-  "kitcom3cremesdentaisco": "2026-11-20T10:02"
+  "kitcom3cremesdentaisco": "2026-11-20T10:02",
+  "vestidoajustadocomfren": "2026-11-20T10:58",
+  "vestidolongoeretoemcre": "2026-11-20T10:58",
+  "vestidomidiempontoroma": "2026-11-20T10:58",
+  "blusaajustadaemribanac": "2026-11-20T10:58",
+  "blusafrentenicaacetina": "2026-11-20T10:59",
+  "blusaempoliamidacomgol": "2026-11-20T10:59",
+  "blusaemcrepecomdrapead": "2026-11-20T10:59",
+  "macacohalterlongoemvis": "2026-11-20T10:59",
+  "macacoemviscosecomcava": "2026-11-20T11:00",
+  "calaretaalfaiatadacomp": "2026-11-20T11:00",
+  "blazeralfaiatadoajusta": "2026-11-20T11:00",
+  "vestidocurtoemmicrofib": "2026-11-20T11:00"
  },
- "seq_posts": 108,
+ "seq_posts": 120,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2156,6 +2216,150 @@
    "categoria": "cupom",
    "preco": 0.0,
    "de": 0.0,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "109": {
+   "em": "2026-11-20T10:58:10",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Ajustado com Frente Única Drapeado (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 125.93,
+   "de": 179.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "110": {
+   "em": "2026-11-20T10:58:18",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Longo e Reto em Crepe com Bolsos (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 111.93,
+   "de": 159.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "111": {
+   "em": "2026-11-20T10:58:36",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Midi em Ponto Roma (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 83.93,
+   "de": 119.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "112": {
+   "em": "2026-11-20T10:58:46",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Ajustada em Ribana com Gola Alta (off-white)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 55.93,
+   "de": 79.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "113": {
+   "em": "2026-11-20T10:59:15",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única Acetinada com Decote Degagê e Amarração Lateral (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 97.93,
+   "de": 139.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "114": {
+   "em": "2026-11-20T10:59:23",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Poliamida com Gola Redonda (verde)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 48.93,
+   "de": 69.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "115": {
+   "em": "2026-11-20T10:59:46",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Crepe com Drapeado Lateral e Barra Assimétrica (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 83.93,
+   "de": 119.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "116": {
+   "em": "2026-11-20T10:59:53",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Macacão Halter Longo em Viscose (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 195.93,
+   "de": 279.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "117": {
+   "em": "2026-11-20T11:00:04",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Macacão em Viscose com Cava em Retilínea e Amarração na Cintura (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 97.93,
+   "de": 139.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "118": {
+   "em": "2026-11-20T11:00:11",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Reta Alfaiatada com Passantes Largos (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 125.93,
+   "de": 179.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "119": {
+   "em": "2026-11-20T11:00:20",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blazer Alfaiatado Ajustado com Abotoamento Único (caramelo)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 195.93,
+   "de": 279.9,
+   "cupom": "FAVORITOS",
+   "asin": ""
+  },
+  "120": {
+   "em": "2026-11-20T11:00:31",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Microfibra com Manga Morcego e Franzido Lateral (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 83.93,
+   "de": 119.9,
    "cupom": "FAVORITOS",
    "asin": ""
   }
