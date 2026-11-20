@@ -695,6 +695,10 @@
   "renner:931263052": {
    "preco": 59.9,
    "em": "2026-11-20T14:14"
+  },
+  "mercadolivre:MLB5097414138": {
+   "preco": 41.89,
+   "em": "2026-11-20T15:04"
   }
  },
  "ultimo_post": "2026-11-20T14:14:30",
@@ -955,9 +959,10 @@
   "loralprofessionnelleo1": "2026-11-20T11:33",
   "calaflaresemcsaparente": "2026-11-20T12:11",
   "topfitnesstreasureemsu": "2026-11-20T13:12",
-  "vestidotomaraquecaiaba": "2026-11-20T14:14"
+  "vestidotomaraquecaiaba": "2026-11-20T14:14",
+  "corretivonaturaunacobe": "2026-11-20T15:04"
  },
- "seq_posts": 124,
+ "seq_posts": 125,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2446,6 +2451,18 @@
    "de": 149.9,
    "cupom": "PRO200FF",
    "asin": "B0918FHY6P"
+  },
+  "125": {
+   "em": "2026-11-20T15:04:38",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Corretivo Natura Una Cobertura Extrema 24h",
+   "marca": "Natura",
+   "categoria": "beleza",
+   "preco": 41.89,
+   "de": 62.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
