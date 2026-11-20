@@ -615,9 +615,13 @@
   "shopee:23497763981": {
    "preco": 209.0,
    "em": "2026-11-20T08:55"
+  },
+  "shopee:14102349293": {
+   "preco": 33.94,
+   "em": "2026-11-20T10:02"
   }
  },
- "ultimo_post": "2026-11-20T08:55:17",
+ "ultimo_post": "2026-11-20T10:02:46",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-19T18:22:51",
@@ -630,7 +634,7 @@
   "shopee-Home & Living": "2026-11-19T21:29:10",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-19T22:46:27",
-  "shopee-Health": "2026-11-19T14:28:26",
+  "shopee-Health": "2026-11-20T10:02:46",
   "shopee-Watches": "2026-11-20T08:55:17",
   "shopee-Fashion Accessories": "2026-11-17T13:59:33",
   "shopee-Women Bags": "2026-11-19T12:29:01"
@@ -640,7 +644,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-20T08:54",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -648,7 +652,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-20T08:54",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -656,7 +660,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-20T08:54",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -664,7 +668,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-20T08:54",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -672,7 +676,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T08:55",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -680,7 +684,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-20T08:55",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -688,7 +692,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T08:55",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -696,7 +700,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T08:55",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -704,16 +708,16 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-20T08:55",
+   "visto_em": "2026-11-20T10:02",
    "referencia": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-20T08:55",
+  "em": "2026-11-20T10:02",
   "ofertas_por_loja": {
    "shopee": 617,
    "renner": 49,
-   "hardyn": 20,
+   "hardyn": 18,
    "kaisan": 1
   }
  },
@@ -854,7 +858,8 @@
   "travesseironeoclassico": "2026-11-19T21:29",
   "echodotcomalexacorpret": "2026-11-19T22:27",
   "calawidelegfemininaemp": "2026-11-19T22:46",
-  "relgiodumontfemininola": "2026-11-20T08:55"
+  "relgiodumontfemininola": "2026-11-20T08:55",
+  "kitcom3cremesdentaisco": "2026-11-20T10:02"
  },
  "seq_posts": 107,
  "posts_rastreados": {
