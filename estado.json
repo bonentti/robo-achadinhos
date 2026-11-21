@@ -791,6 +791,10 @@
   "shopee:15600696920": {
    "preco": 54.36,
    "em": "2026-11-21T11:22"
+  },
+  "amazon:B0BQRQVF2C": {
+   "preco": 56.9,
+   "em": "2026-11-21T11:26"
   }
  },
  "ultimo_post": "2026-11-21T11:22:52",
@@ -1075,9 +1079,10 @@
   "bolsatransversalxtremp": "2026-11-21T08:43",
   "cadiveufinalstylefinal": "2026-11-21T09:30",
   "calaleggingfemininaesp": "2026-11-21T10:32",
-  "limpadordiluvelajaxfre": "2026-11-21T11:22"
+  "limpadordiluvelajaxfre": "2026-11-21T11:22",
+  "modeladordecachosphilc": "2026-11-21T11:26"
  },
- "seq_posts": 135,
+ "seq_posts": 136,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2698,6 +2703,18 @@
    "de": 119.9,
    "cupom": "AQUECE",
    "asin": ""
+  },
+  "136": {
+   "em": "2026-11-21T11:26:03",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Modelador de Cachos Philco Intense Curves PEC15, 25 mm, cerâmica, bivolt",
+   "marca": "Philco",
+   "categoria": "beleza",
+   "preco": 56.9,
+   "de": null,
+   "cupom": "",
+   "asin": "B0BQRQVF2C"
   }
  },
  "agenda_feitos": [
