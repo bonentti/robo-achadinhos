@@ -799,9 +799,13 @@
   "shopee:19399068917": {
    "preco": 34.99,
    "em": "2026-11-21T12:09"
+  },
+  "shopee:22994289762": {
+   "preco": 209.0,
+   "em": "2026-11-21T12:58"
   }
  },
- "ultimo_post": "2026-11-21T12:09:23",
+ "ultimo_post": "2026-11-21T12:58:59",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-20T22:00:27",
@@ -815,7 +819,7 @@
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-21T12:09:23",
   "shopee-Health": "2026-11-20T19:29:41",
-  "shopee-Watches": "2026-11-20T18:48:16",
+  "shopee-Watches": "2026-11-21T12:58:59",
   "shopee-Fashion Accessories": "2026-11-17T13:59:33",
   "shopee-Women Bags": "2026-11-21T08:43:53"
  },
@@ -824,7 +828,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -832,7 +836,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -840,7 +844,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -848,7 +852,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -856,7 +860,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -864,7 +868,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -872,7 +876,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -880,7 +884,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -888,13 +892,13 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-21T12:09",
+   "visto_em": "2026-11-21T12:58",
    "referencia": 134.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-21T12:09",
+  "em": "2026-11-21T12:58",
   "ofertas_por_loja": {
    "shopee": 595,
    "renner": 51,
@@ -1085,7 +1089,8 @@
   "calaleggingfemininaesp": "2026-11-21T10:32",
   "limpadordiluvelajaxfre": "2026-11-21T11:22",
   "modeladordecachosphilc": "2026-11-21T11:26",
-  "regatabsicafemininagol": "2026-11-21T12:09"
+  "regatabsicafemininagol": "2026-11-21T12:09",
+  "kitdumontfemininoladyb": "2026-11-21T12:58"
  },
  "seq_posts": 136,
  "posts_rastreados": {
