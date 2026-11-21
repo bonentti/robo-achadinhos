@@ -875,9 +875,13 @@
   "shopee:28187201069": {
    "preco": 119.99,
    "em": "2026-11-21T18:55"
+  },
+  "shopee:20397982368": {
+   "preco": 99.9,
+   "em": "2026-11-21T19:38"
   }
  },
- "ultimo_post": "2026-11-21T18:55:36",
+ "ultimo_post": "2026-11-21T19:38:00",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-21T16:04:20",
@@ -889,7 +893,7 @@
   "shopee-Sports & Outdoors": "2026-11-21T18:14:51",
   "shopee-Home & Living": "2026-11-21T18:55:36",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
-  "shopee-Women Clothes": "2026-11-21T12:09:23",
+  "shopee-Women Clothes": "2026-11-21T19:38:00",
   "shopee-Health": "2026-11-21T13:43:14",
   "shopee-Watches": "2026-11-21T12:58:59",
   "shopee-Fashion Accessories": "2026-11-17T13:59:33",
@@ -900,7 +904,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -908,7 +912,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -916,7 +920,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -924,7 +928,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -932,7 +936,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -940,7 +944,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -948,7 +952,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -956,7 +960,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -964,16 +968,16 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-21T18:55",
+   "visto_em": "2026-11-21T19:37",
    "referencia": 134.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-21T18:55",
+  "em": "2026-11-21T19:37",
   "ofertas_por_loja": {
    "shopee": 595,
-   "renner": 50,
+   "renner": 49,
    "hardyn": 19
   }
  },
@@ -1179,7 +1183,8 @@
   "bolsalateralfemininamo": "2026-11-21T16:46",
   "leoderosamosquetapuro2": "2026-11-21T17:25",
   "bermudaluporun5pocketf": "2026-11-21T18:14",
-  "churrasqueiraeltricael": "2026-11-21T18:55"
+  "churrasqueiraeltricael": "2026-11-21T18:55",
+  "calaalfaiatariafeminin": "2026-11-21T19:38"
  },
  "seq_posts": 146,
  "posts_rastreados": {
