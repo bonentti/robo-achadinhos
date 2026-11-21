@@ -815,6 +815,38 @@
   "hardyn:2885": {
    "preco": 43.74,
    "em": "2026-11-21T15:12"
+  },
+  "renner:931107412": {
+   "preco": 57.54,
+   "em": "2026-11-21T15:24"
+  },
+  "renner:931208926": {
+   "preco": 59.94,
+   "em": "2026-11-21T15:24"
+  },
+  "renner:931751144": {
+   "preco": 65.94,
+   "em": "2026-11-21T15:24"
+  },
+  "renner:931606844": {
+   "preco": 71.94,
+   "em": "2026-11-21T15:25"
+  },
+  "renner:929909563": {
+   "preco": 95.94,
+   "em": "2026-11-21T15:25"
+  },
+  "renner:931458415": {
+   "preco": 23.94,
+   "em": "2026-11-21T15:25"
+  },
+  "renner:573054815": {
+   "preco": 23.94,
+   "em": "2026-11-21T15:25"
+  },
+  "renner:930658749": {
+   "preco": 35.94,
+   "em": "2026-11-21T15:25"
   }
  },
  "ultimo_post": "2026-11-21T15:12:30",
@@ -1105,9 +1137,16 @@
   "kitdumontfemininoladyb": "2026-11-21T12:58",
   "enxaguantebucalcolgate": "2026-11-21T13:43",
   "batomhidratantepayot": "2026-11-21T14:26",
-  "topnadadorempoliamidav": "2026-11-21T15:12"
+  "topnadadorempoliamidav": "2026-11-21T15:12",
+  "blusafrentenicaembenga": "2026-11-21T15:24",
+  "vestidocurtoempontorom": "2026-11-21T15:24",
+  "blusaemrendacomalasfin": "2026-11-21T15:24",
+  "coletehalteremsarjacom": "2026-11-21T15:25",
+  "calaretacroppedemjeans": "2026-11-21T15:25",
+  "kit2calcinhasstringfio": "2026-11-21T15:25",
+  "blusafrentenicaemcetim": "2026-11-21T15:25"
  },
- "seq_posts": 136,
+ "seq_posts": 144,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2740,6 +2779,102 @@
    "de": null,
    "cupom": "",
    "asin": "B0BQRQVF2C"
+  },
+  "137": {
+   "em": "2026-11-21T15:24:33",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única em Bengaline com Aplicação (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 57.54,
+   "de": 119.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "138": {
+   "em": "2026-11-21T15:24:42",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Ponto Roma com Ombreiras (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 59.94,
+   "de": 159.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "139": {
+   "em": "2026-11-21T15:24:51",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Renda com Alças Finas e Barra Assimétrica (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 65.94,
+   "de": 139.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "140": {
+   "em": "2026-11-21T15:25:00",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Colete Halter em Sarja com Abotoamento e Decote Profundo (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 71.94,
+   "de": 139.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "141": {
+   "em": "2026-11-21T15:25:09",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Reta Cropped em Jeans com Leve Desgaste (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 95.94,
+   "de": 179.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "142": {
+   "em": "2026-11-21T15:25:18",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Kit 2 Calcinhas String Fio Duplo em Algodão (vermelha e preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 23.94,
+   "de": 45.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "143": {
+   "em": "2026-11-21T15:25:25",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Kit 2 Calcinhas String Fio Duplo em Renda Floral (vermelha e preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 23.94,
+   "de": 45.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "144": {
+   "em": "2026-11-21T15:25:34",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única em Cetim com Decote Degagê (vermelha)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 35.94,
+   "de": 99.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
