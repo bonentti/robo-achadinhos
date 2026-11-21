@@ -847,6 +847,10 @@
   "renner:930658749": {
    "preco": 35.94,
    "em": "2026-11-21T15:25"
+  },
+  "renner:931084169": {
+   "preco": 15.54,
+   "em": "2026-11-21T15:26"
   }
  },
  "ultimo_post": "2026-11-21T15:12:30",
@@ -1144,9 +1148,10 @@
   "coletehalteremsarjacom": "2026-11-21T15:25",
   "calaretacroppedemjeans": "2026-11-21T15:25",
   "kit2calcinhasstringfio": "2026-11-21T15:25",
-  "blusafrentenicaemcetim": "2026-11-21T15:25"
+  "blusafrentenicaemcetim": "2026-11-21T15:25",
+  "meiacalaempoliamidafio": "2026-11-21T15:26"
  },
- "seq_posts": 144,
+ "seq_posts": 145,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2873,6 +2878,18 @@
    "categoria": "feminino",
    "preco": 35.94,
    "de": 99.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "145": {
+   "em": "2026-11-21T15:26:10",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Meia-Calça em Poliamida Fio 40 (vermelha)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 15.54,
+   "de": 29.9,
    "cupom": "",
    "asin": ""
   }
