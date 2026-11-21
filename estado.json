@@ -851,6 +851,10 @@
   "renner:931084169": {
    "preco": 15.54,
    "em": "2026-11-21T15:26"
+  },
+  "renner:931634992": {
+   "preco": 77.94,
+   "em": "2026-11-21T15:29"
   }
  },
  "ultimo_post": "2026-11-21T15:12:30",
@@ -1149,9 +1153,10 @@
   "calaretacroppedemjeans": "2026-11-21T15:25",
   "kit2calcinhasstringfio": "2026-11-21T15:25",
   "blusafrentenicaemcetim": "2026-11-21T15:25",
-  "meiacalaempoliamidafio": "2026-11-21T15:26"
+  "meiacalaempoliamidafio": "2026-11-21T15:26",
+  "pijamaemalgodocomestam": "2026-11-21T15:29"
  },
- "seq_posts": 145,
+ "seq_posts": 146,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2890,6 +2895,18 @@
    "categoria": "feminino",
    "preco": 15.54,
    "de": 29.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "146": {
+   "em": "2026-11-21T15:29:17",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Pijama em Algodão com Estampa Gato com Capacete (branco)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 77.94,
+   "de": 159.9,
    "cupom": "",
    "asin": ""
   }
