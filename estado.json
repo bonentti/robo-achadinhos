@@ -763,6 +763,10 @@
   "renner:928010329": {
    "preco": 81.84,
    "em": "2026-11-20T22:42"
+  },
+  "renner:931253719": {
+   "preco": 32.44,
+   "em": "2026-11-20T22:46"
   }
  },
  "ultimo_post": "2026-11-20T22:00:27",
@@ -1040,9 +1044,10 @@
   "shortsaiaalfaiatadocom": "2026-11-20T22:42",
   "blusaalfaiatadacomdeco": "2026-11-20T22:42",
   "vestidomidiemribanaomb": "2026-11-20T22:42",
-  "calawidelegemcrepecomf": "2026-11-20T22:42"
+  "calawidelegemcrepecomf": "2026-11-20T22:42",
+  "blusaempoliamidacompre": "2026-11-20T22:46"
  },
- "seq_posts": 132,
+ "seq_posts": 133,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2625,6 +2630,18 @@
    "categoria": "feminino",
    "preco": 81.84,
    "de": 199.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "133": {
+   "em": "2026-11-20T22:46:33",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Poliamida com Pregas nos Ombros (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 32.44,
+   "de": 69.9,
    "cupom": "AQUECE",
    "asin": ""
   }
