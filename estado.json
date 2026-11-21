@@ -771,6 +771,10 @@
   "renner:929919104": {
    "preco": 25.94,
    "em": "2026-11-20T22:47"
+  },
+  "renner:930783021": {
+   "preco": 49.34,
+   "em": "2026-11-20T22:48"
   }
  },
  "ultimo_post": "2026-11-20T22:00:27",
@@ -1050,9 +1054,10 @@
   "vestidomidiemribanaomb": "2026-11-20T22:42",
   "calawidelegemcrepecomf": "2026-11-20T22:42",
   "blusaempoliamidacompre": "2026-11-20T22:46",
-  "blusaombroscomamarraon": "2026-11-20T22:47"
+  "blusaombroscomamarraon": "2026-11-20T22:47",
+  "blusaalfaiatadacomumom": "2026-11-20T22:48"
  },
- "seq_posts": 134,
+ "seq_posts": 135,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2659,6 +2664,18 @@
    "categoria": "feminino",
    "preco": 25.94,
    "de": 89.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "135": {
+   "em": "2026-11-20T22:48:35",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Alfaiatada com Um Ombro Só, risca de giz (azul-marinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 49.34,
+   "de": 119.9,
    "cupom": "AQUECE",
    "asin": ""
   }
