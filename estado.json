@@ -739,6 +739,30 @@
   "renner:931273648": {
    "preco": 79.9,
    "em": "2026-11-20T22:00"
+  },
+  "renner:930122995": {
+   "preco": 19.44,
+   "em": "2026-11-20T22:41"
+  },
+  "renner:931315406": {
+   "preco": 19.44,
+   "em": "2026-11-20T22:41"
+  },
+  "renner:930513662": {
+   "preco": 71.44,
+   "em": "2026-11-20T22:42"
+  },
+  "renner:930317338": {
+   "preco": 81.84,
+   "em": "2026-11-20T22:42"
+  },
+  "renner:930022927": {
+   "preco": 49.34,
+   "em": "2026-11-20T22:42"
+  },
+  "renner:928010329": {
+   "preco": 81.84,
+   "em": "2026-11-20T22:42"
   }
  },
  "ultimo_post": "2026-11-20T22:00:27",
@@ -1010,9 +1034,15 @@
   "escovadedentecolgatese": "2026-11-20T19:29",
   "eudoraniinasecretsprim": "2026-11-20T20:19",
   "leggingfitnessredshine": "2026-11-20T21:01",
-  "vestidocurtoemrendacom": "2026-11-20T22:00"
+  "vestidocurtoemrendacom": "2026-11-20T22:00",
+  "camisetajustinhaemalgo": "2026-11-20T22:41",
+  "camisetaemalgodocolleg": "2026-11-20T22:41",
+  "shortsaiaalfaiatadocom": "2026-11-20T22:42",
+  "blusaalfaiatadacomdeco": "2026-11-20T22:42",
+  "vestidomidiemribanaomb": "2026-11-20T22:42",
+  "calawidelegemcrepecomf": "2026-11-20T22:42"
  },
- "seq_posts": 126,
+ "seq_posts": 132,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2524,6 +2554,78 @@
    "preco": 115.15,
    "de": 199.0,
    "cupom": "FULL2011ENTREGAS",
+   "asin": ""
+  },
+  "127": {
+   "em": "2026-11-20T22:41:50",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Camiseta Justinha em Algodão Estampa Gettin Ready (amarela)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 19.44,
+   "de": 59.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "128": {
+   "em": "2026-11-20T22:41:59",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Camiseta em Algodão College Get Off (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 19.44,
+   "de": 39.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "129": {
+   "em": "2026-11-20T22:42:29",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Short Saia Alfaiatado com Pala Transpassada (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 71.44,
+   "de": 139.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "130": {
+   "em": "2026-11-20T22:42:38",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Alfaiatada com Decote Quadrado e Barra Estruturada (vinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 81.84,
+   "de": 139.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "131": {
+   "em": "2026-11-20T22:42:47",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Midi em Ribana Ombro Só com Franzido Lateral (verde-escuro)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 49.34,
+   "de": 139.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "132": {
+   "em": "2026-11-20T22:42:56",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Wide Leg em Crepe com Fivela no Cós (vinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 81.84,
+   "de": 199.9,
+   "cupom": "AQUECE",
    "asin": ""
   }
  },
