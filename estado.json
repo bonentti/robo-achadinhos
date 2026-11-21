@@ -767,6 +767,10 @@
   "renner:931253719": {
    "preco": 32.44,
    "em": "2026-11-20T22:46"
+  },
+  "renner:929919104": {
+   "preco": 25.94,
+   "em": "2026-11-20T22:47"
   }
  },
  "ultimo_post": "2026-11-20T22:00:27",
@@ -1045,9 +1049,10 @@
   "blusaalfaiatadacomdeco": "2026-11-20T22:42",
   "vestidomidiemribanaomb": "2026-11-20T22:42",
   "calawidelegemcrepecomf": "2026-11-20T22:42",
-  "blusaempoliamidacompre": "2026-11-20T22:46"
+  "blusaempoliamidacompre": "2026-11-20T22:46",
+  "blusaombroscomamarraon": "2026-11-20T22:47"
  },
- "seq_posts": 133,
+ "seq_posts": 134,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -2642,6 +2647,18 @@
    "categoria": "feminino",
    "preco": 32.44,
    "de": 69.9,
+   "cupom": "AQUECE",
+   "asin": ""
+  },
+  "134": {
+   "em": "2026-11-20T22:47:05",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Ombro Só com Amarração na Gola (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 25.94,
+   "de": 89.9,
    "cupom": "AQUECE",
    "asin": ""
   }
