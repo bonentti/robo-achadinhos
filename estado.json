@@ -731,14 +731,18 @@
   "shopee:23794736856": {
    "preco": 29.9,
    "em": "2026-11-20T20:19"
+  },
+  "hardyn:1529": {
+   "preco": 55.74,
+   "em": "2026-11-20T21:01"
   }
  },
- "ultimo_post": "2026-11-20T20:19:03",
+ "ultimo_post": "2026-11-20T21:01:10",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-20T14:14:30",
   "kaisan": "2026-11-20T12:11:52",
-  "hardyn": "2026-11-20T13:12:35",
+  "hardyn": "2026-11-20T21:01:10",
   "favoritas": "2026-11-20T20:19:03",
   "shopee-Beauty": "2026-11-20T15:11:44",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
@@ -756,7 +760,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -764,7 +768,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -772,7 +776,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -780,7 +784,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -788,7 +792,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -796,7 +800,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -804,7 +808,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T20:18",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -812,7 +816,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-20T20:19",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -820,16 +824,16 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-20T20:19",
+   "visto_em": "2026-11-20T21:01",
    "referencia": 134.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-20T20:19",
+  "em": "2026-11-20T21:01",
   "ofertas_por_loja": {
    "shopee": 617,
-   "renner": 49,
+   "renner": 52,
    "hardyn": 20
   }
  },
@@ -1000,7 +1004,8 @@
   "shortsfemininoalfaiata": "2026-11-20T18:04",
   "kitrelgiodumontfeminin": "2026-11-20T18:48",
   "escovadedentecolgatese": "2026-11-20T19:29",
-  "eudoraniinasecretsprim": "2026-11-20T20:19"
+  "eudoraniinasecretsprim": "2026-11-20T20:19",
+  "leggingfitnessredshine": "2026-11-20T21:01"
  },
  "seq_posts": 126,
  "posts_rastreados": {
