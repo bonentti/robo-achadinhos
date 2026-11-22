@@ -380,6 +380,13 @@ def loja_confiavel(cfg: dict, titulo: str, loja: str) -> bool:
     return any(norm(v) in norm(loja) for v in sp.get("lojas_multimarcas", []))
 
 
+def passa_do_teto(sp: dict, titulo: str, preco: float) -> bool:
+    """True se o nome tem um termo de [shopee].tetos_por_termo e o preço passa do teto dele."""
+    t = titulo.lower()
+    return any(re.search(rf"\b{re.escape(termo.lower())}", t) and preco > float(teto)
+               for termo, teto in sp.get("tetos_por_termo", {}).items())
+
+
 def link_shopee_afiliado(link: str, id_afiliado: str, sub_id: str = "telegram") -> str:
     """Os links do feed nao levam o ID de afiliada; sem ele nao ha comissao."""
     if "affiliate_id=" in link:
@@ -536,6 +543,8 @@ def buscar_shopee_feed(cfg: dict) -> list[Oferta]:
                         n_min = sp.get("nota_minima_marcas", nota_min)
             if preco_min and preco and preco < preco_min:
                 continue
+            if preco and passa_do_teto(sp, titulo, preco):
+                continue  # caro demais para o tipo de produto (ex.: creme dental a R$ 60)
             if (not preco or desconto < d_min or nota < n_min or nota_loja < min(nota_loja_min, n_min)
                     or curtidas < c_min or (preco_max and preco > preco_max)):
                 continue

@@ -69,7 +69,10 @@ nota_minima = 4.7         # estrelas do produto
 nota_minima_loja = 4.7    # estrelas da loja
 curtidas_minimas = 500    # produtos que muita gente já aprovou
 vendas_minimas = 100      # (usado só quando a API for liberada)
-preco_maximo = 300        # em R$
+preco_maximo = 150        # em R$ (22/11: era 300; bermuda Lupo de R$ 168,90 "muito cara")
+# Teto por tipo de produto (22/11: ela achou caros creme dental R$ 60,74, mini kit de pincéis R$ 78,90
+# e bermuda R$ 168,90). Se o nome tiver o termo e o preço passar do teto, não posta.
+tetos_por_termo = { "creme dental" = 25, "pasta de dente" = 25, "escova de dente" = 30, "pincel" = 45, "pincéis" = 45, "bermuda" = 90, "short" = 80, "camiseta" = 60, "regata" = 60, "meia" = 40, "calcinha" = 50, "desodorante" = 40, "sabonete" = 40, "esponja" = 40 }
 preco_minimo = 15         # evita itens muito baratinhos (sabonete avulso etc.)
 excluir_palavras = ["masculin", "infantil", "kids", "menino", "inspirad", "contratipo", "similar ao",
                     "atacado", "revenda", "kit 12", "kit 24", "caixa com 12"]
@@ -157,7 +160,11 @@ evitar = ["rasteirinha moleca com laço",   # 17/11: ela não gostou
   "multiprocessador", "forno elétrico", "forno eletrico", "micro-ondas", "microondas", "aspirador",
   "robô aspirador", "ventilador", "ferro de passar", "vaporizador de roupa", "purificador",
   "umidificador", "mop giratório", "mop giratorio", "geladeira", "fogão", "fogao", "cooktop", "lava-louça", "lava louça",
-  "utensílio", "utensilio", "espátula", "espatula", "tábua de corte", "potes herméticos", "pote hermético", "parafusadeira", "furadeira"]
+  "utensílio", "utensilio", "espátula", "espatula", "tábua de corte", "potes herméticos", "pote hermético", "parafusadeira", "furadeira",
+  # 22/11: "churrasqueira" e "lava roupa nada a ver enviar" (produto de limpeza/supermercado não é achado do canal)
+  "churrasqueira", "lava roupa", "lava-roupa", "lava roupas", "sabão em pó", "sabao em po", "sabão líquido", "sabao liquido",
+  "amaciante", "detergente", "desinfetante", "água sanitária", "agua sanitaria", "alvejante", "tira manchas",
+  "bolsa moleca transversal"]   # 22/11: "a bolsa é feia"
 # Peça + cor que ela acha difícil de usar e combinar (17/11: "não gostei da legging rosa";
 # depois: "vale sim" para calça e short também)
 evitar_combinacoes = [
