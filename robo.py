@@ -163,25 +163,23 @@ def montar_mensagem(oferta: Oferta, cfg: dict) -> str:
     if not chamada and msg_cfg.get("usar_chamadas", True):
         if oferta.desconto >= 1:
             chamada = f"🔥 {oferta.desconto}% OFF"
+    # 22/11: Nicole pediu posts mais curtos -> nome, preço numa linha, cupom, no máximo 1 extra, link.
+    loja = NOMES_LOJAS.get(oferta.loja, oferta.loja.title())
     linhas = []
     if chamada:
-        linhas += [f"<b>{e(chamada)}</b>", ""]
-    linhas += [f"🛍️ {e(nome)}", ""]
+        linhas.append(f"<b>{e(chamada)}</b>")
+    linhas.append(f"🛍️ {e(nome)}")
     if oferta.desconto >= 1:
-        linhas.append(f"De <s>{reais(oferta.preco_antigo)}</s>")
-        linhas.append(f"💰 <b>Por {reais(oferta.preco)}</b>  (-{oferta.desconto}%)")
+        linhas.append(f"De <s>{reais(oferta.preco_antigo)}</s> por <b>{reais(oferta.preco)}</b> na {e(loja)}")
     else:
-        linhas.append(f"💰 <b>{reais(oferta.preco)}</b>")
+        linhas.append(f"💰 <b>{reais(oferta.preco)}</b> na {e(loja)}")
     if oferta.cupom:
         linhas.append(f"🎟️ Cupom: <code>{e(oferta.cupom)}</code>")
-    for extra in oferta.extras:
-        linhas.append(e(extra))
-    linhas.append(f"🏬 {NOMES_LOJAS.get(oferta.loja, oferta.loja.title())}")
-    linhas.append("")
-    linhas.append(f'🛒 Comprar aqui: {e(oferta.link)}')  # link visivel: vai junto ao copiar para o WhatsApp
+    linhas += [e(x) for x in oferta.extras[:msg_cfg.get("max_extras", 1)]]
+    linhas += ["", f'🛒 {e(oferta.link)}']  # link visivel: vai junto ao copiar para o WhatsApp
     rodape = msg_cfg.get("rodape", "")
     if rodape:
-        linhas += ["", e(rodape)]
+        linhas.append(e(rodape))
     return "\n".join(linhas)
 
 
@@ -1246,16 +1244,16 @@ def legenda_whatsapp(o: Oferta, link: str | None = None) -> str:
     loja = NOMES_LOJAS.get(o.loja, o.loja.title())
     nome = o.nome.strip()
     nome = nome[:90] + "..." if len(nome) > 90 else nome
-    linhas = [f"🔥 *{o.desconto}% OFF*" if o.desconto >= 1 else "🔥 *Achado do dia*", "", f"🛍️ {nome}", ""]
+    # 22/11: mais curto e sem a frase de comissão (fica só o #publi)
+    linhas = [f"🔥 *{o.desconto}% OFF*" if o.desconto >= 1 else "🔥 *Achado do dia*", f"🛍️ {nome}"]
     if o.desconto >= 1:
-        linhas.append(f"De ~{reais(o.preco_antigo)}~")
-        linhas.append(f"💰 *Por {reais(o.preco)}* na {loja}")
+        linhas.append(f"De ~{reais(o.preco_antigo)}~ por *{reais(o.preco)}* na {loja}")
     else:
         linhas.append(f"💰 *{reais(o.preco)}* na {loja}")
     if o.cupom:
         linhas.append(f"🎟️ Cupom: *{o.cupom}*")
-    linhas += ["", f"🛒 {link or o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "",
-               "#publi Link/cupom de parceria: posso ganhar uma comissão, sem custo extra pra você."]
+    linhas += o.extras[:1]
+    linhas += ["", f"🛒 {link or o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "#publi"]
     return "\n".join(linhas)
 
 
@@ -1362,7 +1360,7 @@ def montar_aviso_cupom(texto: str, id_af: str) -> str | None:
         link = link_shopee_afiliado("https://shopee.com.br/", id_af)
         msg += ["", f'👉 Use o cupom no carrinho: {e(link)}']
     msg += ["", "⚠️ Cupons são limitados e acabam rápido.",
-            "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você."]
+            "#publi"]
     return "\n".join(msg)
 
 
@@ -1421,7 +1419,7 @@ def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: 
         "Promoções e cupons o dia todo. Vou postando aqui os melhores achados de lojas oficiais 👇", "",
         f'🎟️ Veja as ofertas e cupons do dia: {e(link)}', "",
         "🔔 Ative as notificações para não perder nada!",
-        "#publi 🔗 Link de parceria: posso ganhar uma comissão, sem custo extra pra você.",
+        "#publi",
     ])
     tg.enviar(texto)
     if not modo_teste:

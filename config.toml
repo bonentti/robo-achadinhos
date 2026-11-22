@@ -14,7 +14,9 @@ canal = "@achadosdabonentti"
 
 [mensagem]
 # Aparece no fim de toda postagem (aviso de link de afiliado - recomendado)
-rodape = "⚠️ Preço e estoque podem mudar a qualquer momento.\n#publi 🔗 Links e cupons de parceria: posso ganhar uma comissão, sem custo extra pra você."
+rodape = "#publi"   # 22/11: Nicole pediu post mais curto e sem a frase de comissão
+# Quantas linhas extras (histórico, vendedor, nota...) cabem no post
+max_extras = 1
 # Mostra o % de desconto no topo do post (ex.: "🔥 67% OFF")
 usar_chamadas = true
 
@@ -303,7 +305,7 @@ ativo = false   # 19/11: Nicole já reposta tudo ao mesmo tempo; chat_id continu
 chat_id = "1713332589"   # seu chat privado com o bot
 hora = 19             # a partir das 19h
 quantidade = 5
-rodape = """#publi Links e cupons de parceria: posso ganhar uma comissão, sem custo extra pra você.
+rodape = """#publi
 
 📲 Quer ofertas o dia todo? Entra no meu canal do Telegram: t.me/achadosdabonentti
 💬 Canal no WhatsApp: https://whatsapp.com/channel/0029VbEqyLMFi8xUgzfgQ53N"""
