@@ -1244,7 +1244,7 @@ def legenda_whatsapp(o: Oferta, link: str | None = None) -> str:
     loja = NOMES_LOJAS.get(o.loja, o.loja.title())
     nome = o.nome.strip()
     nome = nome[:90] + "..." if len(nome) > 90 else nome
-    # 22/11: mais curto e sem a frase de comissão (fica só o #publi)
+    # 22/11: mais curto; no fim só "Link de afiliado" (ela não é paga pela marca, então não usa #publi)
     linhas = [f"🔥 *{o.desconto}% OFF*" if o.desconto >= 1 else "🔥 *Achado do dia*", f"🛍️ {nome}"]
     if o.desconto >= 1:
         linhas.append(f"De ~{reais(o.preco_antigo)}~ por *{reais(o.preco)}* na {loja}")
@@ -1253,7 +1253,7 @@ def legenda_whatsapp(o: Oferta, link: str | None = None) -> str:
     if o.cupom:
         linhas.append(f"🎟️ Cupom: *{o.cupom}*")
     linhas += o.extras[:1]
-    linhas += ["", f"🛒 {link or o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "#publi"]
+    linhas += ["", f"🛒 {link or o.link.replace('sub_id=telegram', 'sub_id=whatsapp')}", "🔗 Link de afiliado"]
     return "\n".join(linhas)
 
 
@@ -1360,7 +1360,7 @@ def montar_aviso_cupom(texto: str, id_af: str) -> str | None:
         link = link_shopee_afiliado("https://shopee.com.br/", id_af)
         msg += ["", f'👉 Use o cupom no carrinho: {e(link)}']
     msg += ["", "⚠️ Cupons são limitados e acabam rápido.",
-            "#publi"]
+            "🔗 Link de afiliado"]
     return "\n".join(msg)
 
 
@@ -1419,7 +1419,7 @@ def avisar_dia_promocional(cfg: dict, estado: dict, tg: "Telegram", modo_teste: 
         "Promoções e cupons o dia todo. Vou postando aqui os melhores achados de lojas oficiais 👇", "",
         f'🎟️ Veja as ofertas e cupons do dia: {e(link)}', "",
         "🔔 Ative as notificações para não perder nada!",
-        "#publi",
+        "🔗 Link de afiliado",
     ])
     tg.enviar(texto)
     if not modo_teste:
@@ -1510,7 +1510,7 @@ def processar_encaminhados(cfg: dict, estado: dict, tg: "Telegram") -> int:
                 loja_l = "amazon" if "amazon." in l else "renner" if "awin1.com" in l else "shopee"
                 num = registrar_post(cfg, estado, "whatsapp", titulo, loja_l, l)
                 zap.append(f"🛒 {link_rastreado(cfg, l, 'whatsapp', num)}")
-            zap += ["", "#publi"]
+            zap += ["", "🔗 Link de afiliado"]
             tg.enviar_privado(dona, "✅ Postei no canal com os seus links. Versão para o WhatsApp:")
             tg.enviar_privado(dona, "\n".join(zap))
             log.info(f"  ✔ oferta encaminhada postada ({len(links)} link(s))")
