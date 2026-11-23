@@ -991,6 +991,42 @@
   "amazon:B083JL2JKF": {
    "preco": 200.85,
    "em": "2026-11-23T09:50"
+  },
+  "renner:927851206": {
+   "preco": 17.94,
+   "em": "2026-11-23T10:41"
+  },
+  "renner:930990346": {
+   "preco": 27.54,
+   "em": "2026-11-23T10:41"
+  },
+  "renner:930839136": {
+   "preco": 29.94,
+   "em": "2026-11-23T10:41"
+  },
+  "renner:930547627": {
+   "preco": 35.94,
+   "em": "2026-11-23T10:42"
+  },
+  "renner:929072610": {
+   "preco": 35.94,
+   "em": "2026-11-23T10:42"
+  },
+  "renner:931665481": {
+   "preco": 45.54,
+   "em": "2026-11-23T10:42"
+  },
+  "renner:931232660": {
+   "preco": 51.54,
+   "em": "2026-11-23T10:42"
+  },
+  "renner:930145581": {
+   "preco": 53.94,
+   "em": "2026-11-23T10:42"
+  },
+  "renner:927985458": {
+   "preco": 65.94,
+   "em": "2026-11-23T10:43"
   }
  },
  "ultimo_post": "2026-11-23T08:52:26",
@@ -1325,9 +1361,18 @@
   "pranchaphilipsthermopr": "2026-11-23T09:44",
   "pranchaconairdigitaldo": "2026-11-23T09:44",
   "chapataiffcermicapreta": "2026-11-23T09:44",
-  "mscarakrastasegenesism": "2026-11-23T09:50"
+  "mscarakrastasegenesism": "2026-11-23T09:50",
+  "blusasemmangaemjacquar": "2026-11-23T10:41",
+  "camisetaemalgodocomapl": "2026-11-23T10:41",
+  "blusaemalgodocomgolaca": "2026-11-23T10:41",
+  "blusaemviscoseanimalpr": "2026-11-23T10:42",
+  "vestidocurtoemribanaco": "2026-11-23T10:42",
+  "minissaiabalonemtricol": "2026-11-23T10:42",
+  "calaaladimemcrepecomre": "2026-11-23T10:42",
+  "saiacurtaemcrepecomcin": "2026-11-23T10:42",
+  "calacenouraalfaiatadac": "2026-11-23T10:43"
  },
- "seq_posts": 154,
+ "seq_posts": 163,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3176,6 +3221,114 @@
    "de": 339.0,
    "cupom": "PRO200FF",
    "asin": "B083JL2JKF"
+  },
+  "155": {
+   "em": "2026-11-23T10:41:14",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa sem Manga em Jacquard Xadrez Argyle (verde)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 17.94,
+   "de": 69.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "156": {
+   "em": "2026-11-23T10:41:23",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Camiseta em Algodão com Aplicação de Brilhos (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 27.54,
+   "de": 69.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "157": {
+   "em": "2026-11-23T10:41:52",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Algodão com Gola Canoa (terracota)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.94,
+   "de": 49.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "158": {
+   "em": "2026-11-23T10:42:01",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Viscose Animal Print (zebra)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 35.94,
+   "de": 99.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "159": {
+   "em": "2026-11-23T10:42:09",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Ribana com Gola Polo (vinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 35.94,
+   "de": 139.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "160": {
+   "em": "2026-11-23T10:42:17",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Minissaia Balonê em Tricoline (lilás)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 45.54,
+   "de": 119.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "161": {
+   "em": "2026-11-23T10:42:45",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Aladim em Crepe com Renda na Barra (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 51.54,
+   "de": 199.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "162": {
+   "em": "2026-11-23T10:42:53",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Saia Curta em Crepe com Cinto (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 53.94,
+   "de": 119.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "163": {
+   "em": "2026-11-23T10:43:00",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Cenoura Alfaiatada com Cinto (marinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 65.94,
+   "de": 179.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
