@@ -682,7 +682,7 @@
   },
   "amazon:B0BZZJWGPQ": {
    "preco": 290.02,
-   "em": "2026-11-20T11:29"
+   "em": "2026-11-23T12:56"
   },
   "amazon:B0918FHY6P": {
    "preco": 112.42,
@@ -1381,9 +1381,10 @@
   "saiacurtaemcrepecomcin": "2026-11-23T10:42",
   "calacenouraalfaiatadac": "2026-11-23T10:43",
   "topluposportseamlessba": "2026-11-23T11:09",
-  "monteaparelhojantarpra": "2026-11-23T12:23"
+  "monteaparelhojantarpra": "2026-11-23T12:23",
+  "srumnoturnokrastasenut": "2026-11-23T12:56"
  },
- "seq_posts": 163,
+ "seq_posts": 164,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3340,6 +3341,18 @@
    "de": 179.9,
    "cupom": "",
    "asin": ""
+  },
+  "164": {
+   "em": "2026-11-23T12:56:05",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum Noturno Kérastase Nutritive 8H Magic Night 90 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 290.02,
+   "de": 399.0,
+   "cupom": "",
+   "asin": "B0BZZJWGPQ"
   }
  },
  "agenda_feitos": [
