@@ -1059,6 +1059,10 @@
   "hardyn:2103": {
    "preco": 43.96,
    "em": "2026-11-23T16:25"
+  },
+  "amazon:B07G7JWLL1": {
+   "preco": 17.07,
+   "em": "2026-11-23T17:18"
   }
  },
  "ultimo_post": "2026-11-23T16:25:34",
@@ -1412,9 +1416,10 @@
   "leaveinsrumcapilarpara": "2026-11-23T15:22",
   "bronzerecontornoembast": "2026-11-23T15:39",
   "kitlolafromriorapunzel": "2026-11-23T15:43",
-  "shortdecorridacom7bols": "2026-11-23T16:25"
+  "shortdecorridacom7bols": "2026-11-23T16:25",
+  "goenergygelatlheticanu": "2026-11-23T17:18"
  },
- "seq_posts": 166,
+ "seq_posts": 167,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3407,6 +3412,18 @@
    "de": 119.9,
    "cupom": "",
    "asin": "B0GHP4NL1J"
+  },
+  "167": {
+   "em": "2026-11-23T17:18:40",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Go Energy Gel Atlhetica Nutrition – guaraná e açaí (10 sachês)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 17.07,
+   "de": 25.0,
+   "cupom": "",
+   "asin": "B07G7JWLL1"
   }
  },
  "agenda_feitos": [
