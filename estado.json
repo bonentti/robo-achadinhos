@@ -1091,6 +1091,38 @@
   "renner:930539053": {
    "preco": 93.54,
    "em": "2026-11-23T17:34"
+  },
+  "kaisan:K4524-C": {
+   "preco": 89.9,
+   "em": "2026-11-23T17:50"
+  },
+  "kaisan:K4908-B": {
+   "preco": 83.9,
+   "em": "2026-11-23T17:50"
+  },
+  "kaisan:K4948-A": {
+   "preco": 127.9,
+   "em": "2026-11-23T17:51"
+  },
+  "kaisan:K4919-A": {
+   "preco": 104.93,
+   "em": "2026-11-23T17:51"
+  },
+  "kaisan:K4876-A": {
+   "preco": 82.43,
+   "em": "2026-11-23T17:51"
+  },
+  "kaisan:K4829-B": {
+   "preco": 71.92,
+   "em": "2026-11-23T17:51"
+  },
+  "kaisan:K4523-E": {
+   "preco": 63.9,
+   "em": "2026-11-23T17:52"
+  },
+  "kaisan:K4703-A": {
+   "preco": 63.9,
+   "em": "2026-11-23T17:52"
   }
  },
  "ultimo_post": "2026-11-23T17:23:52",
@@ -1452,9 +1484,17 @@
   "calaleggingesportivaem": "2026-11-23T17:33",
   "calabarrelalfaiatadaco": "2026-11-23T17:33",
   "calapantalonaemalfaiat": "2026-11-23T17:33",
-  "jaquetabikerempucommat": "2026-11-23T17:34"
+  "jaquetabikerempucommat": "2026-11-23T17:34",
+  "calaleggingcombolsosna": "2026-11-23T17:50",
+  "calaleggingcomviracont": "2026-11-23T17:50",
+  "macacocomaberturanodec": "2026-11-23T17:51",
+  "macacocomvivonorecorte": "2026-11-23T17:51",
+  "shortsemganchocomvivoc": "2026-11-23T17:51",
+  "shortsemcsaparentecomr": "2026-11-23T17:51",
+  "topfrentenicacomtirasn": "2026-11-23T17:52",
+  "regatacurtacombarraarr": "2026-11-23T17:52"
  },
- "seq_posts": 173,
+ "seq_posts": 181,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3530,6 +3570,102 @@
    "preco": 93.54,
    "de": 239.9,
    "cupom": "",
+   "asin": ""
+  },
+  "174": {
+   "em": "2026-11-23T17:50:32",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Calça Legging com Bolsos nas Laterais do Cós (preta)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 89.9,
+   "de": 149.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "175": {
+   "em": "2026-11-23T17:50:40",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Calça Legging com Vira Contrastante (off-white/preto)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 83.9,
+   "de": 139.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "176": {
+   "em": "2026-11-23T17:51:10",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Macacão com Abertura no Decote (trufa)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 127.9,
+   "de": 159.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "177": {
+   "em": "2026-11-23T17:51:19",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Macacão com Vivo no Recorte (preto)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 104.93,
+   "de": 139.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "178": {
+   "em": "2026-11-23T17:51:29",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Short sem Gancho com Vivo Contrastante (rum/off-white)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 82.43,
+   "de": 109.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "179": {
+   "em": "2026-11-23T17:51:57",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Short sem Cós Aparente com Recorte Lateral (preto)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 71.92,
+   "de": 99.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "180": {
+   "em": "2026-11-23T17:52:05",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Top Frente Única com Tiras nas Costas (duna)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 63.9,
+   "de": 79.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "181": {
+   "em": "2026-11-23T17:52:14",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Regata Curta com Barra Arredondada (preta)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 63.9,
+   "de": 79.9,
+   "cupom": "BONENTTI",
    "asin": ""
   }
  },
