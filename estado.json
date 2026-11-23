@@ -1143,6 +1143,10 @@
   "shopee:23497916254": {
    "preco": 12.99,
    "em": "2026-11-23T19:14"
+  },
+  "shopee:23294295863": {
+   "preco": 19.99,
+   "em": "2026-11-23T19:38"
   }
  },
  "ultimo_post": "2026-11-23T19:14:09",
@@ -1517,9 +1521,10 @@
   "bolsacomalasacolchoada": "2026-11-23T17:54",
   "pranchabritniacordogir": "2026-11-23T18:22",
   "kitcom2garrafasdeguatu": "2026-11-23T19:14",
-  "bolsatrmicalancheirapo": "2026-11-23T19:14"
+  "bolsatrmicalancheirapo": "2026-11-23T19:14",
+  "luzledporttilparafotos": "2026-11-23T19:38"
  },
- "seq_posts": 184,
+ "seq_posts": 185,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3726,6 +3731,18 @@
    "categoria": "casa",
    "preco": 12.99,
    "de": 49.99,
+   "cupom": "",
+   "asin": ""
+  },
+  "185": {
+   "em": "2026-11-23T19:38:51",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Luz LED Portátil para Fotos e Vídeos (iluminador de preenchimento)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 19.99,
+   "de": 50.0,
    "cupom": "",
    "asin": ""
   }
