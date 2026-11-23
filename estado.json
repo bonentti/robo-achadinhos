@@ -1047,6 +1047,10 @@
   "shopee:58262774075": {
    "preco": 28.9,
    "em": "2026-11-23T15:22"
+  },
+  "mercadolivre:MLB69358801": {
+   "preco": 186.3,
+   "em": "2026-11-23T15:39"
   }
  },
  "ultimo_post": "2026-11-23T15:22:35",
@@ -1397,9 +1401,10 @@
   "srumnoturnokrastasenut": "2026-11-23T12:56",
   "vestidocurtojustoemrib": "2026-11-23T13:29",
   "kitenxaguantebucalcolg": "2026-11-23T14:28",
-  "leaveinsrumcapilarpara": "2026-11-23T15:22"
+  "leaveinsrumcapilarpara": "2026-11-23T15:22",
+  "bronzerecontornoembast": "2026-11-23T15:39"
  },
- "seq_posts": 164,
+ "seq_posts": 165,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3368,6 +3373,18 @@
    "de": 399.0,
    "cupom": "",
    "asin": "B0BZZJWGPQ"
+  },
+  "165": {
+   "em": "2026-11-23T15:39:39",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Bronzer e Contorno em Bastão Too Faced Chocolate Soleil (Chocolate Mousse)",
+   "marca": "Too Faced",
+   "categoria": "beleza",
+   "preco": 186.3,
+   "de": 259.0,
+   "cupom": "OFERTAPARAVOCE",
+   "asin": ""
   }
  },
  "agenda_feitos": [
