@@ -1051,6 +1051,10 @@
   "mercadolivre:MLB69358801": {
    "preco": 186.3,
    "em": "2026-11-23T15:39"
+  },
+  "amazon:B0GHP4NL1J": {
+   "preco": 55.45,
+   "em": "2026-11-23T15:43"
   }
  },
  "ultimo_post": "2026-11-23T15:22:35",
@@ -1402,9 +1406,10 @@
   "vestidocurtojustoemrib": "2026-11-23T13:29",
   "kitenxaguantebucalcolg": "2026-11-23T14:28",
   "leaveinsrumcapilarpara": "2026-11-23T15:22",
-  "bronzerecontornoembast": "2026-11-23T15:39"
+  "bronzerecontornoembast": "2026-11-23T15:39",
+  "kitlolafromriorapunzel": "2026-11-23T15:43"
  },
- "seq_posts": 165,
+ "seq_posts": 166,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3385,6 +3390,18 @@
    "de": 259.0,
    "cupom": "OFERTAPARAVOCE",
    "asin": ""
+  },
+  "166": {
+   "em": "2026-11-23T15:43:10",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Kit Lola From Rio Rapunzel (shampoo + tônico + milk spray)",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 55.45,
+   "de": 119.9,
+   "cupom": "",
+   "asin": "B0GHP4NL1J"
   }
  },
  "agenda_feitos": [
