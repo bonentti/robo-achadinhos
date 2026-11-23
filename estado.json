@@ -1027,9 +1027,13 @@
   "renner:927985458": {
    "preco": 65.94,
    "em": "2026-11-23T10:43"
+  },
+  "shopee:22398018625": {
+   "preco": 99.9,
+   "em": "2026-11-23T11:09"
   }
  },
- "ultimo_post": "2026-11-23T08:52:26",
+ "ultimo_post": "2026-11-23T11:09:31",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-22T21:15:29",
@@ -1038,7 +1042,7 @@
   "favoritas": "2026-11-22T19:42:24",
   "shopee-Beauty": "2026-11-22T22:32:36",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
-  "shopee-Sports & Outdoors": "2026-11-21T18:14:51",
+  "shopee-Sports & Outdoors": "2026-11-23T11:09:31",
   "shopee-Home & Living": "2026-11-22T17:31:06",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-22T18:17:11",
@@ -1052,7 +1056,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1060,7 +1064,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1068,7 +1072,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -1076,7 +1080,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -1084,7 +1088,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1092,7 +1096,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -1100,7 +1104,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1108,7 +1112,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1116,16 +1120,17 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-23T08:52",
+   "visto_em": "2026-11-23T11:09",
    "referencia": 134.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-23T08:52",
+  "em": "2026-11-23T11:09",
   "ofertas_por_loja": {
    "shopee": 502,
-   "hardyn": 19
+   "renner": 48,
+   "hardyn": 18
   }
  },
  "resumo_enviado_em": "2026-11-19",
@@ -1370,7 +1375,8 @@
   "minissaiabalonemtricol": "2026-11-23T10:42",
   "calaaladimemcrepecomre": "2026-11-23T10:42",
   "saiacurtaemcrepecomcin": "2026-11-23T10:42",
-  "calacenouraalfaiatadac": "2026-11-23T10:43"
+  "calacenouraalfaiatadac": "2026-11-23T10:43",
+  "topluposportseamlessba": "2026-11-23T11:09"
  },
  "seq_posts": 163,
  "posts_rastreados": {
