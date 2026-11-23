@@ -1123,6 +1123,14 @@
   "kaisan:K4703-A": {
    "preco": 63.9,
    "em": "2026-11-23T17:52"
+  },
+  "kaisan:K5285-B": {
+   "preco": 103.9,
+   "em": "2026-11-23T17:54"
+  },
+  "kaisan:K5449-B": {
+   "preco": 143.92,
+   "em": "2026-11-23T17:54"
   }
  },
  "ultimo_post": "2026-11-23T17:23:52",
@@ -1492,9 +1500,11 @@
   "shortsemganchocomvivoc": "2026-11-23T17:51",
   "shortsemcsaparentecomr": "2026-11-23T17:51",
   "topfrentenicacomtirasn": "2026-11-23T17:52",
-  "regatacurtacombarraarr": "2026-11-23T17:52"
+  "regatacurtacombarraarr": "2026-11-23T17:52",
+  "calaleggingcomrecortes": "2026-11-23T17:54",
+  "bolsacomalasacolchoada": "2026-11-23T17:54"
  },
- "seq_posts": 181,
+ "seq_posts": 183,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3665,6 +3675,30 @@
    "categoria": "fitness",
    "preco": 63.9,
    "de": 79.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "182": {
+   "em": "2026-11-23T17:54:29",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Calça Legging com Recortes e Bolsos no Cós (velvet)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 103.9,
+   "de": 129.9,
+   "cupom": "BONENTTI",
+   "asin": ""
+  },
+  "183": {
+   "em": "2026-11-23T17:54:42",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Bolsa com Alças Acolchoadas e Bolsos Externos (duna)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 143.92,
+   "de": 179.9,
    "cupom": "BONENTTI",
    "asin": ""
   }
