@@ -1151,6 +1151,22 @@
   "shopee:58269262869": {
    "preco": 139.99,
    "em": "2026-11-23T20:08"
+  },
+  "mercadolivre:MLB36136752": {
+   "preco": 71.9,
+   "em": "2026-11-23T20:09"
+  },
+  "mercadolivre:MLB35376421": {
+   "preco": 255.35,
+   "em": "2026-11-23T20:09"
+  },
+  "mercadolivre:MLB67318170": {
+   "preco": 460.22,
+   "em": "2026-11-23T20:09"
+  },
+  "mercadolivre:MLB64176719": {
+   "preco": 23.0,
+   "em": "2026-11-23T20:10"
   }
  },
  "ultimo_post": "2026-11-23T20:08:13",
@@ -1527,9 +1543,13 @@
   "kitcom2garrafasdeguatu": "2026-11-23T19:14",
   "bolsatrmicalancheirapo": "2026-11-23T19:14",
   "luzledporttilparafotos": "2026-11-23T19:38",
-  "vestidocurtodecotevemv": "2026-11-23T20:08"
+  "vestidocurtodecotevemv": "2026-11-23T20:08",
+  "oboticriolizfloradesod": "2026-11-23T20:09",
+  "krastasenutritivemasqu": "2026-11-23T20:09",
+  "perfumearmanipowerofyo": "2026-11-23T20:09",
+  "mscaraloralelsevecolla": "2026-11-23T20:10"
  },
- "seq_posts": 185,
+ "seq_posts": 189,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3748,6 +3768,54 @@
    "categoria": "eletronicos",
    "preco": 19.99,
    "de": 50.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "186": {
+   "em": "2026-11-23T20:09:12",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "O Boticário Liz Flora Desodorante Colônia 100 ml",
+   "marca": "O Boticário",
+   "categoria": "beleza",
+   "preco": 71.9,
+   "de": 179.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "187": {
+   "em": "2026-11-23T20:09:23",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Kérastase Nutritive Masquintense Máscara 200 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 255.35,
+   "de": 399.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "188": {
+   "em": "2026-11-23T20:09:33",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Perfume Armani Power of You Eau de Parfum 50 ml",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 460.22,
+   "de": 789.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "189": {
+   "em": "2026-11-23T20:10:25",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Máscara L'Oréal Elseve Collagen Lifter 300 g",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 23.0,
+   "de": 45.49,
    "cupom": "",
    "asin": ""
   }
