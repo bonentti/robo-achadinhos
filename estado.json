@@ -987,6 +987,10 @@
   "amazon:B01643LCLW": {
    "preco": 90.83,
    "em": "2026-11-23T09:44"
+  },
+  "amazon:B083JL2JKF": {
+   "preco": 200.85,
+   "em": "2026-11-23T09:50"
   }
  },
  "ultimo_post": "2026-11-23T08:52:26",
@@ -1320,9 +1324,10 @@
   "bonolympikusabacurvast": "2026-11-23T08:52",
   "pranchaphilipsthermopr": "2026-11-23T09:44",
   "pranchaconairdigitaldo": "2026-11-23T09:44",
-  "chapataiffcermicapreta": "2026-11-23T09:44"
+  "chapataiffcermicapreta": "2026-11-23T09:44",
+  "mscarakrastasegenesism": "2026-11-23T09:50"
  },
- "seq_posts": 153,
+ "seq_posts": 154,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3159,6 +3164,18 @@
    "de": 129.9,
    "cupom": "",
    "asin": "B01643LCLW"
+  },
+  "154": {
+   "em": "2026-11-23T09:50:36",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara Kérastase Genesis Masque Reconstituant 200 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 200.85,
+   "de": 339.0,
+   "cupom": "PRO200FF",
+   "asin": "B083JL2JKF"
   }
  },
  "agenda_feitos": [
