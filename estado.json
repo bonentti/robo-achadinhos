@@ -975,6 +975,18 @@
   "shopee:52960516596": {
    "preco": 79.9,
    "em": "2026-11-23T08:52"
+  },
+  "amazon:B07ZK5J1BQ": {
+   "preco": 189.0,
+   "em": "2026-11-23T09:44"
+  },
+  "amazon:B0CRNPXQ68": {
+   "preco": 147.0,
+   "em": "2026-11-23T09:44"
+  },
+  "amazon:B01643LCLW": {
+   "preco": 90.83,
+   "em": "2026-11-23T09:44"
   }
  },
  "ultimo_post": "2026-11-23T08:52:26",
@@ -1305,9 +1317,12 @@
   "vestidoevascurtoembeng": "2026-11-22T21:15",
   "srumrollonreadosolhosa": "2026-11-22T22:32",
   "kiteudorasigehairplast": "2026-11-23T08:19",
-  "bonolympikusabacurvast": "2026-11-23T08:52"
+  "bonolympikusabacurvast": "2026-11-23T08:52",
+  "pranchaphilipsthermopr": "2026-11-23T09:44",
+  "pranchaconairdigitaldo": "2026-11-23T09:44",
+  "chapataiffcermicapreta": "2026-11-23T09:44"
  },
- "seq_posts": 150,
+ "seq_posts": 153,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3108,6 +3123,42 @@
    "de": 75.99,
    "cupom": "",
    "asin": "B0CWB2H5JX"
+  },
+  "151": {
+   "em": "2026-11-23T09:44:33",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Prancha Philips ThermoProtect (bivolt)",
+   "marca": "Philips",
+   "categoria": "beleza",
+   "preco": 189.0,
+   "de": 269.9,
+   "cupom": "",
+   "asin": "B07ZK5J1BQ"
+  },
+  "152": {
+   "em": "2026-11-23T09:44:41",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Prancha Conair Digital Double Ceramic (bivolt)",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 147.0,
+   "de": 289.0,
+   "cupom": "",
+   "asin": "B0CRNPXQ68"
+  },
+  "153": {
+   "em": "2026-11-23T09:44:48",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Chapa Taiff Cerâmica Preta (bivolt)",
+   "marca": "Taiff",
+   "categoria": "beleza",
+   "preco": 90.83,
+   "de": 129.9,
+   "cupom": "",
+   "asin": "B01643LCLW"
   }
  },
  "agenda_feitos": [
