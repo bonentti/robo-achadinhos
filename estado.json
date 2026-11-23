@@ -1067,6 +1067,30 @@
   "renner:930474464": {
    "preco": 89.9,
    "em": "2026-11-23T17:23"
+  },
+  "renner:931250032": {
+   "preco": 39.54,
+   "em": "2026-11-23T17:32"
+  },
+  "renner:928196901": {
+   "preco": 39.54,
+   "em": "2026-11-23T17:33"
+  },
+  "renner:928090672": {
+   "preco": 51.54,
+   "em": "2026-11-23T17:33"
+  },
+  "renner:929328427": {
+   "preco": 75.54,
+   "em": "2026-11-23T17:33"
+  },
+  "renner:929379806": {
+   "preco": 77.94,
+   "em": "2026-11-23T17:33"
+  },
+  "renner:930539053": {
+   "preco": 93.54,
+   "em": "2026-11-23T17:34"
   }
  },
  "ultimo_post": "2026-11-23T17:23:52",
@@ -1422,9 +1446,15 @@
   "kitlolafromriorapunzel": "2026-11-23T15:43",
   "shortdecorridacom7bols": "2026-11-23T16:25",
   "goenergygelatlheticanu": "2026-11-23T17:18",
-  "vestidocurtoemtrictext": "2026-11-23T17:23"
+  "vestidocurtoemtrictext": "2026-11-23T17:23",
+  "blusaombroaombrocomdra": "2026-11-23T17:32",
+  "chinelohavaianaspointc": "2026-11-23T17:33",
+  "calaleggingesportivaem": "2026-11-23T17:33",
+  "calabarrelalfaiatadaco": "2026-11-23T17:33",
+  "calapantalonaemalfaiat": "2026-11-23T17:33",
+  "jaquetabikerempucommat": "2026-11-23T17:34"
  },
- "seq_posts": 167,
+ "seq_posts": 173,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3429,6 +3459,78 @@
    "de": 25.0,
    "cupom": "",
    "asin": "B07G7JWLL1"
+  },
+  "168": {
+   "em": "2026-11-23T17:32:55",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Ombro a Ombro com Drapeado (verde)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 39.54,
+   "de": 89.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "169": {
+   "em": "2026-11-23T17:33:05",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Chinelo Havaianas Point com Sola Bicolor (marrom)",
+   "marca": "Havaianas",
+   "categoria": "feminino",
+   "preco": 39.54,
+   "de": 79.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "170": {
+   "em": "2026-11-23T17:33:14",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Legging Esportiva em Microfibra com Bolsos (lilás)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 51.54,
+   "de": 119.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "171": {
+   "em": "2026-11-23T17:33:43",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Barrel Alfaiatada com Pregas (roxa)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 75.54,
+   "de": 199.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "172": {
+   "em": "2026-11-23T17:33:52",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Pantalona em Alfaiataria com Bolso Faca (azul)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 77.94,
+   "de": 159.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "173": {
+   "em": "2026-11-23T17:34:32",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Jaqueta Biker em PU com Matelassê (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 93.54,
+   "de": 239.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
