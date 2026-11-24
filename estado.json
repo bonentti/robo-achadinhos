@@ -1179,6 +1179,10 @@
   "shopee:19099259952": {
    "preco": 29.9,
    "em": "2026-11-23T22:00"
+  },
+  "amazon:B07BWSJN13": {
+   "preco": 179.25,
+   "em": "2026-11-23T22:09"
   }
  },
  "ultimo_post": "2026-11-23T22:00:48",
@@ -1562,9 +1566,10 @@
   "mscaraloralelsevecolla": "2026-11-23T20:10",
   "appleiphone17promax512": "2026-11-23T20:15",
   "cremedentalcolgatenatu": "2026-11-23T21:02",
-  "lpisparaolhospratashin": "2026-11-23T22:00"
+  "lpisparaolhospratashin": "2026-11-23T22:00",
+  "mscarakrastasersistanc": "2026-11-23T22:09"
  },
- "seq_posts": 190,
+ "seq_posts": 191,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3845,6 +3850,18 @@
    "de": 13999.0,
    "cupom": "",
    "asin": "B0FQHCTCSQ"
+  },
+  "191": {
+   "em": "2026-11-23T22:09:17",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara Kérastase Résistance Thérapiste 200 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 179.25,
+   "de": 339.0,
+   "cupom": "PRO200FF",
+   "asin": "B07BWSJN13"
   }
  },
  "agenda_feitos": [
