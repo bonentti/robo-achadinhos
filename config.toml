@@ -172,6 +172,8 @@ evitar = ["rasteirinha moleca com laço",   # 17/11: ela não gostou
 evitar_combinacoes = [
   # rasteirinha/chinelo com laço (17/11: não gostou da Moleca com laços)
   { pecas = ["rasteirinha", "rasteira", "chinelo", "slide"], cores = ["laço", "laços", "laco", "lacinho"] },
+  # 23/11: "não gostei da lapiseira prata" (lápis de olho prata da Shopee)
+  { pecas = ["lápis", "lapis", "lapiseira", "delineador", "sombra"], cores = ["prata", "silver", "prateado", "prateada"] },
   { pecas = ["legging", "leggin", "legue", "calça", "calca", "short", "shortinho", "bermuda"], cores = ["rosa", "pink", "lilás", "lilas", "neon", "laranja", "amarel", "limão", "limao", "fúcsia", "fucsia", "pitaya", "coral", "turquesa"] },
 ]
 
