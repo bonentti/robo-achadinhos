@@ -1187,6 +1187,22 @@
   "shopee:58208914346": {
    "preco": 65.4,
    "em": "2026-11-24T08:57"
+  },
+  "amazon:B0BD6755LC": {
+   "preco": 24.9,
+   "em": "2026-11-24T09:03"
+  },
+  "amazon:B08NVML21R": {
+   "preco": 38.45,
+   "em": "2026-11-24T09:03"
+  },
+  "amazon:B07Y2BK4GJ": {
+   "preco": 55.44,
+   "em": "2026-11-24T09:03"
+  },
+  "amazon:B0C4RV19RH": {
+   "preco": 41.3,
+   "em": "2026-11-24T09:04"
   }
  },
  "ultimo_post": "2026-11-24T08:57:16",
@@ -1572,9 +1588,13 @@
   "cremedentalcolgatenatu": "2026-11-23T21:02",
   "lpisparaolhospratashin": "2026-11-23T22:00",
   "mscarakrastasersistanc": "2026-11-23T22:09",
-  "pochetextremomicron3xt": "2026-11-24T08:57"
+  "pochetextremomicron3xt": "2026-11-24T08:57",
+  "protetorsolarfacialniv": "2026-11-24T09:03",
+  "protetorsolarfacialneu": "2026-11-24T09:03",
+  "protetorsolarfacialmin": "2026-11-24T09:03",
+  "protetorsolarfacialsal": "2026-11-24T09:04"
  },
- "seq_posts": 191,
+ "seq_posts": 195,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3867,6 +3887,54 @@
    "de": 339.0,
    "cupom": "PRO200FF",
    "asin": "B07BWSJN13"
+  },
+  "192": {
+   "em": "2026-11-24T09:03:36",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial Nivea Sun Toque Seco Antissinais FPS 70 (40 ml)",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 24.9,
+   "de": 50.9,
+   "cupom": "",
+   "asin": "B0BD6755LC"
+  },
+  "193": {
+   "em": "2026-11-24T09:03:45",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial Neutrogena Sun Fresh FPS 70 (40 g)",
+   "marca": "Neutrogena",
+   "categoria": "beleza",
+   "preco": 38.45,
+   "de": 72.99,
+   "cupom": "",
+   "asin": "B08NVML21R"
+  },
+  "194": {
+   "em": "2026-11-24T09:03:53",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial Minesol Oil Control FPS 70 sem cor (40 g)",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 55.44,
+   "de": 123.99,
+   "cupom": "",
+   "asin": "B07Y2BK4GJ"
+  },
+  "195": {
+   "em": "2026-11-24T09:04:00",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial Sallve Toque Seco FPS 50 (40 g)",
+   "marca": "Sallve",
+   "categoria": "beleza",
+   "preco": 41.3,
+   "de": 64.9,
+   "cupom": "",
+   "asin": "B0C4RV19RH"
   }
  },
  "agenda_feitos": [
