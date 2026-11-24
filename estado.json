@@ -14,7 +14,7 @@
   },
   "renner:930611406": {
    "preco": 29.9,
-   "em": "2026-11-15T10:58"
+   "em": "2026-11-24T14:10"
   },
   "shopee:58261485876": {
    "preco": 19.9,
@@ -342,7 +342,7 @@
   },
   "renner:930267107": {
    "preco": 9.9,
-   "em": "2026-11-18T19:41"
+   "em": "2026-11-24T14:09"
   },
   "renner:929949039": {
    "preco": 15.9,
@@ -1235,6 +1235,30 @@
   "amazon:B075HV6SX5": {
    "preco": 33.15,
    "em": "2026-11-24T13:57"
+  },
+  "renner:834060974": {
+   "preco": 15.9,
+   "em": "2026-11-24T14:09"
+  },
+  "renner:929529325": {
+   "preco": 19.9,
+   "em": "2026-11-24T14:09"
+  },
+  "renner:930016738": {
+   "preco": 29.9,
+   "em": "2026-11-24T14:10"
+  },
+  "renner:930645711": {
+   "preco": 29.9,
+   "em": "2026-11-24T14:10"
+  },
+  "renner:928370922": {
+   "preco": 45.9,
+   "em": "2026-11-24T14:10"
+  },
+  "renner:929519611": {
+   "preco": 45.9,
+   "em": "2026-11-24T14:11"
   }
  },
  "ultimo_post": "2026-11-24T13:40:14",
@@ -1409,7 +1433,7 @@
   "macaquinhosemganchocom": "2026-11-18T19:04",
   "cremehidratantefacialc": "2026-11-18T19:04",
   "cacheadorbritnia25mmre": "2026-11-18T19:04",
-  "blusafrentenicaemcotto": "2026-11-18T19:41",
+  "blusafrentenicaemcotto": "2026-11-24T14:09",
   "blusafrentenicaemmicro": "2026-11-18T19:41",
   "blusaemmicrofibratomar": "2026-11-18T19:42",
   "blusafrentenicacombarr": "2026-11-18T19:42",
@@ -1634,9 +1658,16 @@
   "cafmelittasabordafazen": "2026-11-24T13:49",
   "cafbaggioespressotorra": "2026-11-24T13:56",
   "cafbaggiobourbontorrad": "2026-11-24T13:56",
-  "cafbaggiopremiumcaffco": "2026-11-24T13:57"
+  "cafbaggiopremiumcaffco": "2026-11-24T13:57",
+  "blusatomaraquecaiaemri": "2026-11-24T14:09",
+  "blusaemribanacomgolaha": "2026-11-24T14:09",
+  "bodyombronicoemmicrofi": "2026-11-24T14:10",
+  "bodyfrentenicatranspas": "2026-11-24T14:10",
+  "coletetexturizadocomam": "2026-11-24T14:10",
+  "vestidocurtoembengalin": "2026-11-24T14:10",
+  "saiaevasmidiemalgodoes": "2026-11-24T14:11"
  },
- "seq_posts": 200,
+ "seq_posts": 208,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4037,6 +4068,102 @@
    "de": 38.9,
    "cupom": "",
    "asin": "B075HV6SX5"
+  },
+  "201": {
+   "em": "2026-11-24T14:09:16",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Frente Única em Cotton com Amarração (cinza)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 9.9,
+   "de": 49.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "202": {
+   "em": "2026-11-24T14:09:25",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Tomara que Caia em Ribana Canelada (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 15.9,
+   "de": 39.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "203": {
+   "em": "2026-11-24T14:09:33",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Ribana com Gola Halter (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 19.9,
+   "de": 49.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "204": {
+   "em": "2026-11-24T14:10:02",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Body Ombro Único em Microfibra (verde)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 89.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "205": {
+   "em": "2026-11-24T14:10:32",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Body Frente Única Transpassado com Amarração (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 99.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "206": {
+   "em": "2026-11-24T14:10:40",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Colete Texturizado com Amarrações Frontais (bege)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 29.9,
+   "de": 89.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "207": {
+   "em": "2026-11-24T14:10:48",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Bengaline com Manga Bufante (azul-marinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 45.9,
+   "de": 159.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "208": {
+   "em": "2026-11-24T14:11:17",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Saia Evasê Midi em Algodão Estonado com Babados (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 45.9,
+   "de": 139.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
