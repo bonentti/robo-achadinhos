@@ -1219,6 +1219,10 @@
   "amazon:B0DKVJ1HWB": {
    "preco": 35.64,
    "em": "2026-11-24T13:48"
+  },
+  "amazon:B07YCQ64HM": {
+   "preco": 23.25,
+   "em": "2026-11-24T13:49"
   }
  },
  "ultimo_post": "2026-11-24T13:40:14",
@@ -1614,9 +1618,10 @@
   "widelegcomcsdobradomba": "2026-11-24T11:30",
   "leggingcombolsosempoli": "2026-11-24T12:34",
   "vestidocurtoemjeanscom": "2026-11-24T13:40",
-  "kitcronogramacapilarlo": "2026-11-24T13:48"
+  "kitcronogramacapilarlo": "2026-11-24T13:48",
+  "cafmelittasabordafazen": "2026-11-24T13:49"
  },
- "seq_posts": 196,
+ "seq_posts": 197,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3969,6 +3974,18 @@
    "de": 69.9,
    "cupom": "",
    "asin": "B0DKVJ1HWB"
+  },
+  "197": {
+   "em": "2026-11-24T13:49:17",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Café Melitta Sabor da Fazenda a vácuo 500 g",
+   "marca": "Melitta",
+   "categoria": "casa",
+   "preco": 23.25,
+   "de": 29.03,
+   "cupom": "",
+   "asin": "B07YCQ64HM"
   }
  },
  "agenda_feitos": [
