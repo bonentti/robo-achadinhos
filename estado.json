@@ -1275,6 +1275,10 @@
   "shopee:20997974904": {
    "preco": 129.99,
    "em": "2026-11-24T16:32"
+  },
+  "mercadolivre:MLB41448956": {
+   "preco": 4149.0,
+   "em": "2026-11-24T17:06"
   }
  },
  "ultimo_post": "2026-11-24T16:32:03",
@@ -1685,9 +1689,10 @@
   "cremegelregeneradorfac": "2026-11-24T14:36",
   "cobertorcasalqueenmant": "2026-11-24T15:24",
   "appleiphone17e512gbbra": "2026-11-24T16:19",
-  "vestidocurtoevascomlin": "2026-11-24T16:32"
+  "vestidocurtoevascomlin": "2026-11-24T16:32",
+  "geladeiramideasidebysi": "2026-11-24T17:06"
  },
- "seq_posts": 209,
+ "seq_posts": 210,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4196,6 +4201,18 @@
    "de": 7299.0,
    "cupom": "20BLACKPRIME",
    "asin": "B0GTRPYH9M"
+  },
+  "210": {
+   "em": "2026-11-24T17:06:21",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Geladeira Midea Side by Side 511 L Inverter Preta (conectada)",
+   "marca": "Midea",
+   "categoria": "casa",
+   "preco": 4149.0,
+   "de": 5299.0,
+   "cupom": "QUEROOFFHOJE",
+   "asin": ""
   }
  },
  "agenda_feitos": [
