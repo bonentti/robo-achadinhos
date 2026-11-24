@@ -1223,6 +1223,18 @@
   "amazon:B07YCQ64HM": {
    "preco": 23.25,
    "em": "2026-11-24T13:49"
+  },
+  "amazon:B075HV5WP9": {
+   "preco": 32.2,
+   "em": "2026-11-24T13:56"
+  },
+  "amazon:B075HVRHT3": {
+   "preco": 33.15,
+   "em": "2026-11-24T13:56"
+  },
+  "amazon:B075HV6SX5": {
+   "preco": 33.15,
+   "em": "2026-11-24T13:57"
   }
  },
  "ultimo_post": "2026-11-24T13:40:14",
@@ -1619,9 +1631,12 @@
   "leggingcombolsosempoli": "2026-11-24T12:34",
   "vestidocurtoemjeanscom": "2026-11-24T13:40",
   "kitcronogramacapilarlo": "2026-11-24T13:48",
-  "cafmelittasabordafazen": "2026-11-24T13:49"
+  "cafmelittasabordafazen": "2026-11-24T13:49",
+  "cafbaggioespressotorra": "2026-11-24T13:56",
+  "cafbaggiobourbontorrad": "2026-11-24T13:56",
+  "cafbaggiopremiumcaffco": "2026-11-24T13:57"
  },
- "seq_posts": 197,
+ "seq_posts": 200,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -3986,6 +4001,42 @@
    "de": 29.03,
    "cupom": "",
    "asin": "B07YCQ64HM"
+  },
+  "198": {
+   "em": "2026-11-24T13:56:28",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Café Baggio Espresso torrado e moído (250 g)",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 32.2,
+   "de": 38.9,
+   "cupom": "",
+   "asin": "B075HV5WP9"
+  },
+  "199": {
+   "em": "2026-11-24T13:56:37",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Café Baggio Bourbon torrado e moído (250 g)",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 33.15,
+   "de": 38.9,
+   "cupom": "",
+   "asin": "B075HVRHT3"
+  },
+  "200": {
+   "em": "2026-11-24T13:57:06",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Café Baggio Premium Caffè.com torrado e moído (250 g)",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 33.15,
+   "de": 38.9,
+   "cupom": "",
+   "asin": "B075HV6SX5"
   }
  },
  "agenda_feitos": [
