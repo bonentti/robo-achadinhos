@@ -1283,6 +1283,10 @@
   "shopee:43928937868": {
    "preco": 20.94,
    "em": "2026-11-24T17:24"
+  },
+  "amazon:B0GT2QFWM8": {
+   "preco": 432.19,
+   "em": "2026-11-24T17:54"
   }
  },
  "ultimo_post": "2026-11-24T17:24:27",
@@ -1695,9 +1699,10 @@
   "appleiphone17e512gbbra": "2026-11-24T16:19",
   "vestidocurtoevascomlin": "2026-11-24T16:32",
   "geladeiramideasidebysi": "2026-11-24T17:06",
-  "kit2cremesdentaisclare": "2026-11-24T17:24"
+  "kit2cremesdentaisclare": "2026-11-24T17:24",
+  "bolsadeombroguesspetra": "2026-11-24T17:54"
  },
- "seq_posts": 210,
+ "seq_posts": 211,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4218,6 +4223,18 @@
    "de": 5299.0,
    "cupom": "QUEROOFFHOJE",
    "asin": ""
+  },
+  "211": {
+   "em": "2026-11-24T17:54:04",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Bolsa de ombro GUESS Petra Hobo (Chocolate)",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 432.19,
+   "de": 576.25,
+   "cupom": "",
+   "asin": "B0GT2QFWM8"
   }
  },
  "agenda_feitos": [
