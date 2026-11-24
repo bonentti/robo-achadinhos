@@ -1291,14 +1291,18 @@
   "shopee:20397295533": {
    "preco": 25.9,
    "em": "2026-11-24T18:28"
+  },
+  "hardyn:2886": {
+   "preco": 43.45,
+   "em": "2026-11-24T20:23"
   }
  },
- "ultimo_post": "2026-11-24T19:28:39",
+ "ultimo_post": "2026-11-24T20:23:50",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-24T13:40:14",
   "kaisan": "2026-11-24T19:28:39",
-  "hardyn": "2026-11-24T12:34:44",
+  "hardyn": "2026-11-24T20:23:50",
   "favoritas": "2026-11-24T18:28:09",
   "shopee-Beauty": "2026-11-24T14:36:05",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
@@ -1316,7 +1320,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1324,7 +1328,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1332,7 +1336,7 @@
    "maior_preco": 104.93,
    "menor_preco": 97.93,
    "ultimo_preco": 97.93,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 97.93,
    "ultimo_postado": 97.93
   },
@@ -1340,7 +1344,7 @@
    "maior_preco": 164.93,
    "menor_preco": 153.93,
    "ultimo_preco": 153.93,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 153.93,
    "ultimo_postado": 153.93
   },
@@ -1348,7 +1352,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1356,7 +1360,7 @@
    "maior_preco": 112.43,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 104.93,
    "ultimo_postado": 112.43
   },
@@ -1364,7 +1368,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1372,7 +1376,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1380,18 +1384,18 @@
    "maior_preco": 134.93,
    "menor_preco": 125.93,
    "ultimo_preco": 125.93,
-   "visto_em": "2026-11-24T19:28",
+   "visto_em": "2026-11-24T20:23",
    "referencia": 125.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-24T19:28",
+  "em": "2026-11-24T20:23",
   "ofertas_por_loja": {
    "shopee": 493,
-   "renner": 39,
+   "renner": 37,
    "hardyn": 15,
-   "kaisan": 3
+   "kaisan": 2
   }
  },
  "resumo_enviado_em": "2026-11-19",
@@ -1706,7 +1710,8 @@
   "kit2cremesdentaisclare": "2026-11-24T17:24",
   "bolsadeombroguesspetra": "2026-11-24T17:54",
   "mscarafacialnoturnacom": "2026-11-24T18:28",
-  "macacocombolsoseabertu": "2026-11-24T19:28"
+  "macacocombolsoseabertu": "2026-11-24T19:28",
+  "shortcinturaaltaempoli": "2026-11-24T20:23"
  },
  "seq_posts": 211,
  "posts_rastreados": {
