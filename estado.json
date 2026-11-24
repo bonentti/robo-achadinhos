@@ -1209,11 +1209,11 @@
    "em": "2026-11-24T10:11"
   }
  },
- "ultimo_post": "2026-11-24T10:11:09",
+ "ultimo_post": "2026-11-24T11:30:03",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-23T17:23:52",
-  "kaisan": "2026-11-20T12:11:52",
+  "kaisan": "2026-11-24T11:30:03",
   "hardyn": "2026-11-23T16:25:34",
   "favoritas": "2026-11-23T22:00:48",
   "shopee-Beauty": "2026-11-23T18:22:35",
@@ -1232,7 +1232,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-24T10:10",
+   "visto_em": "2026-11-24T11:29",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1240,47 +1240,47 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-24T10:10",
+   "visto_em": "2026-11-24T11:29",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
   "https://www.kaisan.com.br/wide-leg-com-cos-dobrado-ambar-ref-k5533-i-k5533-i": {
    "maior_preco": 104.93,
-   "menor_preco": 104.93,
-   "ultimo_preco": 104.93,
-   "visto_em": "2026-11-24T10:11",
-   "referencia": 104.93,
-   "ultimo_postado": 104.93
+   "menor_preco": 97.93,
+   "ultimo_preco": 97.93,
+   "visto_em": "2026-11-24T11:29",
+   "referencia": 97.93,
+   "ultimo_postado": 97.93
   },
   "https://www.kaisan.com.br/macacao-com-bolsos-e-abertura-nas-costas-imperial-ref-k5444-a-k5444-a": {
    "maior_preco": 164.93,
-   "menor_preco": 164.93,
-   "ultimo_preco": 164.93,
-   "visto_em": "2026-11-24T10:11",
-   "referencia": 164.93,
+   "menor_preco": 153.93,
+   "ultimo_preco": 153.93,
+   "visto_em": "2026-11-24T11:29",
+   "referencia": 153.93,
    "ultimo_postado": 164.93
   },
   "https://www.kaisan.com.br/wide-leg-sem-gancho-frente-avela-ref-k5536-g-k5536-g": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T10:11",
+   "visto_em": "2026-11-24T11:29",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
   "https://www.kaisan.com.br/calca-legging-com-cos-em-v-e-bolso-nas-costas-militar-ref-k5313-b-k5313-b": {
    "maior_preco": 112.43,
-   "menor_preco": 112.43,
-   "ultimo_preco": 112.43,
-   "visto_em": "2026-11-24T10:11",
-   "referencia": 112.43,
+   "menor_preco": 104.93,
+   "ultimo_preco": 104.93,
+   "visto_em": "2026-11-24T11:29",
+   "referencia": 104.93,
    "ultimo_postado": 112.43
   },
   "https://www.kaisan.com.br/macaquinho-sem-gancho-com-alcas-cruzadas-marrom-off-white-ref-k4701-d-k4701-d": {
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T10:11",
+   "visto_em": "2026-11-24T11:29",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1288,25 +1288,26 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T10:11",
+   "visto_em": "2026-11-24T11:29",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
   "https://www.kaisan.com.br/calca-flare-sem-cos-aparente-marrom-ref-k5438-c-k5438-c": {
    "maior_preco": 134.93,
-   "menor_preco": 134.93,
-   "ultimo_preco": 134.93,
-   "visto_em": "2026-11-24T10:11",
-   "referencia": 134.93,
+   "menor_preco": 125.93,
+   "ultimo_preco": 125.93,
+   "visto_em": "2026-11-24T11:30",
+   "referencia": 125.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-24T10:11",
+  "em": "2026-11-24T11:30",
   "ofertas_por_loja": {
    "shopee": 493,
-   "renner": 42,
-   "hardyn": 16
+   "renner": 44,
+   "hardyn": 15,
+   "kaisan": 4
   }
  },
  "resumo_enviado_em": "2026-11-19",
@@ -1597,7 +1598,8 @@
   "protetorsolarfacialneu": "2026-11-24T09:03",
   "protetorsolarfacialmin": "2026-11-24T09:03",
   "protetorsolarfacialsal": "2026-11-24T09:04",
-  "topesportivocaneladose": "2026-11-24T10:11"
+  "topesportivocaneladose": "2026-11-24T10:11",
+  "widelegcomcsdobradomba": "2026-11-24T11:30"
  },
  "seq_posts": 195,
  "posts_rastreados": {
