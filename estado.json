@@ -1183,9 +1183,13 @@
   "amazon:B07BWSJN13": {
    "preco": 179.25,
    "em": "2026-11-23T22:09"
+  },
+  "shopee:58208914346": {
+   "preco": 65.4,
+   "em": "2026-11-24T08:57"
   }
  },
- "ultimo_post": "2026-11-23T22:00:48",
+ "ultimo_post": "2026-11-24T08:57:16",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-23T17:23:52",
@@ -1201,14 +1205,14 @@
   "shopee-Health": "2026-11-23T21:02:39",
   "shopee-Watches": "2026-11-22T08:42:47",
   "shopee-Fashion Accessories": "2026-11-23T08:52:26",
-  "shopee-Women Bags": "2026-11-22T10:32:08"
+  "shopee-Women Bags": "2026-11-24T08:57:16"
  },
  "vigiados": {
   "https://www.kaisan.com.br/top-triangulo-slim-alquimia-ref-k5340-f-k5340-f": {
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1216,7 +1220,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1224,7 +1228,7 @@
    "maior_preco": 104.93,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -1232,7 +1236,7 @@
    "maior_preco": 164.93,
    "menor_preco": 164.93,
    "ultimo_preco": 164.93,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 164.93,
    "ultimo_postado": 164.93
   },
@@ -1240,7 +1244,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1248,7 +1252,7 @@
    "maior_preco": 112.43,
    "menor_preco": 112.43,
    "ultimo_preco": 112.43,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 112.43,
    "ultimo_postado": 112.43
   },
@@ -1256,7 +1260,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1264,7 +1268,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1272,17 +1276,17 @@
    "maior_preco": 134.93,
    "menor_preco": 134.93,
    "ultimo_preco": 134.93,
-   "visto_em": "2026-11-24T00:07",
+   "visto_em": "2026-11-24T08:57",
    "referencia": 134.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-24T00:07",
+  "em": "2026-11-24T08:57",
   "ofertas_por_loja": {
    "shopee": 493,
-   "renner": 41,
-   "hardyn": 15
+   "renner": 44,
+   "hardyn": 16
   }
  },
  "resumo_enviado_em": "2026-11-19",
@@ -1567,7 +1571,8 @@
   "appleiphone17promax512": "2026-11-23T20:15",
   "cremedentalcolgatenatu": "2026-11-23T21:02",
   "lpisparaolhospratashin": "2026-11-23T22:00",
-  "mscarakrastasersistanc": "2026-11-23T22:09"
+  "mscarakrastasersistanc": "2026-11-23T22:09",
+  "pochetextremomicron3xt": "2026-11-24T08:57"
  },
  "seq_posts": 191,
  "posts_rastreados": {
