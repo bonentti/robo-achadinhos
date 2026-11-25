@@ -1355,9 +1355,13 @@
   "shopee:44906825151": {
    "preco": 79.9,
    "em": "2026-11-25T18:13"
+  },
+  "shopee:22194880327": {
+   "preco": 60.94,
+   "em": "2026-11-25T19:13"
   }
  },
- "ultimo_post": "2026-11-25T18:13:39",
+ "ultimo_post": "2026-11-25T19:13:01",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-25T16:12:30",
@@ -1367,7 +1371,7 @@
   "shopee-Beauty": "2026-11-25T17:11:00",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
   "shopee-Sports & Outdoors": "2026-11-25T18:13:39",
-  "shopee-Home & Living": "2026-11-25T10:15:31",
+  "shopee-Home & Living": "2026-11-25T19:13:01",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-25T11:32:45",
   "shopee-Health": "2026-11-25T12:36:40",
@@ -1380,7 +1384,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1388,7 +1392,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1396,7 +1400,7 @@
    "maior_preco": 104.93,
    "menor_preco": 97.93,
    "ultimo_preco": 97.93,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 97.93,
    "ultimo_postado": 97.93
   },
@@ -1404,7 +1408,7 @@
    "maior_preco": 164.93,
    "menor_preco": 153.93,
    "ultimo_preco": 153.93,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 153.93,
    "ultimo_postado": 153.93
   },
@@ -1412,7 +1416,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1420,7 +1424,7 @@
    "maior_preco": 112.43,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -1428,7 +1432,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1436,7 +1440,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1444,13 +1448,13 @@
    "maior_preco": 134.93,
    "menor_preco": 125.93,
    "ultimo_preco": 125.93,
-   "visto_em": "2026-11-25T18:13",
+   "visto_em": "2026-11-25T19:12",
    "referencia": 125.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-25T18:13",
+  "em": "2026-11-25T19:12",
   "ofertas_por_loja": {
    "shopee": 505,
    "renner": 40,
@@ -1786,7 +1790,8 @@
   "pijamashortdollemriban": "2026-11-25T17:01",
   "pijamacurtoemalgodocom": "2026-11-25T17:07",
   "escovasecadorabritnian": "2026-11-25T17:11",
-  "toplupolsportslimfemin": "2026-11-25T18:13"
+  "toplupolsportslimfemin": "2026-11-25T18:13",
+  "freshboxquadradotupper": "2026-11-25T19:13"
  },
  "seq_posts": 222,
  "posts_rastreados": {
