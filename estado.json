@@ -997,32 +997,32 @@
    "em": "2026-11-23T10:41"
   },
   "renner:930990346": {
-   "preco": 27.54,
-   "em": "2026-11-23T10:41"
+   "preco": 45.9,
+   "em": "2026-11-25T12:02"
   },
   "renner:930839136": {
-   "preco": 29.94,
-   "em": "2026-11-23T10:41"
+   "preco": 50.9,
+   "em": "2026-11-25T12:01"
   },
   "renner:930547627": {
    "preco": 35.94,
    "em": "2026-11-23T10:42"
   },
   "renner:929072610": {
-   "preco": 35.94,
-   "em": "2026-11-23T10:42"
+   "preco": 59.9,
+   "em": "2026-11-25T12:02"
   },
   "renner:931665481": {
    "preco": 45.54,
    "em": "2026-11-23T10:42"
   },
   "renner:931232660": {
-   "preco": 51.54,
-   "em": "2026-11-23T10:42"
+   "preco": 85.9,
+   "em": "2026-11-25T12:02"
   },
   "renner:930145581": {
-   "preco": 53.94,
-   "em": "2026-11-23T10:42"
+   "preco": 89.9,
+   "em": "2026-11-25T12:02"
   },
   "renner:927985458": {
    "preco": 65.94,
@@ -1069,8 +1069,8 @@
    "em": "2026-11-23T17:23"
   },
   "renner:931250032": {
-   "preco": 39.54,
-   "em": "2026-11-23T17:32"
+   "preco": 59.9,
+   "em": "2026-11-25T12:01"
   },
   "renner:928196901": {
    "preco": 39.54,
@@ -1661,13 +1661,13 @@
   "chapataiffcermicapreta": "2026-11-23T09:44",
   "mscarakrastasegenesism": "2026-11-23T09:50",
   "blusasemmangaemjacquar": "2026-11-23T10:41",
-  "camisetaemalgodocomapl": "2026-11-23T10:41",
+  "camisetaemalgodocomapl": "2026-11-25T12:02",
   "blusaemalgodocomgolaca": "2026-11-23T10:41",
   "blusaemviscoseanimalpr": "2026-11-23T10:42",
-  "vestidocurtoemribanaco": "2026-11-23T10:42",
+  "vestidocurtoemribanaco": "2026-11-25T12:02",
   "minissaiabalonemtricol": "2026-11-23T10:42",
-  "calaaladimemcrepecomre": "2026-11-23T10:42",
-  "saiacurtaemcrepecomcin": "2026-11-23T10:42",
+  "calaaladimemcrepecomre": "2026-11-25T12:02",
+  "saiacurtaemcrepecomcin": "2026-11-25T12:02",
   "calacenouraalfaiatadac": "2026-11-23T10:43",
   "topluposportseamlessba": "2026-11-23T11:09",
   "monteaparelhojantarpra": "2026-11-23T12:23",
@@ -1680,7 +1680,7 @@
   "shortdecorridacom7bols": "2026-11-23T16:25",
   "goenergygelatlheticanu": "2026-11-23T17:18",
   "vestidocurtoemtrictext": "2026-11-23T17:23",
-  "blusaombroaombrocomdra": "2026-11-23T17:32",
+  "blusaombroaombrocomdra": "2026-11-25T12:01",
   "chinelohavaianaspointc": "2026-11-23T17:33",
   "calaleggingesportivaem": "2026-11-23T17:33",
   "calabarrelalfaiatadaco": "2026-11-23T17:33",
@@ -1746,9 +1746,10 @@
   "kit2potestupperwaremin": "2026-11-25T10:15",
   "protetorsolarfacialvic": "2026-11-25T11:19",
   "blusalistradacrepemalw": "2026-11-25T11:32",
-  "appleairpods4": "2026-11-25T11:52"
+  "appleairpods4": "2026-11-25T11:52",
+  "blusaemalgodocomgolaal": "2026-11-25T12:01"
  },
- "seq_posts": 214,
+ "seq_posts": 220,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4317,6 +4318,78 @@
    "de": 1499.0,
    "cupom": "",
    "asin": "B0DGM4T4H8"
+  },
+  "215": {
+   "em": "2026-11-25T12:01:44",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa em Algodão com Gola Alta (vinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 50.9,
+   "de": 59.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "216": {
+   "em": "2026-11-25T12:01:53",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Ombro a Ombro com Drapeado (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 59.9,
+   "de": 89.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "217": {
+   "em": "2026-11-25T12:02:01",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Vestido Curto em Ribana com Gola Polo (vinho)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 59.9,
+   "de": 139.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "218": {
+   "em": "2026-11-25T12:02:09",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Camiseta em Algodão com Aplicação de Brilhos (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 45.9,
+   "de": 69.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "219": {
+   "em": "2026-11-25T12:02:38",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Saia Curta em Crepe com Cinto e Fivela (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 89.9,
+   "de": 119.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "220": {
+   "em": "2026-11-25T12:02:46",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Calça Aladim em Crepe com Renda na Barra (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 85.9,
+   "de": 199.9,
+   "cupom": "BLACK40",
+   "asin": ""
   }
  },
  "agenda_feitos": [
