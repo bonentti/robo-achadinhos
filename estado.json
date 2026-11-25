@@ -1299,6 +1299,10 @@
   "shopee:21699850579": {
    "preco": 29.88,
    "em": "2026-11-24T22:42"
+  },
+  "amazon:B0GQWVYKZV": {
+   "preco": 5273.1,
+   "em": "2026-11-24T22:53"
   }
  },
  "ultimo_post": "2026-11-24T22:42:31",
@@ -1715,9 +1719,10 @@
   "mscarafacialnoturnacom": "2026-11-24T18:28",
   "macacocombolsoseabertu": "2026-11-24T19:28",
   "shortcinturaaltaempoli": "2026-11-24T20:23",
-  "kitnivealoohidratantem": "2026-11-24T22:42"
+  "kitnivealoohidratantem": "2026-11-24T22:42",
+  "appleiphone17256gblava": "2026-11-24T22:53"
  },
- "seq_posts": 211,
+ "seq_posts": 212,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4250,6 +4255,18 @@
    "de": 576.25,
    "cupom": "",
    "asin": "B0GT2QFWM8"
+  },
+  "212": {
+   "em": "2026-11-24T22:53:10",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Apple iPhone 17 256 GB (Lavanda)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 5273.1,
+   "de": 7999.0,
+   "cupom": "",
+   "asin": "B0GQWVYKZV"
   }
  },
  "agenda_feitos": [
