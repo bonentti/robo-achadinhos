@@ -1311,6 +1311,10 @@
   "shopee:58251013394": {
    "preco": 138.36,
    "em": "2026-11-25T10:15"
+  },
+  "amazon:B0DB8TRNZX": {
+   "preco": 49.75,
+   "em": "2026-11-25T11:19"
   }
  },
  "ultimo_post": "2026-11-25T10:15:31",
@@ -1731,9 +1735,10 @@
   "kitnivealoohidratantem": "2026-11-24T22:42",
   "appleiphone17256gblava": "2026-11-24T22:53",
   "topesportivofemininona": "2026-11-25T08:58",
-  "kit2potestupperwaremin": "2026-11-25T10:15"
+  "kit2potestupperwaremin": "2026-11-25T10:15",
+  "protetorsolarfacialvic": "2026-11-25T11:19"
  },
- "seq_posts": 212,
+ "seq_posts": 213,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4278,6 +4283,18 @@
    "de": 7999.0,
    "cupom": "",
    "asin": "B0GQWVYKZV"
+  },
+  "213": {
+   "em": "2026-11-25T11:19:12",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial Vichy Capital Soleil UV-Clear FPS 60 Sem Cor (40 g)",
+   "marca": "Vichy",
+   "categoria": "beleza",
+   "preco": 49.75,
+   "de": 99.9,
+   "cupom": "",
+   "asin": "B0DB8TRNZX"
   }
  },
  "agenda_feitos": [
