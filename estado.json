@@ -1319,6 +1319,10 @@
   "shopee:22497463052": {
    "preco": 40.0,
    "em": "2026-11-25T11:32"
+  },
+  "amazon:B0DGM4T4H8": {
+   "preco": 999.99,
+   "em": "2026-11-25T11:52"
   }
  },
  "ultimo_post": "2026-11-25T11:32:45",
@@ -1741,9 +1745,10 @@
   "topesportivofemininona": "2026-11-25T08:58",
   "kit2potestupperwaremin": "2026-11-25T10:15",
   "protetorsolarfacialvic": "2026-11-25T11:19",
-  "blusalistradacrepemalw": "2026-11-25T11:32"
+  "blusalistradacrepemalw": "2026-11-25T11:32",
+  "appleairpods4": "2026-11-25T11:52"
  },
- "seq_posts": 213,
+ "seq_posts": 214,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4300,6 +4305,18 @@
    "de": 99.9,
    "cupom": "",
    "asin": "B0DB8TRNZX"
+  },
+  "214": {
+   "em": "2026-11-25T11:52:15",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Apple AirPods 4",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 999.99,
+   "de": 1499.0,
+   "cupom": "",
+   "asin": "B0DGM4T4H8"
   }
  },
  "agenda_feitos": [
