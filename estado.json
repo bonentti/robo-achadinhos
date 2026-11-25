@@ -1328,7 +1328,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1336,7 +1336,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1344,7 +1344,7 @@
    "maior_preco": 104.93,
    "menor_preco": 97.93,
    "ultimo_preco": 97.93,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 97.93,
    "ultimo_postado": 97.93
   },
@@ -1352,7 +1352,7 @@
    "maior_preco": 164.93,
    "menor_preco": 153.93,
    "ultimo_preco": 153.93,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 153.93,
    "ultimo_postado": 153.93
   },
@@ -1360,7 +1360,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1368,7 +1368,7 @@
    "maior_preco": 112.43,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 104.93,
    "ultimo_postado": 112.43
   },
@@ -1376,7 +1376,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1384,7 +1384,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1392,17 +1392,17 @@
    "maior_preco": 134.93,
    "menor_preco": 125.93,
    "ultimo_preco": 125.93,
-   "visto_em": "2026-11-24T23:43",
+   "visto_em": "2026-11-25T00:44",
    "referencia": 125.93,
    "ultimo_postado": 134.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-24T23:43",
+  "em": "2026-11-25T00:44",
   "ofertas_por_loja": {
-   "shopee": 493,
-   "renner": 37,
-   "hardyn": 15,
+   "shopee": 505,
+   "renner": 38,
+   "hardyn": 16,
    "kaisan": 2
   }
  },
