@@ -1439,6 +1439,34 @@
   "shopee:23228610296": {
    "preco": 59.99,
    "em": "2026-11-26T13:37"
+  },
+  "renner:931163609": {
+   "preco": 204.72,
+   "em": "2026-11-26T13:40"
+  },
+  "renner:931105839": {
+   "preco": 215.92,
+   "em": "2026-11-26T13:40"
+  },
+  "renner:930617154": {
+   "preco": 223.92,
+   "em": "2026-11-26T13:40"
+  },
+  "renner:931145996": {
+   "preco": 231.92,
+   "em": "2026-11-26T13:40"
+  },
+  "renner:931202217": {
+   "preco": 244.72,
+   "em": "2026-11-26T13:41"
+  },
+  "renner:931274229": {
+   "preco": 247.92,
+   "em": "2026-11-26T13:41"
+  },
+  "renner:929267361": {
+   "preco": 292.72,
+   "em": "2026-11-26T13:41"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1893,9 +1921,16 @@
   "condicionadorkrastasec": "2026-11-26T11:08",
   "blushtoofacedlipcheekc": "2026-11-26T11:55",
   "kitpincismascavoproser": "2026-11-26T12:12",
-  "kithenrenpretocaf180gc": "2026-11-26T13:37"
+  "kithenrenpretocaf180gc": "2026-11-26T13:37",
+  "jaquetaemsuedecomelsti": "2026-11-26T13:40",
+  "jaquetatruckerjeanscom": "2026-11-26T13:40",
+  "blazeralongadoempucomc": "2026-11-26T13:40",
+  "jaquetaemsuedecomcapuz": "2026-11-26T13:40",
+  "trenchcoatlongoemjeans": "2026-11-26T13:41",
+  "casaquetocurtoalfaiata": "2026-11-26T13:41",
+  "jaquetaemtweedxadrezco": "2026-11-26T13:41"
  },
- "seq_posts": 242,
+ "seq_posts": 249,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4799,6 +4834,90 @@
    "preco": 133.6,
    "de": 197.0,
    "cupom": "",
+   "asin": ""
+  },
+  "243": {
+   "em": "2026-11-26T13:40:10",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Jaqueta em Suede com Elástico na Barra (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 204.72,
+   "de": 319.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "244": {
+   "em": "2026-11-26T13:40:41",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Jaqueta Trucker Jeans com Gola Sherpa (azul)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 215.92,
+   "de": 379.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "245": {
+   "em": "2026-11-26T13:40:49",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blazer Alongado em PU com Cinto Faixa (marrom)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 223.92,
+   "de": 339.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "246": {
+   "em": "2026-11-26T13:40:58",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Jaqueta em Suede com Capuz e Ajuste na Cintura (bege)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 231.92,
+   "de": 359.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "247": {
+   "em": "2026-11-26T13:41:06",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Trench Coat Longo em Jeans com Cinto (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 244.72,
+   "de": 359.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "248": {
+   "em": "2026-11-26T13:41:15",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Casaqueto Curto Alfaiatado com Botões Metálicos (preto)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 247.92,
+   "de": 359.9,
+   "cupom": "MAISBLACK",
+   "asin": ""
+  },
+  "249": {
+   "em": "2026-11-26T13:41:23",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Jaqueta em Tweed Xadrez com Botões (azul e branco)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 292.72,
+   "de": 379.9,
+   "cupom": "MAISBLACK",
    "asin": ""
   }
  },
