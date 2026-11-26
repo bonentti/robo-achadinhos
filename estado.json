@@ -1477,8 +1477,8 @@
    "em": "2026-11-26T14:23"
   },
   "mercadolivre:MLB29034307": {
-   "preco": 3517.26,
-   "em": "2026-11-26T14:30"
+   "preco": 3321.0,
+   "em": "2026-11-26T14:31"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1943,9 +1943,9 @@
   "jaquetaemtweedxadrezco": "2026-11-26T13:41",
   "shampookrastaseelixiru": "2026-11-26T13:42",
   "cremehidratantecorpora": "2026-11-26T14:23",
-  "consoleplaystation5sli": "2026-11-26T14:30"
+  "consoleplaystation5sli": "2026-11-26T14:31"
  },
- "seq_posts": 252,
+ "seq_posts": 253,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4969,6 +4969,18 @@
    "preco": 3517.26,
    "de": 4900.0,
    "cupom": "",
+   "asin": ""
+  },
+  "253": {
+   "em": "2026-11-26T14:31:46",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Console PlayStation 5 Slim Digital 1 TB (branco)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 3321.0,
+   "de": 4900.0,
+   "cupom": "PROMOTOP",
    "asin": ""
   }
  },
