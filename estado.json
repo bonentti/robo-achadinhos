@@ -1467,6 +1467,10 @@
   "renner:929267361": {
    "preco": 292.72,
    "em": "2026-11-26T13:41"
+  },
+  "amazon:B07H8N7ZCW": {
+   "preco": 126.1,
+   "em": "2026-11-26T13:42"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1928,9 +1932,10 @@
   "jaquetaemsuedecomcapuz": "2026-11-26T13:40",
   "trenchcoatlongoemjeans": "2026-11-26T13:41",
   "casaquetocurtoalfaiata": "2026-11-26T13:41",
-  "jaquetaemtweedxadrezco": "2026-11-26T13:41"
+  "jaquetaemtweedxadrezco": "2026-11-26T13:41",
+  "shampookrastaseelixiru": "2026-11-26T13:42"
  },
- "seq_posts": 249,
+ "seq_posts": 250,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4919,6 +4924,18 @@
    "de": 379.9,
    "cupom": "MAISBLACK",
    "asin": ""
+  },
+  "250": {
+   "em": "2026-11-26T13:42:18",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Shampoo Kérastase Elixir Ultime Le Bain 250 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 126.1,
+   "de": 205.0,
+   "cupom": "",
+   "asin": "B07H8N7ZCW"
   }
  },
  "agenda_feitos": [
