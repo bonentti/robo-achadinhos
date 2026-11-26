@@ -181,8 +181,8 @@ evitar_combinacoes = [
 # "Natal chegou", 17/11/2026). Depois de "ate" o robô para de mostrar sozinho.
 # Para trocar: mude cupom/regra/ate. Para desligar: cupom = "".
 [renner_cupom]
-cupom = "FAVORITOS"
-regra = "💸 25% OFF no carrinho acima de R$ 199 (Black Friday, todo o site)"   # 26/11: aviso da Renner/Awin, cupons NOMINAL ou FAVORITOS; antes 30%/249 até 23/11
+cupom = "MAISBLACK"   # 26/11: testado no carrinho, 20% OFF; FAVORITOS deu "não vale para os produtos" e NOMINAL inválido
+regra = "💸 20% OFF extra acima de R$ 199 (Black Friday, todo o site)"
 ate = "2026-11-30"   # validade não informada no aviso; conferir com ela
 exceto = ["perfumaria", "cosmético", "cosmetico", "beleza", "maquiagem", "new balance"]
 categorias = [
