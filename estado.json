@@ -1427,6 +1427,10 @@
   "mercadolivre:kerastase-chroma-fondant-200": {
    "preco": 209.0,
    "em": "2026-11-26T11:08"
+  },
+  "mercadolivre:MLB5866004732": {
+   "preco": 117.9,
+   "em": "2026-11-26T11:55"
   }
  },
  "ultimo_post": "2026-11-26T11:30:03",
@@ -1878,9 +1882,10 @@
   "camisetainsidertechlig": "2026-11-26T10:07",
   "shampooloralprofession": "2026-11-26T10:13",
   "bmbondrblsamoselante75": "2026-11-26T10:52",
-  "condicionadorkrastasec": "2026-11-26T11:08"
+  "condicionadorkrastasec": "2026-11-26T11:08",
+  "blushtoofacedlipcheekc": "2026-11-26T11:55"
  },
- "seq_posts": 240,
+ "seq_posts": 241,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4760,6 +4765,18 @@
    "preco": 209.0,
    "de": 330.9,
    "cupom": "",
+   "asin": ""
+  },
+  "241": {
+   "em": "2026-11-26T11:55:44",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Blush Too Faced Lip & Cheek Cloud Crush (lábios e bochechas)",
+   "marca": "Too Faced",
+   "categoria": "beleza",
+   "preco": 117.9,
+   "de": 219.0,
+   "cupom": "MAISDESCONTODEZ",
    "asin": ""
   }
  },
