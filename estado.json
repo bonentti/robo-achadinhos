@@ -1419,6 +1419,10 @@
   "amazon:B0DDDT7VGQ": {
    "preco": 49.99,
    "em": "2026-11-26T10:13"
+  },
+  "amazon:B01N6803FC": {
+   "preco": 58.9,
+   "em": "2026-11-26T10:52"
   }
  },
  "ultimo_post": "2026-11-26T10:13:09",
@@ -1869,9 +1873,10 @@
   "srumkrastasemagicnight": "2026-11-26T10:06",
   "iphone16e128gbpreto": "2026-11-26T10:06",
   "camisetainsidertechlig": "2026-11-26T10:07",
-  "shampooloralprofession": "2026-11-26T10:13"
+  "shampooloralprofession": "2026-11-26T10:13",
+  "bmbondrblsamoselante75": "2026-11-26T10:52"
  },
- "seq_posts": 238,
+ "seq_posts": 239,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4728,6 +4733,18 @@
    "de": 74.9,
    "cupom": "",
    "asin": "B0DDDT7VGQ"
+  },
+  "239": {
+   "em": "2026-11-26T10:52:37",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "BM BondR Bálsamo Selante 75 ml",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 58.9,
+   "de": 149.0,
+   "cupom": "",
+   "asin": "B01N6803FC"
   }
  },
  "agenda_feitos": [
