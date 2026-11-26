@@ -1471,6 +1471,10 @@
   "amazon:B07H8N7ZCW": {
    "preco": 126.1,
    "em": "2026-11-26T13:42"
+  },
+  "shopee:22795170973": {
+   "preco": 124.66,
+   "em": "2026-11-26T14:23"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1933,9 +1937,10 @@
   "trenchcoatlongoemjeans": "2026-11-26T13:41",
   "casaquetocurtoalfaiata": "2026-11-26T13:41",
   "jaquetaemtweedxadrezco": "2026-11-26T13:41",
-  "shampookrastaseelixiru": "2026-11-26T13:42"
+  "shampookrastaseelixiru": "2026-11-26T13:42",
+  "cremehidratantecorpora": "2026-11-26T14:23"
  },
- "seq_posts": 250,
+ "seq_posts": 251,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4936,6 +4941,18 @@
    "de": 205.0,
    "cupom": "",
    "asin": "B07H8N7ZCW"
+  },
+  "251": {
+   "em": "2026-11-26T14:23:43",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Creme Hidratante Corporal CeraVe 454 g (pele seca a extra seca)",
+   "marca": "CeraVe",
+   "categoria": "beleza",
+   "preco": 124.66,
+   "de": 133.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
