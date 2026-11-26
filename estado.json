@@ -1483,6 +1483,14 @@
   "amazon:B07MLST22Y": {
    "preco": 209.99,
    "em": "2026-11-26T14:53"
+  },
+  "renner:931038461": {
+   "preco": 57.54,
+   "em": "2026-11-26T14:58"
+  },
+  "renner:931136782": {
+   "preco": 35.94,
+   "em": "2026-11-26T14:58"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1948,9 +1956,11 @@
   "shampookrastaseelixiru": "2026-11-26T13:42",
   "cremehidratantecorpora": "2026-11-26T14:23",
   "consoleplaystation5sli": "2026-11-26T14:31",
-  "wheyintegralmdica100pu": "2026-11-26T14:53"
+  "wheyintegralmdica100pu": "2026-11-26T14:53",
+  "regataesportivacomtule": "2026-11-26T14:58",
+  "bolsabowlingpequenaemp": "2026-11-26T14:58"
  },
- "seq_posts": 254,
+ "seq_posts": 256,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4999,6 +5009,30 @@
    "de": 209.99,
    "cupom": "",
    "asin": "B07MLST22Y"
+  },
+  "255": {
+   "em": "2026-11-26T14:58:22",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Regata Esportiva com Tule nas Costas (preta)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 57.54,
+   "de": 119.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "256": {
+   "em": "2026-11-26T14:58:30",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Bolsa Bowling Pequena em PU (vermelha)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 35.94,
+   "de": 119.9,
+   "cupom": "BLACK40",
+   "asin": ""
   }
  },
  "agenda_feitos": [
