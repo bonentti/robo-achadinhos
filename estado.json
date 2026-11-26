@@ -1379,6 +1379,10 @@
   "amazon:B0FQG1JVQS": {
    "preco": 2699.33,
    "em": "2026-11-26T09:11"
+  },
+  "mercadolivre:MLBU5670396185": {
+   "preco": 9916.0,
+   "em": "2026-11-26T09:26"
   }
  },
  "ultimo_post": "2026-11-26T08:57:51",
@@ -1816,9 +1820,10 @@
   "cremedentalcolgatesens": "2026-11-25T21:00",
   "lpisparaolhosdouradosh": "2026-11-25T22:05",
   "cintofemininotexturiza": "2026-11-26T08:57",
-  "applewatchseries11gpsc": "2026-11-26T09:11"
+  "applewatchseries11gpsc": "2026-11-26T09:11",
+  "iphone18promax256gbpre": "2026-11-26T09:26"
  },
- "seq_posts": 223,
+ "seq_posts": 224,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4495,6 +4500,18 @@
    "de": 6799.0,
    "cupom": "IMPERDIVEL25",
    "asin": "B0FQG1JVQS"
+  },
+  "224": {
+   "em": "2026-11-26T09:26:41",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "iPhone 18 Pro Max 256 GB Preto",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 9916.0,
+   "de": 12999.0,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
