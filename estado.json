@@ -1431,6 +1431,10 @@
   "mercadolivre:MLB5866004732": {
    "preco": 117.9,
    "em": "2026-11-26T11:55"
+  },
+  "mercadolivre:mascavo-pro-01-02": {
+   "preco": 157.6,
+   "em": "2026-11-26T12:12"
   }
  },
  "ultimo_post": "2026-11-26T11:30:03",
@@ -1883,9 +1887,10 @@
   "shampooloralprofession": "2026-11-26T10:13",
   "bmbondrblsamoselante75": "2026-11-26T10:52",
   "condicionadorkrastasec": "2026-11-26T11:08",
-  "blushtoofacedlipcheekc": "2026-11-26T11:55"
+  "blushtoofacedlipcheekc": "2026-11-26T11:55",
+  "kitpincismascavoproser": "2026-11-26T12:12"
  },
- "seq_posts": 241,
+ "seq_posts": 242,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4777,6 +4782,18 @@
    "preco": 117.9,
    "de": 219.0,
    "cupom": "MAISDESCONTODEZ",
+   "asin": ""
+  },
+  "242": {
+   "em": "2026-11-26T12:12:03",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Kit Pincéis Mascavo Pro Series 01 + 02",
+   "marca": "Mascavo",
+   "categoria": "beleza",
+   "preco": 157.6,
+   "de": 197.0,
+   "cupom": "",
    "asin": ""
   }
  },
