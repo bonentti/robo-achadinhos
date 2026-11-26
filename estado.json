@@ -1411,6 +1411,10 @@
   "mercadolivre:MLB1046215784": {
    "preco": 3098.76,
    "em": "2026-11-26T10:06"
+  },
+  "mercadolivre:MLB4232914111": {
+   "preco": 59.76,
+   "em": "2026-11-26T10:07"
   }
  },
  "ultimo_post": "2026-11-26T08:57:51",
@@ -1859,9 +1863,10 @@
   "fonejblwavebuds2branco": "2026-11-26T10:00",
   "applewatchse3gps44mmlu": "2026-11-26T10:01",
   "srumkrastasemagicnight": "2026-11-26T10:06",
-  "iphone16e128gbpreto": "2026-11-26T10:06"
+  "iphone16e128gbpreto": "2026-11-26T10:06",
+  "camisetainsidertechlig": "2026-11-26T10:07"
  },
- "seq_posts": 236,
+ "seq_posts": 237,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4692,6 +4697,18 @@
    "categoria": "eletronicos",
    "preco": 3098.76,
    "de": 5799.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "237": {
+   "em": "2026-11-26T10:07:41",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Camiseta Insider Tech Light Masculina",
+   "marca": "",
+   "categoria": "moda",
+   "preco": 59.76,
+   "de": 189.0,
    "cupom": "",
    "asin": ""
   }
