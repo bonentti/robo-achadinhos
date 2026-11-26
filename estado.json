@@ -1415,6 +1415,10 @@
   "mercadolivre:MLB4232914111": {
    "preco": 59.76,
    "em": "2026-11-26T10:07"
+  },
+  "amazon:B0DDDT7VGQ": {
+   "preco": 49.99,
+   "em": "2026-11-26T10:13"
   }
  },
  "ultimo_post": "2026-11-26T10:13:09",
@@ -1864,9 +1868,10 @@
   "applewatchse3gps44mmlu": "2026-11-26T10:01",
   "srumkrastasemagicnight": "2026-11-26T10:06",
   "iphone16e128gbpreto": "2026-11-26T10:06",
-  "camisetainsidertechlig": "2026-11-26T10:07"
+  "camisetainsidertechlig": "2026-11-26T10:07",
+  "shampooloralprofession": "2026-11-26T10:13"
  },
- "seq_posts": 237,
+ "seq_posts": 238,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4711,6 +4716,18 @@
    "de": 189.0,
    "cupom": "",
    "asin": ""
+  },
+  "238": {
+   "em": "2026-11-26T10:13:18",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Shampoo L'Oréal Professionnel Absolut Repair Refil 240 ml",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 49.99,
+   "de": 74.9,
+   "cupom": "",
+   "asin": "B0DDDT7VGQ"
   }
  },
  "agenda_feitos": [
