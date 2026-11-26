@@ -1435,16 +1435,20 @@
   "mercadolivre:mascavo-pro-01-02": {
    "preco": 157.6,
    "em": "2026-11-26T12:12"
+  },
+  "shopee:23228610296": {
+   "preco": 59.99,
+   "em": "2026-11-26T13:37"
   }
  },
- "ultimo_post": "2026-11-26T12:32:44",
+ "ultimo_post": "2026-11-26T13:37:11",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-26T12:32:44",
   "kaisan": "2026-11-26T10:13:09",
   "hardyn": "2026-11-26T11:30:03",
   "favoritas": "2026-11-25T22:05:55",
-  "shopee-Beauty": "2026-11-25T17:11:00",
+  "shopee-Beauty": "2026-11-26T13:37:11",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
   "shopee-Sports & Outdoors": "2026-11-25T18:13:39",
   "shopee-Home & Living": "2026-11-25T19:13:01",
@@ -1460,7 +1464,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1468,7 +1472,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1476,7 +1480,7 @@
    "maior_preco": 104.93,
    "menor_preco": 97.93,
    "ultimo_preco": 97.93,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 97.93,
    "ultimo_postado": 97.93
   },
@@ -1484,7 +1488,7 @@
    "maior_preco": 164.93,
    "menor_preco": 153.93,
    "ultimo_preco": 153.93,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 153.93,
    "ultimo_postado": 153.93
   },
@@ -1492,7 +1496,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1500,7 +1504,7 @@
    "maior_preco": 112.43,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -1508,7 +1512,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1516,7 +1520,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1524,16 +1528,16 @@
    "maior_preco": 134.93,
    "menor_preco": 125.93,
    "ultimo_preco": 125.93,
-   "visto_em": "2026-11-26T12:32",
+   "visto_em": "2026-11-26T13:37",
    "referencia": 125.93,
    "ultimo_postado": 125.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-26T12:32",
+  "em": "2026-11-26T13:37",
   "ofertas_por_loja": {
    "shopee": 471,
-   "renner": 40,
+   "renner": 38,
    "hardyn": 15
   }
  },
@@ -1888,7 +1892,8 @@
   "bmbondrblsamoselante75": "2026-11-26T10:52",
   "condicionadorkrastasec": "2026-11-26T11:08",
   "blushtoofacedlipcheekc": "2026-11-26T11:55",
-  "kitpincismascavoproser": "2026-11-26T12:12"
+  "kitpincismascavoproser": "2026-11-26T12:12",
+  "kithenrenpretocaf180gc": "2026-11-26T13:37"
  },
  "seq_posts": 242,
  "posts_rastreados": {
