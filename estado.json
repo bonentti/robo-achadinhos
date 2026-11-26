@@ -1190,7 +1190,7 @@
   },
   "amazon:B0BD6755LC": {
    "preco": 24.9,
-   "em": "2026-11-24T09:03"
+   "em": "2026-11-26T18:22"
   },
   "amazon:B08NVML21R": {
    "preco": 38.45,
@@ -1535,6 +1535,14 @@
   "shopee:20197270559": {
    "preco": 68.0,
    "em": "2026-11-26T18:12"
+  },
+  "amazon:B07YNFRZK9": {
+   "preco": 35.39,
+   "em": "2026-11-26T18:23"
+  },
+  "amazon:B0D6Z9T62Q": {
+   "preco": 56.88,
+   "em": "2026-11-26T18:23"
   }
  },
  "ultimo_post": "2026-11-26T18:12:25",
@@ -1921,7 +1929,7 @@
   "lpisparaolhospratashin": "2026-11-23T22:00",
   "mscarakrastasersistanc": "2026-11-23T22:09",
   "pochetextremomicron3xt": "2026-11-24T08:57",
-  "protetorsolarfacialniv": "2026-11-24T09:03",
+  "protetorsolarfacialniv": "2026-11-26T18:23",
   "protetorsolarfacialneu": "2026-11-24T09:03",
   "protetorsolarfacialmin": "2026-11-24T09:03",
   "protetorsolarfacialsal": "2026-11-24T09:04",
@@ -2012,9 +2020,10 @@
   "cadeiradeescritrioergo": "2026-11-26T15:26",
   "toplupolsportseamlessa": "2026-11-26T16:19",
   "tapeteparacasa50x80cmb": "2026-11-26T17:20",
-  "saiamidifloralemcrepem": "2026-11-26T18:12"
+  "saiamidifloralemcrepem": "2026-11-26T18:12",
+  "protetorsolarlarochepo": "2026-11-26T18:23"
  },
- "seq_posts": 264,
+ "seq_posts": 267,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5183,6 +5192,42 @@
    "de": 397.97,
    "cupom": "IMPERDIVEL30",
    "asin": "B0H12VRNRY"
+  },
+  "265": {
+   "em": "2026-11-26T18:22:56",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial NIVEA Sun Toque Seco Antissinais FPS 70 40 ml",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 24.9,
+   "de": 50.9,
+   "cupom": "",
+   "asin": "B0BD6755LC"
+  },
+  "266": {
+   "em": "2026-11-26T18:23:06",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar Facial NIVEA Sun UV Face FPS 60 50 ml",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 35.39,
+   "de": 62.9,
+   "cupom": "",
+   "asin": "B07YNFRZK9"
+  },
+  "267": {
+   "em": "2026-11-26T18:23:14",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Protetor Solar La Roche-Posay Anthelios Ultra Cover 30 g (tom 1.0)",
+   "marca": "La Roche-Posay",
+   "categoria": "beleza",
+   "preco": 56.88,
+   "de": 89.9,
+   "cupom": "",
+   "asin": "B0D6Z9T62Q"
   }
  },
  "agenda_feitos": [
