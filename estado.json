@@ -1503,6 +1503,10 @@
   "renner:930769414": {
    "preco": 41.94,
    "em": "2026-11-26T15:08"
+  },
+  "renner:930948421": {
+   "preco": 57.54,
+   "em": "2026-11-26T15:15"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1973,9 +1977,10 @@
   "bolsabowlingpequenaemp": "2026-11-26T14:58",
   "pantufacarrosrelmpagom": "2026-11-26T15:02",
   "bolsashouldermdiacomal": "2026-11-26T15:03",
-  "blusaombronicocomacaba": "2026-11-26T15:08"
+  "blusaombronicocomacaba": "2026-11-26T15:08",
+  "camisaemviscolinhocomg": "2026-11-26T15:15"
  },
- "seq_posts": 259,
+ "seq_posts": 260,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5082,6 +5087,18 @@
    "categoria": "feminino",
    "preco": 41.94,
    "de": 139.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "260": {
+   "em": "2026-11-26T15:15:45",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Camisa em Viscolinho com Gola Padre (azul)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 57.54,
+   "de": 179.9,
    "cupom": "BLACK40",
    "asin": ""
   }
