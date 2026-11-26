@@ -1423,6 +1423,10 @@
   "amazon:B01N6803FC": {
    "preco": 58.9,
    "em": "2026-11-26T10:52"
+  },
+  "mercadolivre:kerastase-chroma-fondant-200": {
+   "preco": 209.0,
+   "em": "2026-11-26T11:08"
   }
  },
  "ultimo_post": "2026-11-26T10:13:09",
@@ -1874,9 +1878,10 @@
   "iphone16e128gbpreto": "2026-11-26T10:06",
   "camisetainsidertechlig": "2026-11-26T10:07",
   "shampooloralprofession": "2026-11-26T10:13",
-  "bmbondrblsamoselante75": "2026-11-26T10:52"
+  "bmbondrblsamoselante75": "2026-11-26T10:52",
+  "condicionadorkrastasec": "2026-11-26T11:08"
  },
- "seq_posts": 239,
+ "seq_posts": 240,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4745,6 +4750,18 @@
    "de": 149.0,
    "cupom": "",
    "asin": "B01N6803FC"
+  },
+  "240": {
+   "em": "2026-11-26T11:08:09",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Condicionador Kérastase Chroma Absolu Fondant Cica 200 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 209.0,
+   "de": 330.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
