@@ -198,7 +198,7 @@
   },
   "amazon:B09GSR58JF": {
    "preco": 120.94,
-   "em": "2026-11-18T09:43"
+   "em": "2026-11-26T09:59"
   },
   "amazon:B08M2PP78L": {
    "preco": 297.0,
@@ -221,8 +221,8 @@
    "em": "2026-11-18T10:58"
   },
   "amazon:B008SBKTLI": {
-   "preco": 382.5,
-   "em": "2026-11-19T11:59"
+   "preco": 405.0,
+   "em": "2026-11-26T09:59"
   },
   "amazon:B0FPGF9J2J": {
    "preco": 3999.9,
@@ -277,8 +277,8 @@
    "em": "2026-11-18T16:13"
   },
   "amazon:B07WCVW56S": {
-   "preco": 292.99,
-   "em": "2026-11-18T17:12"
+   "preco": 272.62,
+   "em": "2026-11-26T10:00"
   },
   "amazon:B0CD9F8FM7": {
    "preco": 99.0,
@@ -477,8 +477,8 @@
    "em": "2026-11-19T12:01"
   },
   "amazon:B0924ZWDFL": {
-   "preco": 147.15,
-   "em": "2026-11-19T12:01"
+   "preco": 159.9,
+   "em": "2026-11-26T10:00"
   },
   "amazon:B0F4LT38LJ": {
    "preco": 29.99,
@@ -498,7 +498,7 @@
   },
   "amazon:B08YLQNL4W": {
    "preco": 64.88,
-   "em": "2026-11-19T12:03"
+   "em": "2026-11-26T09:58"
   },
   "amazon:B07LFLRQXP": {
    "preco": 11.58,
@@ -1383,6 +1383,26 @@
   "mercadolivre:MLBU5670396185": {
    "preco": 9916.0,
    "em": "2026-11-26T09:26"
+  },
+  "amazon:B07BL1CJRN": {
+   "preco": 180.48,
+   "em": "2026-11-26T09:59"
+  },
+  "amazon:B0D6Z9YQFD": {
+   "preco": 151.11,
+   "em": "2026-11-26T09:59"
+  },
+  "amazon:B0FG8GP2HY": {
+   "preco": 146.29,
+   "em": "2026-11-26T09:59"
+  },
+  "amazon:B0DHLBLFXQ": {
+   "preco": 184.29,
+   "em": "2026-11-26T10:00"
+  },
+  "amazon:B0FQG1SWXN": {
+   "preco": 2110.08,
+   "em": "2026-11-26T10:01"
   }
  },
  "ultimo_post": "2026-11-26T08:57:51",
@@ -1519,7 +1539,7 @@
   "bermudaacademiamaxcore": "2026-11-17T20:35",
   "poteshermticoselectrol": "2026-11-17T21:22",
   "grillesanduicheiraphil": "2026-11-18T19:04",
-  "mscaraloralprofessionn": "2026-11-19T06:34",
+  "mscaraloralprofessionn": "2026-11-26T09:59",
   "jimmychooiwantchooeaud": "2026-11-18T10:03",
   "pulseiralifecoraoempra": "2026-11-18T10:03",
   "carolinaherrera212vipr": "2026-11-18T10:05",
@@ -1587,7 +1607,7 @@
   "miniprocessadordealime": "2026-11-19T11:23",
   "echodot5geraocomalexap": "2026-11-19T11:59",
   "fonedeouvidosemfiojblw": "2026-11-19T11:59",
-  "perfumelancmelavieestb": "2026-11-19T12:00",
+  "perfumelancmelavieestb": "2026-11-26T09:59",
   "perfumegabrielasabatin": "2026-11-19T12:01",
   "mscararedkenextremepar": "2026-11-19T12:01",
   "loralpariselsevebondre": "2026-11-19T12:01",
@@ -1821,9 +1841,17 @@
   "lpisparaolhosdouradosh": "2026-11-25T22:05",
   "cintofemininotexturiza": "2026-11-26T08:57",
   "applewatchseries11gpsc": "2026-11-26T09:11",
-  "iphone18promax256gbpre": "2026-11-26T09:26"
+  "iphone18promax256gbpre": "2026-11-26T09:26",
+  "srumnivealuminous630an": "2026-11-26T09:58",
+  "mscaradeclioslancmehyp": "2026-11-26T09:59",
+  "srumantimanchaslaroche": "2026-11-26T09:59",
+  "srumvichyliftactivcolg": "2026-11-26T09:59",
+  "perfumelancmeidleedp25": "2026-11-26T10:00",
+  "mscararedkenextreme500": "2026-11-26T10:00",
+  "fonejblwavebuds2branco": "2026-11-26T10:00",
+  "applewatchse3gps44mmlu": "2026-11-26T10:01"
  },
- "seq_posts": 224,
+ "seq_posts": 234,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4512,6 +4540,126 @@
    "de": 12999.0,
    "cupom": "",
    "asin": ""
+  },
+  "225": {
+   "em": "2026-11-26T09:58:55",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum NIVEA Luminous 630 Antimarcas 30 ml",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 64.88,
+   "de": 129.9,
+   "cupom": "",
+   "asin": "B08YLQNL4W"
+  },
+  "226": {
+   "em": "2026-11-26T09:59:03",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara de Cílios Lancôme Hypnôse 6,5 ml",
+   "marca": "Lancôme",
+   "categoria": "beleza",
+   "preco": 180.48,
+   "de": 319.0,
+   "cupom": "",
+   "asin": "B07BL1CJRN"
+  },
+  "227": {
+   "em": "2026-11-26T09:59:12",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara L'Oréal Professionnel Absolut Repair 250 g",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 120.94,
+   "de": 214.9,
+   "cupom": "",
+   "asin": "B09GSR58JF"
+  },
+  "228": {
+   "em": "2026-11-26T09:59:41",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum Antimanchas La Roche-Posay Mela B3 30 ml",
+   "marca": "La Roche-Posay",
+   "categoria": "beleza",
+   "preco": 151.11,
+   "de": 289.9,
+   "cupom": "",
+   "asin": "B0D6Z9YQFD"
+  },
+  "229": {
+   "em": "2026-11-26T09:59:49",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum Vichy Liftactiv Colágeno Specialist 30 ml",
+   "marca": "Vichy",
+   "categoria": "beleza",
+   "preco": 146.29,
+   "de": 279.9,
+   "cupom": "",
+   "asin": "B0FG8GP2HY"
+  },
+  "230": {
+   "em": "2026-11-26T09:59:58",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle EDP 50 ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 405.0,
+   "de": 809.0,
+   "cupom": "",
+   "asin": "B008SBKTLI"
+  },
+  "231": {
+   "em": "2026-11-26T10:00:28",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme Idôle EDP 25 ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 272.62,
+   "de": 509.0,
+   "cupom": "",
+   "asin": "B07WCVW56S"
+  },
+  "232": {
+   "em": "2026-11-26T10:00:37",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara Redken Extreme 500 ml",
+   "marca": "Redken",
+   "categoria": "beleza",
+   "preco": 159.9,
+   "de": 296.89,
+   "cupom": "",
+   "asin": "B0924ZWDFL"
+  },
+  "233": {
+   "em": "2026-11-26T10:00:45",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Fone JBL Wave Buds 2 (branco)",
+   "marca": "JBL",
+   "categoria": "eletronicos",
+   "preco": 184.29,
+   "de": 466.66,
+   "cupom": "",
+   "asin": "B0DHLBLFXQ"
+  },
+  "234": {
+   "em": "2026-11-26T10:01:14",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Apple Watch SE 3 GPS 44 mm (luz das estrelas)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 2110.08,
+   "de": 3699.0,
+   "cupom": "",
+   "asin": "B0FQG1SWXN"
   }
  },
  "agenda_feitos": [
