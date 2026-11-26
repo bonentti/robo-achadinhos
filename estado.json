@@ -1375,6 +1375,10 @@
   "shopee:58251070319": {
    "preco": 19.99,
    "em": "2026-11-26T08:57"
+  },
+  "amazon:B0FQG1JVQS": {
+   "preco": 2699.33,
+   "em": "2026-11-26T09:11"
   }
  },
  "ultimo_post": "2026-11-26T08:57:51",
@@ -1811,9 +1815,10 @@
   "calajeansskinnyfeminin": "2026-11-25T20:09",
   "cremedentalcolgatesens": "2026-11-25T21:00",
   "lpisparaolhosdouradosh": "2026-11-25T22:05",
-  "cintofemininotexturiza": "2026-11-26T08:57"
+  "cintofemininotexturiza": "2026-11-26T08:57",
+  "applewatchseries11gpsc": "2026-11-26T09:11"
  },
- "seq_posts": 222,
+ "seq_posts": 223,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4478,6 +4483,18 @@
    "de": 119.9,
    "cupom": "BLACK40",
    "asin": ""
+  },
+  "223": {
+   "em": "2026-11-26T09:11:25",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Apple Watch Series 11 GPS + Cellular 42 mm (prateado, pulseira roxo névoa)",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 2699.33,
+   "de": 6799.0,
+   "cupom": "IMPERDIVEL25",
+   "asin": "B0FQG1JVQS"
   }
  },
  "agenda_feitos": [
