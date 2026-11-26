@@ -1523,6 +1523,10 @@
   "shopee:44613651352": {
    "preco": 119.9,
    "em": "2026-11-26T16:19"
+  },
+  "amazon:B0H12VRNRY": {
+   "preco": 194.99,
+   "em": "2026-11-26T16:30"
   }
  },
  "ultimo_post": "2026-11-26T16:19:35",
@@ -1734,7 +1738,7 @@
   "eucerindermopureclinic": "2026-11-19T12:02",
   "nivealuminous630sruman": "2026-11-19T12:03",
   "niveahidratantelabiala": "2026-11-19T12:03",
-  "aparelhodejantaroxford": "2026-11-19T12:04",
+  "aparelhodejantaroxford": "2026-11-26T16:30",
   "culosdesolraybanhexago": "2026-11-19T12:04",
   "shoulderbaghavaianasco": "2026-11-19T12:29",
   "calaleggingfemininacan": "2026-11-19T19:11",
@@ -2000,7 +2004,7 @@
   "cadeiradeescritrioergo": "2026-11-26T15:26",
   "toplupolsportseamlessa": "2026-11-26T16:19"
  },
- "seq_posts": 263,
+ "seq_posts": 264,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5157,6 +5161,18 @@
    "de": 509.9,
    "cupom": "",
    "asin": ""
+  },
+  "264": {
+   "em": "2026-11-26T16:30:58",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Aparelho de Jantar Oxford Ryo Baunilha 20 Peças (formato orgânico)",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 194.99,
+   "de": 397.97,
+   "cupom": "IMPERDIVEL30",
+   "asin": "B0H12VRNRY"
   }
  },
  "agenda_feitos": [
