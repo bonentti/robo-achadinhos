@@ -1515,6 +1515,10 @@
   "renner:929541068": {
    "preco": 27.54,
    "em": "2026-11-26T15:19"
+  },
+  "mercadolivre:MLBU4786649514": {
+   "preco": 166.24,
+   "em": "2026-11-26T15:26"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1988,9 +1992,10 @@
   "blusaombronicocomacaba": "2026-11-26T15:08",
   "camisaemviscolinhocomg": "2026-11-26T15:15",
   "blusacompalaassimtrica": "2026-11-26T15:17",
-  "shortrunneresportivoco": "2026-11-26T15:19"
+  "shortrunneresportivoco": "2026-11-26T15:19",
+  "cadeiradeescritrioergo": "2026-11-26T15:26"
  },
- "seq_posts": 262,
+ "seq_posts": 263,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5134,6 +5139,18 @@
    "preco": 27.54,
    "de": 79.9,
    "cupom": "BLACK40",
+   "asin": ""
+  },
+  "263": {
+   "em": "2026-11-26T15:26:53",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Cadeira de Escritório Ergonômica Ravena com Apoio Lombar e de Nuca (preta)",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 166.24,
+   "de": 509.9,
+   "cupom": "",
    "asin": ""
   }
  },
