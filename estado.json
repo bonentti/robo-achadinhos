@@ -1499,6 +1499,10 @@
   "renner:931113046": {
    "preco": 47.94,
    "em": "2026-11-26T15:03"
+  },
+  "renner:930769414": {
+   "preco": 41.94,
+   "em": "2026-11-26T15:08"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1968,9 +1972,10 @@
   "regataesportivacomtule": "2026-11-26T14:58",
   "bolsabowlingpequenaemp": "2026-11-26T14:58",
   "pantufacarrosrelmpagom": "2026-11-26T15:02",
-  "bolsashouldermdiacomal": "2026-11-26T15:03"
+  "bolsashouldermdiacomal": "2026-11-26T15:03",
+  "blusaombronicocomacaba": "2026-11-26T15:08"
  },
- "seq_posts": 258,
+ "seq_posts": 259,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5065,6 +5070,18 @@
    "categoria": "feminino",
    "preco": 47.94,
    "de": 199.9,
+   "cupom": "BLACK40",
+   "asin": ""
+  },
+  "259": {
+   "em": "2026-11-26T15:08:06",
+   "canal": "whatsapp",
+   "loja": "renner",
+   "nome": "Blusa Ombro Único com Acabamento em Twill (bege)",
+   "marca": "",
+   "categoria": "feminino",
+   "preco": 41.94,
+   "de": 139.9,
    "cupom": "BLACK40",
    "asin": ""
   }
