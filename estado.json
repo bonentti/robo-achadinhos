@@ -1479,6 +1479,10 @@
   "mercadolivre:MLB29034307": {
    "preco": 3321.0,
    "em": "2026-11-26T14:31"
+  },
+  "amazon:B07MLST22Y": {
+   "preco": 209.99,
+   "em": "2026-11-26T14:53"
   }
  },
  "ultimo_post": "2026-11-26T13:37:11",
@@ -1943,9 +1947,10 @@
   "jaquetaemtweedxadrezco": "2026-11-26T13:41",
   "shampookrastaseelixiru": "2026-11-26T13:42",
   "cremehidratantecorpora": "2026-11-26T14:23",
-  "consoleplaystation5sli": "2026-11-26T14:31"
+  "consoleplaystation5sli": "2026-11-26T14:31",
+  "wheyintegralmdica100pu": "2026-11-26T14:53"
  },
- "seq_posts": 253,
+ "seq_posts": 254,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -4982,6 +4987,18 @@
    "de": 4900.0,
    "cupom": "PROMOTOP",
    "asin": ""
+  },
+  "254": {
+   "em": "2026-11-26T14:53:25",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Whey Integralmédica 100% Pure Concentrado 1,8 kg (morango)",
+   "marca": "",
+   "categoria": "suplementos",
+   "preco": 209.99,
+   "de": 399.9,
+   "cupom": "",
+   "asin": "B07MLST22Y"
   }
  },
  "agenda_feitos": [
