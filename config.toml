@@ -182,8 +182,8 @@ evitar_combinacoes = [
 # Para trocar: mude cupom/regra/ate. Para desligar: cupom = "".
 [renner_cupom]
 cupom = "FAVORITOS"
-regra = "💸 30% OFF no carrinho acima de R$ 249 (até 23/11, 8h)"   # 20/11: aviso do canal da Renner; antes era 25% acima de R$ 149
-ate = "2026-11-22"   # ação vai até 23/11 às 8h
+regra = "💸 25% OFF no carrinho acima de R$ 199 (Black Friday, todo o site)"   # 26/11: aviso da Renner/Awin, cupons NOMINAL ou FAVORITOS; antes 30%/249 até 23/11
+ate = "2026-11-30"   # validade não informada no aviso; conferir com ela
 exceto = ["perfumaria", "cosmético", "cosmetico", "beleza", "maquiagem", "new balance"]
 categorias = [
   { termos = ["vestido"], cupom = "VESTIDOS10", texto = "+10% OFF em vestidos" },
