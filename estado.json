@@ -1429,8 +1429,8 @@
    "em": "2026-11-26T11:08"
   },
   "mercadolivre:MLB5866004732": {
-   "preco": 117.9,
-   "em": "2026-11-26T11:55"
+   "preco": 104.8,
+   "em": "2026-11-27T08:58"
   },
   "mercadolivre:mascavo-pro-01-02": {
    "preco": 157.6,
@@ -1571,6 +1571,26 @@
   "shopee:23493105721": {
    "preco": 105.9,
    "em": "2026-11-27T08:55"
+  },
+  "mercadolivre:MLB22074888": {
+   "preco": 66.32,
+   "em": "2026-11-27T08:57"
+  },
+  "mercadolivre:MLB50123845": {
+   "preco": 146.4,
+   "em": "2026-11-27T08:57"
+  },
+  "mercadolivre:MLB40161724": {
+   "preco": 113.93,
+   "em": "2026-11-27T08:58"
+  },
+  "mercadolivre:MLB78878036": {
+   "preco": 369.5,
+   "em": "2026-11-27T08:58"
+  },
+  "shopee:58270243088": {
+   "preco": 29.9,
+   "em": "2026-11-27T08:58"
   }
  },
  "ultimo_post": "2026-11-27T08:55:20",
@@ -2056,9 +2076,15 @@
   "kitniveasabonetelquido": "2026-11-27T00:19",
   "batommattemacmacximalc": "2026-11-27T00:26",
   "perfumecarolinaherrera": "2026-11-27T00:44",
-  "papabolinhasrecarregve": "2026-11-27T08:55"
+  "papabolinhasrecarregve": "2026-11-27T08:55",
+  "srumfacialeucerinhyalu": "2026-11-27T08:57",
+  "krastasebainglossabsol": "2026-11-27T08:57",
+  "blushmultifuncionaltoo": "2026-11-27T08:58",
+  "escovarotativamondialc": "2026-11-27T08:58",
+  "bicicletaergomtricaspi": "2026-11-27T08:58",
+  "protetorsolarfacialhid": "2026-11-27T08:58"
  },
- "seq_posts": 272,
+ "seq_posts": 278,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5321,6 +5347,78 @@
    "categoria": "beleza",
    "preco": 431.48,
    "de": 911.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "273": {
+   "em": "2026-11-27T08:57:26",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Sérum Facial Eucerin Hyaluron-Filler Daily Booster Ultraleve, 30 ml",
+   "marca": "Eucerin",
+   "categoria": "beleza",
+   "preco": 66.32,
+   "de": 159.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "274": {
+   "em": "2026-11-27T08:57:56",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Kérastase Bain Gloss Absolu – shampoo anti-frizz com ácido hialurônico, 250 ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 146.4,
+   "de": 259.9,
+   "cupom": "KERASTASE15",
+   "asin": ""
+  },
+  "275": {
+   "em": "2026-11-27T08:58:05",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Blush Multifuncional Too Faced Lip & Cheek Cloud Crush",
+   "marca": "Too Faced",
+   "categoria": "beleza",
+   "preco": 104.8,
+   "de": 219.0,
+   "cupom": "BELEZAPREMIUM",
+   "asin": ""
+  },
+  "276": {
+   "em": "2026-11-27T08:58:15",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Escova Rotativa Mondial Cerâmica Tourmaline Íon Golden Rose ERB-01",
+   "marca": "Mondial",
+   "categoria": "beleza",
+   "preco": 113.93,
+   "de": 259.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "277": {
+   "em": "2026-11-27T08:58:24",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Bicicleta Ergométrica Spinning Liftness com volante e display LCD",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 369.5,
+   "de": 1143.99,
+   "cupom": "",
+   "asin": ""
+  },
+  "278": {
+   "em": "2026-11-27T08:58:57",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Protetor Solar Facial Hidrabene FPS 70 Toque Seco, 50 g",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 29.9,
+   "de": 36.9,
    "cupom": "",
    "asin": ""
   }
