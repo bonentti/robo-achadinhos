@@ -1639,6 +1639,10 @@
   "shopee:23992878756": {
    "preco": 142.99,
    "em": "2026-11-27T19:11"
+  },
+  "shopee:58219289722": {
+   "preco": 3683.88,
+   "em": "2026-11-27T19:19"
   }
  },
  "ultimo_post": "2026-11-27T19:11:38",
@@ -2146,9 +2150,10 @@
   "wheyproteinconcentrado": "2026-11-27T18:05",
   "topcomdecoteretoealasd": "2026-11-27T18:12",
   "medicubezeroporepads20": "2026-11-27T19:08",
-  "calafemininaslimemalfa": "2026-11-27T19:11"
+  "calafemininaslimemalfa": "2026-11-27T19:11",
+  "lavaesecasamsung11kgin": "2026-11-27T19:19"
  },
- "seq_posts": 287,
+ "seq_posts": 288,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5591,6 +5596,18 @@
    "categoria": "beleza",
    "preco": 79.1,
    "de": 113.0,
+   "cupom": "",
+   "asin": ""
+  },
+  "288": {
+   "em": "2026-11-27T19:19:59",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Lava e Seca Samsung 11 kg Inverter Inox Look",
+   "marca": "Samsung",
+   "categoria": "casa",
+   "preco": 3683.88,
+   "de": null,
    "cupom": "",
    "asin": ""
   }
