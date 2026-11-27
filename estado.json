@@ -1647,6 +1647,10 @@
   "mercadolivre:MLB4840953687": {
    "preco": 48.75,
    "em": "2026-11-27T19:25"
+  },
+  "amazon:B08F864LDD": {
+   "preco": 55.46,
+   "em": "2026-11-27T20:53"
   }
  },
  "ultimo_post": "2026-11-27T20:12:10",
@@ -2156,9 +2160,10 @@
   "medicubezeroporepads20": "2026-11-27T19:08",
   "calafemininaslimemalfa": "2026-11-27T19:11",
   "lavaesecasamsung11kgin": "2026-11-27T19:19",
-  "sabonetefacialmedicube": "2026-11-27T19:25"
+  "sabonetefacialmedicube": "2026-11-27T19:25",
+  "isdinprotetorsolarfaci": "2026-11-27T20:53"
  },
- "seq_posts": 289,
+ "seq_posts": 290,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5627,6 +5632,18 @@
    "de": 73.32,
    "cupom": "",
    "asin": ""
+  },
+  "290": {
+   "em": "2026-11-27T20:53:14",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "ISDIN Protetor Solar Facial Fusion Water 5 Stars Sem Cor FPS 60 50ml",
+   "marca": "Isdin",
+   "categoria": "beleza",
+   "preco": 55.46,
+   "de": 93.9,
+   "cupom": "SONHOBLACK10",
+   "asin": "B08F864LDD"
   }
  },
  "agenda_feitos": [
