@@ -69,8 +69,8 @@
    "em": "2026-11-16T19:31"
   },
   "shopee:23198845672": {
-   "preco": 69.99,
-   "em": "2026-11-16T12:56"
+   "preco": 48.93,
+   "em": "2026-11-27T00:19"
   },
   "hardyn:2904": {
    "preco": 63.45,
@@ -2040,9 +2040,10 @@
   "escovadentalcolgatesli": "2026-11-26T19:11",
   "topseamlesspoliamidapr": "2026-11-26T21:11",
   "kit6henpelciafortepouc": "2026-11-26T22:38",
-  "packyoprobebidalcteaco": "2026-11-26T22:51"
+  "packyoprobebidalcteaco": "2026-11-26T22:51",
+  "kitniveasabonetelquido": "2026-11-27T00:19"
  },
- "seq_posts": 269,
+ "seq_posts": 270,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5270,6 +5271,18 @@
    "preco": 204.3,
    "de": 399.9,
    "cupom": "KERASTASE15",
+   "asin": ""
+  },
+  "270": {
+   "em": "2026-11-27T00:19:29",
+   "canal": "whatsapp",
+   "loja": "shopee",
+   "nome": "Kit NIVEA Sabonete Líquido Óleo de Banho 200 ml – 3 unidades",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 48.93,
+   "de": 69.9,
+   "cupom": "",
    "asin": ""
   }
  },
