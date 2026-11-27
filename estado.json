@@ -1643,6 +1643,10 @@
   "shopee:58219289722": {
    "preco": 3683.88,
    "em": "2026-11-27T19:19"
+  },
+  "mercadolivre:MLB4840953687": {
+   "preco": 48.75,
+   "em": "2026-11-27T19:25"
   }
  },
  "ultimo_post": "2026-11-27T19:11:38",
@@ -2151,9 +2155,10 @@
   "topcomdecoteretoealasd": "2026-11-27T18:12",
   "medicubezeroporepads20": "2026-11-27T19:08",
   "calafemininaslimemalfa": "2026-11-27T19:11",
-  "lavaesecasamsung11kgin": "2026-11-27T19:19"
+  "lavaesecasamsung11kgin": "2026-11-27T19:19",
+  "sabonetefacialmedicube": "2026-11-27T19:25"
  },
- "seq_posts": 288,
+ "seq_posts": 289,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5608,6 +5613,18 @@
    "categoria": "casa",
    "preco": 3683.88,
    "de": null,
+   "cupom": "",
+   "asin": ""
+  },
+  "289": {
+   "em": "2026-11-27T19:25:18",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Sabonete Facial Medicube Kojic Acid Turmeric Toning",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 48.75,
+   "de": 73.32,
    "cupom": "",
    "asin": ""
   }
