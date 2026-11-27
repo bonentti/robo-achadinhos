@@ -1567,9 +1567,13 @@
   "mercadolivre:MLB6137685": {
    "preco": 431.48,
    "em": "2026-11-27T00:44"
+  },
+  "shopee:23493105721": {
+   "preco": 105.9,
+   "em": "2026-11-27T08:55"
   }
  },
- "ultimo_post": "2026-11-26T22:38:54",
+ "ultimo_post": "2026-11-27T08:55:20",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-26T12:32:44",
@@ -1579,7 +1583,7 @@
   "shopee-Beauty": "2026-11-26T22:38:54",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
   "shopee-Sports & Outdoors": "2026-11-26T16:19:35",
-  "shopee-Home & Living": "2026-11-26T17:20:05",
+  "shopee-Home & Living": "2026-11-27T08:55:20",
   "shopee-Home Appliances": "2026-11-19T11:23:53",
   "shopee-Women Clothes": "2026-11-26T18:12:25",
   "shopee-Health": "2026-11-26T19:11:23",
@@ -1592,7 +1596,7 @@
    "maior_preco": 59.94,
    "menor_preco": 59.94,
    "ultimo_preco": 59.94,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 59.94,
    "ultimo_postado": 59.94
   },
@@ -1600,7 +1604,7 @@
    "maior_preco": 71.92,
    "menor_preco": 71.92,
    "ultimo_preco": 71.92,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 71.92,
    "ultimo_postado": 71.92
   },
@@ -1608,7 +1612,7 @@
    "maior_preco": 104.93,
    "menor_preco": 97.93,
    "ultimo_preco": 97.93,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 97.93,
    "ultimo_postado": 97.93
   },
@@ -1616,7 +1620,7 @@
    "maior_preco": 164.93,
    "menor_preco": 153.93,
    "ultimo_preco": 153.93,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 153.93,
    "ultimo_postado": 153.93
   },
@@ -1624,7 +1628,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1632,7 +1636,7 @@
    "maior_preco": 112.43,
    "menor_preco": 104.93,
    "ultimo_preco": 104.93,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 104.93,
    "ultimo_postado": 104.93
   },
@@ -1640,7 +1644,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1648,7 +1652,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1656,20 +1660,20 @@
    "maior_preco": 134.93,
    "menor_preco": 125.93,
    "ultimo_preco": 125.93,
-   "visto_em": "2026-11-27T00:43",
+   "visto_em": "2026-11-27T08:55",
    "referencia": 125.93,
    "ultimo_postado": 125.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-27T00:43",
+  "em": "2026-11-27T08:55",
   "ofertas_por_loja": {
    "shopee": 519,
-   "hardyn": 20
+   "hardyn": 22
   }
  },
  "resumo_enviado_em": "2026-11-19",
- "dia_promocional_avisado": "2026-11-16",
+ "dia_promocional_avisado": "2026-11-27",
  "cupons_ultimo_id": 8040,
  "telegram_offset": 474373501,
  "nomes_postados": {
@@ -2051,7 +2055,8 @@
   "packyoprobebidalcteaco": "2026-11-26T22:51",
   "kitniveasabonetelquido": "2026-11-27T00:19",
   "batommattemacmacximalc": "2026-11-27T00:26",
-  "perfumecarolinaherrera": "2026-11-27T00:44"
+  "perfumecarolinaherrera": "2026-11-27T00:44",
+  "papabolinhasrecarregve": "2026-11-27T08:55"
  },
  "seq_posts": 272,
  "posts_rastreados": {
