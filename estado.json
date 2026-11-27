@@ -1563,6 +1563,10 @@
   "mercadolivre:MLBU5300056130": {
    "preco": 56.92,
    "em": "2026-11-27T00:26"
+  },
+  "mercadolivre:MLB6137685": {
+   "preco": 431.48,
+   "em": "2026-11-27T00:44"
   }
  },
  "ultimo_post": "2026-11-26T22:38:54",
@@ -2046,9 +2050,10 @@
   "kit6henpelciafortepouc": "2026-11-26T22:38",
   "packyoprobebidalcteaco": "2026-11-26T22:51",
   "kitniveasabonetelquido": "2026-11-27T00:19",
-  "batommattemacmacximalc": "2026-11-27T00:26"
+  "batommattemacmacximalc": "2026-11-27T00:26",
+  "perfumecarolinaherrera": "2026-11-27T00:44"
  },
- "seq_posts": 271,
+ "seq_posts": 272,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5299,6 +5304,18 @@
    "categoria": "beleza",
    "preco": 56.92,
    "de": 79.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "272": {
+   "em": "2026-11-27T00:44:52",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Perfume Carolina Herrera 212 VIP Rosé EDP 80 ml",
+   "marca": "Carolina Herrera",
+   "categoria": "beleza",
+   "preco": 431.48,
+   "de": 911.9,
    "cupom": "",
    "asin": ""
   }
