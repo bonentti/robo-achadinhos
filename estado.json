@@ -1631,6 +1631,10 @@
   "mercadolivre:MLB15067118": {
    "preco": 284.99,
    "em": "2026-11-27T18:05"
+  },
+  "mercadolivre:MLB6984127054": {
+   "preco": 79.1,
+   "em": "2026-11-27T19:08"
   }
  },
  "ultimo_post": "2026-11-27T18:12:12",
@@ -2136,9 +2140,10 @@
   "kitcadiveuhairremedyre": "2026-11-27T16:16",
   "jogodetalherestramonti": "2026-11-27T17:13",
   "wheyproteinconcentrado": "2026-11-27T18:05",
-  "topcomdecoteretoealasd": "2026-11-27T18:12"
+  "topcomdecoteretoealasd": "2026-11-27T18:12",
+  "medicubezeroporepads20": "2026-11-27T19:08"
  },
- "seq_posts": 286,
+ "seq_posts": 287,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5569,6 +5574,18 @@
    "categoria": "fitness",
    "preco": 284.99,
    "de": 599.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "287": {
+   "em": "2026-11-27T19:08:23",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Medicube Zero Pore Pads 2.0 (70 pads)",
+   "marca": "",
+   "categoria": "beleza",
+   "preco": 79.1,
+   "de": 113.0,
    "cupom": "",
    "asin": ""
   }
