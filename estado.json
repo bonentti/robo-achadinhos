@@ -1595,6 +1595,10 @@
   "mercadolivre:MLB50232347": {
    "preco": 169.93,
    "em": "2026-11-27T09:54"
+  },
+  "mercadolivre:MLB79373299": {
+   "preco": 929.99,
+   "em": "2026-11-27T10:02"
   }
  },
  "ultimo_post": "2026-11-27T08:55:20",
@@ -2087,9 +2091,10 @@
   "escovarotativamondialc": "2026-11-27T08:58",
   "bicicletaergomtricaspi": "2026-11-27T08:58",
   "protetorsolarfacialhid": "2026-11-27T08:58",
-  "fritadeiraairfryermide": "2026-11-27T09:54"
+  "fritadeiraairfryermide": "2026-11-27T09:54",
+  "robaspiradorkabumsmart": "2026-11-27T10:02"
  },
- "seq_posts": 279,
+ "seq_posts": 280,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5436,6 +5441,18 @@
    "categoria": "casa",
    "preco": 169.93,
    "de": 739.68,
+   "cupom": "SOHOJEBF",
+   "asin": ""
+  },
+  "280": {
+   "em": "2026-11-27T10:02:28",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Robô Aspirador KaBuM! Smart K800 Pro – mapeamento a laser, autolimpante, 13000 Pa",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 929.99,
+   "de": 1333.32,
    "cupom": "SOHOJEBF",
    "asin": ""
   }
