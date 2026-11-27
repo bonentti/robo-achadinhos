@@ -1591,6 +1591,10 @@
   "shopee:58270243088": {
    "preco": 29.9,
    "em": "2026-11-27T08:58"
+  },
+  "mercadolivre:MLB50232347": {
+   "preco": 169.93,
+   "em": "2026-11-27T09:54"
   }
  },
  "ultimo_post": "2026-11-27T08:55:20",
@@ -2082,9 +2086,10 @@
   "blushmultifuncionaltoo": "2026-11-27T08:58",
   "escovarotativamondialc": "2026-11-27T08:58",
   "bicicletaergomtricaspi": "2026-11-27T08:58",
-  "protetorsolarfacialhid": "2026-11-27T08:58"
+  "protetorsolarfacialhid": "2026-11-27T08:58",
+  "fritadeiraairfryermide": "2026-11-27T09:54"
  },
- "seq_posts": 278,
+ "seq_posts": 279,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5420,6 +5425,18 @@
    "preco": 29.9,
    "de": 36.9,
    "cupom": "",
+   "asin": ""
+  },
+  "279": {
+   "em": "2026-11-27T09:54:27",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Fritadeira Air Fryer Midea Widemax 5,5 L 1900W com interior de alumínio",
+   "marca": "Midea",
+   "categoria": "casa",
+   "preco": 169.93,
+   "de": 739.68,
+   "cupom": "SOHOJEBF",
    "asin": ""
   }
  },
