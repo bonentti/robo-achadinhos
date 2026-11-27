@@ -1555,6 +1555,10 @@
   "shopee:21774736359": {
    "preco": 59.99,
    "em": "2026-11-26T22:38"
+  },
+  "amazon:B0CXB4HYV8": {
+   "preco": 79.36,
+   "em": "2026-11-26T22:51"
   }
  },
  "ultimo_post": "2026-11-26T22:38:54",
@@ -2035,9 +2039,10 @@
   "protetorsolarlarochepo": "2026-11-26T18:23",
   "escovadentalcolgatesli": "2026-11-26T19:11",
   "topseamlesspoliamidapr": "2026-11-26T21:11",
-  "kit6henpelciafortepouc": "2026-11-26T22:38"
+  "kit6henpelciafortepouc": "2026-11-26T22:38",
+  "packyoprobebidalcteaco": "2026-11-26T22:51"
  },
- "seq_posts": 267,
+ "seq_posts": 268,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5242,6 +5247,18 @@
    "de": 89.9,
    "cupom": "",
    "asin": "B0D6Z9T62Q"
+  },
+  "268": {
+   "em": "2026-11-26T22:51:04",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Pack YoPRO Bebida Láctea Coco com Batata Doce 15g de Proteína 250ml – 24 unidades",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 79.36,
+   "de": 192.19,
+   "cupom": "YOPROQUINZE",
+   "asin": "B0CXB4HYV8"
   }
  },
  "agenda_feitos": [
