@@ -226,7 +226,7 @@
   },
   "amazon:B0FPGF9J2J": {
    "preco": 3999.9,
-   "em": "2026-11-19T13:38"
+   "em": "2026-11-27T10:18"
   },
   "shopee:22797770341": {
    "preco": 19.56,
@@ -1741,7 +1741,7 @@
   "kit10cuecasboxerlupo": "2026-11-18T10:35",
   "dolcegabbanadevotioned": "2026-11-18T10:58",
   "lancmelavieestbelleeau": "2026-11-18T11:17",
-  "playstation5slimdigita": "2026-11-19T13:38",
+  "playstation5slimdigita": "2026-11-27T10:18",
   "bolsaclutchnighthinode": "2026-11-18T12:13",
   "cacharelamoramoreaudet": "2026-11-18T13:16",
   "kit2regatasfemininasem": "2026-11-18T19:04",
@@ -2096,7 +2096,7 @@
   "robaspiradorkabumsmart": "2026-11-27T10:02",
   "toptringuloslimalquimi": "2026-11-27T10:09"
  },
- "seq_posts": 280,
+ "seq_posts": 281,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5457,6 +5457,18 @@
    "de": 1333.32,
    "cupom": "SOHOJEBF",
    "asin": ""
+  },
+  "281": {
+   "em": "2026-11-27T10:18:43",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "PlayStation 5 Slim Digital 825 GB – pacote ASTRO BOT e Gran Turismo 7",
+   "marca": "",
+   "categoria": "eletronicos",
+   "preco": 3999.9,
+   "de": 4599.9,
+   "cupom": "",
+   "asin": "B0FPGF9J2J"
   }
  },
  "agenda_feitos": [
