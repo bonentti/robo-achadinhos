@@ -1559,6 +1559,10 @@
   "amazon:B0CXB4HYV8": {
    "preco": 79.36,
    "em": "2026-11-26T22:51"
+  },
+  "mercadolivre:MLBU5300056130": {
+   "preco": 56.92,
+   "em": "2026-11-27T00:26"
   }
  },
  "ultimo_post": "2026-11-26T22:38:54",
@@ -2041,9 +2045,10 @@
   "topseamlesspoliamidapr": "2026-11-26T21:11",
   "kit6henpelciafortepouc": "2026-11-26T22:38",
   "packyoprobebidalcteaco": "2026-11-26T22:51",
-  "kitniveasabonetelquido": "2026-11-27T00:19"
+  "kitniveasabonetelquido": "2026-11-27T00:19",
+  "batommattemacmacximalc": "2026-11-27T00:26"
  },
- "seq_posts": 270,
+ "seq_posts": 271,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5282,6 +5287,18 @@
    "categoria": "beleza",
    "preco": 48.93,
    "de": 69.9,
+   "cupom": "",
+   "asin": ""
+  },
+  "271": {
+   "em": "2026-11-27T00:26:16",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Batom Matte M·A·C Macximal – cor Warm Teddy",
+   "marca": "M.A.C",
+   "categoria": "beleza",
+   "preco": 56.92,
+   "de": 79.9,
    "cupom": "",
    "asin": ""
   }
