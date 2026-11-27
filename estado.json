@@ -685,8 +685,8 @@
    "em": "2026-11-23T12:56"
   },
   "amazon:B0918FHY6P": {
-   "preco": 112.42,
-   "em": "2026-11-20T11:33"
+   "preco": 129.9,
+   "em": "2026-11-27T14:12"
   },
   "hardyn:1392": {
    "preco": 21.67,
@@ -2109,9 +2109,10 @@
   "robaspiradorkabumsmart": "2026-11-27T10:02",
   "toptringuloslimalquimi": "2026-11-27T10:09",
   "kitcom2camisetasfemini": "2026-11-27T11:28",
-  "kitdehigienebucalparav": "2026-11-27T13:36"
+  "kitdehigienebucalparav": "2026-11-27T13:36",
+  "leoloralprofessionnel1": "2026-11-27T14:12"
  },
- "seq_posts": 282,
+ "seq_posts": 283,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5496,6 +5497,18 @@
    "de": 108.49,
    "cupom": "",
    "asin": ""
+  },
+  "283": {
+   "em": "2026-11-27T14:12:58",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Óleo L'Oréal Professionnel 10 em 1 Absolut Repair 90ml",
+   "marca": "L'Oréal",
+   "categoria": "beleza",
+   "preco": 129.9,
+   "de": 247.9,
+   "cupom": "PRO200FF",
+   "asin": "B0918FHY6P"
   }
  },
  "agenda_feitos": [
