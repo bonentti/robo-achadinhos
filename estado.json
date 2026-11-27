@@ -1627,6 +1627,10 @@
   "shopee:23095288479": {
    "preco": 80.0,
    "em": "2026-11-27T17:13"
+  },
+  "mercadolivre:MLB15067118": {
+   "preco": 284.99,
+   "em": "2026-11-27T18:05"
   }
  },
  "ultimo_post": "2026-11-27T17:13:07",
@@ -2130,9 +2134,10 @@
   "saboneteembarratododia": "2026-11-27T14:31",
   "shortsaiaempoliamidame": "2026-11-27T15:18",
   "kitcadiveuhairremedyre": "2026-11-27T16:16",
-  "jogodetalherestramonti": "2026-11-27T17:13"
+  "jogodetalherestramonti": "2026-11-27T17:13",
+  "wheyproteinconcentrado": "2026-11-27T18:05"
  },
- "seq_posts": 285,
+ "seq_posts": 286,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5553,6 +5558,18 @@
    "de": 295.9,
    "cupom": "IMPERDIVEL30",
    "asin": "B0H12VRNRY"
+  },
+  "286": {
+   "em": "2026-11-27T18:05:32",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Whey Protein Concentrado Dux Nutrition 1,8 kg Chocolate",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 284.99,
+   "de": 599.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
