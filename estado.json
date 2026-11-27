@@ -1526,7 +1526,7 @@
   },
   "amazon:B0H12VRNRY": {
    "preco": 194.99,
-   "em": "2026-11-26T16:30"
+   "em": "2026-11-27T16:55"
   },
   "shopee:23998082656": {
    "preco": 105.16,
@@ -1835,7 +1835,7 @@
   "eucerindermopureclinic": "2026-11-19T12:02",
   "nivealuminous630sruman": "2026-11-19T12:03",
   "niveahidratantelabiala": "2026-11-19T12:03",
-  "aparelhodejantaroxford": "2026-11-26T16:30",
+  "aparelhodejantaroxford": "2026-11-27T16:55",
   "culosdesolraybanhexago": "2026-11-19T12:04",
   "shoulderbaghavaianasco": "2026-11-19T12:29",
   "calaleggingfemininacan": "2026-11-19T19:11",
@@ -2127,7 +2127,7 @@
   "shortsaiaempoliamidame": "2026-11-27T15:18",
   "kitcadiveuhairremedyre": "2026-11-27T16:16"
  },
- "seq_posts": 284,
+ "seq_posts": 285,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5536,6 +5536,18 @@
    "de": 247.9,
    "cupom": "PRO200FF",
    "asin": "B0918FHY6P"
+  },
+  "285": {
+   "em": "2026-11-27T16:55:12",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Aparelho de Jantar Oxford 20 Peças Ryo Baunilha",
+   "marca": "",
+   "categoria": "casa",
+   "preco": 194.99,
+   "de": 295.9,
+   "cupom": "IMPERDIVEL30",
+   "asin": "B0H12VRNRY"
   }
  },
  "agenda_feitos": [
