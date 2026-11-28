@@ -465,8 +465,8 @@
    "em": "2026-11-19T11:59"
   },
   "amazon:B0DBW2Y9VH": {
-   "preco": 291.54,
-   "em": "2026-11-19T12:00"
+   "preco": 308.69,
+   "em": "2026-11-28T17:51"
   },
   "amazon:B0F22PGY7K": {
    "preco": 297.33,
@@ -1739,6 +1739,22 @@
   "shopee:20999205324": {
    "preco": 85.49,
    "em": "2026-11-28T17:50"
+  },
+  "amazon:B008SBKTZ4": {
+   "preco": 256.47,
+   "em": "2026-11-28T17:51"
+  },
+  "amazon:B0FTZZW5CQ": {
+   "preco": 103.11,
+   "em": "2026-11-28T17:51"
+  },
+  "amazon:B0GM1LSHQF": {
+   "preco": 158.64,
+   "em": "2026-11-28T17:51"
+  },
+  "amazon:B0B3SGCCY5": {
+   "preco": 44.27,
+   "em": "2026-11-28T17:51"
   }
  },
  "ultimo_post": "2026-11-28T17:50:47",
@@ -1943,7 +1959,7 @@
   "miniprocessadordealime": "2026-11-19T11:23",
   "echodot5geraocomalexap": "2026-11-19T11:59",
   "fonedeouvidosemfiojblw": "2026-11-19T11:59",
-  "perfumelancmelavieestb": "2026-11-28T12:15",
+  "perfumelancmelavieestb": "2026-11-28T17:51",
   "perfumegabrielasabatin": "2026-11-19T12:01",
   "mscararedkenextremepar": "2026-11-19T12:01",
   "loralpariselsevebondre": "2026-11-19T12:01",
@@ -2273,9 +2289,12 @@
   "escovadentalcolgatezig": "2026-11-28T14:30",
   "mscaraesfolianteparaps": "2026-11-28T15:16",
   "shortempoliamidatextur": "2026-11-28T17:07",
-  "kitpanteneshampoo510ml": "2026-11-28T17:50"
+  "kitpanteneshampoo510ml": "2026-11-28T17:50",
+  "gelhidratantelarochepo": "2026-11-28T17:51",
+  "fonejbltune530btblueto": "2026-11-28T17:51",
+  "refilgeldelimpezalaroc": "2026-11-28T17:51"
  },
- "seq_posts": 310,
+ "seq_posts": 315,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5996,6 +6015,66 @@
    "de": 109.9,
    "cupom": "BONENTTI",
    "asin": ""
+  },
+  "311": {
+   "em": "2026-11-28T17:51:02",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle EDP 30ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 256.47,
+   "de": 529.0,
+   "cupom": "",
+   "asin": "B008SBKTZ4"
+  },
+  "312": {
+   "em": "2026-11-28T17:51:13",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle Elixir 30ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 308.69,
+   "de": 599.0,
+   "cupom": "",
+   "asin": "B0DBW2Y9VH"
+  },
+  "313": {
+   "em": "2026-11-28T17:51:23",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Gel Hidratante La Roche-Posay Hyalu B5 Water Gel 40g",
+   "marca": "La Roche-Posay",
+   "categoria": "beleza",
+   "preco": 103.11,
+   "de": 169.9,
+   "cupom": "",
+   "asin": "B0FTZZW5CQ"
+  },
+  "314": {
+   "em": "2026-11-28T17:51:32",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Fone JBL Tune 530BT Bluetooth (preto)",
+   "marca": "JBL",
+   "categoria": "eletronicos",
+   "preco": 158.64,
+   "de": 299.0,
+   "cupom": "",
+   "asin": "B0GM1LSHQF"
+  },
+  "315": {
+   "em": "2026-11-28T17:51:43",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Refil Gel de Limpeza La Roche-Posay Effaclar Alta Tolerância 240g",
+   "marca": "La Roche-Posay",
+   "categoria": "beleza",
+   "preco": 44.27,
+   "de": 74.9,
+   "cupom": "",
+   "asin": "B0B3SGCCY5"
   }
  },
  "agenda_feitos": [
