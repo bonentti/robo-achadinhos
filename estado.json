@@ -1683,14 +1683,18 @@
   "amazon:B0032RMX3U": {
    "preco": 145.64,
    "em": "2026-11-28T09:17"
+  },
+  "hardyn:2479": {
+   "preco": 49.95,
+   "em": "2026-11-28T09:37"
   }
  },
- "ultimo_post": "2026-11-28T08:47:14",
+ "ultimo_post": "2026-11-28T09:37:50",
  "ultima_vez_loja": {
   "shopee": "2026-11-16T16:14:40",
   "renner": "2026-11-27T20:12:10",
   "kaisan": "2026-11-27T18:12:12",
-  "hardyn": "2026-11-27T15:18:15",
+  "hardyn": "2026-11-28T09:37:50",
   "favoritas": "2026-11-27T22:08:02",
   "shopee-Beauty": "2026-11-27T16:16:01",
   "shopee-Women Shoes": "2026-11-19T20:01:25",
@@ -1708,7 +1712,7 @@
    "maior_preco": 59.94,
    "menor_preco": 54.95,
    "ultimo_preco": 54.95,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 54.95,
    "ultimo_postado": 54.95
   },
@@ -1716,7 +1720,7 @@
    "maior_preco": 71.92,
    "menor_preco": 65.94,
    "ultimo_preco": 65.94,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 65.94,
    "ultimo_postado": 65.94
   },
@@ -1724,7 +1728,7 @@
    "maior_preco": 104.93,
    "menor_preco": 90.94,
    "ultimo_preco": 90.94,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 90.94,
    "ultimo_postado": 97.93
   },
@@ -1732,7 +1736,7 @@
    "maior_preco": 164.93,
    "menor_preco": 142.94,
    "ultimo_preco": 142.94,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 142.94,
    "ultimo_postado": 153.93
   },
@@ -1740,7 +1744,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1748,7 +1752,7 @@
    "maior_preco": 112.43,
    "menor_preco": 97.44,
    "ultimo_preco": 97.44,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 97.44,
    "ultimo_postado": 104.93
   },
@@ -1756,7 +1760,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1764,7 +1768,7 @@
    "maior_preco": 97.43,
    "menor_preco": 97.43,
    "ultimo_preco": 97.43,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 97.43,
    "ultimo_postado": 97.43
   },
@@ -1772,13 +1776,13 @@
    "maior_preco": 134.93,
    "menor_preco": 116.94,
    "ultimo_preco": 116.94,
-   "visto_em": "2026-11-28T08:47",
+   "visto_em": "2026-11-28T09:37",
    "referencia": 116.94,
    "ultimo_postado": 125.93
   }
  },
  "ultima_rodada": {
-  "em": "2026-11-28T08:47",
+  "em": "2026-11-28T09:37",
   "ofertas_por_loja": {
    "shopee": 598,
    "renner": 32,
@@ -1789,7 +1793,7 @@
  "resumo_enviado_em": "2026-11-19",
  "dia_promocional_avisado": "2026-11-27",
  "cupons_ultimo_id": 8040,
- "telegram_offset": 474373503,
+ "telegram_offset": 474373505,
  "nomes_postados": {
   "kitshampooecondicionad": "2026-11-16T20:16",
   "papetefemininamolecasl": "2026-11-16T20:55",
@@ -2202,7 +2206,8 @@
   "mscarawellaprofessiona": "2026-11-28T09:16",
   "perfumemywaygiorgioarm": "2026-11-28T09:16",
   "cremeantifrizzkrastase": "2026-11-28T09:16",
-  "batomcliniquealmostlip": "2026-11-28T09:17"
+  "batomcliniquealmostlip": "2026-11-28T09:17",
+  "topnadadorseamlesspoli": "2026-11-28T09:37"
  },
  "seq_posts": 296,
  "posts_rastreados": {
