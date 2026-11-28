@@ -2224,7 +2224,7 @@
   "guamicelarbiodermasens": "2026-11-28T12:15",
   "aparelhodejantartramon": "2026-11-28T12:16"
  },
- "seq_posts": 302,
+ "seq_posts": 303,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5849,6 +5849,18 @@
    "de": 518.81,
    "cupom": "",
    "asin": "B0D2V3NLV9"
+  },
+  "303": {
+   "em": "2026-11-28T12:29:38",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Carrinho SKINCARE30 (CeraVe, Vichy, La Roche-Posay)",
+   "marca": "La Roche-Posay",
+   "categoria": "beleza",
+   "preco": 43.62,
+   "de": null,
+   "cupom": "SKINCARE30",
+   "asin": ""
   }
  },
  "agenda_feitos": [
