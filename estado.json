@@ -222,7 +222,7 @@
   },
   "amazon:B008SBKTLI": {
    "preco": 405.0,
-   "em": "2026-11-26T09:59"
+   "em": "2026-11-28T12:15"
   },
   "amazon:B0FPGF9J2J": {
    "preco": 3999.9,
@@ -277,8 +277,8 @@
    "em": "2026-11-28T09:16"
   },
   "amazon:B07WCVW56S": {
-   "preco": 272.62,
-   "em": "2026-11-26T10:00"
+   "preco": 258.29,
+   "em": "2026-11-28T12:16"
   },
   "amazon:B0CD9F8FM7": {
    "preco": 99.0,
@@ -498,7 +498,7 @@
   },
   "amazon:B08YLQNL4W": {
    "preco": 64.88,
-   "em": "2026-11-26T09:58"
+   "em": "2026-11-28T12:16"
   },
   "amazon:B07LFLRQXP": {
    "preco": 11.58,
@@ -1691,6 +1691,14 @@
   "mercadolivre:MLB5255583191": {
    "preco": 56.92,
    "em": "2026-11-28T10:23"
+  },
+  "amazon:B002XZLAWM": {
+   "preco": 75.9,
+   "em": "2026-11-28T12:15"
+  },
+  "amazon:B0D2V3NLV9": {
+   "preco": 231.8,
+   "em": "2026-11-28T12:16"
   }
  },
  "ultimo_post": "2026-11-28T11:31:21",
@@ -1895,7 +1903,7 @@
   "miniprocessadordealime": "2026-11-19T11:23",
   "echodot5geraocomalexap": "2026-11-19T11:59",
   "fonedeouvidosemfiojblw": "2026-11-19T11:59",
-  "perfumelancmelavieestb": "2026-11-26T09:59",
+  "perfumelancmelavieestb": "2026-11-28T12:15",
   "perfumegabrielasabatin": "2026-11-19T12:01",
   "mscararedkenextremepar": "2026-11-19T12:01",
   "loralpariselsevebondre": "2026-11-19T12:01",
@@ -2130,11 +2138,11 @@
   "cintofemininotexturiza": "2026-11-26T08:57",
   "applewatchseries11gpsc": "2026-11-26T09:11",
   "iphone18promax256gbpre": "2026-11-26T09:26",
-  "srumnivealuminous630an": "2026-11-26T09:58",
+  "srumnivealuminous630an": "2026-11-28T12:16",
   "mscaradeclioslancmehyp": "2026-11-26T09:59",
   "srumantimanchaslaroche": "2026-11-26T09:59",
   "srumvichyliftactivcolg": "2026-11-26T09:59",
-  "perfumelancmeidleedp25": "2026-11-26T10:00",
+  "perfumelancmeidleedp25": "2026-11-28T12:16",
   "mscararedkenextreme500": "2026-11-26T10:00",
   "fonejblwavebuds2branco": "2026-11-26T10:00",
   "applewatchse3gps44mmlu": "2026-11-26T10:01",
@@ -2212,9 +2220,11 @@
   "cremeantifrizzkrastase": "2026-11-28T09:16",
   "batomcliniquealmostlip": "2026-11-28T09:17",
   "topnadadorseamlesspoli": "2026-11-28T09:37",
-  "batommacmacximalsilkym": "2026-11-28T10:23"
+  "batommacmacximalsilkym": "2026-11-28T10:23",
+  "guamicelarbiodermasens": "2026-11-28T12:15",
+  "aparelhodejantartramon": "2026-11-28T12:16"
  },
- "seq_posts": 297,
+ "seq_posts": 302,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5779,6 +5789,66 @@
    "de": 79.9,
    "cupom": "",
    "asin": ""
+  },
+  "298": {
+   "em": "2026-11-28T12:15:43",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Água Micelar Bioderma Sensibio H2O 500ml",
+   "marca": "Bioderma",
+   "categoria": "beleza",
+   "preco": 75.9,
+   "de": 169.0,
+   "cupom": "",
+   "asin": "B002XZLAWM"
+  },
+  "299": {
+   "em": "2026-11-28T12:15:54",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme La Vie est Belle EDP 50ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 405.0,
+   "de": 809.0,
+   "cupom": "",
+   "asin": "B008SBKTLI"
+  },
+  "300": {
+   "em": "2026-11-28T12:16:25",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume Lancôme Idôle EDP 25ml",
+   "marca": "Lancôme",
+   "categoria": "perfume",
+   "preco": 258.29,
+   "de": 509.0,
+   "cupom": "",
+   "asin": "B07WCVW56S"
+  },
+  "301": {
+   "em": "2026-11-28T12:16:36",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Sérum Nivea Luminous 630 Antimarcas 30ml",
+   "marca": "Nivea",
+   "categoria": "beleza",
+   "preco": 64.88,
+   "de": 129.9,
+   "cupom": "",
+   "asin": "B08YLQNL4W"
+  },
+  "302": {
+   "em": "2026-11-28T12:16:50",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Aparelho de Jantar Tramontina Magnólia Porcelana 20 peças",
+   "marca": "Tramontina",
+   "categoria": "casa",
+   "preco": 231.8,
+   "de": 518.81,
+   "cupom": "",
+   "asin": "B0D2V3NLV9"
   }
  },
  "agenda_feitos": [
