@@ -1687,6 +1687,10 @@
   "hardyn:2479": {
    "preco": 49.95,
    "em": "2026-11-28T09:37"
+  },
+  "mercadolivre:MLB5255583191": {
+   "preco": 56.92,
+   "em": "2026-11-28T10:23"
   }
  },
  "ultimo_post": "2026-11-28T09:37:50",
@@ -2207,9 +2211,10 @@
   "perfumemywaygiorgioarm": "2026-11-28T09:16",
   "cremeantifrizzkrastase": "2026-11-28T09:16",
   "batomcliniquealmostlip": "2026-11-28T09:17",
-  "topnadadorseamlesspoli": "2026-11-28T09:37"
+  "topnadadorseamlesspoli": "2026-11-28T09:37",
+  "batommacmacximalsilkym": "2026-11-28T10:23"
  },
- "seq_posts": 296,
+ "seq_posts": 297,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5762,6 +5767,18 @@
    "de": 225.0,
    "cupom": "",
    "asin": "B0032RMX3U"
+  },
+  "297": {
+   "em": "2026-11-28T10:23:19",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Batom MAC Macximal Silky Matte cor Taupe",
+   "marca": "MAC",
+   "categoria": "maquiagem",
+   "preco": 56.92,
+   "de": 79.9,
+   "cupom": "",
+   "asin": ""
   }
  },
  "agenda_feitos": [
