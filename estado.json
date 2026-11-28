@@ -1659,6 +1659,10 @@
   "shopee:23993071132": {
    "preco": 29.9,
    "em": "2026-11-27T22:08"
+  },
+  "mercadolivre:MLB19605864": {
+   "preco": 103.98,
+   "em": "2026-11-27T22:09"
   }
  },
  "ultimo_post": "2026-11-27T22:08:02",
@@ -2171,9 +2175,10 @@
   "sabonetefacialmedicube": "2026-11-27T19:25",
   "isdinprotetorsolarfaci": "2026-11-27T20:53",
   "kitc2cremesdentaiscolg": "2026-11-27T21:03",
-  "lpisparaolhosbegeshine": "2026-11-27T22:08"
+  "lpisparaolhosbegeshine": "2026-11-27T22:08",
+  "mscarawellainvigonutri": "2026-11-27T22:09"
  },
- "seq_posts": 290,
+ "seq_posts": 291,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5654,6 +5659,18 @@
    "de": 93.9,
    "cupom": "SONHOBLACK10",
    "asin": "B08F864LDD"
+  },
+  "291": {
+   "em": "2026-11-27T22:09:37",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Máscara Wella Invigo Nutri-Enrich 500ml",
+   "marca": "Wella",
+   "categoria": "beleza",
+   "preco": 103.98,
+   "de": 264.9,
+   "cupom": "R3ZMELI",
+   "asin": ""
   }
  },
  "agenda_feitos": [
