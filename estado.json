@@ -1663,6 +1663,10 @@
   "mercadolivre:MLB19605864": {
    "preco": 103.98,
    "em": "2026-11-27T22:09"
+  },
+  "mercadolivre:MLB4944955937": {
+   "preco": 159.06,
+   "em": "2026-11-27T22:18"
   }
  },
  "ultimo_post": "2026-11-27T22:08:02",
@@ -2176,9 +2180,10 @@
   "isdinprotetorsolarfaci": "2026-11-27T20:53",
   "kitc2cremesdentaiscolg": "2026-11-27T21:03",
   "lpisparaolhosbegeshine": "2026-11-27T22:08",
-  "mscarawellainvigonutri": "2026-11-27T22:09"
+  "mscarawellainvigonutri": "2026-11-27T22:09",
+  "mscarawellaultimatelux": "2026-11-27T22:18"
  },
- "seq_posts": 291,
+ "seq_posts": 292,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5669,6 +5674,18 @@
    "categoria": "beleza",
    "preco": 103.98,
    "de": 264.9,
+   "cupom": "R3ZMELI",
+   "asin": ""
+  },
+  "292": {
+   "em": "2026-11-27T22:18:17",
+   "canal": "whatsapp",
+   "loja": "mercadolivre",
+   "nome": "Máscara Wella Ultimate Luxe Oil 500ml",
+   "marca": "Wella",
+   "categoria": "beleza",
+   "preco": 159.06,
+   "de": 364.9,
    "cupom": "R3ZMELI",
    "asin": ""
   }
