@@ -1699,6 +1699,10 @@
   "amazon:B0D2V3NLV9": {
    "preco": 231.8,
    "em": "2026-11-28T12:16"
+  },
+  "kaisan:K5055-C": {
+   "preco": 64.94,
+   "em": "2026-11-28T13:49"
   }
  },
  "ultimo_post": "2026-11-28T13:48:29",
@@ -2222,9 +2226,10 @@
   "topnadadorseamlesspoli": "2026-11-28T09:37",
   "batommacmacximalsilkym": "2026-11-28T10:23",
   "guamicelarbiodermasens": "2026-11-28T12:15",
-  "aparelhodejantartramon": "2026-11-28T12:16"
+  "aparelhodejantartramon": "2026-11-28T12:16",
+  "topcomdecotevecostasab": "2026-11-28T13:49"
  },
- "seq_posts": 303,
+ "seq_posts": 304,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5860,6 +5865,18 @@
    "preco": 43.62,
    "de": null,
    "cupom": "SKINCARE30",
+   "asin": ""
+  },
+  "304": {
+   "em": "2026-11-28T13:49:35",
+   "canal": "whatsapp",
+   "loja": "kaisan",
+   "nome": "Top com Decote V e Costas Abertas (oliva)",
+   "marca": "",
+   "categoria": "fitness",
+   "preco": 64.94,
+   "de": 99.9,
+   "cupom": "BONENTTI",
    "asin": ""
   }
  },
