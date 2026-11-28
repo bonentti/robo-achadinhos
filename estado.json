@@ -273,8 +273,8 @@
    "em": "2026-11-18T15:16"
   },
   "amazon:B08DHW4CT9": {
-   "preco": 314.9,
-   "em": "2026-11-18T16:13"
+   "preco": 299.9,
+   "em": "2026-11-28T09:16"
   },
   "amazon:B07WCVW56S": {
    "preco": 272.62,
@@ -1671,6 +1671,18 @@
   "shopee:23897173913": {
    "preco": 34.5,
    "em": "2026-11-28T08:47"
+  },
+  "amazon:B0BM4RN4RL": {
+   "preco": 155.52,
+   "em": "2026-11-28T09:16"
+  },
+  "amazon:B0G7HJFJVH": {
+   "preco": 225.0,
+   "em": "2026-11-28T09:16"
+  },
+  "amazon:B0032RMX3U": {
+   "preco": 145.64,
+   "em": "2026-11-28T09:17"
   }
  },
  "ultimo_post": "2026-11-28T08:47:14",
@@ -2186,9 +2198,13 @@
   "lpisparaolhosbegeshine": "2026-11-27T22:08",
   "mscarawellainvigonutri": "2026-11-27T22:09",
   "mscarawellaultimatelux": "2026-11-27T22:18",
-  "portafonedeouvidohavai": "2026-11-28T08:47"
+  "portafonedeouvidohavai": "2026-11-28T08:47",
+  "mscarawellaprofessiona": "2026-11-28T09:16",
+  "perfumemywaygiorgioarm": "2026-11-28T09:16",
+  "cremeantifrizzkrastase": "2026-11-28T09:16",
+  "batomcliniquealmostlip": "2026-11-28T09:17"
  },
- "seq_posts": 292,
+ "seq_posts": 296,
  "posts_rastreados": {
   "1": {
    "em": "2026-11-17T19:14:16",
@@ -5693,6 +5709,54 @@
    "de": 364.9,
    "cupom": "R3ZMELI",
    "asin": ""
+  },
+  "293": {
+   "em": "2026-11-28T09:16:37",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Máscara Wella Professionals Oil Reflections 500ml",
+   "marca": "Wella",
+   "categoria": "beleza",
+   "preco": 155.52,
+   "de": 302.0,
+   "cupom": "",
+   "asin": "B0BM4RN4RL"
+  },
+  "294": {
+   "em": "2026-11-28T09:16:46",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Perfume My Way Giorgio Armani EDP 30ml",
+   "marca": "",
+   "categoria": "perfume",
+   "preco": 299.9,
+   "de": 569.0,
+   "cupom": "",
+   "asin": "B08DHW4CT9"
+  },
+  "295": {
+   "em": "2026-11-28T09:16:54",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Creme Antifrizz Kérastase Gloss Absolu 240ml",
+   "marca": "Kérastase",
+   "categoria": "beleza",
+   "preco": 225.0,
+   "de": 399.9,
+   "cupom": "",
+   "asin": "B0G7HJFJVH"
+  },
+  "296": {
+   "em": "2026-11-28T09:17:02",
+   "canal": "whatsapp",
+   "loja": "amazon",
+   "nome": "Batom Clinique Almost Lipstick Black Honey",
+   "marca": "Clinique",
+   "categoria": "maquiagem",
+   "preco": 145.64,
+   "de": 225.0,
+   "cupom": "",
+   "asin": "B0032RMX3U"
   }
  },
  "agenda_feitos": [
